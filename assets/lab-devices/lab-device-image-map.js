@@ -1,0 +1,20 @@
+window.LAB_DEVICE_IMAGE_MAP = {
+  "abdampfschale": "assets/lab-devices/abdampfschale.jpg",
+  "becherglas": "assets/lab-devices/becherglas.jpg",
+  "bunsenbrenner": "assets/lab-devices/bunsenbrenner.jpg",
+  "dreifuss": "assets/lab-devices/dreifuss.jpg",
+  "erlenmeyer": "assets/lab-devices/erlenmeyer.png",
+  "filterpapier": "assets/lab-devices/filterpapier.jpg",
+  "glasstab": "assets/lab-devices/glasstab.jpg",
+  "keramikdrahtnetz": "assets/lab-devices/keramikdrahtnetz.png",
+  "messzylinder": "assets/lab-devices/messzylinder.jpg",
+  "reagenzglas": "assets/lab-devices/reagenzglas.jpg",
+  "reagenzglasgestell": "assets/lab-devices/reagenzglasgestell.jpg",
+  "reagenzglasklammer": "assets/lab-devices/reagenzglasklammer.png",
+  "spatel": "assets/lab-devices/spatel.jpg",
+  "spritzflasche": "assets/lab-devices/spritzflasche.jpg",
+  "tiegel": "assets/lab-devices/tiegel.png",
+  "tiegelzange": "assets/lab-devices/tiegelzange.jpg",
+  "trichter_glas": "assets/lab-devices/trichter_glas.jpg",
+  "uhrglas": "assets/lab-devices/uhrglas.png"
+};

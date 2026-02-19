@@ -137,6 +137,18 @@
   aspect-ratio: 11 / 8;
 }
 
+.device-photo,
+.quiz-photo,
+.modal-photo {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 11 / 8;
+  object-fit: contain;
+  background: #f5f8fc;
+  border: 1px solid #d4deea;
+  border-radius: 10px;
+}
+
 .device-svg .line,
 .quiz-svg .line,
 #deviceModalSvg .line {
@@ -256,6 +268,10 @@
 
 .quiz-svg {
   width: min(240px, 60vw);
+}
+
+.quiz-photo {
+  width: min(260px, 62vw);
 }
 
 .answer-btn {
@@ -413,6 +429,11 @@
   margin: 0;
   color: #32475d;
   font-weight: 600;
+}
+
+#deviceModalSvg .modal-photo {
+  width: 100%;
+  max-height: 70vh;
 }
 
 @media (max-width: 720px) {
