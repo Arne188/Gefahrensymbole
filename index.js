@@ -11,6 +11,11 @@ const defaultTopics = [
     title: "Laborgeraete und Sicherheit",
     link: "chemie-laborgeraete.html",
   },
+  {
+    subject: "Erdkunde",
+    title: "Vom Luftbild zur Karte",
+    link: "erdkunde-luftbild-karte.html",
+  },
 ];
 
 const topicForm = document.getElementById("topicForm");
@@ -45,12 +50,13 @@ function saveTopics(topics) {
 function createTopicMarkup(topic) {
   const safeLink = (topic.link || "").trim();
   const linkMarkup = safeLink
-    ? `<a href="${safeLink}">Zum Thema</a>`
-    : `<p>Kein Link hinterlegt</p>`;
+    ? `<a class="button-link topic-link" href="${safeLink}">Modul oeffnen</a>`
+    : `<p class="topic-note">Kein Link hinterlegt</p>`;
 
   return `
     <article class="topic-entry">
-      <h3>${topic.subject}: ${topic.title}</h3>
+      <p class="module-kicker">${topic.subject}</p>
+      <h3>${topic.title}</h3>
       ${linkMarkup}
     </article>
   `;

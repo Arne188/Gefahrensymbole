@@ -47,6 +47,10 @@ h2 {
   gap: 14px;
 }
 
+.home-layout {
+  width: min(1120px, 94vw);
+}
+
 .hero,
 .card {
   border: 1px solid var(--line);
@@ -57,6 +61,32 @@ h2 {
 
 .hero {
   padding: 22px;
+}
+
+.home-hero {
+  display: grid;
+  gap: 16px;
+  background:
+    linear-gradient(140deg, rgba(255, 255, 255, 0.95), rgba(226, 239, 252, 0.95)),
+    rgba(255, 255, 255, 0.9);
+}
+
+.hero-pillars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+}
+
+.pillar-card {
+  border: 1px solid #c5d5e7;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.86);
+  padding: 10px;
+}
+
+.pillar-card p {
+  margin: 6px 0 0;
+  color: var(--ink-soft);
 }
 
 .tag {
@@ -76,6 +106,30 @@ h2 {
 
 .card {
   padding: 18px;
+}
+
+.card-intro {
+  margin: 8px 0 0;
+  color: var(--ink-soft);
+}
+
+.purpose-grid {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.purpose-item {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: #fff;
+  padding: 12px;
+}
+
+.purpose-item p {
+  margin: 8px 0 0;
+  color: var(--ink-soft);
 }
 
 .topic-form {
@@ -130,13 +184,21 @@ button:hover,
   gap: 10px;
 }
 
+.module-grid {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 10px;
+}
+
 .topic-entry {
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
   padding: 11px;
   background: #fff;
   display: grid;
-  gap: 6px;
+  gap: 8px;
+  align-content: start;
 }
 
 .topic-entry p {
@@ -149,17 +211,40 @@ button:hover,
   text-decoration: none;
 }
 
+.topic-entry a.button-link {
+  color: #fff;
+}
+
+.topic-note {
+  font-size: 14px;
+}
+
+.module-kicker {
+  margin: 0;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #496380;
+}
+
 .module-callout {
-  margin-top: 12px;
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
   padding: 14px;
   background: #fff;
+  display: grid;
+  gap: 8px;
+  align-content: start;
 }
 
 .module-callout p {
-  margin: 8px 0 12px;
+  margin: 0;
   color: var(--ink-soft);
+}
+
+.module-callout .button-link {
+  width: fit-content;
 }
 
 .back-link {

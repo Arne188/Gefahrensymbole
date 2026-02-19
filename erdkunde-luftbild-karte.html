@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erdkunde - Vom Luftbild zur Karte</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="erdkunde-luftbild-karte.css">
+</head>
+<body>
+  <main class="geo-page">
+    <header class="geo-hero">
+      <a class="back-link" href="index.html">Zurueck zur Startseite</a>
+      <p class="geo-tag">Erdkunde Klasse 5</p>
+      <h1>Vom Luftbild zur Karte</h1>
+      <p>
+        Du lernst, wie aus einem echten Blick von oben eine vereinfachte Karte mit
+        Legende, Nordpfeil und Massstab wird.
+      </p>
+    </header>
+
+    <nav class="geo-nav" aria-label="Modulnavigation">
+      <button class="geo-tab-btn is-active" data-tab="lernen" type="button">Lernen</button>
+      <button class="geo-tab-btn" data-tab="ueben" type="button">Ueben</button>
+      <button class="geo-tab-btn" data-tab="kartentest" type="button">Kartentest</button>
+    </nav>
+
+    <section id="tab-lernen" class="geo-tab is-active">
+      <article class="geo-card">
+        <h2>Inhalte fuer Klasse 5: Was du sicher koennen sollst</h2>
+        <p>
+          Dieses Thema gehoert zu den Grundbausteinen im Erdkundeunterricht.
+          Ziel ist, dass du dich mit Karten orientieren kannst und verstehst,
+          wie aus der Wirklichkeit eine Karte entsteht.
+        </p>
+        <ul class="focus-list">
+          <li>Luftbild und Karte vergleichen: echt, vereinfacht, symbolisch.</li>
+          <li>Legende lesen und Symbole richtig zuordnen.</li>
+          <li>Mit Nordpfeil und Himmelsrichtungen Wege beschreiben.</li>
+          <li>Massstab auf Karten verstehen (z. B. 1:10.000).</li>
+          <li>Einfache Lagebeziehungen in Stadtplan und Atlas erkennen.</li>
+        </ul>
+        <div class="info-grid">
+          <article class="info-box">
+            <h3>Luftbild</h3>
+            <p>
+              Ein Luftbild ist ein Foto von oben. Man erkennt viele Details
+              wie Dachformen, Schatten, Baeume und Fahrzeuge. Das ist realistisch,
+              aber oft unuebersichtlich.
+            </p>
+          </article>
+          <article class="info-box">
+            <h3>Karte</h3>
+            <p>
+              Eine Karte waehlt nur wichtige Informationen aus. Farben und Symbole
+              ersetzen Details. Dadurch kann man Orte und Wege schneller erfassen.
+            </p>
+          </article>
+          <article class="info-box">
+            <h3>Legende</h3>
+            <p>
+              Die Legende erklaert alle Zeichen. Ohne Legende kannst du viele
+              Kartensymbole nicht sicher deuten. Sie ist das "Woerterbuch" der Karte.
+            </p>
+          </article>
+          <article class="info-box">
+            <h3>Nordpfeil</h3>
+            <p>
+              Der Nordpfeil zeigt, wo Norden liegt. Von dort leitest du Osten, Sueden
+              und Westen ab. So kannst du Richtungen eindeutig beschreiben.
+            </p>
+          </article>
+          <article class="info-box">
+            <h3>Massstab</h3>
+            <p>
+              Der Massstab zeigt, wie stark die Wirklichkeit verkleinert wurde.
+              Beispiel 1:10.000 bedeutet: 1 cm Karte sind 10.000 cm echt.
+            </p>
+          </article>
+          <article class="info-box">
+            <h3>Lagebeziehungen</h3>
+            <p>
+              Du beschreibst, wo etwas liegt: noerdlich, suedlich, links/rechts,
+              nahe/weit entfernt. Das hilft beim Vergleichen von Orten.
+            </p>
+          </article>
+        </div>
+      </article>
+
+      <article class="geo-card">
+        <h2>Interaktiv: 3 Schritte vom Luftbild zur Karte</h2>
+        <p>
+          Wechsle zwischen den Stufen und beobachte, wie Details reduziert
+          und durch Zeichen ersetzt werden.
+        </p>
+        <div class="stage-controls">
+          <button class="stage-btn is-active" type="button" data-stage="luftbild">1. Luftbild</button>
+          <button class="stage-btn" type="button" data-stage="vereinfacht">2. Vereinfachen</button>
+          <button class="stage-btn" type="button" data-stage="karte">3. Karte</button>
+        </div>
+        <div id="mapTransform" class="map-transform" data-stage="luftbild">
+          <svg class="transform-svg" viewBox="0 0 780 420" aria-label="Darstellung vom Luftbild zur Karte">
+            <defs>
+              <pattern id="roofPattern" width="12" height="12" patternUnits="userSpaceOnUse">
+                <rect width="12" height="12" fill="#cb5a4f"></rect>
+                <path d="M0 0h12M0 6h12" stroke="#b44c40" stroke-width="1"></path>
+              </pattern>
+            </defs>
+
+            <g class="layer layer-luftbild">
+              <rect x="0" y="0" width="780" height="420" fill="#d9e9cc"></rect>
+              <path d="M26 90 754 58 744 120 14 152Z" fill="#8a9098"></path>
+              <path d="M28 272 768 230 756 290 18 332Z" fill="#8a9098"></path>
+              <path d="M530 24 708 24 670 184 492 184Z" fill="#7fb3db"></path>
+              <path d="M72 54 176 36 202 132 96 150Z" fill="url(#roofPattern)"></path>
+              <path d="M250 70 358 54 384 150 276 164Z" fill="url(#roofPattern)"></path>
+              <path d="M166 216 286 196 314 310 194 328Z" fill="url(#roofPattern)"></path>
+              <path d="M350 210 480 190 508 308 378 326Z" fill="url(#roofPattern)"></path>
+              <circle cx="620" cy="258" r="82" fill="#5a9754"></circle>
+              <circle cx="658" cy="230" r="32" fill="#4b8747"></circle>
+              <circle cx="578" cy="302" r="26" fill="#4b8747"></circle>
+              <path d="M68 344c48-44 108-48 156-8 38 30 66 22 102 8" fill="none" stroke="#4f79a7" stroke-width="12" stroke-linecap="round"></path>
+            </g>
+
+            <g class="layer layer-vereinfacht">
+              <rect x="0" y="0" width="780" height="420" fill="#edf6e8"></rect>
+              <path d="M20 100h740v42H20z" fill="#cfd6dd"></path>
+              <path d="M20 258h740v42H20z" fill="#cfd6dd"></path>
+              <rect x="520" y="28" width="176" height="150" fill="#9dc8ea"></rect>
+              <rect x="74" y="56" width="126" height="96" fill="#d98474"></rect>
+              <rect x="252" y="72" width="132" height="96" fill="#d98474"></rect>
+              <rect x="168" y="208" width="140" height="122" fill="#d98474"></rect>
+              <rect x="354" y="202" width="148" height="126" fill="#d98474"></rect>
+              <rect x="540" y="198" width="180" height="138" fill="#8ac385"></rect>
+              <path d="M62 354c48-40 108-42 154-8 46 32 72 30 112 14" fill="none" stroke="#67a9d3" stroke-width="10" stroke-linecap="round"></path>
+            </g>
+
+            <g class="layer layer-karte">
+              <rect x="0" y="0" width="780" height="420" fill="#f8fbff"></rect>
+              <path d="M20 102h740v38H20z" fill="#f7cf65" stroke="#8f7f45" stroke-width="2"></path>
+              <path d="M20 258h740v38H20z" fill="#f7cf65" stroke="#8f7f45" stroke-width="2"></path>
+              <rect x="520" y="28" width="176" height="150" fill="#a8d7f5" stroke="#3d6f9d" stroke-width="2"></rect>
+              <rect x="74" y="56" width="126" height="96" fill="#f6ddd8" stroke="#8d5a4c" stroke-width="3"></rect>
+              <rect x="252" y="72" width="132" height="96" fill="#f6ddd8" stroke="#8d5a4c" stroke-width="3"></rect>
+              <rect x="168" y="208" width="140" height="122" fill="#f6ddd8" stroke="#8d5a4c" stroke-width="3"></rect>
+              <rect x="354" y="202" width="148" height="126" fill="#f6ddd8" stroke="#8d5a4c" stroke-width="3"></rect>
+              <rect x="540" y="198" width="180" height="138" fill="#d8f0d5" stroke="#3f7f44" stroke-width="3"></rect>
+              <path d="M62 354c48-40 108-42 154-8 46 32 72 30 112 14" fill="none" stroke="#2d7cb2" stroke-width="8" stroke-linecap="round"></path>
+              <g class="map-legend">
+                <rect x="554" y="208" width="156" height="116" rx="8" fill="#fff" stroke="#9fb0c1"></rect>
+                <rect x="568" y="224" width="22" height="12" fill="#f6ddd8" stroke="#8d5a4c"></rect>
+                <text x="598" y="234">Haus</text>
+                <rect x="568" y="246" width="22" height="12" fill="#f7cf65" stroke="#8f7f45"></rect>
+                <text x="598" y="256">Strasse</text>
+                <rect x="568" y="268" width="22" height="12" fill="#d8f0d5" stroke="#3f7f44"></rect>
+                <text x="598" y="278">Park</text>
+                <rect x="568" y="290" width="22" height="12" fill="#a8d7f5" stroke="#3d6f9d"></rect>
+                <text x="598" y="300">Wasser</text>
+              </g>
+              <g class="north-arrow">
+                <path d="M42 52 62 96 22 96Z" fill="#2f445a"></path>
+                <text x="36" y="46">N</text>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <p id="stageExplanation" class="stage-explanation"></p>
+      </article>
+
+      <article class="geo-card">
+        <h2>Schritt fuer Schritt: So wird kartiert</h2>
+        <ol class="step-list">
+          <li>
+            <strong>Beobachten:</strong> Im Luftbild alle Elemente erkennen
+            (z. B. Strassen, Gebaeude, Gruenflaechen, Gewaesser).
+          </li>
+          <li>
+            <strong>Auswaehlen:</strong> Nur wichtige Informationen behalten,
+            Nebendetails weglassen.
+          </li>
+          <li>
+            <strong>Vereinfachen:</strong> Formen glatten, Farben gruppieren,
+            Grenzen klar zeichnen.
+          </li>
+          <li>
+            <strong>Symbolisieren:</strong> Einheitliche Kartensymbole und
+            Farben verwenden (z. B. blau fuer Wasser).
+          </li>
+          <li>
+            <strong>Ergaenzen:</strong> Legende, Nordpfeil, Titel und Massstab
+            eintragen.
+          </li>
+          <li>
+            <strong>Pruefen:</strong> Ist die Karte lesbar? Kann eine andere
+            Person alles richtig verstehen?
+          </li>
+        </ol>
+        <p class="tip-text">
+          Merksatz: <strong>Nicht alles zeichnen, sondern das Wichtige klar zeigen.</strong>
+        </p>
+      </article>
+
+      <article class="geo-card">
+        <h2>Massstab ausfuehrlich erklaert</h2>
+        <p>
+          Der Massstab ist ein Verhaeltnis. Er verbindet Kartenstrecke und
+          reale Strecke.
+        </p>
+        <div class="formula-box">
+          <p><strong>1:10.000</strong> bedeutet:</p>
+          <p>1 cm auf der Karte = 10.000 cm in Wirklichkeit = 100 m.</p>
+        </div>
+        <div class="example-list">
+          <article class="example-step">
+            <h3>Beispiel A</h3>
+            <p>Massstab 1:5.000, Kartenstrecke 4 cm</p>
+            <p>4 x 5.000 = 20.000 cm = 200 m</p>
+          </article>
+          <article class="example-step">
+            <h3>Beispiel B</h3>
+            <p>Massstab 1:25.000, Kartenstrecke 3 cm</p>
+            <p>3 x 25.000 = 75.000 cm = 750 m</p>
+          </article>
+          <article class="example-step">
+            <h3>Beispiel C</h3>
+            <p>Massstab 1:50.000, Kartenstrecke 2 cm</p>
+            <p>2 x 50.000 = 100.000 cm = 1.000 m = 1 km</p>
+          </article>
+        </div>
+        <p class="tip-text">
+          Wichtig: Erst in <strong>cm</strong> rechnen, dann in <strong>m</strong>
+          oder <strong>km</strong> umwandeln.
+        </p>
+      </article>
+
+      <article class="geo-card">
+        <h2>Haeufige Fehler und wie du sie vermeidest</h2>
+        <ul class="focus-list">
+          <li>Legende nicht lesen -> zuerst immer Zeichen pruefen.</li>
+          <li>Nordrichtung verwechseln -> erst Nordpfeil suchen, dann orientieren.</li>
+          <li>Massstab falsch nutzen -> immer mit Einheit (cm/m/km) arbeiten.</li>
+          <li>Luftbild wie Karte behandeln -> Luftbild zeigt mehr Details, Karte ist Auswahl.</li>
+          <li>Wegebeschreibung ohne Richtung -> Himmelsrichtungen immer dazuschreiben.</li>
+        </ul>
+      </article>
+
+      <article class="geo-card">
+        <h2>Bilder: Luftbild und Karte</h2>
+        <p>
+          Beispielbilder mit freier Lizenz. Diese helfen beim Vergleich von fotografischer
+          Wirklichkeit und kartografischer Vereinfachung.
+        </p>
+        <div class="example-grid">
+          <figure class="example-card">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/c/c6/Fachhochschule_FH_Stralsund_University_of_Applied_Sciences_aerial_Luftbild.JPG"
+              alt="Luftbild von Stralsund"
+              loading="lazy"
+            >
+            <figcaption>
+              Luftbild Stralsund (Wikimedia Commons, CC BY-SA 3.0).
+              <a href="https://commons.wikimedia.org/wiki/File:Fachhochschule_FH_Stralsund_University_of_Applied_Sciences_aerial_Luftbild.JPG" target="_blank" rel="noopener noreferrer">Quelle</a>
+            </figcaption>
+          </figure>
+          <figure class="example-card">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/8/8b/City_map_Stralsund_Germany.png"
+              alt="Stadtkarte von Stralsund"
+              loading="lazy"
+            >
+            <figcaption>
+              Stadtkarte Stralsund (Wikimedia Commons, CC BY-SA 2.0).
+              <a href="https://commons.wikimedia.org/wiki/File:City_map_Stralsund_Germany.png" target="_blank" rel="noopener noreferrer">Quelle</a>
+            </figcaption>
+          </figure>
+        </div>
+      </article>
+    </section>
+
+    <section id="tab-ueben" class="geo-tab">
+      <article class="geo-card">
+        <h2>Legenden-Trainer</h2>
+        <p>Ordne jedem Kartensymbol den richtigen Begriff zu.</p>
+        <ol class="step-list compact">
+          <li>Schau dir das Symbol genau an (Form, Farbe, Linie).</li>
+          <li>Waehle den passenden Begriff im Auswahlfeld.</li>
+          <li>Klicke auf "Ueberpruefen" und lies die Rueckmeldung.</li>
+        </ol>
+        <div id="legendTrainer" class="legend-trainer"></div>
+        <div class="trainer-controls">
+          <button id="legendCheck" type="button">Ueberpruefen</button>
+          <button id="legendReset" type="button">Neu mischen</button>
+        </div>
+        <div id="legendFeedback"></div>
+      </article>
+
+      <article class="geo-card">
+        <h2>Massstab-Uebung A: Karte -> Wirklichkeit</h2>
+        <p>Rechne Entfernungen von der Karte in die Wirklichkeit um.</p>
+        <div class="scale-box">
+          <p id="scaleTask">Aufgabe wird geladen...</p>
+          <div class="scale-input">
+            <label for="scaleAnswer">Antwort in Metern</label>
+            <input id="scaleAnswer" type="number" min="0" step="1" placeholder="z. B. 350">
+          </div>
+          <div class="trainer-controls">
+            <button id="scaleCheck" type="button">Antwort pruefen</button>
+            <button id="scaleNext" type="button">Neue Aufgabe</button>
+          </div>
+          <p id="scaleWalkthrough" class="walkthrough-text"></p>
+          <div id="scaleFeedback"></div>
+        </div>
+      </article>
+
+      <article class="geo-card">
+        <h2>Massstab-Uebung B: Wirklichkeit -> Karte</h2>
+        <p>Bestimme, wie lang die Strecke auf der Karte waere.</p>
+        <div class="scale-box">
+          <p id="scaleReverseTask">Aufgabe wird geladen...</p>
+          <div class="scale-input">
+            <label for="scaleReverseAnswer">Antwort in Zentimetern</label>
+            <input id="scaleReverseAnswer" type="number" min="0" step="0.1" placeholder="z. B. 4">
+          </div>
+          <div class="trainer-controls">
+            <button id="scaleReverseCheck" type="button">Antwort pruefen</button>
+            <button id="scaleReverseNext" type="button">Neue Aufgabe</button>
+          </div>
+          <p id="scaleReverseWalkthrough" class="walkthrough-text"></p>
+          <div id="scaleReverseFeedback"></div>
+        </div>
+      </article>
+
+      <article class="geo-card">
+        <h2>Massstab-Uebung C: Passenden Massstab waehlen</h2>
+        <p>Waehle bei jeder Aufgabe den korrekten Massstab aus.</p>
+        <div class="scale-box">
+          <p id="scaleChoiceTask">Aufgabe wird geladen...</p>
+          <div id="scaleChoiceAnswers"></div>
+          <div class="trainer-controls">
+            <button id="scaleChoiceNext" type="button">Neue Aufgabe</button>
+          </div>
+          <div id="scaleChoiceFeedback"></div>
+        </div>
+      </article>
+    </section>
+
+    <section id="tab-kartentest" class="geo-tab">
+      <article class="geo-card">
+        <h2>Kartentest</h2>
+        <p>
+          Kurzer Abschlusstest zu allen Kernpunkten. Nach jeder Antwort
+          bekommst du eine Begruendung, damit du aus Fehlern direkt lernen kannst.
+        </p>
+        <div class="test-controls">
+          <button id="geoTestStart" type="button">Test starten</button>
+          <button id="geoTestNext" type="button" disabled>Naechste Frage</button>
+          <p id="geoTestScore" class="score">Punkte: 0 / 8</p>
+        </div>
+        <div class="test-box">
+          <p id="geoTestStatus">Test noch nicht gestartet.</p>
+          <h3 id="geoTestPrompt">Bitte auf "Test starten" klicken.</h3>
+          <div id="geoTestAnswers"></div>
+          <div id="geoTestFeedback"></div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="erdkunde-luftbild-karte.js"></script>
+</body>
+</html>

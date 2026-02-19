@@ -1,0 +1,441 @@
+.geo-page {
+  width: min(1120px, 94vw);
+  margin: 20px auto 30px;
+  display: grid;
+  gap: 14px;
+}
+
+.geo-hero,
+.geo-nav,
+.geo-card {
+  border: 1px solid #c5d2df;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 10px 22px rgba(14, 29, 44, 0.1);
+}
+
+.geo-hero {
+  padding: 20px;
+}
+
+.geo-hero h1 {
+  margin: 4px 0 8px;
+}
+
+.geo-hero p {
+  margin: 0;
+  color: #3b4f63;
+}
+
+.geo-tag {
+  margin: 0;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  color: #4f5f73;
+}
+
+.geo-nav {
+  padding: 8px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.geo-tab-btn {
+  border: 1px solid #b9cadc;
+  background: #eef5ff;
+  color: #14375f;
+}
+
+.geo-tab-btn.is-active {
+  background: #0f5cb8;
+  color: #fff;
+  border-color: #0f5cb8;
+}
+
+.geo-tab {
+  display: none;
+  gap: 14px;
+}
+
+.geo-tab.is-active {
+  display: grid;
+}
+
+.geo-card {
+  padding: 16px;
+}
+
+.geo-card h2 {
+  margin-bottom: 8px;
+}
+
+.geo-card p {
+  margin-top: 0;
+  color: #41566e;
+}
+
+.focus-list {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 6px;
+}
+
+.info-grid {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.info-box {
+  border: 1px solid #cddceb;
+  border-radius: 12px;
+  padding: 10px;
+  background: #f9fbff;
+}
+
+.info-box h3 {
+  margin: 0 0 6px;
+}
+
+.info-box p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.stage-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.stage-btn {
+  border: 1px solid #c6d7ea;
+  background: #f4f8ff;
+  color: #1f3e5f;
+}
+
+.stage-btn.is-active {
+  background: #1a6ec9;
+  border-color: #1a6ec9;
+  color: #fff;
+}
+
+.map-transform {
+  margin-top: 10px;
+  border: 1px solid #cedcea;
+  border-radius: 12px;
+  background: #fff;
+  padding: 10px;
+}
+
+.transform-svg {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 13 / 7;
+}
+
+.transform-svg text {
+  font-family: "Outfit", "Segoe UI", sans-serif;
+  font-size: 14px;
+  fill: #1f3448;
+  font-weight: 600;
+}
+
+.layer {
+  display: none;
+}
+
+.map-transform[data-stage="luftbild"] .layer-luftbild {
+  display: block;
+}
+
+.map-transform[data-stage="vereinfacht"] .layer-vereinfacht {
+  display: block;
+}
+
+.map-transform[data-stage="karte"] .layer-karte {
+  display: block;
+}
+
+.stage-explanation {
+  margin: 10px 0 0;
+  border: 1px solid #d7e4f1;
+  border-radius: 10px;
+  padding: 10px;
+  background: #f8fbff;
+  color: #2e4a66;
+  font-weight: 600;
+}
+
+.step-list {
+  margin: 0;
+  padding-left: 22px;
+  display: grid;
+  gap: 8px;
+}
+
+.step-list.compact {
+  margin-bottom: 10px;
+  gap: 4px;
+}
+
+.tip-text {
+  margin-top: 10px;
+  border: 1px solid #d6e2ef;
+  border-radius: 10px;
+  background: #f7fbff;
+  padding: 10px;
+  color: #2d4b67;
+}
+
+.formula-box {
+  border: 1px solid #cad9ea;
+  border-radius: 12px;
+  background: #eef5ff;
+  padding: 10px;
+}
+
+.formula-box p {
+  margin: 0 0 6px;
+}
+
+.formula-box p:last-child {
+  margin-bottom: 0;
+}
+
+.example-list {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.example-step {
+  border: 1px solid #cfdded;
+  border-radius: 12px;
+  background: #fff;
+  padding: 10px;
+}
+
+.example-step h3 {
+  margin: 0 0 6px;
+}
+
+.example-step p {
+  margin: 0 0 4px;
+  font-size: 14px;
+}
+
+.example-step p:last-child {
+  margin-bottom: 0;
+}
+
+.example-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 10px;
+}
+
+.example-card {
+  margin: 0;
+  border: 1px solid #ccdaea;
+  border-radius: 12px;
+  background: #fff;
+  padding: 10px;
+}
+
+.example-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #d4deea;
+  background: #eef3f8;
+}
+
+.example-card figcaption {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #526b85;
+}
+
+.example-card a {
+  color: #0f5cb8;
+}
+
+.legend-trainer {
+  display: grid;
+  gap: 8px;
+}
+
+.legend-row {
+  border: 1px solid #cedaea;
+  border-radius: 10px;
+  background: #fff;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 68px 1fr 1fr;
+  align-items: center;
+  gap: 10px;
+}
+
+.symbol-chip {
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  border: 1px solid #d2ddeb;
+  background: #f5f9ff;
+  display: grid;
+  place-items: center;
+}
+
+.symbol-chip svg {
+  width: 44px;
+  height: 44px;
+}
+
+.legend-row label {
+  color: #2f475f;
+}
+
+.legend-row.is-correct {
+  border-color: #95d3bd;
+  background: #ebf9f3;
+}
+
+.legend-row.is-wrong {
+  border-color: #e5b4b4;
+  background: #fdeeee;
+}
+
+.trainer-controls {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.scale-box {
+  border: 1px solid #cedaea;
+  border-radius: 12px;
+  padding: 12px;
+  background: #fff;
+}
+
+.scale-input {
+  max-width: 260px;
+}
+
+.scale-input label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.scale-input input {
+  width: 100%;
+}
+
+.walkthrough-text {
+  margin: 10px 0 0;
+  border: 1px solid #d0deed;
+  border-radius: 10px;
+  background: #f8fbff;
+  padding: 10px;
+  color: #2f4c68;
+  font-size: 14px;
+}
+
+#scaleChoiceAnswers {
+  margin-top: 8px;
+}
+
+.feedback {
+  margin-top: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  font-weight: 600;
+}
+
+.feedback.ok {
+  background: #d9f4ea;
+  color: #136e59;
+}
+
+.feedback.bad {
+  background: #f7e3e3;
+  color: #9d2f2f;
+}
+
+.feedback.info {
+  background: #e7eef7;
+  color: #2b4460;
+}
+
+.test-controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
+  align-items: end;
+}
+
+.score {
+  margin: 0;
+  font-weight: 700;
+}
+
+.test-box {
+  margin-top: 12px;
+  border: 1px solid #d2ddeb;
+  border-radius: 12px;
+  padding: 12px;
+  background: #fff;
+  display: grid;
+  gap: 8px;
+}
+
+.test-box h3,
+.test-box p {
+  margin: 0;
+}
+
+.answer-btn {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 8px;
+  border: 1px solid #c0d3e9;
+  background: #f4f8ff;
+  color: #143353;
+}
+
+.answer-btn:last-child {
+  margin-bottom: 0;
+}
+
+.answer-btn:disabled {
+  opacity: 1;
+  cursor: not-allowed;
+}
+
+.answer-btn.is-correct {
+  border-color: #0f8a6d;
+  background: #d9f4ea;
+}
+
+.answer-btn.is-wrong {
+  border-color: #b63a3a;
+  background: #f7e3e3;
+}
+
+@media (max-width: 820px) {
+  .legend-row {
+    grid-template-columns: 68px 1fr;
+  }
+
+  .legend-row label {
+    grid-column: 1 / -1;
+  }
+}

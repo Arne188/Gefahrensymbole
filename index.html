@@ -10,50 +10,96 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="layout">
-    <header class="hero">
-      <p class="tag">Nachschlagen + Ueben</p>
-      <h1>Lernbereich 5. Klasse</h1>
-      <p class="intro">
-        Schlichtes Geruest zum Sammeln von Themen und Uebungsmodulen.
-        Kein Schulverwaltungsbereich, nur Inhalte zum Lernen.
-      </p>
+  <main class="layout home-layout">
+    <header class="hero home-hero">
+      <div>
+        <p class="tag">Nachschlagen + Ueben + Testen</p>
+        <h1>Lernhub 5. Klasse</h1>
+        <p class="intro">
+          Diese Seite ist ein fachlicher Lernbereich fuer Themenmodule.
+          Fokus: Inhalte erklaeren, Uebungen anbieten, Wissen pruefen.
+          Keine schulinterne Verwaltung, nur Lernen.
+        </p>
+      </div>
+      <div class="hero-pillars">
+        <article class="pillar-card">
+          <h3>Nachschlagen</h3>
+          <p>Begriffe, Regeln und Beispiele schnell finden.</p>
+        </article>
+        <article class="pillar-card">
+          <h3>Ueben</h3>
+          <p>Interaktive Aufgaben mit sofortiger Rueckmeldung.</p>
+        </article>
+        <article class="pillar-card">
+          <h3>Testen</h3>
+          <p>Abschlusstests pro Thema zur Selbstkontrolle.</p>
+        </article>
+      </div>
     </header>
 
+    <section class="card purpose-card">
+      <h2>So nutzt ihr die Module</h2>
+      <div class="purpose-grid">
+        <article class="purpose-item">
+          <h3>1. Lernen</h3>
+          <p>Startet im Tab "Lernen" und schaut euch die Grunderklaerungen an.</p>
+        </article>
+        <article class="purpose-item">
+          <h3>2. Ueben</h3>
+          <p>Bearbeitet mehrere Uebungstypen, bis die Loesungswege sicher sitzen.</p>
+        </article>
+        <article class="purpose-item">
+          <h3>3. Testen</h3>
+          <p>Macht den Test ohne Hilfen und prueft den Lernstand.</p>
+        </article>
+      </div>
+    </section>
+
     <section class="card">
-      <h2>Themen</h2>
+      <h2>Direkt zu den Lernmodulen</h2>
+      <div class="module-grid">
+        <article class="module-callout">
+          <p class="module-kicker">Chemie</p>
+          <h3>Gefahrstoffkennzeichen</h3>
+          <p>GHS-Symbole verstehen und im Test sicher anwenden.</p>
+          <a class="button-link" href="chemie-gefahrstoffe.html">Modul oeffnen</a>
+        </article>
+        <article class="module-callout">
+          <p class="module-kicker">Chemie</p>
+          <h3>Laborgeraete und Sicherheit</h3>
+          <p>Geraetekunde, Protokoll, Quiz und Sicherheitstest.</p>
+          <a class="button-link" href="chemie-laborgeraete.html">Modul oeffnen</a>
+        </article>
+        <article class="module-callout">
+          <p class="module-kicker">Erdkunde</p>
+          <h3>Vom Luftbild zur Karte</h3>
+          <p>Legende, Himmelsrichtungen, Massstab und Kartentest.</p>
+          <a class="button-link" href="erdkunde-luftbild-karte.html">Modul oeffnen</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="card manage-card">
+      <h2>Themen verwalten</h2>
+      <p class="card-intro">
+        Neue Themen koennen hier direkt angelegt und mit einer Moduldatei verknuepft werden.
+      </p>
       <form id="topicForm" class="topic-form">
         <label>
           Fach
-          <input id="topicSubject" name="subject" type="text" placeholder="z. B. Chemie" required>
+          <input id="topicSubject" name="subject" type="text" placeholder="z. B. Erdkunde" required>
         </label>
         <label>
           Thema
-          <input id="topicTitle" name="title" type="text" placeholder="z. B. Gefahrstoffkennzeichen" required>
+          <input id="topicTitle" name="title" type="text" placeholder="z. B. Klima und Wetter" required>
         </label>
         <label>
           Link (optional)
-          <input id="topicLink" name="link" type="text" placeholder="z. B. chemie-gefahrstoffe.html">
+          <input id="topicLink" name="link" type="text" placeholder="z. B. erdkunde-klima.html">
         </label>
         <button type="submit">Thema hinzufuegen</button>
       </form>
       <div id="topicList" class="topic-list"></div>
-    </section>
-
-    <section class="card">
-      <h2>Aktuelles Uebungsmodul</h2>
-      <div class="topic-list">
-        <article class="module-callout">
-          <h3>Chemie: Gefahrstoffkennzeichen</h3>
-          <p>Erklaerungen zu den Kennzeichen plus Test-Modul.</p>
-          <a class="button-link" href="chemie-gefahrstoffe.html">Zum Thema</a>
-        </article>
-        <article class="module-callout">
-          <h3>Chemie: Laborgeraete und Sicherheit</h3>
-          <p>Geraetefunktionen, SVG-Schnittzeichnungen, Quiz, Protokoll und Sicherheitstest.</p>
-          <a class="button-link" href="chemie-laborgeraete.html">Zum Thema</a>
-        </article>
-      </div>
     </section>
   </main>
 
