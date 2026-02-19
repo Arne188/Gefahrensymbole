@@ -1,0 +1,427 @@
+.lab-page {
+  width: min(1100px, 94vw);
+  margin: 20px auto 30px;
+  display: grid;
+  gap: 14px;
+}
+
+.lab-hero,
+.lab-card,
+.lab-nav {
+  border: 1px solid #c5d2df;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 10px 22px rgba(14, 29, 44, 0.1);
+}
+
+.lab-hero {
+  padding: 20px;
+}
+
+.lab-hero h1 {
+  margin: 4px 0 8px;
+}
+
+.lab-hero p {
+  margin: 0;
+  color: #3b4f63;
+}
+
+.lab-tag {
+  margin: 0;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  color: #4f5f73;
+}
+
+.lab-nav {
+  padding: 8px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.lab-tab-btn {
+  border: 1px solid #b9cadc;
+  background: #eef5ff;
+  color: #14375f;
+}
+
+.lab-tab-btn.is-active {
+  background: #0f5cb8;
+  color: #fff;
+  border-color: #0f5cb8;
+}
+
+.lab-tab {
+  display: none;
+  gap: 14px;
+}
+
+.lab-tab.is-active {
+  display: grid;
+}
+
+.lab-card {
+  padding: 16px;
+}
+
+.lab-card h2 {
+  margin-bottom: 8px;
+}
+
+.lab-card p {
+  margin-top: 0;
+  color: #41566e;
+}
+
+.device-sections {
+  display: grid;
+  gap: 14px;
+}
+
+.device-section {
+  border: 1px solid #d4deea;
+  border-radius: 12px;
+  padding: 12px;
+  background: #f9fbff;
+}
+
+.device-section h3 {
+  margin-bottom: 4px;
+}
+
+.device-intro {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.device-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+}
+
+.device-card {
+  border: 1px solid #c9d7e8;
+  border-radius: 12px;
+  background: #fff;
+  padding: 10px;
+  display: grid;
+  gap: 8px;
+}
+
+.device-card h4 {
+  margin: 0;
+}
+
+.device-card p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.device-zoom-btn {
+  background: #f3f8ff;
+  border: 1px solid #c9d7e8;
+  padding: 8px;
+  cursor: zoom-in;
+}
+
+.device-svg svg,
+.quiz-svg svg,
+#deviceModalSvg svg {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 11 / 8;
+}
+
+.device-svg .line,
+.quiz-svg .line,
+#deviceModalSvg .line {
+  fill: none;
+  stroke: #142434;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.device-svg .mark,
+.quiz-svg .mark,
+#deviceModalSvg .mark {
+  fill: none;
+  stroke: #406180;
+  stroke-width: 2;
+}
+
+.device-svg .liquid,
+.quiz-svg .liquid,
+#deviceModalSvg .liquid {
+  fill: none;
+  stroke: #0b78a8;
+  stroke-width: 3;
+}
+
+.device-svg .meniscus,
+.quiz-svg .meniscus,
+#deviceModalSvg .meniscus {
+  fill: none;
+  stroke: #0b78a8;
+  stroke-width: 2;
+}
+
+.device-svg .flame-outer,
+.quiz-svg .flame-outer,
+#deviceModalSvg .flame-outer {
+  fill: #eb7f2a;
+}
+
+.device-svg .flame-inner,
+.quiz-svg .flame-inner,
+#deviceModalSvg .flame-inner {
+  fill: #f7d15f;
+}
+
+.device-svg .paper,
+.quiz-svg .paper,
+#deviceModalSvg .paper {
+  fill: rgba(255, 255, 255, 0.7);
+  stroke: #142434;
+  stroke-width: 2;
+}
+
+.device-svg .drop,
+.quiz-svg .drop,
+#deviceModalSvg .drop {
+  fill: #0b78a8;
+}
+
+.device-svg .steam,
+.quiz-svg .steam,
+#deviceModalSvg .steam {
+  fill: none;
+  stroke: #7f92a8;
+  stroke-width: 2;
+}
+
+.volumetry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 10px;
+}
+
+.volumetry-box {
+  border: 1px solid #ccdaea;
+  border-radius: 12px;
+  background: #f9fbff;
+  padding: 12px;
+}
+
+.volumetry-box h3 {
+  margin-bottom: 8px;
+}
+
+.volumetry-box ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.test-controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
+  align-items: end;
+}
+
+.score {
+  margin: 0;
+  font-weight: 700;
+}
+
+.test-box {
+  margin-top: 12px;
+  border: 1px solid #d2ddeb;
+  border-radius: 12px;
+  padding: 12px;
+  background: #fff;
+  display: grid;
+  gap: 8px;
+}
+
+.test-box h3,
+.test-box p {
+  margin: 0;
+}
+
+.quiz-svg {
+  width: min(240px, 60vw);
+}
+
+.answer-btn {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 8px;
+  border: 1px solid #c0d3e9;
+  background: #f4f8ff;
+  color: #143353;
+}
+
+.answer-btn:last-child {
+  margin-bottom: 0;
+}
+
+.answer-btn:disabled {
+  opacity: 1;
+  cursor: not-allowed;
+}
+
+.answer-btn.is-correct {
+  border-color: #0f8a6d;
+  background: #d9f4ea;
+}
+
+.answer-btn.is-wrong {
+  border-color: #b63a3a;
+  background: #f7e3e3;
+}
+
+.protocol-list {
+  display: grid;
+  gap: 8px;
+}
+
+.protocol-item {
+  border: 1px solid #cad8e8;
+  border-radius: 10px;
+  background: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.protocol-item p {
+  margin: 0;
+  font-weight: 600;
+}
+
+.protocol-move {
+  display: flex;
+  gap: 8px;
+}
+
+.move-btn {
+  border: 1px solid #c0d3e9;
+  background: #eff5fe;
+  color: #244261;
+}
+
+.protocol-controls {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.ghs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.ghs-card {
+  border: 1px solid #cedbea;
+  border-radius: 12px;
+  background: #fff;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 10px;
+  align-items: center;
+}
+
+.ghs-card img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.ghs-card h3 {
+  margin: 0 0 4px;
+}
+
+.ghs-card p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.rule-list {
+  margin: 12px 0 0;
+  padding-left: 20px;
+}
+
+.feedback {
+  margin: 0;
+  border-radius: 10px;
+  padding: 10px;
+  font-weight: 600;
+}
+
+.feedback.ok {
+  background: #d9f4ea;
+  color: #136e59;
+}
+
+.feedback.bad {
+  background: #f7e3e3;
+  color: #9d2f2f;
+}
+
+.device-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  place-items: center;
+  background: rgba(12, 21, 33, 0.75);
+  z-index: 999;
+  padding: 16px;
+}
+
+.device-modal.is-open {
+  display: grid;
+}
+
+.device-modal-dialog {
+  width: min(680px, 100%);
+  border: 1px solid #c6d3e2;
+  border-radius: 16px;
+  background: #fff;
+  padding: 14px;
+  display: grid;
+  gap: 10px;
+}
+
+#deviceModalClose {
+  justify-self: end;
+  background: #e9f1fc;
+  color: #173b63;
+}
+
+#deviceModalCaption {
+  margin: 0;
+  color: #32475d;
+  font-weight: 600;
+}
+
+@media (max-width: 720px) {
+  .protocol-item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .protocol-move {
+    justify-content: space-between;
+  }
+}

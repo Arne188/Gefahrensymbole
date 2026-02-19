@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chemie - Laborgeraete und Sicherheit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="chemie-laborgeraete.css">
+</head>
+<body>
+  <main class="lab-page">
+    <header class="lab-hero">
+      <a class="back-link" href="index.html">Zurueck zur Startseite</a>
+      <p class="lab-tag">Chemie 5-8</p>
+      <h1>Laborgeraete und Sicherheit</h1>
+      <p>
+        Interaktives Lernmodul mit Geraete-Wissen, Uebungen und Sicherheitstest.
+      </p>
+    </header>
+
+    <nav class="lab-nav" aria-label="Modulnavigation">
+      <button class="lab-tab-btn is-active" data-tab="lernen" type="button">Lernen</button>
+      <button class="lab-tab-btn" data-tab="ueben" type="button">Ueben</button>
+      <button class="lab-tab-btn" data-tab="sicherheit" type="button">Sicherheitstest</button>
+    </nav>
+
+    <section id="tab-lernen" class="lab-tab is-active">
+      <article class="lab-card">
+        <h2>Geraete-Uebersicht</h2>
+        <p>
+          Die Zeichnungen sind als vereinfachte wissenschaftliche Schnittzeichnungen
+          aufgebaut. Klicke ein Geraet an, um es groesser zu sehen.
+        </p>
+        <div id="deviceSections" class="device-sections"></div>
+      </article>
+
+      <article class="lab-card">
+        <h2>Volumetrie: Praezision verstehen</h2>
+        <div class="volumetry-grid">
+          <div class="volumetry-box">
+            <h3>Praezisionsvergleich</h3>
+            <ul>
+              <li><strong>Messzylinder:</strong> hoechste Genauigkeit der drei.</li>
+              <li><strong>Erlenmeyerkolben:</strong> nur grobe Volumenabschaetzung.</li>
+              <li><strong>Becherglas:</strong> Skala nur orientierend.</li>
+            </ul>
+          </div>
+          <div class="volumetry-box">
+            <h3>Meniskus & Parallaxenfehler</h3>
+            <ul>
+              <li><strong>Meniskus:</strong> bei den meisten Fluessigkeiten nach unten gekruemmt.</li>
+              <li><strong>Richtig ablesen:</strong> Unterkante des Meniskus auf Augenhoehe.</li>
+              <li><strong>Parallaxe:</strong> von oben/unten schauen fuehrt zu Messfehlern.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section id="tab-ueben" class="lab-tab">
+      <article class="lab-card">
+        <h2>Quiz-Modus</h2>
+        <p>
+          Zuordnung von Namen, Bildern und Verwendungszwecken.
+        </p>
+        <div class="test-controls">
+          <label>
+            Fragenzahl
+            <select id="labQuizCount">
+              <option value="8">8</option>
+              <option value="10" selected>10</option>
+              <option value="12">12</option>
+            </select>
+          </label>
+          <button id="labQuizStart" type="button">Quiz starten</button>
+          <button id="labQuizNext" type="button" disabled>Naechste Frage</button>
+          <p id="labQuizScore" class="score">Punkte: 0 / 10</p>
+        </div>
+        <div class="test-box">
+          <p id="labQuizStatus">Quiz noch nicht gestartet.</p>
+          <h3 id="labQuizPrompt">Bitte auf "Quiz starten" klicken.</h3>
+          <div id="labQuizVisual"></div>
+          <div id="labQuizAnswers"></div>
+          <div id="labQuizFeedback"></div>
+        </div>
+      </article>
+
+      <article class="lab-card">
+        <h2>Virtuelles Protokoll</h2>
+        <p>
+          Bringe die Teile eines Versuchsprotokolls in die richtige Reihenfolge.
+        </p>
+        <div id="protocolList" class="protocol-list"></div>
+        <div class="protocol-controls">
+          <button id="protocolCheck" type="button">Reihenfolge pruefen</button>
+          <button id="protocolShuffle" type="button">Neu mischen</button>
+        </div>
+        <div id="protocolFeedback"></div>
+      </article>
+    </section>
+
+    <section id="tab-sicherheit" class="lab-tab">
+      <article class="lab-card">
+        <h2>GHS und Laborregeln</h2>
+        <div class="ghs-grid">
+          <article class="ghs-card">
+            <img src="assets/ghs/GHS02.svg" alt="GHS02 Flamme">
+            <div>
+              <h3>GHS02 - Flamme</h3>
+              <p>Entzuendbar: von Flammen und Funken fernhalten.</p>
+            </div>
+          </article>
+          <article class="ghs-card">
+            <img src="assets/ghs/GHS05.svg" alt="GHS05 Aetzwirkung">
+            <div>
+              <h3>GHS05 - Aetzwirkung</h3>
+              <p>Aetzend: Schutzbrille, Handschuhe, vorsichtiges Arbeiten.</p>
+            </div>
+          </article>
+          <article class="ghs-card">
+            <img src="assets/ghs/GHS07.svg" alt="GHS07 Ausrufezeichen">
+            <div>
+              <h3>GHS07 - Ausrufezeichen</h3>
+              <p>Reizend/gesundheitsschaedlich: Kontakt und Einatmen vermeiden.</p>
+            </div>
+          </article>
+        </div>
+        <ul class="rule-list">
+          <li>Schutzbrille tragen und lange Haare zusammenbinden.</li>
+          <li>Nicht essen, trinken oder schmecken im Labor.</li>
+          <li>Chemikalien nie direkt riechen, nur vorsichtig anwedeln.</li>
+          <li>Unfaelle sofort melden und Ruhe bewahren.</li>
+        </ul>
+      </article>
+
+      <article class="lab-card">
+        <h2>Sicherheitstest</h2>
+        <div class="test-controls">
+          <button id="safeStart" type="button">Sicherheitstest starten</button>
+          <button id="safeNext" type="button" disabled>Naechste Frage</button>
+          <p id="safeScore" class="score">Punkte: 0 / 8</p>
+        </div>
+        <div class="test-box">
+          <p id="safeStatus">Test noch nicht gestartet.</p>
+          <h3 id="safePrompt">Bitte auf "Sicherheitstest starten" klicken.</h3>
+          <div id="safeAnswers"></div>
+          <div id="safeFeedback"></div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <div id="deviceModal" class="device-modal" aria-hidden="true">
+    <div class="device-modal-dialog" role="dialog" aria-modal="true" aria-label="Geraet vergroessert">
+      <button id="deviceModalClose" type="button">Schliessen</button>
+      <div id="deviceModalSvg"></div>
+      <p id="deviceModalCaption"></p>
+    </div>
+  </div>
+
+  <script src="chemie-laborgeraete.js"></script>
+</body>
+</html>

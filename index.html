@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lernbereich Klasse 5</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="layout">
+    <header class="hero">
+      <p class="tag">Nachschlagen + Ueben</p>
+      <h1>Lernbereich 5. Klasse</h1>
+      <p class="intro">
+        Schlichtes Geruest zum Sammeln von Themen und Uebungsmodulen.
+        Kein Schulverwaltungsbereich, nur Inhalte zum Lernen.
+      </p>
+    </header>
+
+    <section class="card">
+      <h2>Themen</h2>
+      <form id="topicForm" class="topic-form">
+        <label>
+          Fach
+          <input id="topicSubject" name="subject" type="text" placeholder="z. B. Chemie" required>
+        </label>
+        <label>
+          Thema
+          <input id="topicTitle" name="title" type="text" placeholder="z. B. Gefahrstoffkennzeichen" required>
+        </label>
+        <label>
+          Link (optional)
+          <input id="topicLink" name="link" type="text" placeholder="z. B. chemie-gefahrstoffe.html">
+        </label>
+        <button type="submit">Thema hinzufuegen</button>
+      </form>
+      <div id="topicList" class="topic-list"></div>
+    </section>
+
+    <section class="card">
+      <h2>Aktuelles Uebungsmodul</h2>
+      <div class="topic-list">
+        <article class="module-callout">
+          <h3>Chemie: Gefahrstoffkennzeichen</h3>
+          <p>Erklaerungen zu den Kennzeichen plus Test-Modul.</p>
+          <a class="button-link" href="chemie-gefahrstoffe.html">Zum Thema</a>
+        </article>
+        <article class="module-callout">
+          <h3>Chemie: Laborgeraete und Sicherheit</h3>
+          <p>Geraetefunktionen, SVG-Schnittzeichnungen, Quiz, Protokoll und Sicherheitstest.</p>
+          <a class="button-link" href="chemie-laborgeraete.html">Zum Thema</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script src="index.js"></script>
+</body>
+</html>

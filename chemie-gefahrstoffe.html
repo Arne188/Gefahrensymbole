@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chemie - Gefahrstoffkennzeichen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="layout">
+    <header class="hero">
+      <a class="back-link" href="index.html">Zurueck zur Startseite</a>
+      <p class="tag">Chemie Klasse 5</p>
+      <h1>Gefahrstoffkennzeichen</h1>
+      <p class="intro">
+        Hier findest du eine Nachschlagehilfe und einen Test mit mehreren
+        Abfragearten.
+      </p>
+    </header>
+
+    <section id="referenceSection" class="card reference-section">
+      <h2>Nachschlagen</h2>
+      <p class="lock-notice">Nachschlagen ist waehrend des Tests ausgeblendet.</p>
+      <div id="symbolGrid" class="symbol-grid"></div>
+    </section>
+
+    <section class="card">
+      <h2>Test-Modul</h2>
+      <div class="quiz-controls">
+        <label>
+          Testart
+          <select id="modeSelect">
+            <option value="mixed">Gemischt (alle Abfragearten)</option>
+            <option value="meaning">Bedeutung erkennen (Multiple Choice)</option>
+            <option value="symbol">Kennzeichen finden (Multiple Choice)</option>
+          </select>
+        </label>
+        <label>
+          Fragenanzahl
+          <select id="questionCountSelect">
+            <option value="5">5</option>
+            <option value="10" selected>10</option>
+            <option value="15">15</option>
+          </select>
+        </label>
+        <button id="startTestBtn" type="button">Test starten</button>
+        <button id="nextQuestionBtn" type="button" disabled>Naechste Frage</button>
+        <p id="scoreLabel" class="score">Punkte: 0 / 10</p>
+      </div>
+
+      <div class="quiz-box">
+        <p id="quizStatus" class="quiz-status">Waehle Testart und starte den Test.</p>
+        <h3 id="quizPrompt">Noch kein Test gestartet.</h3>
+        <div id="questionVisual" class="question-visual"></div>
+        <div id="answerArea"></div>
+        <div id="feedbackArea"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="symbolModal" class="symbol-modal" aria-hidden="true">
+    <div class="symbol-modal-dialog" role="dialog" aria-modal="true" aria-label="Kennzeichen vergroessert">
+      <button id="symbolModalClose" class="symbol-modal-close" type="button">Schliessen</button>
+      <img id="symbolModalImage" class="symbol-modal-image" src="" alt="">
+      <p id="symbolModalCaption" class="symbol-modal-caption"></p>
+    </div>
+  </div>
+
+  <script src="chemie.js"></script>
+</body>
+</html>
