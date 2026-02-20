@@ -204,100 +204,100 @@ function getDeviceVisualMarkup(device, variant) {
 }
 
 const allDeviceCatalog = [
-  // Gefaesse, Reaktion, Mischung, Aufbewahrung
-  { id: "becherglas", name: "Becherglas", category: "reaktion_gefaesse", precision: "niedrig", functionText: "Zylindrisches Gefaess zum Mischen, Erhitzen und Uebertragen.", useShort: "Mischen, Erhitzen und grobes Abmessen von Fluessigkeiten." },
-  { id: "erlenmeyer", name: "Erlenmeyerkolben", category: "reaktion_gefaesse", precision: "niedrig bis mittel", functionText: "Konischer Kolben mit engem Hals fuer schwenkendes Arbeiten.", useShort: "Reaktionen und Schwenken mit geringer Spritzgefahr." },
-  { id: "reagenzglas", name: "Reagenzglas", category: "reaktion_gefaesse", precision: "niedrig", functionText: "Kleines Glasrohr fuer Experimente mit kleinen Stoffmengen.", useShort: "Reaktionen mit kleinsten Stoffmengen." },
-  { id: "reagenzglasgestell", name: "Reagenzglasgestell", category: "reaktion_gefaesse", precision: "nicht zutreffend", functionText: "Gestell zur sicheren Aufbewahrung mehrerer Reagenzglaeser.", useShort: "Reagenzglaeser stabil aufstellen und ordnen." },
-  { id: "rundkolben", name: "Rundkolben", category: "reaktion_gefaesse", precision: "nicht zutreffend", functionText: "Kolben mit kugelfoermigem Koerper, oft fuer Erhitzung und Destillation.", useShort: "Gleichmaessiges Erhitzen bei Reaktions- und Destillationsaufbauten." },
-  { id: "mehrhalskolben", name: "Mehrhalskolben", category: "reaktion_gefaesse", precision: "nicht zutreffend", functionText: "Rundkolben mit mehreren Anschluessen fuer komplexe Apparaturen.", useShort: "Gleichzeitiges Anschliessen mehrerer Komponenten." },
-  { id: "siedekolben_florence", name: "Siedekolben (Florence-Flasche)", category: "reaktion_gefaesse", precision: "nicht zutreffend", functionText: "Rundbodenkolben fuer Siede- und Erhitzungsvorgaenge.", useShort: "Sieden und gleichmaessiges Erhitzen von Fluessigkeiten." },
-  { id: "standzylinder", name: "Standzylinder", category: "reaktion_gefaesse", precision: "niedrig", functionText: "Hoher Zylinder fuer Aufbewahrung, Beobachtung und einfache Trennungen.", useShort: "Fluessigkeiten stehend aufbewahren oder Schichtungen beobachten." },
-  { id: "petrischale", name: "Petrischale", category: "reaktion_gefaesse", precision: "nicht zutreffend", functionText: "Flache Schale fuer kleine Proben und Beobachtungen.", useShort: "Kleine Proben ausbreiten und beobachten." },
+  // Gefäße, Reaktion, Mischung, Aufbewahrung
+  { id: "becherglas", name: "Becherglas", category: "reaktion_gefaesse", precision: "niedrig", functionText: "Zylindrisches Gefäß zum Mischen, Erhitzen und Übertragen.", useShort: "Mischen, Erhitzen und grobes Abmessen von Flüssigkeiten." },
+  { id: "erlenmeyer", name: "Erlenmeyerkolben", category: "reaktion_gefaesse", precision: "niedrig bis mittel", functionText: "Konischer Kolben mit engem Hals für schwenkendes Arbeiten.", useShort: "Reaktionen und Schwenken mit geringer Spritzgefahr." },
+  { id: "reagenzglas", name: "Reagenzglas", category: "reaktion_gefaesse", precision: "niedrig", functionText: "Kleines Glasrohr für Experimente mit kleinen Stoffmengen.", useShort: "Reaktionen mit kleinsten Stoffmengen." },
+  { id: "reagenzglasgestell", name: "Reagenzglasgestell", category: "reaktion_gefaesse", precision: "nicht zutreffend", functionText: "Gestell zur sicheren Aufbewahrung mehrerer Reagenzgläser.", useShort: "Reagenzgläser stabil aufstellen und ordnen." },
+  { id: "rundkolben", name: "Rundkolben", category: "reaktion_gefaesse", precision: "nicht zutreffend", functionText: "Kolben mit kugelförmigem Körper, oft für Erhitzung und Destillation.", useShort: "Gleichmäßiges Erhitzen bei Reaktions- und Destillationsaufbauten." },
+  { id: "mehrhalskolben", name: "Mehrhalskolben", category: "reaktion_gefaesse", precision: "nicht zutreffend", functionText: "Rundkolben mit mehreren Anschlüssen für komplexe Apparaturen.", useShort: "Gleichzeitiges Anschließen mehrerer Komponenten." },
+  { id: "siedekolben_florence", name: "Siedekolben (Florence-Flasche)", category: "reaktion_gefaesse", precision: "nicht zutreffend", functionText: "Rundbodenkolben für Siede- und Erhitzungsvorgänge.", useShort: "Sieden und gleichmäßiges Erhitzen von Flüssigkeiten." },
+  { id: "standzylinder", name: "Standzylinder", category: "reaktion_gefaesse", precision: "niedrig", functionText: "Hoher Zylinder für Aufbewahrung, Beobachtung und einfache Trennungen.", useShort: "Flüssigkeiten stehend aufbewahren oder Schichtungen beobachten." },
+  { id: "petrischale", name: "Petrischale", category: "reaktion_gefaesse", precision: "nicht zutreffend", functionText: "Flache Schale für kleine Proben und Beobachtungen.", useShort: "Kleine Proben ausbreiten und beobachten." },
   { id: "uhrglas", name: "Uhrglas", category: "reaktion_gefaesse", precision: "nicht zutreffend", functionText: "Flache Glasform zum Verdampfen kleiner Mengen oder Abdecken.", useShort: "Kleine Mengen verdampfen oder Becher abdecken." },
 
-  // Praezises Messen
-  { id: "messzylinder", name: "Messzylinder", category: "messen", precision: "mittel bis hoch", functionText: "Skaliertes Gefaess zum genauen Abmessen von Volumina.", useShort: "Volumina deutlich genauer als im Becherglas messen." },
-  { id: "messpipette", name: "Messpipette", category: "messen", precision: "hoch", functionText: "Skalierte Pipette fuer variable, genaue Volumenabgabe.", useShort: "Unterschiedliche kleine Volumina exakt dosieren." },
-  { id: "vollpipette", name: "Vollpipette", category: "messen", precision: "sehr hoch", functionText: "Kalibrierte Pipette fuer ein festes Volumen.", useShort: "Ein festes Volumen sehr exakt abmessen." },
-  { id: "pasteurpipette", name: "Pasteurpipette", category: "messen", precision: "niedrig bis mittel", functionText: "Tropfpipette zum Umfuellen und Dosieren kleiner Mengen.", useShort: "Kleine Fluessigkeitsmengen tropfenweise uebertragen." },
-  { id: "mikropipette", name: "Mikropipette", category: "messen", precision: "sehr hoch", functionText: "Praezises Dosieren sehr kleiner Volumina im Mikroliterbereich.", useShort: "Mikrolitermengen exakt dosieren." },
-  { id: "buerette", name: "Buerette", category: "messen", precision: "sehr hoch", functionText: "Kalibrierte Roehre mit Hahn fuer Titrationen.", useShort: "Volumen bei Titrationen tropfenweise exakt zugeben." },
-  { id: "messkolben", name: "Messkolben", category: "messen", precision: "sehr hoch", functionText: "Kalibriertes Gefaess zur Herstellung exakter Loesungsvolumina.", useShort: "Loesungen auf ein genaues Endvolumen einstellen." },
+  // Präzises Messen
+  { id: "messzylinder", name: "Messzylinder", category: "messen", precision: "mittel bis hoch", functionText: "Skaliertes Gefäß zum genauen Abmessen von Volumina.", useShort: "Volumina deutlich genauer als im Becherglas messen." },
+  { id: "messpipette", name: "Messpipette", category: "messen", precision: "hoch", functionText: "Skalierte Pipette für variable, genaue Volumenabgabe.", useShort: "Unterschiedliche kleine Volumina exakt dosieren." },
+  { id: "vollpipette", name: "Vollpipette", category: "messen", precision: "sehr hoch", functionText: "Kalibrierte Pipette für ein festes Volumen.", useShort: "Ein festes Volumen sehr exakt abmessen." },
+  { id: "pasteurpipette", name: "Pasteurpipette", category: "messen", precision: "niedrig bis mittel", functionText: "Tropfpipette zum Umfüllen und Dosieren kleiner Mengen.", useShort: "Kleine Flüssigkeitsmengen tropfenweise übertragen." },
+  { id: "mikropipette", name: "Mikropipette", category: "messen", precision: "sehr hoch", functionText: "Präzises Dosieren sehr kleiner Volumina im Mikroliterbereich.", useShort: "Mikrolitermengen exakt dosieren." },
+  { id: "buerette", name: "Bürette", category: "messen", precision: "sehr hoch", functionText: "Kalibrierte Röhre mit Hahn für Titrationen.", useShort: "Volumen bei Titrationen tropfenweise exakt zugeben." },
+  { id: "messkolben", name: "Messkolben", category: "messen", precision: "sehr hoch", functionText: "Kalibriertes Gefäß zur Herstellung exakter Lösungsvolumina.", useShort: "Lösungen auf ein genaues Endvolumen einstellen." },
   { id: "waage", name: "Waage", category: "messen", precision: "hoch", functionText: "Bestimmt die Masse von Stoffen quantitativ.", useShort: "Masse von Chemikalien exakt erfassen." },
   { id: "einschlussthermometer", name: "Einschlussthermometer", category: "messen", precision: "mittel bis hoch", functionText: "Thermometer zur Temperaturbestimmung in Apparaturen.", useShort: "Temperaturen in geschlossenen/teilgeschlossenen Systemen messen." },
-  { id: "stabthermometer", name: "Stabthermometer", category: "messen", precision: "mittel", functionText: "Klassisches Laborthermometer fuer direkte Messungen.", useShort: "Temperaturen direkt in Proben messen." },
-  { id: "widerstandsthermometer", name: "Widerstandsthermometer", category: "messen", precision: "hoch", functionText: "Elektronische Temperaturmessung ueber Widerstandsaenderung.", useShort: "Temperatur praezise elektronisch erfassen." },
+  { id: "stabthermometer", name: "Stabthermometer", category: "messen", precision: "mittel", functionText: "Klassisches Laborthermometer für direkte Messungen.", useShort: "Temperaturen direkt in Proben messen." },
+  { id: "widerstandsthermometer", name: "Widerstandsthermometer", category: "messen", precision: "hoch", functionText: "Elektronische Temperaturmessung über Widerstandsänderung.", useShort: "Temperatur präzise elektronisch erfassen." },
 
   // Erhitzen und thermische Verfahren
   { id: "bunsenbrenner", name: "Bunsenbrenner", category: "erhitzen", precision: "nicht zutreffend", functionText: "Standardflamme im Labor mit Luftregulierung.", useShort: "Gezieltes Erhitzen mit regulierbarer Flamme." },
-  { id: "teclubrenner", name: "Teclubrenner", category: "erhitzen", precision: "nicht zutreffend", functionText: "Brenner mit breiter Luftzufuhr fuer stabile Flammen.", useShort: "Stabile Laborflamme fuer Erhitzung." },
-  { id: "knallgasbrenner", name: "Knallgasbrenner", category: "erhitzen", precision: "nicht zutreffend", functionText: "Sehr heisse Flamme aus Wasserstoff/Sauerstoff-Gemisch.", useShort: "Sehr hohe Temperaturen fuer Spezialanwendungen." },
-  { id: "dreifuss", name: "Dreifuss", category: "erhitzen", precision: "nicht zutreffend", functionText: "Stativgeraet fuer Gefaesse ueber der Flamme.", useShort: "Gefaesse sicher ueber Brenner positionieren." },
-  { id: "keramikdrahtnetz", name: "Keramikdrahtnetz", category: "erhitzen", precision: "nicht zutreffend", functionText: "Hitzeverteiler zwischen Flamme und Glasgefaess.", useShort: "Hitze gleichmaessig auf Glasgefaesse verteilen." },
-  { id: "tondreieck", name: "Tondreieck", category: "erhitzen", precision: "nicht zutreffend", functionText: "Auflage fuer Tiegel am Stativring.", useShort: "Tiegel beim starken Erhitzen sicher tragen." },
-  { id: "tiegel", name: "Tiegel", category: "erhitzen", precision: "nicht zutreffend", functionText: "Hitzebestaendiges Gefaess fuer starke Erhitzung von Feststoffen.", useShort: "Feststoffe sehr stark erhitzen." },
-  { id: "abdampfschale", name: "Abdampfschale", category: "erhitzen", precision: "nicht zutreffend", functionText: "Flache Schale zum Eindampfen von Loesungen.", useShort: "Loesungsmittel abtrennen und Loesungen konzentrieren." },
-  { id: "trockenschrank", name: "Trockenschrank", category: "erhitzen", precision: "nicht zutreffend", functionText: "Waermeschrank zum Trocknen von Stoffen und Geraeten.", useShort: "Stoffe und Geraete unter kontrollierter Waerme trocknen." },
-  { id: "exikkator", name: "Exikkator", category: "erhitzen", precision: "nicht zutreffend", functionText: "Trockenbehaelter mit Trockenmittel gegen Luftfeuchtigkeit.", useShort: "Proben feuchtigkeitsarm lagern und nachtrocknen." },
-  { id: "trockenpistole", name: "Trockenpistole", category: "erhitzen", precision: "nicht zutreffend", functionText: "Warmluftgeraet zum schnellen Trocknen von Glasgeraeten.", useShort: "Geraete gezielt mit Warmluft trocknen." },
-  { id: "trockenrohr", name: "Trockenrohr", category: "erhitzen", precision: "nicht zutreffend", functionText: "Rohr mit Trockenmittel fuer gasfoermige Stroeme.", useShort: "Gase und Apparaturen gegen Feuchtigkeit schuetzen." },
+  { id: "teclubrenner", name: "Teclubrenner", category: "erhitzen", precision: "nicht zutreffend", functionText: "Brenner mit breiter Luftzufuhr für stabile Flammen.", useShort: "Stabile Laborflamme für Erhitzung." },
+  { id: "knallgasbrenner", name: "Knallgasbrenner", category: "erhitzen", precision: "nicht zutreffend", functionText: "Sehr heiße Flamme aus Wasserstoff/Sauerstoff-Gemisch.", useShort: "Sehr hohe Temperaturen für Spezialanwendungen." },
+  { id: "dreifuss", name: "Dreifuss", category: "erhitzen", precision: "nicht zutreffend", functionText: "Stativgerät für Gefäße über der Flamme.", useShort: "Gefäße sicher über Brenner positionieren." },
+  { id: "keramikdrahtnetz", name: "Keramikdrahtnetz", category: "erhitzen", precision: "nicht zutreffend", functionText: "Hitzeverteiler zwischen Flamme und Glasgefäß.", useShort: "Hitze gleichmäßig auf Glasgefäße verteilen." },
+  { id: "tondreieck", name: "Tondreieck", category: "erhitzen", precision: "nicht zutreffend", functionText: "Auflage für Tiegel am Stativring.", useShort: "Tiegel beim starken Erhitzen sicher tragen." },
+  { id: "tiegel", name: "Tiegel", category: "erhitzen", precision: "nicht zutreffend", functionText: "Hitzebeständiges Gefäß für starke Erhitzung von Feststoffen.", useShort: "Feststoffe sehr stark erhitzen." },
+  { id: "abdampfschale", name: "Abdampfschale", category: "erhitzen", precision: "nicht zutreffend", functionText: "Flache Schale zum Eindampfen von Lösungen.", useShort: "Lösungsmittel abtrennen und Lösungen konzentrieren." },
+  { id: "trockenschrank", name: "Trockenschrank", category: "erhitzen", precision: "nicht zutreffend", functionText: "Wärmeschrank zum Trocknen von Stoffen und Geräten.", useShort: "Stoffe und Geräte unter kontrollierter Wärme trocknen." },
+  { id: "exikkator", name: "Exikkator", category: "erhitzen", precision: "nicht zutreffend", functionText: "Trockenbehälter mit Trockenmittel gegen Luftfeuchtigkeit.", useShort: "Proben feuchtigkeitsarm lagern und nachtrocknen." },
+  { id: "trockenpistole", name: "Trockenpistole", category: "erhitzen", precision: "nicht zutreffend", functionText: "Warmluftgerät zum schnellen Trocknen von Glasgeräten.", useShort: "Geräte gezielt mit Warmluft trocknen." },
+  { id: "trockenrohr", name: "Trockenrohr", category: "erhitzen", precision: "nicht zutreffend", functionText: "Rohr mit Trockenmittel für gasförmige Ströme.", useShort: "Gase und Apparaturen gegen Feuchtigkeit schützen." },
 
   // Trennverfahren und Spezialapparaturen
-  { id: "trichter_glas", name: "Trichter (Glas)", category: "trennung", precision: "nicht zutreffend", functionText: "Glastrichter zum Umfuellen und Filtrieren.", useShort: "Fluessigkeiten sauber umfuellen oder filtrieren." },
-  { id: "trichter_kunststoff", name: "Trichter (Kunststoff)", category: "trennung", precision: "nicht zutreffend", functionText: "Chemikalienfester Trichter zum sicheren Umfuellen.", useShort: "Fluessigkeiten sicher in enge Oeffnungen fuellen." },
-  { id: "pulvertrichter", name: "Pulvertrichter", category: "trennung", precision: "nicht zutreffend", functionText: "Breite Oeffnung fuer Feststoffe und Pulver.", useShort: "Pulver ohne Verluste einfuellen." },
-  { id: "filterpapier", name: "Filterpapier", category: "trennung", precision: "nicht zutreffend", functionText: "Poroeses Papier fuer Feststoff-Fluessigkeit-Trennung.", useShort: "Feststoffe aus Fluessigkeiten filtrieren." },
-  { id: "saugflasche", name: "Saugflasche", category: "trennung", precision: "nicht zutreffend", functionText: "Flasche mit Seitenstutzen fuer Vakuumfiltration.", useShort: "Filtration mit Unterdruck beschleunigen." },
-  { id: "buechnertrichter", name: "Buechner-Trichter", category: "trennung", precision: "nicht zutreffend", functionText: "Spezialtrichter mit Lochplatte fuer Vakuumfiltration.", useShort: "Schnelle Vakuumfiltration mit Filterpapier." },
-  { id: "scheidetrichter", name: "Scheidetrichter", category: "trennung", precision: "nicht zutreffend", functionText: "Trennt nicht mischbare Fluessigkeiten nach Dichte.", useShort: "Fluessigkeitsphasen gezielt trennen." },
-  { id: "waschflasche", name: "Waschflasche", category: "trennung", precision: "nicht zutreffend", functionText: "Gas wird durch Fluessigkeit geleitet, um es zu reinigen.", useShort: "Gase reinigen oder absorbieren." },
-  { id: "woulffsche_flasche", name: "Woulffsche Flasche", category: "trennung", precision: "nicht zutreffend", functionText: "Mehrhalsige Gaswaschflasche fuer mehrstufige Gasbehandlung.", useShort: "Gase mehrstufig reinigen, trocknen oder absorbieren." },
+  { id: "trichter_glas", name: "Trichter (Glas)", category: "trennung", precision: "nicht zutreffend", functionText: "Glastrichter zum Umfüllen und Filtrieren.", useShort: "Flüssigkeiten sauber umfüllen oder filtrieren." },
+  { id: "trichter_kunststoff", name: "Trichter (Kunststoff)", category: "trennung", precision: "nicht zutreffend", functionText: "Chemikalienfester Trichter zum sicheren Umfüllen.", useShort: "Flüssigkeiten sicher in enge Öffnungen füllen." },
+  { id: "pulvertrichter", name: "Pulvertrichter", category: "trennung", precision: "nicht zutreffend", functionText: "Breite Öffnung für Feststoffe und Pulver.", useShort: "Pulver ohne Verluste einfüllen." },
+  { id: "filterpapier", name: "Filterpapier", category: "trennung", precision: "nicht zutreffend", functionText: "Poröses Papier für Feststoff-Flüssigkeit-Trennung.", useShort: "Feststoffe aus Flüssigkeiten filtrieren." },
+  { id: "saugflasche", name: "Saugflasche", category: "trennung", precision: "nicht zutreffend", functionText: "Flasche mit Seitenstutzen für Vakuumfiltration.", useShort: "Filtration mit Unterdruck beschleunigen." },
+  { id: "buechnertrichter", name: "Büchner-Trichter", category: "trennung", precision: "nicht zutreffend", functionText: "Spezialtrichter mit Lochplatte für Vakuumfiltration.", useShort: "Schnelle Vakuumfiltration mit Filterpapier." },
+  { id: "scheidetrichter", name: "Scheidetrichter", category: "trennung", precision: "nicht zutreffend", functionText: "Trennt nicht mischbare Flüssigkeiten nach Dichte.", useShort: "Flüssigkeitsphasen gezielt trennen." },
+  { id: "waschflasche", name: "Waschflasche", category: "trennung", precision: "nicht zutreffend", functionText: "Gas wird durch Flüssigkeit geleitet, um es zu reinigen.", useShort: "Gase reinigen oder absorbieren." },
+  { id: "woulffsche_flasche", name: "Woulffsche Flasche", category: "trennung", precision: "nicht zutreffend", functionText: "Mehrhalsige Gaswaschflasche für mehrstufige Gasbehandlung.", useShort: "Gase mehrstufig reinigen, trocknen oder absorbieren." },
   { id: "kippscher_apparat", name: "Kipp'scher Apparat", category: "trennung", precision: "nicht zutreffend", functionText: "Apparatur zur kontrollierten Gasentwicklung.", useShort: "Gase bedarfsgerecht erzeugen." },
-  { id: "pneumatische_wanne", name: "Pneumatische Wanne", category: "trennung", precision: "nicht zutreffend", functionText: "Wasserwanne zum Auffangen und Nachweis von Gasen.", useShort: "Gase ueber Wasser sammeln." },
-  { id: "liebigkuehler", name: "Liebigkuehler", category: "trennung", precision: "nicht zutreffend", functionText: "Geradliniger Kuehler fuer Kondensation bei Destillation.", useShort: "Daempfe bei Destillation abkuehlen und verfluessigen." },
-  { id: "schlangenkuehler", name: "Schlangenkuehler", category: "trennung", precision: "nicht zutreffend", functionText: "Spiralfoermiger Kuehler mit grosser Kuehlflaeche.", useShort: "Effiziente Kondensation ueber lange Kuehlstrecke." },
-  { id: "dimrothkuehler", name: "Dimrothkuehler", category: "trennung", precision: "nicht zutreffend", functionText: "Kuehler mit innenliegender Spiral-Kuehlfuehrung.", useShort: "Intensive Rueckfluss- oder Destillationskuehlung." },
-  { id: "destillationskolonne", name: "Destillationskolonne", category: "trennung", precision: "nicht zutreffend", functionText: "Verbessert Trennleistung durch wiederholtes Verdampfen/Kondensieren.", useShort: "Fluessigkeitsgemische nach Siedepunkt trennen." },
+  { id: "pneumatische_wanne", name: "Pneumatische Wanne", category: "trennung", precision: "nicht zutreffend", functionText: "Wasserwanne zum Auffangen und Nachweis von Gasen.", useShort: "Gase über Wasser sammeln." },
+  { id: "liebigkuehler", name: "Liebigkühler", category: "trennung", precision: "nicht zutreffend", functionText: "Geradliniger Kühler für Kondensation bei Destillation.", useShort: "Dämpfe bei Destillation abkühlen und verflüssigen." },
+  { id: "schlangenkuehler", name: "Schlangenkühler", category: "trennung", precision: "nicht zutreffend", functionText: "Spiralförmiger Kühler mit größer Kühlfläche.", useShort: "Effiziente Kondensation über lange Kühlstrecke." },
+  { id: "dimrothkuehler", name: "Dimrothkühler", category: "trennung", precision: "nicht zutreffend", functionText: "Kühler mit innenliegender Spiral-Kühlführung.", useShort: "Intensive Rückfluss- oder Destillationskühlung." },
+  { id: "destillationskolonne", name: "Destillationskolonne", category: "trennung", precision: "nicht zutreffend", functionText: "Verbessert Trennleistung durch wiederholtes Verdampfen/Kondensieren.", useShort: "Flüssigkeitsgemische nach Siedepunkt trennen." },
 
   // Werkzeuge und Hilfsmittel
-  { id: "moerser_pistill", name: "Moerser mit Pistill", category: "werkzeuge", precision: "nicht zutreffend", functionText: "Werkzeugpaar zum Zerkleinern und Verreiben von Feststoffen.", useShort: "Feststoffe zerkleinern und homogenisieren." },
+  { id: "moerser_pistill", name: "Mörser mit Pistill", category: "werkzeuge", precision: "nicht zutreffend", functionText: "Werkzeugpaar zum Zerkleinern und Verreiben von Feststoffen.", useShort: "Feststoffe zerkleinern und homogenisieren." },
   { id: "reibschale", name: "Reibschale", category: "werkzeuge", precision: "nicht zutreffend", functionText: "Schale als Basis zum Verreiben mit Pistill.", useShort: "Stoffe mechanisch verreiben." },
   { id: "spatel", name: "Spatel", category: "werkzeuge", precision: "nicht zutreffend", functionText: "Hilfsmittel zum Entnehmen kleiner Feststoffmengen.", useShort: "Kleine Mengen Feststoff aufnehmen und dosieren." },
-  { id: "spatelloeffel", name: "Spatelloeffel", category: "werkzeuge", precision: "nicht zutreffend", functionText: "Loeffel-Spatel-Kombination fuer Pulver und Granulate.", useShort: "Feststoffe sicher aufnehmen und uebertragen." },
-  { id: "tiegelzange", name: "Tiegelzange", category: "werkzeuge", precision: "nicht zutreffend", functionText: "Zange zum Halten heisser Tiegel und Schalen.", useShort: "Heisse Geraete ohne Verbrennung greifen." },
-  { id: "reagenzglasklammer", name: "Reagenzglasklammer", category: "werkzeuge", precision: "nicht zutreffend", functionText: "Klammer zum Festhalten von Reagenzglaesern beim Erhitzen.", useShort: "Reagenzglaeser beim Erhitzen sicher halten." },
-  { id: "reagenzglashalter", name: "Reagenzglashalter", category: "werkzeuge", precision: "nicht zutreffend", functionText: "Klammer zum sicheren Halten von Reagenzglaesern.", useShort: "Reagenzglas beim Erhitzen sicher halten." },
-  { id: "stativ", name: "Stativ", category: "werkzeuge", precision: "nicht zutreffend", functionText: "Grundgeruest fuer den Aufbau von Apparaturen.", useShort: "Versuchsaufbauten stabil befestigen." },
+  { id: "spatelloeffel", name: "Spatellöffel", category: "werkzeuge", precision: "nicht zutreffend", functionText: "Löffel-Spatel-Kombination für Pulver und Granulate.", useShort: "Feststoffe sicher aufnehmen und übertragen." },
+  { id: "tiegelzange", name: "Tiegelzange", category: "werkzeuge", precision: "nicht zutreffend", functionText: "Zange zum Halten heißer Tiegel und Schalen.", useShort: "Heiße Geräte ohne Verbrennung greifen." },
+  { id: "reagenzglasklammer", name: "Reagenzglasklammer", category: "werkzeuge", precision: "nicht zutreffend", functionText: "Klammer zum Festhalten von Reagenzgläsern beim Erhitzen.", useShort: "Reagenzgläser beim Erhitzen sicher halten." },
+  { id: "reagenzglashalter", name: "Reagenzglashalter", category: "werkzeuge", precision: "nicht zutreffend", functionText: "Klammer zum sicheren Halten von Reagenzgläsern.", useShort: "Reagenzglas beim Erhitzen sicher halten." },
+  { id: "stativ", name: "Stativ", category: "werkzeuge", precision: "nicht zutreffend", functionText: "Grundgerüst für den Aufbau von Apparaturen.", useShort: "Versuchsaufbauten stabil befestigen." },
   { id: "doppelmuffe", name: "Doppelmuffe", category: "werkzeuge", precision: "nicht zutreffend", functionText: "Verbindet Stativstangen und Klemmen variabel.", useShort: "Bauteile am Stativ flexibel verbinden." },
-  { id: "universalklemme", name: "Universalklemme", category: "werkzeuge", precision: "nicht zutreffend", functionText: "Klemme fuer verschiedenste Geraeteformen.", useShort: "Geraete am Stativ fixieren." },
-  { id: "stativring", name: "Stativring", category: "werkzeuge", precision: "nicht zutreffend", functionText: "Ringauflage fuer Netze, Dreiecke oder Gefaesse.", useShort: "Auflageflaeche am Stativ schaffen." },
-  { id: "magnetruehrer", name: "Magnetruehrer", category: "werkzeuge", precision: "nicht zutreffend", functionText: "Ruehrgeraet mit rotierendem Magnetfeld.", useShort: "Loesungen automatisch und gleichmaessig ruehren." },
-  { id: "ruehrfisch", name: "Ruehrfisch (Magnetruehrstaebchen)", category: "werkzeuge", precision: "nicht zutreffend", functionText: "Magnetstaebchen fuer Ruehrung auf Magnetruehrern.", useShort: "Im Gefaess rotieren und mischen." },
-  { id: "glasstab", name: "Glasstab", category: "werkzeuge", precision: "nicht zutreffend", functionText: "Einfache Ruehrhilfe und Ausgiesshilfe.", useShort: "Loesungen manuell ruehren und umleiten." },
-  { id: "spritzflasche", name: "Spritzflasche", category: "werkzeuge", precision: "nicht zutreffend", functionText: "Flasche (oft mit destilliertem Wasser) zum Spuelen.", useShort: "Geraete und Niederschlaege gezielt abspuelen." },
+  { id: "universalklemme", name: "Universalklemme", category: "werkzeuge", precision: "nicht zutreffend", functionText: "Klemme für verschiedenste Geräteformen.", useShort: "Geräte am Stativ fixieren." },
+  { id: "stativring", name: "Stativring", category: "werkzeuge", precision: "nicht zutreffend", functionText: "Ringauflage für Netze, Dreiecke oder Gefäße.", useShort: "Auflagefläche am Stativ schaffen." },
+  { id: "magnetruehrer", name: "Magnetrührer", category: "werkzeuge", precision: "nicht zutreffend", functionText: "Rührgerät mit rotierendem Magnetfeld.", useShort: "Lösungen automatisch und gleichmäßig rühren." },
+  { id: "ruehrfisch", name: "Rührfisch (Magnetrührstäbchen)", category: "werkzeuge", precision: "nicht zutreffend", functionText: "Magnetstäbchen für Rührung auf Magnetrührern.", useShort: "Im Gefäß rotieren und mischen." },
+  { id: "glasstab", name: "Glasstab", category: "werkzeuge", precision: "nicht zutreffend", functionText: "Einfache Rührhilfe und Ausgießhilfe.", useShort: "Lösungen manuell rühren und umleiten." },
+  { id: "spritzflasche", name: "Spritzflasche", category: "werkzeuge", precision: "nicht zutreffend", functionText: "Flasche (oft mit destilliertem Wasser) zum Spülen.", useShort: "Geräte und Niederschläge gezielt abspülen." },
 
-  // Sicherheits- und Grossgeraete
-  { id: "abzug", name: "Abzug", category: "sicherheit", precision: "nicht zutreffend", functionText: "Geschlossener Arbeitsbereich mit Abluft fuer gefaehrliche Gase.", useShort: "Sicheres Arbeiten mit gasfoermigen/fluechtigen Stoffen." },
-  { id: "feuerloescher", name: "Feuerloescher", category: "sicherheit", precision: "nicht zutreffend", functionText: "Loeschgeraet fuer Entstehungsbraende.", useShort: "Braende im Notfall loeschen." },
-  { id: "loeschdecke", name: "Loeschdecke", category: "sicherheit", precision: "nicht zutreffend", functionText: "Erstickt kleine Braende durch Sauerstoffentzug.", useShort: "Kleine Flammen schnell ersticken." },
-  { id: "augendusche", name: "Augendusche", category: "sicherheit", precision: "nicht zutreffend", functionText: "Spuelt Chemikalien sofort aus den Augen.", useShort: "Augen im Notfall sofort lange ausspuelen." },
-  { id: "notdusche", name: "Notdusche", category: "sicherheit", precision: "nicht zutreffend", functionText: "Grossflaechiges Abspuelen bei Kontamination.", useShort: "Chemikalien vom Koerper schnell entfernen." },
-  { id: "gasmaske", name: "Gasmaske", category: "sicherheit", precision: "nicht zutreffend", functionText: "Atemschutz bei gefaehrlichen Aerosolen/Gasen (je nach Filter).", useShort: "Atemwege unter definierten Bedingungen schuetzen." },
-  { id: "laborautoklav", name: "Laborautoklav", category: "sicherheit", precision: "nicht zutreffend", functionText: "Druckbehaelter fuer hohe Temperaturen und Druecke.", useShort: "Stoffe unter Druck erhitzen oder sterilisieren." },
-  { id: "schmelzpunktapparatur", name: "Schmelzpunktapparatur", category: "sicherheit", precision: "hoch", functionText: "Bestimmt den Schmelzpunkt fester Stoffe praezise.", useShort: "Schmelzbereiche als Stoffkennwert messen." },
-  { id: "wasserstrahlpumpe", name: "Wasserstrahlpumpe", category: "sicherheit", precision: "nicht zutreffend", functionText: "Erzeugt Unterdruck mit fliessendem Wasser.", useShort: "Vakuum fuer Filtration oder Trocknung erzeugen." },
-  { id: "membranpumpe", name: "Membranpumpe", category: "sicherheit", precision: "nicht zutreffend", functionText: "Oelfreie Vakuumpumpe fuer moderate Unterdruecke.", useShort: "Vakuum erzeugen ohne Oelkontakt." },
-  { id: "drehschieberpumpe", name: "Drehschieberpumpe", category: "sicherheit", precision: "nicht zutreffend", functionText: "Leistungsstarke Vakuumpumpe fuer tiefe Unterdruecke.", useShort: "Starkes Vakuum fuer fortgeschrittene Anwendungen." },
+  // Sicherheits- und Großgeräte
+  { id: "abzug", name: "Abzug", category: "sicherheit", precision: "nicht zutreffend", functionText: "Geschlossener Arbeitsbereich mit Abluft für gefährliche Gase.", useShort: "Sicheres Arbeiten mit gasförmigen/flüchtigen Stoffen." },
+  { id: "feuerloescher", name: "Feuerlöscher", category: "sicherheit", precision: "nicht zutreffend", functionText: "Löschgerät für Entstehungsbrände.", useShort: "Brände im Notfall löschen." },
+  { id: "loeschdecke", name: "Löschdecke", category: "sicherheit", precision: "nicht zutreffend", functionText: "Erstickt kleine Brände durch Sauerstoffentzug.", useShort: "Kleine Flammen schnell ersticken." },
+  { id: "augendusche", name: "Augendusche", category: "sicherheit", precision: "nicht zutreffend", functionText: "Spült Chemikalien sofort aus den Augen.", useShort: "Augen im Notfall sofort lange ausspülen." },
+  { id: "notdusche", name: "Notdusche", category: "sicherheit", precision: "nicht zutreffend", functionText: "Großflächiges Abspülen bei Kontamination.", useShort: "Chemikalien vom Körper schnell entfernen." },
+  { id: "gasmaske", name: "Gasmaske", category: "sicherheit", precision: "nicht zutreffend", functionText: "Atemschutz bei gefährlichen Aerosolen/Gasen (je nach Filter).", useShort: "Atemwege unter definierten Bedingungen schützen." },
+  { id: "laborautoklav", name: "Laborautoklav", category: "sicherheit", precision: "nicht zutreffend", functionText: "Druckbehälter für hohe Temperaturen und Drücke.", useShort: "Stoffe unter Druck erhitzen oder sterilisieren." },
+  { id: "schmelzpunktapparatur", name: "Schmelzpunktapparatur", category: "sicherheit", precision: "hoch", functionText: "Bestimmt den Schmelzpunkt fester Stoffe präzise.", useShort: "Schmelzbereiche als Stoffkennwert messen." },
+  { id: "wasserstrahlpumpe", name: "Wasserstrahlpumpe", category: "sicherheit", precision: "nicht zutreffend", functionText: "Erzeugt Unterdruck mit fliessendem Wasser.", useShort: "Vakuum für Filtration oder Trocknung erzeugen." },
+  { id: "membranpumpe", name: "Membranpumpe", category: "sicherheit", precision: "nicht zutreffend", functionText: "Ölfreie Vakuumpumpe für moderate Unterdrücke.", useShort: "Vakuum erzeugen ohne Ölkontakt." },
+  { id: "drehschieberpumpe", name: "Drehschieberpumpe", category: "sicherheit", precision: "nicht zutreffend", functionText: "Leistungsstarke Vakuumpumpe für tiefe Unterdrücke.", useShort: "Starkes Vakuum für fortgeschrittene Anwendungen." },
 ];
 
 const allCategoryMeta = [
-  { id: "reaktion_gefaesse", title: "Gefaesse fuer Reaktion, Mischung, Aufbewahrung", intro: "Von Becherglas bis Uhrglas: typische Reaktions- und Arbeitsgefaesse." },
-  { id: "messen", title: "Geraete zum praezisen Messen", intro: "Volumen-, Massen- und Temperaturmessung mit geeigneten Instrumenten." },
-  { id: "erhitzen", title: "Erhitzen und thermische Verfahren", intro: "Waermequellen, Auflagen und Trocknungsgeraete." },
-  { id: "trennung", title: "Trennverfahren und Spezialapparaturen", intro: "Filtration, Phasentrennung, Gasbehandlung, Kuehlung und Destillation." },
+  { id: "reaktion_gefaesse", title: "Gefäße für Reaktion, Mischung, Aufbewahrung", intro: "Von Becherglas bis Uhrglas: typische Reaktions- und Arbeitsgefäße." },
+  { id: "messen", title: "Geräte zum präzisen Messen", intro: "Volumen-, Massen- und Temperaturmessung mit geeigneten Instrumenten." },
+  { id: "erhitzen", title: "Erhitzen und thermische Verfahren", intro: "Wärmequellen, Auflagen und Trocknungsgeräte." },
+  { id: "trennung", title: "Trennverfahren und Spezialapparaturen", intro: "Filtration, Phasentrennung, Gasbehandlung, Kühlung und Destillation." },
   { id: "werkzeuge", title: "Werkzeuge und Hilfsmittel", intro: "Hilfsmittel zum Handhaben, Aufbauen und Mischen im Labor." },
-  { id: "sicherheit", title: "Sicherheits- und Grossgeraete", intro: "Sicherheitseinrichtungen und fortgeschrittene Laborgeraete." },
+  { id: "sicherheit", title: "Sicherheits- und Großgeräte", intro: "Sicherheitseinrichtungen und fortgeschrittene Laborgeräte." },
 ];
 
 // Fokus auf typische Inhalte der Klassenstufe 5 (Gymnasium Sek I, Niedersachsen).
@@ -358,7 +358,7 @@ const deviceModalClose = document.getElementById("deviceModalClose");
 const deviceModalSvg = document.getElementById("deviceModalSvg");
 const deviceModalCaption = document.getElementById("deviceModalCaption");
 
-const protocolTargetOrder = ["Hypothese", "Durchfuehrung", "Beobachtung", "Deutung"];
+const protocolTargetOrder = ["Hypothese", "Durchführung", "Beobachtung", "Deutung"];
 let protocolState = [];
 
 const labQuizState = {
@@ -372,39 +372,39 @@ const labQuizState = {
 const safetyQuestions = [
   {
     prompt: "Was bedeutet GHS02 (Flamme)?",
-    options: ["Entzuendbar", "Aetzend", "Umweltgefaehrlich", "Giftig"],
+    options: ["Entzündbar", "Ätzend", "Umweltgefährlich", "Giftig"],
     correct: 0,
-    explanation: "GHS02 weist auf entzuendbare Stoffe hin.",
+    explanation: "GHS02 weist auf entzündbare Stoffe hin.",
   },
   {
     prompt: "Welche Schutzmassnahme ist bei langen Haaren korrekt?",
-    options: ["Offen tragen", "Nur Muetze tragen", "Zusammenbinden", "Egal, solange Handschuhe da sind"],
+    options: ["Offen tragen", "Nur Mütze tragen", "Zusammenbinden", "Egal, solange Handschuhe da sind"],
     correct: 2,
     explanation: "Lange Haare immer zusammenbinden, damit sie nicht in Flamme/Chemikalien geraten.",
   },
   {
-    prompt: "Wofuer steht GHS05?",
-    options: ["Leicht entzuendlich", "Aetzwirkung", "Explosiv", "Gas unter Druck"],
+    prompt: "Wofür steht GHS05?",
+    options: ["Leicht entzündlich", "Ätzwirkung", "Explosiv", "Gas unter Druck"],
     correct: 1,
-    explanation: "GHS05 steht fuer aetzende Stoffe.",
+    explanation: "GHS05 steht für ätzende Stoffe.",
   },
   {
     prompt: "Was ist bei unbekanntem Geruch im Labor richtig?",
-    options: ["Direkt tief einatmen", "Vorsichtig anwedeln", "Nase ins Gefaess halten", "Mitschueler riechen lassen"],
+    options: ["Direkt tief einatmen", "Vorsichtig anwedeln", "Nase ins Gefäß halten", "Mitschüler riechen lassen"],
     correct: 1,
     explanation: "Nur vorsichtig anwedeln, nie direkt einatmen.",
   },
   {
     prompt: "Welche Aussage passt zu GHS07?",
-    options: ["Harmlos fuer Haut und Augen", "Reizend/gesundheitsschaedlich", "Nur fuer Metalle gefaehrlich", "Nur in der Natur gefaehrlich"],
+    options: ["Harmlos für Haut und Augen", "Reizend/gesundheitsschädlich", "Nur für Metalle gefährlich", "Nur in der Natur gefährlich"],
     correct: 1,
-    explanation: "GHS07 warnt vor reizenden/gesundheitsschaedlichen Wirkungen.",
+    explanation: "GHS07 warnt vor reizenden/gesundheitsschädlichen Wirkungen.",
   },
   {
     prompt: "Was machst du bei einem Unfall im Labor?",
-    options: ["Nichts sagen", "Sofort melden", "Erst aufraeumen", "Fenster auf und weiterarbeiten"],
+    options: ["Nichts sagen", "Sofort melden", "Erst aufräumen", "Fenster auf und weiterarbeiten"],
     correct: 1,
-    explanation: "Unfaelle sofort der Lehrkraft melden.",
+    explanation: "Unfälle sofort der Lehrkraft melden.",
   },
   {
     prompt: "Welche Kombination ist richtig?",
@@ -418,10 +418,10 @@ const safetyQuestions = [
     explanation: "Schutzbrille und ruhiges Arbeiten sind Grundregeln.",
   },
   {
-    prompt: "Wozu dienen Handschuhe bei aetzenden Stoffen?",
-    options: ["Nur gegen Kaelte", "Nur fuer bessere Griffigkeit", "Zum Schutz der Haut", "Nicht notwendig"],
+    prompt: "Wozu dienen Handschuhe bei ätzenden Stoffen?",
+    options: ["Nur gegen Kälte", "Nur für bessere Griffigkeit", "Zum Schutz der Haut", "Nicht notwendig"],
     correct: 2,
-    explanation: "Handschuhe schuetzen vor Hautkontakt mit gefaehrlichen Stoffen.",
+    explanation: "Handschuhe schützen vor Hautkontakt mit gefährlichen Stoffen.",
   },
 ];
 
@@ -463,7 +463,7 @@ function renderLearningSection() {
               </button>
               <h4>${device.name}</h4>
               <p><strong>Funktion:</strong> ${device.functionText}</p>
-              <p><strong>Praezision:</strong> ${device.precision}</p>
+              <p><strong>Präzision:</strong> ${device.precision}</p>
             </article>
           `
         )
@@ -549,7 +549,7 @@ function buildNameToUseQuestion(device) {
   const wrongOptions = randomWrongDevices(device.id).map((item) => item.useShort);
   const options = shuffle([device.useShort, ...wrongOptions]);
   return {
-    prompt: `Wofuer wird ${device.name} hauptsaechlich verwendet?`,
+    prompt: `Wofür wird ${device.name} hauptsächlich verwendet?`,
     options,
     correct: options.indexOf(device.useShort),
     explanation: `${device.name}: ${device.useShort}`,
@@ -560,7 +560,7 @@ function buildUseToNameQuestion(device) {
   const wrongOptions = randomWrongDevices(device.id).map((item) => item.name);
   const options = shuffle([device.name, ...wrongOptions]);
   return {
-    prompt: `Welches Geraet passt zu dieser Beschreibung? ${device.useShort}`,
+    prompt: `Welches Gerät passt zu dieser Beschreibung? ${device.useShort}`,
     options,
     correct: options.indexOf(device.name),
     explanation: `Richtig ist ${device.name}.`,
@@ -571,7 +571,7 @@ function buildImageToNameQuestion(device) {
   const wrongOptions = randomWrongDevices(device.id).map((item) => item.name);
   const options = shuffle([device.name, ...wrongOptions]);
   return {
-    prompt: "Wie heisst das gezeigte Geraet?",
+    prompt: "Wie heißt das gezeigte Gerät?",
     options,
     correct: options.indexOf(device.name),
     explanation: `Das Bild zeigt ${device.name}.`,
@@ -613,7 +613,7 @@ function renderLabQuizQuestion() {
   labQuizFeedback.innerHTML = "";
   labQuizNext.disabled = true;
   labQuizNext.textContent =
-    labQuizState.index === labQuizState.questions.length - 1 ? "Ergebnis anzeigen" : "Naechste Frage";
+    labQuizState.index === labQuizState.questions.length - 1 ? "Ergebnis anzeigen" : "Nächste Frage";
 
   labQuizAnswers.innerHTML = question.options
     .map((option, index) => `<button type="button" class="answer-btn" data-index="${index}">${option}</button>`)
@@ -629,7 +629,7 @@ function finishLabQuiz() {
   labQuizAnswers.innerHTML = "";
   labQuizVisual.innerHTML = "";
   labQuizFeedback.innerHTML = `<p class="feedback ${percent >= 70 ? "ok" : "bad"}">Bewertung: ${
-    percent >= 90 ? "Sehr stark" : percent >= 70 ? "Gut gearbeitet" : "Weiter ueben"
+    percent >= 90 ? "Sehr stark" : percent >= 70 ? "Gut gearbeitet" : "Weiter üben"
   }.</p>`;
   labQuizStart.textContent = "Quiz erneut starten";
 }
@@ -677,7 +677,7 @@ function nextLabQuizQuestion() {
     return;
   }
   if (!labQuizState.answered) {
-    labQuizFeedback.innerHTML = `<p class="feedback bad">Bitte erst eine Antwort auswaehlen.</p>`;
+    labQuizFeedback.innerHTML = `<p class="feedback bad">Bitte erst eine Antwort auswählen.</p>`;
     return;
   }
   if (labQuizState.index >= labQuizState.questions.length - 1) {
@@ -765,7 +765,7 @@ function renderSafetyQuestion() {
   safeFeedback.innerHTML = "";
   safeNext.disabled = true;
   safeNext.textContent =
-    safetyState.index === safetyState.questions.length - 1 ? "Ergebnis anzeigen" : "Naechste Frage";
+    safetyState.index === safetyState.questions.length - 1 ? "Ergebnis anzeigen" : "Nächste Frage";
 
   safeAnswers.innerHTML = question.options
     .map((option, index) => `<button type="button" class="answer-btn" data-index="${index}">${option}</button>`)
@@ -827,7 +827,7 @@ function nextSafetyQuestion() {
     return;
   }
   if (!safetyState.answered) {
-    safeFeedback.innerHTML = `<p class="feedback bad">Bitte erst eine Antwort auswaehlen.</p>`;
+    safeFeedback.innerHTML = `<p class="feedback bad">Bitte erst eine Antwort auswählen.</p>`;
     return;
   }
   if (safetyState.index >= safetyState.questions.length - 1) {

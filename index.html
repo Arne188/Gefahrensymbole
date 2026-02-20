@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lernbereich Klasse 5</title>
+  <link rel="icon" type="image/svg+xml" href="assets/tab-logo.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
@@ -13,93 +14,27 @@
   <main class="layout home-layout">
     <header class="hero home-hero">
       <div>
-        <p class="tag">Nachschlagen + Ueben + Testen</p>
-        <h1>Lernhub 5. Klasse</h1>
+        <p class="tag">Lernhub Klasse 5</p>
+        <h1>Module schnell auswählen</h1>
         <p class="intro">
-          Diese Seite ist ein fachlicher Lernbereich fuer Themenmodule.
-          Fokus: Inhalte erklaeren, Uebungen anbieten, Wissen pruefen.
-          Keine schulinterne Verwaltung, nur Lernen.
+          Wähle zuerst ein Fach. Danach siehst du direkt die passenden Module und
+          kannst sie einzeln starten.
         </p>
-      </div>
-      <div class="hero-pillars">
-        <article class="pillar-card">
-          <h3>Nachschlagen</h3>
-          <p>Begriffe, Regeln und Beispiele schnell finden.</p>
-        </article>
-        <article class="pillar-card">
-          <h3>Ueben</h3>
-          <p>Interaktive Aufgaben mit sofortiger Rueckmeldung.</p>
-        </article>
-        <article class="pillar-card">
-          <h3>Testen</h3>
-          <p>Abschlusstests pro Thema zur Selbstkontrolle.</p>
-        </article>
       </div>
     </header>
 
-    <section class="card purpose-card">
-      <h2>So nutzt ihr die Module</h2>
-      <div class="purpose-grid">
-        <article class="purpose-item">
-          <h3>1. Lernen</h3>
-          <p>Startet im Tab "Lernen" und schaut euch die Grunderklaerungen an.</p>
-        </article>
-        <article class="purpose-item">
-          <h3>2. Ueben</h3>
-          <p>Bearbeitet mehrere Uebungstypen, bis die Loesungswege sicher sitzen.</p>
-        </article>
-        <article class="purpose-item">
-          <h3>3. Testen</h3>
-          <p>Macht den Test ohne Hilfen und prueft den Lernstand.</p>
-        </article>
-      </div>
-    </section>
+    <section class="card selector-card">
+      <h2>1. Fach wählen</h2>
+      <label class="selector-label" for="subjectSelect">
+        Fach
+        <select id="subjectSelect" name="subject"></select>
+      </label>
 
-    <section class="card">
-      <h2>Direkt zu den Lernmodulen</h2>
-      <div class="module-grid">
-        <article class="module-callout">
-          <p class="module-kicker">Chemie</p>
-          <h3>Gefahrstoffkennzeichen</h3>
-          <p>GHS-Symbole verstehen und im Test sicher anwenden.</p>
-          <a class="button-link" href="chemie-gefahrstoffe.html">Modul oeffnen</a>
-        </article>
-        <article class="module-callout">
-          <p class="module-kicker">Chemie</p>
-          <h3>Laborgeraete und Sicherheit</h3>
-          <p>Geraetekunde, Protokoll, Quiz und Sicherheitstest.</p>
-          <a class="button-link" href="chemie-laborgeraete.html">Modul oeffnen</a>
-        </article>
-        <article class="module-callout">
-          <p class="module-kicker">Erdkunde</p>
-          <h3>Vom Luftbild zur Karte</h3>
-          <p>Legende, Himmelsrichtungen, Massstab und Kartentest.</p>
-          <a class="button-link" href="erdkunde-luftbild-karte.html">Modul oeffnen</a>
-        </article>
-      </div>
-    </section>
-
-    <section class="card manage-card">
-      <h2>Themen verwalten</h2>
-      <p class="card-intro">
-        Neue Themen koennen hier direkt angelegt und mit einer Moduldatei verknuepft werden.
+      <h2>2. Modul wählen</h2>
+      <div id="moduleList" class="module-grid"></div>
+      <p id="emptyState" class="card-intro" hidden>
+        Für dieses Fach sind aktuell keine Module hinterlegt.
       </p>
-      <form id="topicForm" class="topic-form">
-        <label>
-          Fach
-          <input id="topicSubject" name="subject" type="text" placeholder="z. B. Erdkunde" required>
-        </label>
-        <label>
-          Thema
-          <input id="topicTitle" name="title" type="text" placeholder="z. B. Klima und Wetter" required>
-        </label>
-        <label>
-          Link (optional)
-          <input id="topicLink" name="link" type="text" placeholder="z. B. erdkunde-klima.html">
-        </label>
-        <button type="submit">Thema hinzufuegen</button>
-      </form>
-      <div id="topicList" class="topic-list"></div>
     </section>
   </main>
 

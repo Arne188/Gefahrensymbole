@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chemie - Gefahrstoffkennzeichen</title>
+  <link rel="icon" type="image/svg+xml" href="assets/tab-logo.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
@@ -12,7 +13,7 @@
 <body>
   <main class="layout">
     <header class="hero">
-      <a class="back-link" href="index.html">Zurueck zur Startseite</a>
+      <a class="back-link" href="index.html">Zurück zur Startseite</a>
       <p class="tag">Chemie Klasse 5</p>
       <h1>Gefahrstoffkennzeichen</h1>
       <p class="intro">
@@ -23,7 +24,7 @@
 
     <section id="referenceSection" class="card reference-section">
       <h2>Nachschlagen</h2>
-      <p class="lock-notice">Nachschlagen ist waehrend des Tests ausgeblendet.</p>
+      <p class="lock-notice">Nachschlagen ist während des Tests ausgeblendet.</p>
       <div id="symbolGrid" class="symbol-grid"></div>
     </section>
 
@@ -47,12 +48,12 @@
           </select>
         </label>
         <button id="startTestBtn" type="button">Test starten</button>
-        <button id="nextQuestionBtn" type="button" disabled>Naechste Frage</button>
+        <button id="nextQuestionBtn" type="button" disabled>Nächste Frage</button>
         <p id="scoreLabel" class="score">Punkte: 0 / 10</p>
       </div>
 
       <div class="quiz-box">
-        <p id="quizStatus" class="quiz-status">Waehle Testart und starte den Test.</p>
+        <p id="quizStatus" class="quiz-status">Wähle Testart und starte den Test.</p>
         <h3 id="quizPrompt">Noch kein Test gestartet.</h3>
         <div id="questionVisual" class="question-visual"></div>
         <div id="answerArea"></div>
@@ -62,8 +63,8 @@
   </main>
 
   <div id="symbolModal" class="symbol-modal" aria-hidden="true">
-    <div class="symbol-modal-dialog" role="dialog" aria-modal="true" aria-label="Kennzeichen vergroessert">
-      <button id="symbolModalClose" class="symbol-modal-close" type="button">Schliessen</button>
+    <div class="symbol-modal-dialog" role="dialog" aria-modal="true" aria-label="Kennzeichen vergrößert">
+      <button id="symbolModalClose" class="symbol-modal-close" type="button">Schließen</button>
       <img id="symbolModalImage" class="symbol-modal-image" src="" alt="">
       <p id="symbolModalCaption" class="symbol-modal-caption"></p>
     </div>

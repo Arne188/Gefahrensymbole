@@ -37,11 +37,11 @@ const geoTestFeedback = document.getElementById("geoTestFeedback");
 
 const stageTexts = {
   luftbild:
-    "Luftbild: Du siehst viele echte Details (Dachformen, Schatten, Farben). Das Bild ist sehr real, aber auch unuebersichtlich. Genau deshalb braucht man Karten: Sie reduzieren diese Fuelle auf das Wesentliche.",
+    "Luftbild: Du siehst viele echte Details (Dachformen, Schatten, Farben). Das Bild ist sehr real, aber auch unübersichtlich. Genau deshalb braucht man Karten: Sie reduzieren diese Fülle auf das Wesentliche.",
   vereinfacht:
-    "Vereinfachung: Wichtige Flaechen bleiben erhalten, unwichtige Details werden weggelassen. Aus Formen werden klare Flaechen und Linien. Das macht spaeteres Orientieren viel schneller.",
+    "Vereinfachung: Wichtige Flächen bleiben erhalten, unwichtige Details werden weggelassen. Aus Formen werden klare Flächen und Linien. Das macht späteres Orientieren viel schneller.",
   karte:
-    "Karte: Objekte werden als klare Zeichen und Farben dargestellt. Legende, Nordpfeil und Massstab machen die Karte lesbar. Erst durch diese Elemente kann jede Person die Darstellung gleich verstehen.",
+    "Karte: Objekte werden als klare Zeichen und Farben dargestellt. Legende, Nordpfeil und Maßstab machen die Karte lesbar. Erst durch diese Elemente kann jede Person die Darstellung gleich verstehen.",
 };
 
 const legendItems = [
@@ -57,7 +57,7 @@ const legendItems = [
   },
   {
     id: "strasse",
-    label: "Strasse",
+    label: "Straße",
     symbol: `
       <svg viewBox="0 0 48 48" aria-hidden="true">
         <rect x="5" y="18" width="38" height="12" fill="#f4cf6a" stroke="#816f33" stroke-width="2"/>
@@ -166,7 +166,7 @@ function renderLegendTrainer() {
           <div class="symbol-chip">${item.symbol}</div>
           <label for="legend_${item.id}">Welcher Begriff passt zu diesem Symbol?</label>
           <select id="legend_${item.id}" data-correct="${item.label}">
-            <option value="">Bitte waehlen</option>
+            <option value="">Bitte wählen</option>
             ${options.map((option) => `<option value="${option}">${option}</option>`).join("")}
           </select>
         </div>
@@ -213,7 +213,7 @@ function checkLegendTrainer() {
         ? "Stark. Alle Legendenbegriffe sind korrekt."
         : `${correct}/${legendItems.length} korrekt. Schau dir die falschen Felder noch einmal an.`
     }</p>
-    <p class="feedback info">Loesungsbegriffe in diesem Set: ${solutions}.</p>
+    <p class="feedback info">Lösungsbegriffe in diesem Set: ${solutions}.</p>
   `;
 }
 
@@ -233,11 +233,11 @@ function buildScaleReverseTask() {
 
 function renderScaleTask() {
   currentScaleTask = buildScaleTask();
-  scaleTask.textContent = `Massstab 1:${currentScaleTask.scale}. Auf der Karte misst du ${currentScaleTask.mapDistanceCm} cm. Wie viele Meter sind das in Wirklichkeit?`;
+  scaleTask.textContent = `Maßstab 1:${currentScaleTask.scale}. Auf der Karte misst du ${currentScaleTask.mapDistanceCm} cm. Wie viele Meter sind das in Wirklichkeit?`;
   scaleAnswer.value = "";
   scaleFeedback.innerHTML = "";
   scaleWalkthrough.textContent =
-    "Rechenhilfe: Kartenstrecke (cm) x Massstabszahl = Realstrecke in cm. Danach cm in m umrechnen (durch 100 teilen).";
+    "Rechenhilfe: Kartenstrecke (cm) x Maßstabszahl = Realstrecke in cm. Danach cm in m umrechnen (durch 100 teilen).";
 }
 
 function checkScaleTask() {
@@ -257,7 +257,7 @@ function checkScaleTask() {
   if (value === currentScaleTask.realDistanceM) {
     scaleFeedback.innerHTML = `<p class="feedback ok">Richtig. ${currentScaleTask.mapDistanceCm} cm entsprechen ${currentScaleTask.realDistanceM} m.</p>`;
   } else {
-    scaleFeedback.innerHTML = `<p class="feedback bad">Noch nicht richtig. Loesung: ${currentScaleTask.realDistanceM} m.</p>`;
+    scaleFeedback.innerHTML = `<p class="feedback bad">Noch nicht richtig. Lösung: ${currentScaleTask.realDistanceM} m.</p>`;
   }
   scaleWalkthrough.textContent =
     `Rechenweg: ${currentScaleTask.mapDistanceCm} cm x ${currentScaleTask.scale} = ${
@@ -267,11 +267,11 @@ function checkScaleTask() {
 
 function renderScaleReverseTask() {
   currentScaleReverseTask = buildScaleReverseTask();
-  scaleReverseTask.textContent = `Massstab 1:${currentScaleReverseTask.scale}. In Wirklichkeit ist eine Strecke ${currentScaleReverseTask.realDistanceM} m lang. Wie viele Zentimeter sind das auf der Karte?`;
+  scaleReverseTask.textContent = `Maßstab 1:${currentScaleReverseTask.scale}. In Wirklichkeit ist eine Strecke ${currentScaleReverseTask.realDistanceM} m lang. Wie viele Zentimeter sind das auf der Karte?`;
   scaleReverseAnswer.value = "";
   scaleReverseFeedback.innerHTML = "";
   scaleReverseWalkthrough.textContent =
-    "Rechenhilfe: Reale Strecke erst in cm umrechnen. Danach durch die Massstabszahl teilen.";
+    "Rechenhilfe: Reale Strecke erst in cm umrechnen. Danach durch die Maßstabszahl teilen.";
 }
 
 function checkScaleReverseTask() {
@@ -284,7 +284,7 @@ function checkScaleReverseTask() {
   }
   const value = Number(scaleReverseAnswer.value);
   if (!Number.isFinite(value)) {
-    scaleReverseFeedback.innerHTML = `<p class="feedback info">Bitte eine gueltige Zahl eingeben.</p>`;
+    scaleReverseFeedback.innerHTML = `<p class="feedback info">Bitte eine gültige Zahl eingeben.</p>`;
     return;
   }
 
@@ -293,7 +293,7 @@ function checkScaleReverseTask() {
   if (isCorrect) {
     scaleReverseFeedback.innerHTML = `<p class="feedback ok">Richtig. Auf der Karte sind das ${expected} cm.</p>`;
   } else {
-    scaleReverseFeedback.innerHTML = `<p class="feedback bad">Noch nicht richtig. Loesung: ${expected} cm.</p>`;
+    scaleReverseFeedback.innerHTML = `<p class="feedback bad">Noch nicht richtig. Lösung: ${expected} cm.</p>`;
   }
 
   scaleReverseWalkthrough.textContent =
@@ -315,7 +315,7 @@ function buildScaleChoiceTask() {
     }
     const options = shuffle([...optionSet]);
     return {
-      prompt: `Welche Massstabsangabe passt? Auf der Karte misst du ${mapDistanceCm} cm, in Wirklichkeit sind es ${realDistanceM} m.`,
+      prompt: `Welche Maßstabsangabe passt? Auf der Karte misst du ${mapDistanceCm} cm, in Wirklichkeit sind es ${realDistanceM} m.`,
       options: options.map((item) => `1:${item}`),
       correct: options.indexOf(correctScale),
       explanation: `Rechnung: ${realDistanceM} m = ${realDistanceM * 100} cm. ${
@@ -327,10 +327,10 @@ function buildScaleChoiceTask() {
   const options = shuffle([5000, 10000, 25000, 50000]);
   const correctScale = Math.min(...options);
   return {
-    prompt: "Mit welchem Massstab siehst du fuer den gleichen Ort die meisten Details?",
+    prompt: "Mit welchem Maßstab siehst du für den gleichen Ort die meisten Details?",
     options: options.map((item) => `1:${item}`),
     correct: options.indexOf(correctScale),
-    explanation: `Der kleinste Nenner zeigt den groessten Detailgrad. Deshalb ist 1:${correctScale} hier richtig.`,
+    explanation: `Der kleinste Nenner zeigt den größten Detailgrad. Deshalb ist 1:${correctScale} hier richtig.`,
   };
 }
 
@@ -377,7 +377,7 @@ function createScaleQuestion() {
   }
   const options = shuffle([correct, ...wrongSet]);
   return {
-    prompt: `Massstab 1:${task.scale}. Strecke auf der Karte: ${task.mapDistanceCm} cm. Welche reale Strecke passt?`,
+    prompt: `Maßstab 1:${task.scale}. Strecke auf der Karte: ${task.mapDistanceCm} cm. Welche reale Strecke passt?`,
     options: options.map((value) => `${value} m`),
     correct: options.indexOf(correct),
     explanation: `Rechnung: ${task.mapDistanceCm} cm x ${task.scale} = ${task.mapDistanceCm * task.scale} cm. Danach in Meter umrechnen (durch 100 teilen) = ${correct} m.`,
@@ -387,17 +387,17 @@ function createScaleQuestion() {
 function createDirectionQuestion() {
   const moves = [
     { text: "nach oben", correct: "Norden" },
-    { text: "nach unten", correct: "Sueden" },
+    { text: "nach unten", correct: "Süden" },
     { text: "nach rechts", correct: "Osten" },
     { text: "nach links", correct: "Westen" },
   ];
   const move = moves[randomInt(0, moves.length - 1)];
-  const options = shuffle(["Norden", "Osten", "Sueden", "Westen"]);
+  const options = shuffle(["Norden", "Osten", "Süden", "Westen"]);
   return {
     prompt: `Der Nordpfeil zeigt nach oben. Du gehst im Plan ${move.text}. In welche Himmelsrichtung gehst du?`,
     options,
     correct: options.indexOf(move.correct),
-    explanation: `Wenn Norden oben ist, liegt Osten rechts, Sueden unten und Westen links. Daher gilt hier: ${move.text} -> ${move.correct}.`,
+    explanation: `Wenn Norden oben ist, liegt Osten rechts, Süden unten und Westen links. Daher gilt hier: ${move.text} -> ${move.correct}.`,
   };
 }
 
@@ -409,61 +409,61 @@ function buildGeoTestQuestions(totalCount) {
         "Die Wirklichkeit von oben mit vielen Details",
         "Nur vereinfachte Symbole",
         "Nur politische Grenzen",
-        "Nur Hoehenlinien",
+        "Nur Höhenlinien",
       ],
       correct: 0,
       explanation:
-        "Ein Luftbild ist ein echtes Foto aus der Vogelperspektive. Es zeigt viele Details der Wirklichkeit und ist die Ausgangsbasis fuer die spaetere Vereinfachung in einer Karte.",
+        "Ein Luftbild ist ein echtes Foto aus der Vogelperspektive. Es zeigt viele Details der Wirklichkeit und ist die Ausgangsbasis für die spätere Vereinfachung in einer Karte.",
     },
     {
       prompt: "Wozu dient die Legende auf einer Karte?",
       options: [
-        "Sie erklaert Zeichen, Farben und Linien",
-        "Sie vergroessert den Kartenmassstab",
+        "Sie erklärt Zeichen, Farben und Linien",
+        "Sie vergrößert den Kartenmaßstab",
         "Sie ersetzt den Nordpfeil",
         "Sie zeigt nur Ortsnamen",
       ],
       correct: 0,
       explanation:
-        "Die Legende ist das Woerterbuch der Kartensymbole. Erst durch sie kannst du Farben und Zeichen eindeutig deuten, zum Beispiel Wasser, Strasse oder Gruenflaeche.",
+        "Die Legende ist das Wörterbuch der Kartensymbole. Erst durch sie kannst du Farben und Zeichen eindeutig deuten, zum Beispiel Wasser, Straße oder Grünfläche.",
     },
     {
       prompt: "Welche Aussage zur Karte ist richtig?",
       options: [
-        "Eine Karte waehlt wichtige Informationen aus",
+        "Eine Karte wählt wichtige Informationen aus",
         "Eine Karte zeigt alle Details wie ein Foto",
-        "Eine Karte braucht keinen Massstab",
+        "Eine Karte braucht keinen Maßstab",
         "Eine Karte zeigt keine Richtungen",
       ],
       correct: 0,
       explanation:
-        "Karten vereinfachen Wirklichkeit und lassen Unwichtiges weg. Genau diese Reduktion sorgt fuer Uebersicht und macht Orientierung moeglich.",
+        "Karten vereinfachen Wirklichkeit und lassen Unwichtiges weg. Genau diese Reduktion sorgt für Übersicht und macht Orientierung möglich.",
     },
     {
-      prompt: "Welche Farbe steht in Schulatlanten haeufig fuer Wasser?",
+      prompt: "Welche Farbe steht in Schulatlanten häufig für Wasser?",
       options: ["Blau", "Rot", "Braun", "Orange"],
       correct: 0,
       explanation:
-        "Wasserflaechen und Fluesse sind meist blau dargestellt. Standardisierte Farben helfen, Karten schneller und sicherer zu lesen.",
+        "Wasserflächen und Flüsse sind meist blau dargestellt. Standardisierte Farben helfen, Karten schneller und sicherer zu lesen.",
     },
     {
       prompt: "Was hilft dir am besten, wenn du Wege beschreiben willst?",
       options: ["Nordpfeil und Himmelsrichtungen", "Nur das Kartenpapier", "Nur der Titel", "Nur der Rand"],
       correct: 0,
       explanation:
-        "Mit Nordpfeil und Himmelsrichtungen kannst du Lage klar beschreiben, zum Beispiel: 'Die Schule liegt oestlich vom Park'.",
+        "Mit Nordpfeil und Himmelsrichtungen kannst du Lage klar beschreiben, zum Beispiel: 'Die Schule liegt östlich vom Park'.",
     },
     {
-      prompt: "Was bedeutet der Massstab 1:10.000?",
+      prompt: "Was bedeutet der Maßstab 1:10.000?",
       options: [
         "1 cm auf der Karte entspricht 10.000 cm in Wirklichkeit",
         "10.000 cm auf der Karte sind 1 cm in Wirklichkeit",
-        "Die Karte ist 10.000-mal groesser als die Wirklichkeit",
-        "Der Massstab sagt nichts ueber Entfernungen",
+        "Die Karte ist 10.000-mal größer als die Wirklichkeit",
+        "Der Maßstab sagt nichts über Entfernungen",
       ],
       correct: 0,
       explanation:
-        "Der Massstab ist ein Verhaeltnis von Kartenstrecke zur Realstrecke. Bei 1:10.000 gilt deshalb 1 cm auf der Karte = 100 m in der Wirklichkeit.",
+        "Der Maßstab ist ein Verhältnis von Kartenstrecke zur Realstrecke. Bei 1:10.000 gilt deshalb 1 cm auf der Karte = 100 m in der Wirklichkeit.",
     },
   ];
 
@@ -483,7 +483,7 @@ function renderGeoTestQuestion() {
   geoTestFeedback.innerHTML = "";
   geoTestNext.disabled = true;
   geoTestNext.textContent =
-    geoTestState.index === geoTestState.questions.length - 1 ? "Ergebnis anzeigen" : "Naechste Frage";
+    geoTestState.index === geoTestState.questions.length - 1 ? "Ergebnis anzeigen" : "Nächste Frage";
 
   geoTestAnswers.innerHTML = question.options
     .map((option, index) => `<button type="button" class="answer-btn" data-index="${index}">${option}</button>`)
@@ -499,8 +499,8 @@ function finishGeoTest() {
   geoTestAnswers.innerHTML = "";
   geoTestFeedback.innerHTML = `<p class="feedback ${percent >= 75 ? "ok" : "bad"}">${
     percent >= 75
-      ? "Sehr gut. Du kannst Karten schon sicher lesen und Entfernungen gut einschaetzen."
-      : "Noch etwas ueben: Legende, Richtung und Massstab wiederholen. Nutze dafuer den Ueben-Tab mit Legenden- und Massstab-Trainer."
+      ? "Sehr gut. Du kannst Karten schon sicher lesen und Entfernungen gut einschätzen."
+      : "Noch etwas üben: Legende, Richtung und Maßstab wiederholen. Nutze dafür den Üben-Tab mit Legenden- und Maßstab-Trainer."
   }</p>`;
   geoTestStart.textContent = "Test erneut starten";
 }
@@ -548,7 +548,7 @@ function nextGeoTestQuestion() {
     return;
   }
   if (!geoTestState.answered) {
-    geoTestFeedback.innerHTML = `<p class="feedback info">Bitte erst eine Antwort auswaehlen.</p>`;
+    geoTestFeedback.innerHTML = `<p class="feedback info">Bitte erst eine Antwort auswählen.</p>`;
     return;
   }
   if (geoTestState.index >= geoTestState.questions.length - 1) {

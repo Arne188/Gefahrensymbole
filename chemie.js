@@ -4,63 +4,63 @@ const symbols = [
   {
     code: "GHS01",
     name: "Explosiv",
-    meaning: "Kann durch Schlag, Reibung, Feuer oder Waerme explodieren.",
-    example: "Feuerwerkskoerper, bestimmte Laborstoffe",
-    tip: "Nie erhitzen, schuetteln oder fallen lassen.",
+    meaning: "Kann durch Schlag, Reibung, Feuer oder Wärme explodieren.",
+    example: "Feuerwerkskörper, bestimmte Laborstoffe",
+    tip: "Nie erhitzen, schütteln oder fallen lassen.",
   },
   {
     code: "GHS02",
-    name: "Entzuendbar",
-    meaning: "Kann sich leicht entzuenden.",
+    name: "Entzündbar",
+    meaning: "Kann sich leicht entzünden.",
     example: "Ethanol, Aceton, Benzin",
     tip: "Von Flammen, Funken und Hitze fernhalten.",
   },
   {
     code: "GHS03",
-    name: "Brandfoerdernd",
-    meaning: "Kann Braende verursachen oder verstaerken.",
+    name: "Brandfördernd",
+    meaning: "Kann Brände verursachen oder verstärken.",
     example: "Wasserstoffperoxid (hoch konzentriert)",
     tip: "Nicht mit brennbaren Stoffen mischen.",
   },
   {
     code: "GHS04",
     name: "Gas unter Druck",
-    meaning: "Behaelter steht unter Druck und kann bei Waerme platzen.",
+    meaning: "Behälter steht unter Druck und kann bei Wärme platzen.",
     example: "Druckgasflaschen",
-    tip: "Vor Sonne und Hitze schuetzen.",
+    tip: "Vor Sonne und Hitze schützen.",
   },
   {
     code: "GHS05",
-    name: "Aetzend",
-    meaning: "Kann Haut, Augen und Metalle stark schaedigen.",
-    example: "Starke Saeuren und Laugen",
+    name: "Ätzend",
+    meaning: "Kann Haut, Augen und Metalle stark schädigen.",
+    example: "Starke Säuren und Laugen",
     tip: "Schutzbrille und Handschuhe tragen.",
   },
   {
     code: "GHS06",
     name: "Giftig",
-    meaning: "Schon kleine Mengen koennen schwere Vergiftungen ausloesen.",
+    meaning: "Schon kleine Mengen können schwere Vergiftungen auslösen.",
     example: "Bestimmte Laborchemikalien",
     tip: "Niemals probieren, Dampf nicht einatmen.",
   },
   {
     code: "GHS07",
-    name: "Reizend/Gesundheitsschaedlich",
+    name: "Reizend/Gesundheitsschädlich",
     meaning: "Kann Haut, Augen oder Atemwege reizen.",
-    example: "Reinigungsmittel, Loesungsmittel",
-    tip: "Kontakt vermeiden, gut lueften.",
+    example: "Reinigungsmittel, Lösungsmittel",
+    tip: "Kontakt vermeiden, gut lüften.",
   },
   {
     code: "GHS08",
     name: "Schwere Gesundheitsgefahr",
-    meaning: "Kann langfristige schwere Gesundheitsschaeden verursachen.",
-    example: "Krebserzeugende oder organschaedigende Stoffe",
+    meaning: "Kann langfristige schwere Gesundheitsschäden verursachen.",
+    example: "Krebserzeugende oder organschädigende Stoffe",
     tip: "Nur mit strengen Schutzregeln verwenden.",
   },
   {
     code: "GHS09",
-    name: "Umweltgefaehrlich",
-    meaning: "Schaedlich fuer Wasserorganismen und Umwelt.",
+    name: "Umweltgefährlich",
+    meaning: "Schädlich für Wasserorganismen und Umwelt.",
     example: "Pestizide, manche Industriechemikalien",
     tip: "Nicht in Abfluss oder Natur gelangen lassen.",
   },
@@ -225,7 +225,7 @@ function submitAnswer(answer) {
   updateScoreLabel();
   nextQuestionBtn.disabled = false;
   nextQuestionBtn.textContent =
-    testState.currentIndex === testState.totalQuestions - 1 ? "Ergebnis anzeigen" : "Naechste Frage";
+    testState.currentIndex === testState.totalQuestions - 1 ? "Ergebnis anzeigen" : "Nächste Frage";
 
   setFeedback(
     result.ok ? "ok" : "bad",
@@ -272,7 +272,7 @@ function renderCurrentQuestion() {
   quizPrompt.textContent = testState.currentQuestion.prompt;
   nextQuestionBtn.disabled = true;
   nextQuestionBtn.textContent =
-    testState.currentIndex === testState.totalQuestions - 1 ? "Ergebnis anzeigen" : "Naechste Frage";
+    testState.currentIndex === testState.totalQuestions - 1 ? "Ergebnis anzeigen" : "Nächste Frage";
   feedbackArea.innerHTML = "";
 
   if (testState.currentQuestion.image) {
@@ -298,7 +298,7 @@ function getRating(percent) {
   if (percent >= 60) {
     return "Ordentlich";
   }
-  return "Weiter ueben";
+  return "Weiter üben";
 }
 
 function finishTest() {

@@ -107,6 +107,28 @@
   font-size: 14px;
 }
 
+.geo-overview-figure {
+  margin: 10px 0 0;
+  border: 1px solid #ccdaea;
+  border-radius: 12px;
+  background: #fff;
+  padding: 10px;
+}
+
+.geo-overview-figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #d4deea;
+  background: #eef3f8;
+}
+
+.geo-overview-figure figcaption {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #526b85;
+}
+
 .stage-controls {
   display: flex;
   flex-wrap: wrap;
