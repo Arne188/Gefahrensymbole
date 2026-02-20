@@ -43,6 +43,12 @@ const defaultTopics = [
     link: "englisch-if-sentences.html",
     description: "If-Saetze sicher bilden, Fehler verstehen und mit grossem Aufgabenpool ueben.",
   },
+  {
+    subject: "Geschichte",
+    title: "Aegypten - Geschenk des Nils",
+    link: "geschichte-aegypten-nil.html",
+    description: "Hochkultur am Nil verstehen, Ursache-Folge trainieren und mit Feedback testen.",
+  },
 ];
 
 const subjectSelect = document.getElementById("subjectSelect");
