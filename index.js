@@ -25,6 +25,12 @@ const defaultTopics = [
     link: "deutsch-maerchenanalyse.html",
     description: "Lehrplanorientierte Schrittanleitung mit Übungen und Kurztest.",
   },
+  {
+    subject: "Mathematik",
+    title: "Besondere Vierecke",
+    link: "mathematik-besondere-vierecke.html",
+    description: "Vierecke erkennen, Eigenschaften vergleichen und im Test anwenden.",
+  },
 ];
 
 const subjectSelect = document.getElementById("subjectSelect");

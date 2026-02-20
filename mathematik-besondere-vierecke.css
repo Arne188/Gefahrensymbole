@@ -1,0 +1,279 @@
+.ma-page {
+  width: min(1140px, 94vw);
+  margin: 20px auto 34px;
+  display: grid;
+  gap: 14px;
+}
+
+.ma-hero,
+.ma-nav,
+.ma-card {
+  border: 1px solid #cad5e1;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.93);
+  box-shadow: 0 12px 24px rgba(20, 34, 49, 0.11);
+}
+
+.ma-hero {
+  padding: 20px;
+  background:
+    radial-gradient(circle at 85% 12%, rgba(252, 226, 160, 0.34) 0%, transparent 35%),
+    radial-gradient(circle at 10% 88%, rgba(160, 220, 203, 0.3) 0%, transparent 32%),
+    rgba(255, 255, 255, 0.94);
+}
+
+.ma-tag {
+  margin: 0;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  color: #4f6177;
+}
+
+.ma-hero h1 {
+  margin: 6px 0 8px;
+}
+
+.ma-hero p {
+  margin: 0;
+  color: #3f556c;
+  max-width: 64ch;
+}
+
+.ma-nav {
+  padding: 8px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.ma-tab-btn {
+  border: 1px solid #b9cbdd;
+  background: #edf4ff;
+  color: #173f66;
+}
+
+.ma-tab-btn.is-active {
+  border-color: #1563b8;
+  background: #1563b8;
+  color: #fff;
+}
+
+.ma-tab {
+  display: none;
+  gap: 14px;
+}
+
+.ma-tab.is-active {
+  display: grid;
+}
+
+.ma-card {
+  padding: 16px;
+  animation: maCardIn 260ms ease both;
+}
+
+@keyframes maCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ma-card h2 {
+  margin: 0 0 8px;
+}
+
+.ma-card p {
+  margin-top: 0;
+  color: #425a73;
+}
+
+.ma-list {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 6px;
+}
+
+.ma-source-note {
+  margin-top: 10px;
+  color: #506b86;
+  font-size: 14px;
+}
+
+.ma-step-grid,
+.ma-note-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.ma-step-box,
+.ma-note-box {
+  border: 1px solid #cfdbeb;
+  border-radius: 12px;
+  background: #f8fbff;
+  padding: 10px;
+}
+
+.ma-step-box h3,
+.ma-note-box h3 {
+  margin: 0 0 6px;
+  color: #1c4066;
+}
+
+.ma-step-box p,
+.ma-note-box p {
+  margin: 0 0 6px;
+  font-size: 14px;
+}
+
+.ma-step-box p:last-child,
+.ma-note-box p:last-child {
+  margin-bottom: 0;
+}
+
+.ma-overview-figure {
+  margin: 10px 0 0;
+  border: 1px solid #cfdbeb;
+  border-radius: 12px;
+  background: #fff;
+  padding: 10px;
+}
+
+.ma-overview-figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #d7e0eb;
+  background: #f1f6fc;
+}
+
+.ma-overview-figure figcaption {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #536d87;
+}
+
+.ma-property-rows,
+.ma-relation-rows {
+  display: grid;
+  gap: 8px;
+}
+
+.ma-property-row,
+.ma-relation-row {
+  border: 1px solid #cfdbeb;
+  border-radius: 10px;
+  background: #fff;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr minmax(180px, 240px);
+  align-items: center;
+  gap: 10px;
+}
+
+.ma-property-row p,
+.ma-relation-row p {
+  margin: 0;
+}
+
+.ma-property-row.is-correct,
+.ma-relation-row.is-correct {
+  border-color: #95d2bc;
+  background: #ebf9f2;
+}
+
+.ma-property-row.is-wrong,
+.ma-relation-row.is-wrong {
+  border-color: #e4b5b5;
+  background: #fdeeee;
+}
+
+.ma-controls {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.ma-filter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 8px;
+}
+
+.ma-filter-grid label {
+  border: 1px solid #c9d8ea;
+  border-radius: 10px;
+  background: #f7fbff;
+  padding: 10px;
+  color: #2b4967;
+}
+
+.ma-filter-grid input {
+  margin-right: 6px;
+}
+
+.ma-mini-label {
+  margin: 12px 0 8px;
+  color: #415c79;
+  font-weight: 600;
+}
+
+.ma-preset-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 8px;
+}
+
+.ma-preset-btn {
+  border: 1px solid #c3d5e7;
+  border-radius: 10px;
+  background: #f0f7ff;
+  color: #1c466f;
+  font-weight: 600;
+}
+
+.ma-filter-result {
+  margin-top: 10px;
+  display: grid;
+  gap: 8px;
+}
+
+.ma-result-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 8px;
+}
+
+.ma-result-card {
+  border: 1px solid #c9d8ea;
+  border-radius: 10px;
+  background: #fff;
+  padding: 10px;
+}
+
+.ma-result-card h3 {
+  margin: 0 0 4px;
+  color: #1d4369;
+  font-size: 17px;
+}
+
+.ma-result-card p {
+  margin: 0;
+  font-size: 14px;
+}
+
+@media (max-width: 760px) {
+  .ma-property-row,
+  .ma-relation-row {
+    grid-template-columns: 1fr;
+  }
+}
