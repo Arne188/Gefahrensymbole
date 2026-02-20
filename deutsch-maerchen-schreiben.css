@@ -1,0 +1,332 @@
+.dms-page {
+  width: min(1120px, 94vw);
+  margin: 20px auto 34px;
+  display: grid;
+  gap: 14px;
+}
+
+.dms-hero,
+.dms-nav,
+.dms-card {
+  border: 1px solid #c8d5e2;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.93);
+  box-shadow: 0 10px 22px rgba(17, 32, 48, 0.11);
+}
+
+.dms-hero {
+  padding: 20px;
+  background:
+    linear-gradient(120deg, rgba(255, 255, 255, 0.95), rgba(239, 248, 255, 0.95)),
+    #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.dms-hero::after {
+  content: "";
+  position: absolute;
+  right: -30px;
+  bottom: -24px;
+  width: 240px;
+  height: 140px;
+  background: url("assets/deutsch-maerchen-schreiben/deko-textur.png") center/cover no-repeat;
+  opacity: 0.22;
+  pointer-events: none;
+}
+
+.dms-tag {
+  margin: 0;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  color: #4f6277;
+}
+
+.dms-hero h1 {
+  margin: 6px 0 8px;
+}
+
+.dms-hero p {
+  margin: 0;
+  max-width: 64ch;
+  color: #41586f;
+}
+
+.dms-nav {
+  padding: 8px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.dms-tab-btn {
+  border: 1px solid #bed0e2;
+  background: #edf5ff;
+  color: #153d63;
+}
+
+.dms-tab-btn.is-active {
+  border-color: #0f62b5;
+  background: #0f62b5;
+  color: #fff;
+}
+
+.dms-tab {
+  display: none;
+  gap: 14px;
+}
+
+.dms-tab.is-active {
+  display: grid;
+}
+
+.dms-card {
+  padding: 16px;
+}
+
+.dms-card h2 {
+  margin: 0 0 8px;
+}
+
+.dms-card p {
+  margin-top: 0;
+  color: #425971;
+}
+
+.dms-list {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 6px;
+}
+
+.dms-source-note {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #51708d;
+}
+
+.dms-image-grid,
+.dms-help-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 10px;
+}
+
+.dms-step-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.dms-step-box {
+  border: 1px solid #cedbea;
+  border-radius: 12px;
+  background: #f8fbff;
+  padding: 10px;
+  display: grid;
+  gap: 8px;
+  align-content: start;
+}
+
+.dms-step-box h3 {
+  margin: 0;
+  color: #1f4165;
+}
+
+.dms-step-box p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.dms-step-example {
+  border-left: 4px solid #6da2d6;
+  padding: 8px 10px;
+  background: #edf5ff;
+  border-radius: 8px;
+  color: #2c4967;
+}
+
+.dms-mini-visual {
+  width: 100%;
+  min-height: 84px;
+  border: 1px solid #d3deea;
+  border-radius: 8px;
+  background: #fff;
+  padding: 10px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.dms-mini-plan {
+  background: linear-gradient(140deg, #f3fbf2, #e8f5e7);
+}
+
+.dms-mini-plan span,
+.dms-mini-check span {
+  border: 1px solid #bfd7ea;
+  border-radius: 999px;
+  background: #fff;
+  padding: 5px 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #244362;
+}
+
+.dms-mini-start {
+  background: linear-gradient(140deg, #f6f8ff, #edf3ff);
+}
+
+.dms-chip {
+  border: 1px dashed #7ea2cf;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.86);
+  padding: 6px 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #224665;
+}
+
+.dms-mini-middle {
+  background: linear-gradient(140deg, #f3f8ff, #e8f1ff);
+}
+
+.dms-step-dot {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  color: #fff;
+  background: #6a95c4;
+}
+
+.dms-step-dot-strong {
+  background: #0f62b5;
+}
+
+.dms-step-arrow {
+  color: #3d6287;
+  font-weight: 800;
+}
+
+.dms-mini-end {
+  background: linear-gradient(140deg, #fdf4ea, #faeddc);
+}
+
+.dms-mini-end span {
+  border: 1px solid #dfc6a1;
+  border-radius: 8px;
+  background: #fff;
+  padding: 6px 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #5a452c;
+}
+
+.dms-mini-check {
+  background: linear-gradient(140deg, #eefaf6, #e3f4ed);
+}
+
+.dms-figure,
+.dms-help-box {
+  margin: 0;
+  border: 1px solid #cedbea;
+  border-radius: 12px;
+  background: #f8fbff;
+  padding: 10px;
+}
+
+.dms-figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #d3deea;
+  background: #fff;
+}
+
+.dms-figure figcaption {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #536d86;
+  font-weight: 600;
+}
+
+.dms-help-box h3 {
+  margin: 0 0 6px;
+  color: #1f4165;
+}
+
+.dms-controls {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.dms-task-list {
+  margin-top: 10px;
+  display: grid;
+  gap: 8px;
+}
+
+.dms-task-row {
+  border: 1px solid #cfdceb;
+  border-radius: 10px;
+  background: #fff;
+  padding: 10px;
+  display: grid;
+  gap: 8px;
+}
+
+.dms-task-row p {
+  margin: 0;
+}
+
+.dms-task-row.is-correct {
+  border-color: #95d2bc;
+  background: #ebf9f2;
+}
+
+.dms-task-row.is-wrong {
+  border-color: #e4b5b5;
+  background: #fdeeee;
+}
+
+.dms-choice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 8px;
+}
+
+.dms-choice-item {
+  border: 1px solid #c9d9ea;
+  border-radius: 10px;
+  background: #f7fbff;
+  padding: 8px 10px;
+}
+
+.dms-choice-item input {
+  margin-right: 6px;
+}
+
+.dms-plot-box {
+  margin-top: 10px;
+  border: 1px solid #cedbea;
+  border-radius: 10px;
+  background: #f8fbff;
+  padding: 12px;
+  color: #2a4766;
+}
+
+@media (max-width: 760px) {
+  .dms-choice-grid {
+    grid-template-columns: 1fr;
+  }
+}

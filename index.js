@@ -1,4 +1,4 @@
-const storageKey = "lernbereich_themen_v1";
+﻿const storageKey = "lernbereich_themen_v1";
 
 const defaultTopics = [
   {
@@ -9,21 +9,27 @@ const defaultTopics = [
   },
   {
     subject: "Chemie",
-    title: "Laborgeräte und Sicherheit",
+    title: "Laborgeraete und Sicherheit",
     link: "chemie-laborgeraete.html",
-    description: "Gerätekunde, Protokoll, Quiz und Sicherheitstest.",
+    description: "Geraetekunde, Protokoll, Quiz und Sicherheitstest.",
   },
   {
     subject: "Erdkunde",
     title: "Vom Luftbild zur Karte",
     link: "erdkunde-luftbild-karte.html",
-    description: "Legende, Himmelsrichtungen, Maßstab und Kartentest.",
+    description: "Legende, Himmelsrichtungen, Massstab und Kartentest.",
   },
   {
     subject: "Deutsch",
-    title: "Märchenanalyse schreiben",
+    title: "Maerchenanalyse schreiben",
     link: "deutsch-maerchenanalyse.html",
-    description: "Lehrplanorientierte Schrittanleitung mit Übungen und Kurztest.",
+    description: "Lehrplanorientierte Schrittanleitung mit Uebungen und Kurztest.",
+  },
+  {
+    subject: "Deutsch",
+    title: "Maerchen schreiben",
+    link: "deutsch-maerchen-schreiben.html",
+    description: "Von der Idee bis zur Reinschrift: mit Uebungspool, Feedback und Test.",
   },
   {
     subject: "Mathematik",
@@ -89,7 +95,6 @@ function dedupeTopics(topics) {
       return;
     }
 
-    // Neuere Datensätze überschreiben alte Schreibweisen und ergänzen fehlende Felder.
     deduped.set(key, {
       subject: topic.subject || existing.subject,
       title: topic.title || existing.title,
@@ -98,7 +103,6 @@ function dedupeTopics(topics) {
     });
   });
 
-  // Zweite Runde: gleiche Titel im selben Fach zusammenführen (falls alte Links abweichen).
   const byTitle = new Map();
   deduped.forEach((topic) => {
     const titleKey = `${normalizeKeyPart(topic.subject)}|title:${normalizeKeyPart(topic.title)}`;
@@ -166,7 +170,7 @@ function createModuleCard(topic) {
     const link = document.createElement("a");
     link.className = "button-link";
     link.href = topic.link;
-    link.textContent = "Modul öffnen";
+    link.textContent = "Modul oeffnen";
     card.append(link);
   } else {
     const note = document.createElement("p");
@@ -200,7 +204,7 @@ function renderSubjects(topics) {
   if (subjects.length === 0) {
     const option = document.createElement("option");
     option.value = "";
-    option.textContent = "Keine Fächer verfügbar";
+    option.textContent = "Keine Faecher verfuegbar";
     subjectSelect.append(option);
     subjectSelect.disabled = true;
     renderModules(topics, "");
