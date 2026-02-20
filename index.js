@@ -31,6 +31,12 @@ const defaultTopics = [
     link: "mathematik-besondere-vierecke.html",
     description: "Vierecke erkennen, Eigenschaften vergleichen und im Test anwenden.",
   },
+  {
+    subject: "Englisch",
+    title: "Sentences with if - Part 1",
+    link: "englisch-if-sentences.html",
+    description: "If-Saetze sicher bilden, Fehler verstehen und mit grossem Aufgabenpool ueben.",
+  },
 ];
 
 const subjectSelect = document.getElementById("subjectSelect");
