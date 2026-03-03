@@ -1,0 +1,170 @@
+﻿<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geschichte - Der Staat im Alten Ägypten</title>
+  <link rel="icon" type="image/svg+xml" href="../../../assets/tab-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../styles.css">
+  <link rel="stylesheet" href="geschichte-staat-im-alten-aegypten.css">
+</head>
+<body>
+  <main class="sa-page">
+    <header class="sa-hero">
+      <a class="back-link" href="../../../index.html">Zurück zur Startseite</a>
+      <p class="sa-tag">Geschichte Klasse 5</p>
+      <h1>Der Staat im Alten Ägypten</h1>
+      <p>
+        Du lernst, wie der ägyptische Staat aufgebaut war: der Pharao als Gottkönig,
+        wichtige Ämter wie Wesir und Schreiber, die Gesellschaftspyramide
+        und die zentrale Rolle des Nils für Verwaltung und Versorgung.
+      </p>
+      <figure class="sa-hero-figure">
+        <img src="./staat-im-alten-aegypten-grafik.png?v=20260303" alt="Schaubild zu Herrschaft, Verwaltung, Gesellschaft und Nil im Alten Ägypten">
+      </figure>
+    </header>
+
+    <nav class="sa-nav" aria-label="Modulnavigation">
+      <button class="sa-tab-btn is-active" type="button" data-tab="lernen">Lernen</button>
+      <button class="sa-tab-btn" type="button" data-tab="trainieren">Trainieren</button>
+      <button class="sa-tab-btn" type="button" data-tab="test">Test</button>
+    </nav>
+
+    <section id="tab-lernen" class="sa-tab is-active">
+      <article class="sa-card">
+        <h2>Lehrplanbezug Niedersachsen (Gymnasium 5/6)</h2>
+        <p>
+          Das Modul orientiert sich am Kerncurriculum Geschichte für das Gymnasium
+          Sekundarstufe I. In Jahrgang 5/6 geht es bei frühen Hochkulturen unter anderem um
+          Herrschaft, Arbeitsteilung, Wirtschaftsorganisation, Umweltbezug und Weltdeutung.
+        </p>
+        <ul class="sa-list">
+          <li>Du beschreibst den Pharao als politisches und religiöses Zentrum des Staates.</li>
+          <li>Du erklärst die Aufgaben von Wesir, Beamten, Priestern und Schreibern.</li>
+          <li>Du ordnest die Gesellschaftspyramide mit ihren Gruppen und Aufgaben ein.</li>
+          <li>Du erklärst, warum Nil, Bewässerung und Vorratshaltung eine starke Verwaltung brauchten.</li>
+        </ul>
+        <p class="sa-source-note">
+          Offizielle Quelle:
+          <a href="https://cuvo.nibis.de/index.php?p=download&upload=1773" target="_blank" rel="noopener noreferrer">
+            Kerncurriculum Geschichte für das Gymnasium Schuljahrgänge 5-10 (Niedersachsen)
+          </a>
+          |
+          <a href="https://cuvo.nibis.de/download.php?docid=1773" target="_blank" rel="noopener noreferrer">
+            PDF-Download
+          </a>
+        </p>
+      </article>
+
+      <article class="sa-card">
+        <h2>Staat verstehen mit der Grafik (interaktiv)</h2>
+        <p>
+          Klicke auf ein Feld. Unten erscheint eine einfache Erklärung mit Beispielen.
+          Grundlage sind die Grafik und der Quellentext.
+        </p>
+
+        <div class="sa-theme-grid">
+          <button class="sa-theme-btn is-active" type="button" data-theme="pharao">
+            <span class="sa-preview sa-preview-pharao" aria-hidden="true"></span>
+            <span class="sa-theme-label">Pharao als Zentrum</span>
+          </button>
+          <button class="sa-theme-btn" type="button" data-theme="verwaltung">
+            <span class="sa-preview sa-preview-verwaltung" aria-hidden="true"></span>
+            <span class="sa-theme-label">Verwaltung und Ämter</span>
+          </button>
+          <button class="sa-theme-btn" type="button" data-theme="nil">
+            <span class="sa-preview sa-preview-nil" aria-hidden="true"></span>
+            <span class="sa-theme-label">Staat und Nil</span>
+          </button>
+          <button class="sa-theme-btn" type="button" data-theme="gesellschaft">
+            <span class="sa-preview sa-preview-gesellschaft" aria-hidden="true"></span>
+            <span class="sa-theme-label">Gesellschaftspyramide</span>
+          </button>
+        </div>
+
+        <div class="sa-detail-box">
+          <h3 id="saThemeTitle"></h3>
+          <p id="saThemeText"></p>
+          <ul id="saThemeList" class="sa-list"></ul>
+        </div>
+      </article>
+
+      <article class="sa-card">
+        <h2>Vom Nil zur staatlichen Ordnung (interaktiv)</h2>
+        <p>
+          Diese vier Schritte zeigen, warum im Alten Ägypten ein organisierter Staat nötig war.
+          Klicke die Schritte nacheinander durch.
+        </p>
+        <div class="sa-step-controls">
+          <button class="sa-step-btn is-active" type="button" data-step="1">1. Nilschwemme</button>
+          <button class="sa-step-btn" type="button" data-step="2">2. Planung</button>
+          <button class="sa-step-btn" type="button" data-step="3">3. Verwaltung</button>
+          <button class="sa-step-btn" type="button" data-step="4">4. Versorgung</button>
+        </div>
+        <div class="sa-detail-box">
+          <h3 id="saStepTitle"></h3>
+          <p id="saStepText"></p>
+        </div>
+      </article>
+    </section>
+
+    <section id="tab-trainieren" class="sa-tab">
+      <article class="sa-card">
+        <h2>Training A: Aufgabe zuordnen</h2>
+        <p>Ordne jede Aussage dem passenden Bereich des Staates zu.</p>
+        <div class="sa-controls">
+          <button id="saAssignNewRound" type="button">Neue Runde</button>
+          <button id="saAssignCheck" type="button">Prüfen</button>
+        </div>
+        <div id="saAssignList" class="sa-task-list"></div>
+        <div id="saAssignFeedback"></div>
+      </article>
+
+      <article class="sa-card">
+        <h2>Training B: Reihenfolge ordnen</h2>
+        <p>Bringe die Schritte von der Nilschwemme bis zur Versorgung in die richtige Reihenfolge.</p>
+        <div class="sa-controls">
+          <button id="saOrderNewRound" type="button">Neue Runde</button>
+          <button id="saOrderCheck" type="button">Prüfen</button>
+        </div>
+        <div id="saOrderList" class="sa-task-list"></div>
+        <div id="saOrderFeedback"></div>
+      </article>
+
+      <article class="sa-card">
+        <h2>Training C: Richtig oder falsch?</h2>
+        <p>Entscheide, ob die Aussage fachlich passt.</p>
+        <div class="sa-controls">
+          <button id="saTfNewRound" type="button">Neue Runde</button>
+          <button id="saTfCheck" type="button">Prüfen</button>
+        </div>
+        <div id="saTfList" class="sa-task-list"></div>
+        <div id="saTfFeedback"></div>
+      </article>
+    </section>
+
+    <section id="tab-test" class="sa-tab">
+      <article class="sa-card">
+        <h2>Wissens-Test</h2>
+        <p>10 Fragen mit direkter Rückmeldung und Punktezähler.</p>
+        <div class="quiz-controls">
+          <button id="saQuizStart" type="button">Test starten</button>
+          <button id="saQuizNext" type="button" disabled>Nächste Frage</button>
+          <p id="saQuizScore" class="score">Punkte: 0 / 10</p>
+        </div>
+        <div class="quiz-box">
+          <p id="saQuizStatus" class="quiz-status">Test noch nicht gestartet.</p>
+          <h3 id="saQuizPrompt">Klicke auf "Test starten".</h3>
+          <div id="saQuizAnswers" class="choice-list"></div>
+          <div id="saQuizFeedback"></div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="geschichte-staat-im-alten-aegypten.js"></script>
+</body>
+</html>

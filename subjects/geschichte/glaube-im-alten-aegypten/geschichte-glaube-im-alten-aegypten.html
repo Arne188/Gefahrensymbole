@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geschichte - Glaube im Alten Ägypten</title>
+  <link rel="icon" type="image/svg+xml" href="../../../assets/tab-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../styles.css">
+  <link rel="stylesheet" href="geschichte-glaube-im-alten-aegypten.css">
+</head>
+<body>
+  <main class="ga-page">
+    <header class="ga-hero">
+      <a class="back-link" href="../../../index.html">Zurück zur Startseite</a>
+      <p class="ga-tag">Geschichte Klasse 5</p>
+      <h1>Glaube im Alten Ägypten</h1>
+      <p>
+        Du lernst, wie Religion den Alltag im Alten Ägypten geprägt hat:
+        die Götterwelt, der Pharao als Gottkönig, der Glaube an ein Jenseits
+        und die religiöse Bedeutung der Pyramiden.
+      </p>
+      <figure class="ga-hero-figure">
+        <img src="./glaube-im-alten-aegypten-grafik.png?v=20260303" alt="Schaubild zu Götterwelt, Pharao, Jenseitsvorstellungen und Pyramiden im Alten Ägypten">
+      </figure>
+    </header>
+
+    <nav class="ga-nav" aria-label="Modulnavigation">
+      <button class="ga-tab-btn is-active" type="button" data-tab="lernen">Lernen</button>
+      <button class="ga-tab-btn" type="button" data-tab="trainieren">Trainieren</button>
+      <button class="ga-tab-btn" type="button" data-tab="test">Test</button>
+    </nav>
+
+    <section id="tab-lernen" class="ga-tab is-active">
+      <article class="ga-card">
+        <h2>Lehrplanbezug Niedersachsen (Gymnasium 5/6)</h2>
+        <p>
+          Das Modul orientiert sich am Kerncurriculum Geschichte für das
+          Gymnasium Sekundarstufe I (Niedersachsen). In Jahrgang 5/6 werden
+          frühe Hochkulturen untersucht, darunter auch
+          <strong>Weltdeutung und Religion</strong> im Alten Ägypten.
+        </p>
+        <ul class="ga-list">
+          <li>Du erklärst zentrale Vorstellungen des ägyptischen Glaubens.</li>
+          <li>Du beschreibst die Rolle des Pharaos als Herrscher und religiöse Figur.</li>
+          <li>Du ordnest Jenseitsglauben, Totenkult und Pyramiden sinnvoll ein.</li>
+          <li>Du nutzt Fachbegriffe wie Polytheismus, Maat, Mumifizierung und Totengericht korrekt.</li>
+        </ul>
+        <p class="ga-source-note">
+          Offizielle Quelle:
+          <a href="https://cuvo.nibis.de/cuvo.php?k0_0=Dokumentenart&k0_1=Schulbereich&k0_2=Schulform&p=search&v0_0=Kerncurriculum&v0_1=Sek+I&v0_2=Gymnasium-Sek.I" target="_blank" rel="noopener noreferrer">
+            NIBIS / CuVo - Kerncurricula Sek I Gymnasium
+          </a>
+          (Geschichte, Schuljahrgänge 5/6).
+        </p>
+      </article>
+
+      <article class="ga-card">
+        <h2>Themen aus der Grafik (interaktiv)</h2>
+        <p>
+          Klicke auf ein Themenfeld. Du bekommst eine einfache Erklärung mit
+          passenden Beispielen.
+        </p>
+
+        <div class="ga-theme-grid">
+          <button class="ga-theme-btn is-active" type="button" data-theme="goetterwelt">
+            <span class="ga-preview ga-preview-goetterwelt" aria-hidden="true"></span>
+            <span class="ga-theme-label">Götterwelt</span>
+          </button>
+          <button class="ga-theme-btn" type="button" data-theme="pharao">
+            <span class="ga-preview ga-preview-pharao" aria-hidden="true"></span>
+            <span class="ga-theme-label">Pharao und Maat</span>
+          </button>
+          <button class="ga-theme-btn" type="button" data-theme="jenseits">
+            <span class="ga-preview ga-preview-jenseits" aria-hidden="true"></span>
+            <span class="ga-theme-label">Jenseits und Totenkult</span>
+          </button>
+          <button class="ga-theme-btn" type="button" data-theme="pyramiden">
+            <span class="ga-preview ga-preview-pyramiden" aria-hidden="true"></span>
+            <span class="ga-theme-label">Pyramiden und Gräber</span>
+          </button>
+        </div>
+
+        <div class="ga-detail-box">
+          <h3 id="gaThemeTitle"></h3>
+          <p id="gaThemeText"></p>
+          <ul id="gaThemeList" class="ga-list"></ul>
+        </div>
+      </article>
+
+      <article class="ga-card">
+        <h2>Totengericht (interaktiv erklärt)</h2>
+        <p>
+          Der Ablauf des Totengerichts war ein Kernteil der Jenseitsvorstellung.
+          Klicke auf die Schritte.
+        </p>
+        <div class="ga-step-controls">
+          <button class="ga-step-btn is-active" type="button" data-step="1">1. Vorbereitung</button>
+          <button class="ga-step-btn" type="button" data-step="2">2. Gericht</button>
+          <button class="ga-step-btn" type="button" data-step="3">3. Abwägung</button>
+          <button class="ga-step-btn" type="button" data-step="4">4. Ergebnis</button>
+        </div>
+        <div class="ga-detail-box">
+          <h3 id="gaStepTitle"></h3>
+          <p id="gaStepText"></p>
+        </div>
+      </article>
+    </section>
+
+    <section id="tab-trainieren" class="ga-tab">
+      <article class="ga-card">
+        <h2>Training A: Aussage zuordnen</h2>
+        <p>Ordne jede Aussage dem passenden Themenfeld zu.</p>
+        <div class="ga-controls">
+          <button id="gaAssignNewRound" type="button">Neue Runde</button>
+          <button id="gaAssignCheck" type="button">Prüfen</button>
+        </div>
+        <div id="gaAssignList" class="ga-task-list"></div>
+        <div id="gaAssignFeedback"></div>
+      </article>
+
+      <article class="ga-card">
+        <h2>Training B: Reihenfolge ordnen</h2>
+        <p>Bringe die Schritte des Totengerichts in die richtige Reihenfolge.</p>
+        <div class="ga-controls">
+          <button id="gaOrderNewRound" type="button">Neue Runde</button>
+          <button id="gaOrderCheck" type="button">Prüfen</button>
+        </div>
+        <div id="gaOrderList" class="ga-task-list"></div>
+        <div id="gaOrderFeedback"></div>
+      </article>
+
+      <article class="ga-card">
+        <h2>Training C: Richtig oder falsch?</h2>
+        <p>Entscheide, ob die Aussage fachlich passt.</p>
+        <div class="ga-controls">
+          <button id="gaTfNewRound" type="button">Neue Runde</button>
+          <button id="gaTfCheck" type="button">Prüfen</button>
+        </div>
+        <div id="gaTfList" class="ga-task-list"></div>
+        <div id="gaTfFeedback"></div>
+      </article>
+    </section>
+
+    <section id="tab-test" class="ga-tab">
+      <article class="ga-card">
+        <h2>Wissens-Test</h2>
+        <p>10 Fragen mit direkter Rückmeldung und Punktezähler.</p>
+        <div class="quiz-controls">
+          <button id="gaQuizStart" type="button">Test starten</button>
+          <button id="gaQuizNext" type="button" disabled>Nächste Frage</button>
+          <p id="gaQuizScore" class="score">Punkte: 0 / 10</p>
+        </div>
+        <div class="quiz-box">
+          <p id="gaQuizStatus" class="quiz-status">Test noch nicht gestartet.</p>
+          <h3 id="gaQuizPrompt">Klicke auf "Test starten".</h3>
+          <div id="gaQuizAnswers" class="choice-list"></div>
+          <div id="gaQuizFeedback"></div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="geschichte-glaube-im-alten-aegypten.js"></script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-const storageKey = "lernbereich_themen_v1";
+﻿const storageKey = "lernbereich_themen_v1";
 
 const defaultTopics = [
   {
@@ -9,27 +9,27 @@ const defaultTopics = [
   },
   {
     subject: "Chemie",
-    title: "Laborgeräte und Sicherheit",
+    title: "LaborgerÃ¤te und Sicherheit",
     link: "subjects/chemie/laborgeraete-und-sicherheit/chemie-laborgeraete.html",
-    description: "Gerätekunde, Protokoll, Quiz und Sicherheitstest.",
+    description: "GerÃ¤tekunde, Protokoll, Quiz und Sicherheitstest.",
   },
   {
     subject: "Erdkunde",
     title: "Vom Luftbild zur Karte",
     link: "subjects/erdkunde/vom-luftbild-zur-karte/erdkunde-luftbild-karte.html",
-    description: "Legende, Himmelsrichtungen, Maßstab und Kartentest.",
+    description: "Legende, Himmelsrichtungen, MaÃŸstab und Kartentest.",
   },
   {
     subject: "Deutsch",
-    title: "Märchenanalyse schreiben",
+    title: "MÃ¤rchenanalyse schreiben",
     link: "subjects/deutsch/maerchenanalyse/deutsch-maerchenanalyse.html",
-    description: "Lehrplanorientierte Schrittanleitung mit Übungen und Kurztest.",
+    description: "Lehrplanorientierte Schrittanleitung mit Ãœbungen und Kurztest.",
   },
   {
     subject: "Deutsch",
-    title: "Märchen schreiben",
+    title: "MÃ¤rchen schreiben",
     link: "subjects/deutsch/maerchen-schreiben/deutsch-maerchen-schreiben.html",
-    description: "Von der Idee bis zur Reinschrift: mit Übungspool, Feedback und Test.",
+    description: "Von der Idee bis zur Reinschrift: mit Ãœbungspool, Feedback und Test.",
   },
   {
     subject: "Mathematik",
@@ -41,27 +41,51 @@ const defaultTopics = [
     subject: "Englisch",
     title: "Sentences with if - Part 1",
     link: "subjects/englisch/if-sentences-part-1/englisch-if-sentences.html",
-    description: "If-Sätze sicher bilden, Fehler verstehen und mit großem Aufgabenpool üben.",
+    description: "If-SÃ¤tze sicher bilden, Fehler verstehen und mit groÃŸem Aufgabenpool Ã¼ben.",
   },
   {
     subject: "Geschichte",
-    title: "Ägypten - Geschenk des Nils",
+    title: "Ã„gypten - Geschenk des Nils",
     link: "subjects/geschichte/aegypten-geschenk-des-nils/geschichte-aegypten-nil.html",
     description: "Hochkultur am Nil verstehen, Ursache-Folge trainieren und mit Feedback testen.",
+  },
+  {
+    subject: "Geschichte",
+    title: "Glaube im Alten Ã„gypten",
+    link: "subjects/geschichte/glaube-im-alten-aegypten/geschichte-glaube-im-alten-aegypten.html",
+    description: "Dummy-Modul (Platzhalter) - Inhalte folgen.",
+  },
+  {
+    subject: "Geschichte",
+    title: "Der Staat im Alten Ã„gypten",
+    link: "subjects/geschichte/staat-im-alten-aegypten/geschichte-staat-im-alten-aegypten.html",
+    description: "Staatsaufbau, Ämter, Gesellschaft und Nilverwaltung interaktiv lernen, trainieren und prüfen.",
+  },
+  {
+    subject: "Geschichte",
+    title: "Der Pharao",
+    link: "subjects/geschichte/der-pharao/geschichte-der-pharao.html",
+    description: "Dummy-Modul (Platzhalter) - Inhalte folgen.",
+  },
+  {
+    subject: "Geschichte",
+    title: "Das alte Griechenland - Landschaft",
+    link: "subjects/geschichte/altes-griechenland-landschaft/geschichte-altes-griechenland-landschaft.html",
+    description: "Dummy-Modul (Platzhalter) - Inhalte folgen.",
   },
   {
     subject: "Werte und Normen",
     title: "Modul 1: Gottesvorstellungen verstehen",
     link: "subjects/werte-und-normen/gottesvorstellungen-grundlagen/werte-und-normen-glaubensrichtungen.html",
     description:
-      "Polytheismus, Monotheismus und Atheismus erklären, vergleichen und im Test sichern.",
+      "Polytheismus, Monotheismus und Atheismus erklÃ¤ren, vergleichen und im Test sichern.",
   },
   {
     subject: "Werte und Normen",
     title: "Modul 2: Gottesvorstellungen im Monotheismus",
     link: "subjects/werte-und-normen/gottesvorstellungen-im-monotheismus/werte-und-normen-monotheistische-gottesvorstellungen.html",
     description:
-      "Schöpfer, Allmächtiger, Offenbarer und Allwissender Gott verstehen und anwenden.",
+      "SchÃ¶pfer, AllmÃ¤chtiger, Offenbarer und Allwissender Gott verstehen und anwenden.",
   },
   {
     subject: "Werte und Normen",
@@ -75,13 +99,13 @@ const defaultTopics = [
     title: "Inhalte Klasse 5 (Niedersachsen)",
     link: "",
     description:
-      "Leitthemen für Jahrgang 5/6 laut Kerncurriculum Gymnasium Sek. I (verbindlich ab 01.08.2017).",
+      "Leitthemen fÃ¼r Jahrgang 5/6 laut Kerncurriculum Gymnasium Sek. I (verbindlich ab 01.08.2017).",
     bulletPoints: [
       "Ich und meine Beziehungen (Freundschaft, Familie, Vorbilder).",
-      "Glück und Lebensgestaltung (Zukunftswünsche, Verantwortung, Erfolg/Misserfolg).",
-      "Regeln für das Zusammenleben (Regeln und Rituale, Goldene Regel, Regelverletzungen).",
+      "GlÃ¼ck und Lebensgestaltung (ZukunftswÃ¼nsche, Verantwortung, Erfolg/Misserfolg).",
+      "Regeln fÃ¼r das Zusammenleben (Regeln und Rituale, Goldene Regel, Regelverletzungen).",
       "Leben in Vielfalt (Vorurteile, Klischees, Mobbing, Toleranz).",
-      "Aspekte von Religionen und Weltanschauungen (Göttliches, Schöpfungsmythen, religiöse Praxis).",
+      "Aspekte von Religionen und Weltanschauungen (GÃ¶ttliches, SchÃ¶pfungsmythen, religiÃ¶se Praxis).",
     ],
   },
 ];
@@ -110,10 +134,10 @@ function normalizeKeyPart(value) {
   return String(value || "")
     .trim()
     .toLowerCase()
-    .replace(/ä/g, "ae")
-    .replace(/ö/g, "oe")
-    .replace(/ü/g, "ue")
-    .replace(/ß/g, "ss")
+    .replace(/Ã¤/g, "ae")
+    .replace(/Ã¶/g, "oe")
+    .replace(/Ã¼/g, "ue")
+    .replace(/ÃŸ/g, "ss")
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
     .replace(/\s+/g, " ");
@@ -242,7 +266,7 @@ function createModuleCard(topic) {
     const link = document.createElement("a");
     link.className = "button-link";
     link.href = topic.link;
-    link.textContent = "Modul öffnen";
+    link.textContent = "Modul Ã¶ffnen";
     card.append(link);
   } else {
     const note = document.createElement("p");
@@ -276,7 +300,7 @@ function renderSubjects(topics) {
   if (subjects.length === 0) {
     const option = document.createElement("option");
     option.value = "";
-    option.textContent = "Keine Fächer verfügbar";
+    option.textContent = "Keine FÃ¤cher verfÃ¼gbar";
     subjectSelect.append(option);
     subjectSelect.disabled = true;
     renderModules(topics, "");
@@ -301,5 +325,6 @@ renderSubjects(topics);
 subjectSelect.addEventListener("change", () => {
   renderModules(topics, subjectSelect.value);
 });
+
 
 
