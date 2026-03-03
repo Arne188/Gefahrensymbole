@@ -138,6 +138,57 @@
   margin: 0 0 8px;
 }
 
+.mg-theme-grid {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+}
+
+.mg-theme-btn {
+  border: 1px solid #c6d8e9;
+  border-radius: 12px;
+  background: #f7fbff;
+  padding: 8px;
+  display: grid;
+  gap: 8px;
+  color: #173f61;
+}
+
+.mg-theme-btn.is-active {
+  border-color: #1f7ea6;
+  box-shadow: 0 0 0 2px rgba(31, 126, 166, 0.18);
+  background: #eef8ff;
+}
+
+.mg-theme-preview {
+  width: min(100%, 260px);
+  justify-self: center;
+  aspect-ratio: 11 / 18;
+  border-radius: 10px;
+  border: 1px solid #c3d8e8;
+  background-image: url("./menschen-des-glaubens-themen.png?v=20260303");
+  background-repeat: no-repeat;
+  background-size: 300% auto;
+  background-position-y: top;
+}
+
+.mg-theme-preview-praxis {
+  background-position-x: left;
+}
+
+.mg-theme-preview-gemeinschaft {
+  background-position-x: center;
+}
+
+.mg-theme-preview-handeln {
+  background-position-x: right;
+}
+
+.mg-theme-label {
+  font-weight: 700;
+}
+
 .mg-table-wrap {
   margin-top: 10px;
   overflow-x: auto;

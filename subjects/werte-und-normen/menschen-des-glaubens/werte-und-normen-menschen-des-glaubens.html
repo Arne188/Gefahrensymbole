@@ -76,6 +76,36 @@
       </article>
 
       <article class="mg-card">
+        <h2>Religiöses Leben im Alltag (interaktiv mit Grafik)</h2>
+        <p>
+          Die Grafik zeigt drei wichtige Bereiche. Klicke auf einen Bereich und
+          arbeite die Beispiele durch. Achte dabei besonders auf Gemeinsamkeiten
+          zwischen Religionen.
+        </p>
+
+        <div class="mg-theme-grid">
+          <button class="mg-theme-btn is-active" type="button" data-theme="praxis">
+            <span class="mg-theme-preview mg-theme-preview-praxis" aria-hidden="true"></span>
+            <span class="mg-theme-label">Religiöse Praxis</span>
+          </button>
+          <button class="mg-theme-btn" type="button" data-theme="gemeinschaft">
+            <span class="mg-theme-preview mg-theme-preview-gemeinschaft" aria-hidden="true"></span>
+            <span class="mg-theme-label">Gemeinschaft &amp; Feste</span>
+          </button>
+          <button class="mg-theme-btn" type="button" data-theme="handeln">
+            <span class="mg-theme-preview mg-theme-preview-handeln" aria-hidden="true"></span>
+            <span class="mg-theme-label">Glaube im Handeln</span>
+          </button>
+        </div>
+
+        <div class="mg-detail-box">
+          <h3 id="mgThemeTitle"></h3>
+          <p id="mgThemeText"></p>
+          <ul id="mgThemeList" class="mg-list"></ul>
+        </div>
+      </article>
+
+      <article class="mg-card">
         <h2>Menschen des Glaubens im Vergleich</h2>
         <div class="mg-table-wrap">
           <table class="mg-table">
@@ -151,6 +181,21 @@
         </div>
         <div id="mgIdeaList" class="mg-task-list"></div>
         <div id="mgIdeaFeedback"></div>
+      </article>
+
+      <article class="mg-card">
+        <h2>Training C: Bereich erkennen</h2>
+        <p>
+          Ordne jede Aussage dem passenden Bereich zu:
+          <strong>Religiöse Praxis</strong>, <strong>Gemeinschaft &amp; Feste</strong> oder
+          <strong>Glaube im Handeln</strong>.
+        </p>
+        <div class="mg-controls">
+          <button id="mgThemeTrainNewRound" type="button">Neue Runde</button>
+          <button id="mgThemeTrainCheck" type="button">Prüfen</button>
+        </div>
+        <div id="mgThemeTrainList" class="mg-task-list"></div>
+        <div id="mgThemeTrainFeedback"></div>
       </article>
     </section>
 

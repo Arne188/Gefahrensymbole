@@ -6,6 +6,11 @@ const mgFocusTitle = document.getElementById("mgFocusTitle");
 const mgFocusText = document.getElementById("mgFocusText");
 const mgFocusList = document.getElementById("mgFocusList");
 
+const mgThemeButtons = document.querySelectorAll(".mg-theme-btn");
+const mgThemeTitle = document.getElementById("mgThemeTitle");
+const mgThemeText = document.getElementById("mgThemeText");
+const mgThemeList = document.getElementById("mgThemeList");
+
 const mgAssignNewRound = document.getElementById("mgAssignNewRound");
 const mgAssignCheck = document.getElementById("mgAssignCheck");
 const mgAssignList = document.getElementById("mgAssignList");
@@ -15,6 +20,11 @@ const mgIdeaNewRound = document.getElementById("mgIdeaNewRound");
 const mgIdeaCheck = document.getElementById("mgIdeaCheck");
 const mgIdeaList = document.getElementById("mgIdeaList");
 const mgIdeaFeedback = document.getElementById("mgIdeaFeedback");
+
+const mgThemeTrainNewRound = document.getElementById("mgThemeTrainNewRound");
+const mgThemeTrainCheck = document.getElementById("mgThemeTrainCheck");
+const mgThemeTrainList = document.getElementById("mgThemeTrainList");
+const mgThemeTrainFeedback = document.getElementById("mgThemeTrainFeedback");
 
 const mgQuizStart = document.getElementById("mgQuizStart");
 const mgQuizNext = document.getElementById("mgQuizNext");
@@ -81,6 +91,36 @@ const focusDetails = {
   },
 };
 
+const themeDetails = {
+  praxis: {
+    title: "Religiöse Praxis",
+    text: "In vielen Religionen gibt es wiederkehrende Formen religiöser Praxis im Alltag.",
+    points: [
+      "Viele Gläubige beten oder nehmen sich Zeit für Besinnung.",
+      "Heilige Schriften spielen in vielen Religionen eine wichtige Rolle.",
+      "Gotteshäuser sind Orte der Begegnung: Christentum -> Kirche, Islam -> Moschee, Judentum -> Synagoge, Buddhismus -> Tempel.",
+    ],
+  },
+  gemeinschaft: {
+    title: "Gemeinschaft & Feste",
+    text: "Alle großen Religionen kennen wichtige Feste und gemeinsame Rituale im Jahreslauf.",
+    points: [
+      "Gemeinsames Feiern stärkt Zusammenhalt in Familien und Gemeinden.",
+      "Beispiele für Feste: Christentum -> Weihnachten, Ostern; Islam -> Ramadanfest und Opferfest; Judentum -> Pessach und Chanukka; Buddhismus -> Vesakh.",
+      "Feste verbinden Glauben, Gemeinschaft und Freude.",
+    ],
+  },
+  handeln: {
+    title: "Glaube im Handeln",
+    text: "In vielen Religionen zeigt sich Glaube im Umgang mit anderen Menschen und mit der Welt.",
+    points: [
+      "Hilfsbereitschaft, Fürsorge und Nächstenliebe sind gemeinsame Werte, zum Beispiel Spenden oder Hilfe für Bedürftige.",
+      "Viele Gläubige setzen sich für Frieden und Gerechtigkeit ein.",
+      "Verantwortung für Natur und Umwelt wird in vielen Traditionen betont.",
+    ],
+  },
+};
+
 const personLabels = {
   abraham: "Abraham / Ibrahim",
   mose: "Mose / Musa",
@@ -88,6 +128,12 @@ const personLabels = {
   muhammad: "Muhammad",
   buddha: "Buddha",
   martin: "Martin von Tours",
+};
+
+const themeLabels = {
+  praxis: "Religiöse Praxis",
+  gemeinschaft: "Gemeinschaft & Feste",
+  handeln: "Glaube im Handeln",
 };
 
 const assignPool = [
@@ -183,6 +229,69 @@ const ideaPool = [
     statement: "Atheismus beschreibt den Glauben an viele Götter.",
     answer: "nein",
     explanation: "Atheismus bedeutet kein Gottesglaube.",
+  },
+  {
+    statement: "Gebet und das Lesen heiliger Schriften gehören zur religiösen Praxis.",
+    answer: "ja",
+    explanation: "Das sind typische Formen gelebten Glaubens.",
+  },
+  {
+    statement: "Gemeinschaft und Feste haben mit Religion nichts zu tun.",
+    answer: "nein",
+    explanation: "Feste und Gemeinschaft sind in vielen Religionen wichtig.",
+  },
+  {
+    statement: "Einsatz für Frieden und Umweltschutz kann Ausdruck von Glauben sein.",
+    answer: "ja",
+    explanation: "Viele Menschen verstehen das als gelebte Verantwortung.",
+  },
+];
+
+const themeTrainPool = [
+  {
+    statement: "Eine Familie betet vor dem Essen zusammen.",
+    answer: "praxis",
+    explanation: "Gebet gehört zur religiösen Praxis.",
+  },
+  {
+    statement: "Eine Gemeinde feiert ein Fest im Jahreskreis.",
+    answer: "gemeinschaft",
+    explanation: "Das ist Gemeinschaft & Feste.",
+  },
+  {
+    statement: "Jugendliche sammeln Lebensmittel für Bedürftige.",
+    answer: "handeln",
+    explanation: "Das ist Glaube im Handeln.",
+  },
+  {
+    statement: "Kinder lernen in einer Gruppe über heilige Schriften.",
+    answer: "praxis",
+    explanation: "Das Lesen und Verstehen heiliger Schriften ist religiöse Praxis.",
+  },
+  {
+    statement: "Eine Familie feiert ein religiöses Fest mit Ritualen.",
+    answer: "gemeinschaft",
+    explanation: "Gemeinsames Feiern gehört zum Bereich Gemeinschaft & Feste.",
+  },
+  {
+    statement: "Menschen pflanzen Bäume als Zeichen für Verantwortung.",
+    answer: "handeln",
+    explanation: "Bewahrung der Schöpfung zählt zu Glaube im Handeln.",
+  },
+  {
+    statement: "Eine Klasse besucht eine Moschee und beobachtet das Gebet.",
+    answer: "praxis",
+    explanation: "Gotteshausbesuch und Gebet sind religiöse Praxis.",
+  },
+  {
+    statement: "Nachbarinnen und Nachbarn kochen an einem Feiertag gemeinsam.",
+    answer: "gemeinschaft",
+    explanation: "Gemeinsame Feierkultur ist Gemeinschaft & Feste.",
+  },
+  {
+    statement: "Eine Jugendgruppe organisiert eine Aktion für Frieden.",
+    answer: "handeln",
+    explanation: "Einsatz für Frieden ist Glaube im Handeln.",
   },
 ];
 
@@ -366,8 +475,92 @@ const quizPool = [
   },
 ];
 
+const themeQuizPool = [
+  {
+    prompt: "Was passt am besten zu religiöser Praxis?",
+    options: [
+      "Gebet, Besinnung und heilige Schriften",
+      "Nur staatliche Gesetze",
+      "Ausschließlich Sportveranstaltungen",
+      "Nur private Hobbys",
+    ],
+    correct: 0,
+    explanation: "Religiöse Praxis umfasst unter anderem Gebet und heilige Schriften.",
+    wrongReasons: {
+      1: "Das ist kein Kernbereich religiöser Praxis.",
+      2: "Das passt nicht zur Definition.",
+      3: "Das beschreibt keine religiöse Praxis.",
+    },
+  },
+  {
+    prompt: "Welche Aussage gehört zu Gemeinschaft & Feste?",
+    options: [
+      "Gemeinsames Feiern im Jahreskreis",
+      "Nur still allein sein",
+      "Keine Traditionen in Familien",
+      "Religion ohne Gemeinschaft",
+    ],
+    correct: 0,
+    explanation: "Gemeinschaft & Feste meint gemeinsames religiöses Leben.",
+    wrongReasons: {
+      1: "Gemeinschaft bedeutet nicht nur Alleinsein.",
+      2: "Traditionen sind oft wichtig.",
+      3: "Gemeinschaft ist gerade ein Kernpunkt.",
+    },
+  },
+  {
+    prompt: "Was ist ein Beispiel für Glaube im Handeln?",
+    options: [
+      "Einsatz für Frieden und Gerechtigkeit",
+      "Feste absagen und nichts teilen",
+      "Heilige Orte nie betreten",
+      "Nur über Probleme sprechen, nie handeln",
+    ],
+    correct: 0,
+    explanation: "Glaube im Handeln zeigt sich in konkreter Hilfe und Verantwortung.",
+    wrongReasons: {
+      1: "Das widerspricht dem Gedanken von Fürsorge.",
+      2: "Das ist kein typisches Beispiel.",
+      3: "Handeln ist hier der zentrale Punkt.",
+    },
+  },
+  {
+    prompt: "Welche Zuordnung ist korrekt?",
+    options: [
+      "Religiöse Praxis -> Gebet",
+      "Gemeinschaft & Feste -> Keine Traditionen",
+      "Glaube im Handeln -> Rücksichtslosigkeit",
+      "Religiöse Praxis -> Nie heilige Schriften",
+    ],
+    correct: 0,
+    explanation: "Gebet ist ein klassisches Beispiel religiöser Praxis.",
+    wrongReasons: {
+      1: "Gemeinschaft & Feste lebt von Traditionen.",
+      2: "Glaube im Handeln bedeutet Fürsorge.",
+      3: "Heilige Schriften sind Teil religiöser Praxis.",
+    },
+  },
+  {
+    prompt: "Welche Zusammenfassung trifft die drei Bereiche am besten?",
+    options: [
+      "Glaube zeigt sich in Praxis, Gemeinschaft und verantwortlichem Handeln.",
+      "Glaube ist nur Theorie ohne Alltag.",
+      "Es geht nur um einzelne Personen, nie um Verhalten.",
+      "Religion schließt Hilfe für andere aus.",
+    ],
+    correct: 0,
+    explanation: "Die drei Bereiche verbinden Glauben mit Alltag und Verantwortung.",
+    wrongReasons: {
+      1: "Das widerspricht den Lerninhalten.",
+      2: "Das Thema umfasst auch Handeln und Gemeinschaft.",
+      3: "Viele Traditionen betonen Hilfe für andere.",
+    },
+  },
+];
+
 let assignTasks = [];
 let ideaTasks = [];
+let themeTrainTasks = [];
 
 const quizState = {
   running: false,
@@ -418,6 +611,28 @@ function setupFocusModule() {
     });
   });
   renderFocus("abraham");
+}
+
+function renderTheme(key) {
+  const detail = themeDetails[key];
+  if (!detail) {
+    return;
+  }
+  mgThemeTitle.textContent = detail.title;
+  mgThemeText.textContent = detail.text;
+  mgThemeList.innerHTML = detail.points.map((point) => `<li>${point}</li>`).join("");
+  mgThemeButtons.forEach((button) => {
+    button.classList.toggle("is-active", button.dataset.theme === key);
+  });
+}
+
+function setupThemeModule() {
+  mgThemeButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      renderTheme(button.dataset.theme);
+    });
+  });
+  renderTheme("praxis");
 }
 
 function generateAssignRound(count = 7) {
@@ -618,6 +833,100 @@ function setupIdeaTraining() {
   mgIdeaCheck.addEventListener("click", checkIdeaRound);
 }
 
+function generateThemeTrainRound(count = 6) {
+  return shuffle(themeTrainPool).slice(0, count).map((item) => ({ ...item }));
+}
+
+function renderThemeTrainRound() {
+  mgThemeTrainList.replaceChildren();
+  themeTrainTasks.forEach((task, index) => {
+    const row = document.createElement("article");
+    row.className = "mg-task-row";
+
+    const prompt = document.createElement("p");
+    prompt.innerHTML = `<strong>${index + 1}. ${task.statement}</strong>`;
+
+    const select = document.createElement("select");
+    select.className = "mg-select";
+    select.name = `theme-train-${index}`;
+    select.innerHTML = `
+      <option value="">Bitte wählen</option>
+      <option value="praxis">${themeLabels.praxis}</option>
+      <option value="gemeinschaft">${themeLabels.gemeinschaft}</option>
+      <option value="handeln">${themeLabels.handeln}</option>
+    `;
+
+    const feedback = document.createElement("div");
+    feedback.className = "task-feedback";
+
+    row.append(prompt, select, feedback);
+    mgThemeTrainList.append(row);
+  });
+}
+
+function checkThemeTrainRound() {
+  const rows = mgThemeTrainList.querySelectorAll(".mg-task-row");
+  let answered = 0;
+  let correct = 0;
+
+  rows.forEach((row, index) => {
+    row.classList.remove("is-correct", "is-wrong");
+    const select = row.querySelector("select");
+    const feedback = row.querySelector(".task-feedback");
+    if (!(select instanceof HTMLSelectElement) || !(feedback instanceof HTMLDivElement)) {
+      return;
+    }
+
+    feedback.innerHTML = "";
+    if (!select.value) {
+      return;
+    }
+
+    answered += 1;
+    const task = themeTrainTasks[index];
+    if (select.value === task.answer) {
+      correct += 1;
+      row.classList.add("is-correct");
+      feedback.innerHTML = `<p class="feedback ok">Richtig. ${task.explanation}</p>`;
+      return;
+    }
+
+    row.classList.add("is-wrong");
+    feedback.innerHTML = `
+      <p class="feedback bad">
+        Noch nicht passend. Richtige Zuordnung: ${themeLabels[task.answer]}.
+        ${task.explanation}
+      </p>
+    `;
+  });
+
+  if (answered < themeTrainTasks.length) {
+    mgThemeTrainFeedback.innerHTML = '<p class="feedback info">Bitte alle Aufgaben in Training C beantworten.</p>';
+    return;
+  }
+
+  mgThemeTrainFeedback.innerHTML = `
+    <p class="feedback ${correct === themeTrainTasks.length ? "ok" : "bad"}">
+      ${correct} / ${themeTrainTasks.length} richtig.
+      ${correct === themeTrainTasks.length ? "Sehr gut." : "Lies die Rückmeldungen und starte eine neue Runde."}
+    </p>
+  `;
+}
+
+function setupThemeTraining() {
+  themeTrainTasks = generateThemeTrainRound();
+  renderThemeTrainRound();
+  mgThemeTrainFeedback.innerHTML = "";
+
+  mgThemeTrainNewRound.addEventListener("click", () => {
+    themeTrainTasks = generateThemeTrainRound();
+    renderThemeTrainRound();
+    mgThemeTrainFeedback.innerHTML = '<p class="feedback info">Neue Runde erstellt.</p>';
+  });
+
+  mgThemeTrainCheck.addEventListener("click", checkThemeTrainRound);
+}
+
 function updateQuizScore() {
   mgQuizScore.textContent = `Punkte: ${quizState.correct} / ${quizState.questions.length}`;
 }
@@ -681,11 +990,14 @@ function submitQuizAnswer(optionIndex) {
 }
 
 function startQuiz() {
+  const personPart = shuffle(quizPool).slice(0, 7);
+  const themePart = shuffle(themeQuizPool).slice(0, 3);
+
   quizState.running = true;
   quizState.answered = false;
   quizState.index = 0;
   quizState.correct = 0;
-  quizState.questions = shuffle(quizPool).slice(0, 10);
+  quizState.questions = shuffle([...personPart, ...themePart]);
   mgQuizStart.textContent = "Test neu starten";
   updateQuizScore();
   renderQuizQuestion();
@@ -724,8 +1036,10 @@ function setupQuiz() {
 
 setupTabs();
 setupFocusModule();
+setupThemeModule();
 setupAssignTraining();
 setupIdeaTraining();
+setupThemeTraining();
 setupQuiz();
 
 
