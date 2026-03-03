@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Werte und Normen - Modul 1 Gottesvorstellungen</title>
+  <link rel="icon" type="image/svg+xml" href="assets/tab-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="werte-und-normen-glaubensrichtungen.css">
+</head>
+<body>
+  <main class="wn-page">
+    <header class="wn-hero">
+      <a class="back-link" href="index.html">Zurueck zur Startseite</a>
+      <p class="wn-tag">Werte und Normen Klasse 5</p>
+      <h1>Modul 1: Polytheismus, Monotheismus, Atheismus</h1>
+      <p>
+        Du lernst die drei Begriffe sicher zu unterscheiden und zu erklaeren, welche
+        Religionen oder Weltanschauungen meist dazu passen.
+        Danach trainierst du mit Zuordnungsaufgaben und pruefst dein Wissen im Test.
+      </p>
+      <p class="wn-note">
+        Schreibweise-Hinweis: Oft wird versehentlich "Menotheismus" geschrieben.
+        Richtig ist: <strong>Monotheismus</strong>.
+      </p>
+    </header>
+
+    <nav class="wn-nav" aria-label="Modulnavigation">
+      <button class="wn-tab-btn is-active" type="button" data-tab="lernen">Lernen</button>
+      <button class="wn-tab-btn" type="button" data-tab="trainieren">Trainieren</button>
+      <button class="wn-tab-btn" type="button" data-tab="test">Test</button>
+    </nav>
+
+    <section id="tab-lernen" class="wn-tab is-active">
+      <article class="wn-card">
+        <h2>Lehrplanbezug Niedersachsen (Gymnasium 5/6)</h2>
+        <p>
+          Das Modul orientiert sich am Kerncurriculum Werte und Normen (Sek. I, Gymnasium).
+          Im Leitthema <strong>"Aspekte von Religionen und Weltanschauungen"</strong>
+          lernst du, unterschiedliche Gottesvorstellungen zu erkennen, zu vergleichen und
+          respektvoll zu beschreiben.
+        </p>
+        <ul class="wn-list">
+          <li>Du definierst die Begriffe Polytheismus, Monotheismus und Atheismus.</li>
+          <li>Du ordnest typische Beispiele zu und begruendest deine Entscheidung.</li>
+          <li>Du beachtest, dass einzelne Traditionen unterschiedliche Richtungen kennen koennen.</li>
+          <li>Du vergleichst Religionen und Weltanschauungen respektvoll und ohne Abwertung.</li>
+        </ul>
+        <p class="wn-source-note">
+          Offizielle Quelle:
+          <a href="https://nibis.de/werte-und-normen_8045" target="_blank" rel="noreferrer noopener">NIBIS Fachseite Werte und Normen</a>,
+          <a href="https://cuvo.nibis.de/cuvo.php?p=download&upload=3373" target="_blank" rel="noreferrer noopener">Kerncurriculum Gymnasium Sek. I</a>
+          (verbindlich ab 01.08.2017).
+        </p>
+      </article>
+
+      <article class="wn-card">
+        <h2>Begriffe erklaeren (interaktiv mit Grafik-Ausschnitten)</h2>
+        <p>
+          Klicke auf einen Begriff. Unten erscheint eine einfache Erklaerung mit Beispielen.
+          Die Karten nutzen jeweils einen Ausschnitt deiner Grafik.
+        </p>
+        <div class="wn-type-grid">
+          <button class="wn-type-btn is-active" type="button" data-type="poly">
+            <span class="wn-preview wn-preview-poly" aria-hidden="true"></span>
+            <span>Polytheismus</span>
+          </button>
+          <button class="wn-type-btn" type="button" data-type="mono">
+            <span class="wn-preview wn-preview-mono" aria-hidden="true"></span>
+            <span>Monotheismus</span>
+          </button>
+          <button class="wn-type-btn" type="button" data-type="athe">
+            <span class="wn-preview wn-preview-athe" aria-hidden="true"></span>
+            <span>Atheismus</span>
+          </button>
+        </div>
+
+        <div class="wn-detail-box">
+          <h3 id="wnTypeDetailTitle"></h3>
+          <p id="wnTypeDetailText"></p>
+          <ul id="wnTypeDetailList" class="wn-list"></ul>
+        </div>
+      </article>
+
+      <article class="wn-card">
+        <h2>Welche Religion glaubt woran?</h2>
+        <p>Diese Uebersicht ist fuer Klasse 5 bewusst vereinfacht:</p>
+        <div class="wn-table-wrap">
+          <table class="wn-table">
+            <thead>
+              <tr>
+                <th>Religion / Weltanschauung</th>
+                <th>Typische Zuordnung</th>
+                <th>Kurzbegruendung</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Judentum</td>
+                <td>Monotheistisch</td>
+                <td>Glaube an einen einzigen Gott.</td>
+              </tr>
+              <tr>
+                <td>Christentum</td>
+                <td>Monotheistisch</td>
+                <td>Glaube an einen einzigen Gott.</td>
+              </tr>
+              <tr>
+                <td>Islam</td>
+                <td>Monotheistisch</td>
+                <td>Glaube an einen einzigen Gott (Allah).</td>
+              </tr>
+              <tr>
+                <td>Altgriechische Religion</td>
+                <td>Polytheistisch</td>
+                <td>Viele Goetter mit unterschiedlichen Aufgaben.</td>
+              </tr>
+              <tr>
+                <td>Altaegyptische Religion</td>
+                <td>Polytheistisch</td>
+                <td>Viele Goetter, z. B. Re oder Osiris.</td>
+              </tr>
+              <tr>
+                <td>Hinduismus</td>
+                <td>Meist polytheistisch (vereinfacht)</td>
+                <td>Viele Gottheiten; je nach Richtung auch komplexer.</td>
+              </tr>
+              <tr>
+                <td>Atheismus</td>
+                <td>Keine Religion, Weltanschauung</td>
+                <td>Kein Glaube an einen oder mehrere Goetter.</td>
+              </tr>
+              <tr>
+                <td>Buddhismus</td>
+                <td>Nicht eindeutig, oft nicht-theistisch</td>
+                <td>Der Fokus liegt nicht auf einem Schoepfergott.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="wn-note">
+          Wichtig: Kategorien helfen beim Lernen, aber sie vereinfachen.
+          In grossen Religionen gibt es unterschiedliche Richtungen.
+        </p>
+      </article>
+    </section>
+
+    <section id="tab-trainieren" class="wn-tab">
+      <article class="wn-card">
+        <h2>Training A: Zuordnen mit Auswahlfeld</h2>
+        <p>
+          Ordne Begriffe der passenden Kategorie zu.
+          Nutze bei unklaren Faellen die Option "nicht eindeutig / je nach Richtung".
+        </p>
+        <p class="wn-answer-note">
+          Kurzregel: <strong>poly</strong> = viele Goetter, <strong>mono</strong> = ein Gott,
+          <strong>athe</strong> = kein Gottesglaube, <strong>nicht eindeutig</strong> = je nach Richtung.
+        </p>
+        <div class="wn-controls">
+          <button id="wnAssignNewRound" type="button">Neue Runde</button>
+          <button id="wnAssignCheck" type="button">Pruefen</button>
+        </div>
+        <div id="wnAssignList" class="wn-task-list"></div>
+        <div id="wnAssignFeedback"></div>
+      </article>
+
+      <article class="wn-card">
+        <h2>Training B: Aussage einordnen</h2>
+        <p>
+          Lies die Aussage und waehle die passendste Kategorie.
+        </p>
+        <div class="wn-controls">
+          <button id="wnStatementNewRound" type="button">Neue Runde</button>
+          <button id="wnStatementCheck" type="button">Pruefen</button>
+        </div>
+        <div id="wnStatementList" class="wn-task-list"></div>
+        <div id="wnStatementFeedback"></div>
+      </article>
+    </section>
+
+    <section id="tab-test" class="wn-tab">
+      <article class="wn-card">
+        <h2>Wissens-Test</h2>
+        <p>
+          10 Fragen, ein Punkt pro richtiger Antwort.
+          Bei Fehlern bekommst du eine kurze Erklaerung.
+        </p>
+        <div class="quiz-controls">
+          <button id="wnQuizStart" type="button">Test starten</button>
+          <button id="wnQuizNext" type="button" disabled>Naechste Frage</button>
+          <p id="wnQuizScore" class="score">Punkte: 0 / 10</p>
+        </div>
+        <div class="quiz-box">
+          <p id="wnQuizStatus" class="quiz-status">Test noch nicht gestartet.</p>
+          <h3 id="wnQuizPrompt">Klicke auf "Test starten".</h3>
+          <div id="wnQuizAnswers" class="choice-list"></div>
+          <div id="wnQuizFeedback"></div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="werte-und-normen-glaubensrichtungen.js"></script>
+</body>
+</html>

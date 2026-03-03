@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Werte und Normen - Modul 3 Menschen des Glaubens</title>
+  <link rel="icon" type="image/svg+xml" href="assets/tab-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="werte-und-normen-menschen-des-glaubens.css">
+</head>
+<body>
+  <main class="mg-page">
+    <header class="mg-hero">
+      <a class="back-link" href="index.html">Zurueck zur Startseite</a>
+      <p class="mg-tag">Werte und Normen Klasse 5</p>
+      <h1>Modul 3: Menschen des Glaubens</h1>
+      <p>
+        Du lernst wichtige Menschen des Glaubens kennen: Propheten, Religionsstifter
+        und Heilige. Du verstehst, welche Rolle sie in Religionen spielen und wie sie
+        fuer viele Menschen Orientierung geben.
+      </p>
+    </header>
+
+    <nav class="mg-nav" aria-label="Modulnavigation">
+      <button class="mg-tab-btn is-active" type="button" data-tab="lernen">Lernen</button>
+      <button class="mg-tab-btn" type="button" data-tab="trainieren">Trainieren</button>
+      <button class="mg-tab-btn" type="button" data-tab="test">Test</button>
+    </nav>
+
+    <section id="tab-lernen" class="mg-tab is-active">
+      <article class="mg-card">
+        <h2>Lehrplanbezug Niedersachsen (Gymnasium 5/6)</h2>
+        <p>
+          Im Kerncurriculum Werte und Normen (Leitthema
+          <strong>"Aspekte von Religionen und Weltanschauungen"</strong>)
+          sollen unter anderem <strong>zentrale religioese Figuren</strong> behandelt werden,
+          zum Beispiel Propheten, Religionsstifter und Heilige.
+        </p>
+        <ul class="mg-list">
+          <li>Du beschreibst die Rolle wichtiger Menschen des Glaubens.</li>
+          <li>Du vergleichst ihre Bedeutung in verschiedenen Religionen.</li>
+          <li>Du erklaerst, wie Religiositaet Orientierung im Alltag geben kann.</li>
+        </ul>
+        <p class="mg-source-note">
+          Offizielle Quelle:
+          <a href="https://nibis.de/werte-und-normen_8045" target="_blank" rel="noreferrer noopener">NIBIS Fachseite Werte und Normen</a>,
+          <a href="https://cuvo.nibis.de/index.php?p=download&upload=129" target="_blank" rel="noreferrer noopener">Kerncurriculum Gymnasium Sek. I</a>
+          (Kapitel Schuljahrgaenge 5/6).
+        </p>
+      </article>
+
+      <article class="mg-card">
+        <h2>Figurenfokus (interaktiv)</h2>
+        <p>
+          Klicke auf eine Personenkarte. Du siehst dann eine kurze Erklaerung zur
+          Bedeutung dieser Figur im Glauben.
+        </p>
+
+        <div class="mg-focus-grid">
+          <button class="mg-focus-btn is-active" type="button" data-focus="abraham">Abraham / Ibrahim</button>
+          <button class="mg-focus-btn" type="button" data-focus="mose">Mose / Musa</button>
+          <button class="mg-focus-btn" type="button" data-focus="jesus">Jesus</button>
+          <button class="mg-focus-btn" type="button" data-focus="muhammad">Muhammad</button>
+          <button class="mg-focus-btn" type="button" data-focus="buddha">Buddha</button>
+          <button class="mg-focus-btn" type="button" data-focus="martin">Martin von Tours</button>
+        </div>
+
+        <div class="mg-detail-box">
+          <h3 id="mgFocusTitle"></h3>
+          <p id="mgFocusText"></p>
+          <ul id="mgFocusList" class="mg-list"></ul>
+        </div>
+      </article>
+
+      <article class="mg-card">
+        <h2>Menschen des Glaubens im Vergleich</h2>
+        <div class="mg-table-wrap">
+          <table class="mg-table">
+            <thead>
+              <tr>
+                <th>Person</th>
+                <th>Tradition(en)</th>
+                <th>Wofuer bekannt?</th>
+                <th>Warum wichtig?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Abraham / Ibrahim</td>
+                <td>Judentum, Christentum, Islam</td>
+                <td>Vertrauen auf Gott</td>
+                <td>Gemeinsame Bezugsperson der drei Religionen</td>
+              </tr>
+              <tr>
+                <td>Mose / Musa</td>
+                <td>Judentum, Christentum, Islam</td>
+                <td>Fuehrung, Gebote, Befreiung</td>
+                <td>Steht fuer Orientierung und Verantwortung</td>
+              </tr>
+              <tr>
+                <td>Jesus</td>
+                <td>Christentum; im Islam als Prophet geehrt</td>
+                <td>Naechstenliebe, Vergebung</td>
+                <td>Zentrale Figur fuer christlichen Glauben</td>
+              </tr>
+              <tr>
+                <td>Muhammad</td>
+                <td>Islam</td>
+                <td>Prophet und Uebermittlung der Botschaft des Koran</td>
+                <td>Zentrale Orientierungsperson im Islam</td>
+              </tr>
+              <tr>
+                <td>Buddha</td>
+                <td>Buddhismus</td>
+                <td>Weg zur Ueberwindung von Leiden</td>
+                <td>Religionsstifter und Vorbild</td>
+              </tr>
+              <tr>
+                <td>Martin von Tours</td>
+                <td>Christliche Tradition</td>
+                <td>Teilen und Barmherzigkeit</td>
+                <td>Beispiel fuer einen Heiligen als Vorbild</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+    </section>
+
+    <section id="tab-trainieren" class="mg-tab">
+      <article class="mg-card">
+        <h2>Training A: Aussage zuordnen</h2>
+        <p>Ordne jede Aussage der passenden Person zu.</p>
+        <div class="mg-controls">
+          <button id="mgAssignNewRound" type="button">Neue Runde</button>
+          <button id="mgAssignCheck" type="button">Pruefen</button>
+        </div>
+        <div id="mgAssignList" class="mg-task-list"></div>
+        <div id="mgAssignFeedback"></div>
+      </article>
+
+      <article class="mg-card">
+        <h2>Training B: Passt als Grundidee?</h2>
+        <p>Entscheide, ob die Aussage zum Thema "Menschen des Glaubens" passt.</p>
+        <div class="mg-controls">
+          <button id="mgIdeaNewRound" type="button">Neue Runde</button>
+          <button id="mgIdeaCheck" type="button">Pruefen</button>
+        </div>
+        <div id="mgIdeaList" class="mg-task-list"></div>
+        <div id="mgIdeaFeedback"></div>
+      </article>
+    </section>
+
+    <section id="tab-test" class="mg-tab">
+      <article class="mg-card">
+        <h2>Wissens-Test</h2>
+        <p>10 Fragen mit direkter Rueckmeldung und Punktezaehler.</p>
+        <div class="quiz-controls">
+          <button id="mgQuizStart" type="button">Test starten</button>
+          <button id="mgQuizNext" type="button" disabled>Naechste Frage</button>
+          <p id="mgQuizScore" class="score">Punkte: 0 / 10</p>
+        </div>
+        <div class="quiz-box">
+          <p id="mgQuizStatus" class="quiz-status">Test noch nicht gestartet.</p>
+          <h3 id="mgQuizPrompt">Klicke auf "Test starten".</h3>
+          <div id="mgQuizAnswers" class="choice-list"></div>
+          <div id="mgQuizFeedback"></div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="werte-und-normen-menschen-des-glaubens.js"></script>
+</body>
+</html>

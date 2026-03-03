@@ -49,6 +49,41 @@ const defaultTopics = [
     link: "geschichte-aegypten-nil.html",
     description: "Hochkultur am Nil verstehen, Ursache-Folge trainieren und mit Feedback testen.",
   },
+  {
+    subject: "Werte und Normen",
+    title: "Modul 1: Gottesvorstellungen verstehen",
+    link: "werte-und-normen-glaubensrichtungen.html",
+    description:
+      "Polytheismus, Monotheismus und Atheismus erklaeren, vergleichen und im Test sichern.",
+  },
+  {
+    subject: "Werte und Normen",
+    title: "Modul 2: Gottesvorstellungen im Monotheismus",
+    link: "werte-und-normen-monotheistische-gottesvorstellungen.html",
+    description:
+      "Schoepfer, Allmaechtiger, Offenbarer und Allwissender Gott verstehen und anwenden.",
+  },
+  {
+    subject: "Werte und Normen",
+    title: "Modul 3: Menschen des Glaubens",
+    link: "werte-und-normen-menschen-des-glaubens.html",
+    description:
+      "Propheten, Religionsstifter und Heilige kennenlernen, vergleichen und im Test anwenden.",
+  },
+  {
+    subject: "Werte und Normen",
+    title: "Inhalte Klasse 5 (Niedersachsen)",
+    link: "",
+    description:
+      "Leitthemen fuer Jahrgang 5/6 laut Kerncurriculum Gymnasium Sek. I (verbindlich ab 01.08.2017).",
+    bulletPoints: [
+      "Ich und meine Beziehungen (Freundschaft, Familie, Vorbilder).",
+      "Glueck und Lebensgestaltung (Zukunftswuensche, Verantwortung, Erfolg/Misserfolg).",
+      "Regeln fuer das Zusammenleben (Regeln und Rituale, Goldene Regel, Regelverletzungen).",
+      "Leben in Vielfalt (Vorurteile, Klischees, Mobbing, Toleranz).",
+      "Aspekte von Religionen und Weltanschauungen (Goettliches, Schoepfungsmythen, religioese Praxis).",
+    ],
+  },
 ];
 
 const subjectSelect = document.getElementById("subjectSelect");
@@ -56,11 +91,18 @@ const moduleList = document.getElementById("moduleList");
 const emptyState = document.getElementById("emptyState");
 
 function normalizeTopic(topic) {
+  const bulletPoints = Array.isArray(topic.bulletPoints)
+    ? topic.bulletPoints
+        .map((entry) => String(entry || "").trim())
+        .filter(Boolean)
+    : [];
+
   return {
     subject: String(topic.subject || "").trim(),
     title: String(topic.title || "").trim(),
     link: String(topic.link || "").trim(),
     description: String(topic.description || "").trim(),
+    bulletPoints,
   };
 }
 
@@ -106,6 +148,8 @@ function dedupeTopics(topics) {
       title: topic.title || existing.title,
       link: topic.link || existing.link,
       description: topic.description || existing.description,
+      bulletPoints:
+        topic.bulletPoints.length > 0 ? topic.bulletPoints : existing.bulletPoints,
     });
   });
 
@@ -123,6 +167,8 @@ function dedupeTopics(topics) {
       title: topic.title || existing.title,
       link: topic.link || existing.link,
       description: topic.description || existing.description,
+      bulletPoints:
+        topic.bulletPoints.length > 0 ? topic.bulletPoints : existing.bulletPoints,
     });
   });
 
@@ -167,10 +213,30 @@ function createModuleCard(topic) {
   const title = document.createElement("h3");
   title.textContent = topic.title;
 
-  const description = document.createElement("p");
-  description.textContent = topic.description || "Modul ohne Zusatzbeschreibung.";
+  card.append(kicker, title);
 
-  card.append(kicker, title, description);
+  if (topic.description) {
+    const description = document.createElement("p");
+    description.textContent = topic.description;
+    card.append(description);
+  }
+
+  if (topic.bulletPoints.length > 0) {
+    const bulletList = document.createElement("ul");
+    bulletList.className = "module-bullet-list";
+
+    topic.bulletPoints.forEach((item) => {
+      const bullet = document.createElement("li");
+      bullet.textContent = item;
+      bulletList.append(bullet);
+    });
+
+    card.append(bulletList);
+  } else if (!topic.description) {
+    const description = document.createElement("p");
+    description.textContent = "Modul ohne Zusatzbeschreibung.";
+    card.append(description);
+  }
 
   if (topic.link) {
     const link = document.createElement("a");

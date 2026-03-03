@@ -252,6 +252,18 @@ button:hover,
   color: var(--ink-soft);
 }
 
+.module-bullet-list {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--ink-soft);
+  display: grid;
+  gap: 4px;
+}
+
+.module-bullet-list li {
+  margin: 0;
+}
+
 .module-callout .button-link {
   width: fit-content;
 }
