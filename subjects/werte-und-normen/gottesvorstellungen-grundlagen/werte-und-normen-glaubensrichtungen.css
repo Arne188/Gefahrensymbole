@@ -1,0 +1,275 @@
+.wn-page {
+  width: min(1120px, 94vw);
+  margin: 20px auto 34px;
+  display: grid;
+  gap: 14px;
+}
+
+.wn-hero,
+.wn-nav,
+.wn-card {
+  border: 1px solid #c8d5e2;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 10px 22px rgba(17, 32, 48, 0.11);
+}
+
+.wn-hero {
+  padding: 20px;
+  display: grid;
+  gap: 8px;
+  background:
+    linear-gradient(120deg, rgba(255, 255, 255, 0.96), rgba(238, 250, 241, 0.95)),
+    #fff;
+}
+
+.wn-tag {
+  margin: 0;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  color: #566577;
+}
+
+.wn-hero h1 {
+  margin: 2px 0 4px;
+}
+
+.wn-hero p {
+  margin: 0;
+  max-width: 70ch;
+  color: #3e5670;
+}
+
+.wn-note {
+  margin-top: 8px;
+  border: 1px solid #d2ddec;
+  border-radius: 10px;
+  background: #f5f9ff;
+  padding: 10px 12px;
+  color: #2b4764;
+}
+
+.wn-nav {
+  padding: 8px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.wn-tab-btn {
+  border: 1px solid #b8cde1;
+  background: #edf5ff;
+  color: #153d63;
+}
+
+.wn-tab-btn.is-active {
+  border-color: #0f62b5;
+  background: #0f62b5;
+  color: #fff;
+}
+
+.wn-tab {
+  display: none;
+  gap: 14px;
+}
+
+.wn-tab.is-active {
+  display: grid;
+}
+
+.wn-card {
+  padding: 16px;
+}
+
+.wn-card h2 {
+  margin: 0 0 8px;
+}
+
+.wn-card h3 {
+  margin: 0 0 6px;
+  color: #1d4266;
+}
+
+.wn-card p {
+  margin-top: 0;
+  color: #425971;
+}
+
+.wn-list {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 6px;
+}
+
+.wn-source-note {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #58718a;
+}
+
+.wn-source-note a {
+  color: #0f62b5;
+}
+
+.wn-type-grid {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 10px;
+}
+
+.wn-type-btn {
+  border: 1px solid #c7d6e8;
+  border-radius: 12px;
+  background: #fff;
+  color: #1f415f;
+  display: grid;
+  gap: 8px;
+  justify-items: center;
+  text-align: center;
+  padding: 10px;
+}
+
+.wn-type-btn.is-active {
+  border-color: #11786e;
+  background: #eaf7f5;
+}
+
+.wn-preview {
+  width: min(100%, 260px);
+  justify-self: center;
+  aspect-ratio: 11 / 18;
+  border-radius: 8px;
+  border: 1px solid #c6d7e9;
+  background-image: url("../../../Gemini_Generated_Image_9alj549alj549alj.png");
+  background-repeat: no-repeat;
+  background-size: 300% auto;
+  background-color: #fff;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.45);
+}
+
+.wn-preview-poly {
+  background-position: left center;
+}
+
+.wn-preview-mono {
+  background-position: center center;
+}
+
+.wn-preview-athe {
+  background-position: right center;
+}
+
+.wn-detail-box {
+  margin-top: 10px;
+  border: 1px solid #cddced;
+  border-radius: 12px;
+  background: #f8fbff;
+  padding: 12px;
+}
+
+.wn-detail-box p {
+  margin: 0 0 8px;
+}
+
+.wn-table-wrap {
+  margin-top: 10px;
+  overflow-x: auto;
+}
+
+.wn-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 720px;
+}
+
+.wn-table th,
+.wn-table td {
+  border: 1px solid #cfdaea;
+  padding: 9px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.wn-table th {
+  background: #edf4fc;
+  color: #244462;
+}
+
+.wn-controls {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.wn-task-list {
+  margin-top: 10px;
+  display: grid;
+  gap: 8px;
+}
+
+.wn-task-row {
+  border: 1px solid #cfdceb;
+  border-radius: 10px;
+  background: #fff;
+  padding: 10px;
+  display: grid;
+  gap: 8px;
+}
+
+.wn-task-row p {
+  margin: 0;
+}
+
+.wn-task-row.is-correct {
+  border-color: #95d2bc;
+  background: #ebf9f2;
+}
+
+.wn-task-row.is-wrong {
+  border-color: #e4b5b5;
+  background: #fdeeee;
+}
+
+.wn-select {
+  width: 100%;
+  max-width: 380px;
+}
+
+.wn-choice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 8px;
+}
+
+.wn-choice-item {
+  border: 1px solid #c9d9ea;
+  border-radius: 10px;
+  background: #f7fbff;
+  padding: 8px 10px;
+}
+
+.wn-choice-item input {
+  margin-right: 6px;
+}
+
+.wn-answer-note {
+  font-size: 13px;
+  color: #4b6179;
+}
+
+@media (max-width: 760px) {
+  .wn-choice-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wn-table {
+    min-width: 640px;
+  }
+}
+
+

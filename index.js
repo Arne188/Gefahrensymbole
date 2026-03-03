@@ -1,72 +1,72 @@
-﻿const storageKey = "lernbereich_themen_v1";
+const storageKey = "lernbereich_themen_v1";
 
 const defaultTopics = [
   {
     subject: "Chemie",
     title: "Gefahrstoffkennzeichen",
-    link: "chemie-gefahrstoffe.html",
+    link: "subjects/chemie/gefahrstoffkennzeichen/chemie-gefahrstoffe.html",
     description: "GHS-Symbole verstehen und im Test sicher anwenden.",
   },
   {
     subject: "Chemie",
-    title: "Laborgeraete und Sicherheit",
-    link: "chemie-laborgeraete.html",
-    description: "Geraetekunde, Protokoll, Quiz und Sicherheitstest.",
+    title: "Laborgeräte und Sicherheit",
+    link: "subjects/chemie/laborgeraete-und-sicherheit/chemie-laborgeraete.html",
+    description: "Gerätekunde, Protokoll, Quiz und Sicherheitstest.",
   },
   {
     subject: "Erdkunde",
     title: "Vom Luftbild zur Karte",
-    link: "erdkunde-luftbild-karte.html",
-    description: "Legende, Himmelsrichtungen, Massstab und Kartentest.",
+    link: "subjects/erdkunde/vom-luftbild-zur-karte/erdkunde-luftbild-karte.html",
+    description: "Legende, Himmelsrichtungen, Maßstab und Kartentest.",
   },
   {
     subject: "Deutsch",
-    title: "Maerchenanalyse schreiben",
-    link: "deutsch-maerchenanalyse.html",
-    description: "Lehrplanorientierte Schrittanleitung mit Uebungen und Kurztest.",
+    title: "Märchenanalyse schreiben",
+    link: "subjects/deutsch/maerchenanalyse/deutsch-maerchenanalyse.html",
+    description: "Lehrplanorientierte Schrittanleitung mit Übungen und Kurztest.",
   },
   {
     subject: "Deutsch",
-    title: "Maerchen schreiben",
-    link: "deutsch-maerchen-schreiben.html",
-    description: "Von der Idee bis zur Reinschrift: mit Uebungspool, Feedback und Test.",
+    title: "Märchen schreiben",
+    link: "subjects/deutsch/maerchen-schreiben/deutsch-maerchen-schreiben.html",
+    description: "Von der Idee bis zur Reinschrift: mit Übungspool, Feedback und Test.",
   },
   {
     subject: "Mathematik",
     title: "Besondere Vierecke",
-    link: "mathematik-besondere-vierecke.html",
+    link: "subjects/mathematik/besondere-vierecke/mathematik-besondere-vierecke.html",
     description: "Vierecke erkennen, Eigenschaften vergleichen und im Test anwenden.",
   },
   {
     subject: "Englisch",
     title: "Sentences with if - Part 1",
-    link: "englisch-if-sentences.html",
-    description: "If-Saetze sicher bilden, Fehler verstehen und mit grossem Aufgabenpool ueben.",
+    link: "subjects/englisch/if-sentences-part-1/englisch-if-sentences.html",
+    description: "If-Sätze sicher bilden, Fehler verstehen und mit großem Aufgabenpool üben.",
   },
   {
     subject: "Geschichte",
-    title: "Aegypten - Geschenk des Nils",
-    link: "geschichte-aegypten-nil.html",
+    title: "Ägypten - Geschenk des Nils",
+    link: "subjects/geschichte/aegypten-geschenk-des-nils/geschichte-aegypten-nil.html",
     description: "Hochkultur am Nil verstehen, Ursache-Folge trainieren und mit Feedback testen.",
   },
   {
     subject: "Werte und Normen",
     title: "Modul 1: Gottesvorstellungen verstehen",
-    link: "werte-und-normen-glaubensrichtungen.html",
+    link: "subjects/werte-und-normen/gottesvorstellungen-grundlagen/werte-und-normen-glaubensrichtungen.html",
     description:
-      "Polytheismus, Monotheismus und Atheismus erklaeren, vergleichen und im Test sichern.",
+      "Polytheismus, Monotheismus und Atheismus erklären, vergleichen und im Test sichern.",
   },
   {
     subject: "Werte und Normen",
     title: "Modul 2: Gottesvorstellungen im Monotheismus",
-    link: "werte-und-normen-monotheistische-gottesvorstellungen.html",
+    link: "subjects/werte-und-normen/gottesvorstellungen-im-monotheismus/werte-und-normen-monotheistische-gottesvorstellungen.html",
     description:
-      "Schoepfer, Allmaechtiger, Offenbarer und Allwissender Gott verstehen und anwenden.",
+      "Schöpfer, Allmächtiger, Offenbarer und Allwissender Gott verstehen und anwenden.",
   },
   {
     subject: "Werte und Normen",
     title: "Modul 3: Menschen des Glaubens",
-    link: "werte-und-normen-menschen-des-glaubens.html",
+    link: "subjects/werte-und-normen/menschen-des-glaubens/werte-und-normen-menschen-des-glaubens.html",
     description:
       "Propheten, Religionsstifter und Heilige kennenlernen, vergleichen und im Test anwenden.",
   },
@@ -75,13 +75,13 @@ const defaultTopics = [
     title: "Inhalte Klasse 5 (Niedersachsen)",
     link: "",
     description:
-      "Leitthemen fuer Jahrgang 5/6 laut Kerncurriculum Gymnasium Sek. I (verbindlich ab 01.08.2017).",
+      "Leitthemen für Jahrgang 5/6 laut Kerncurriculum Gymnasium Sek. I (verbindlich ab 01.08.2017).",
     bulletPoints: [
       "Ich und meine Beziehungen (Freundschaft, Familie, Vorbilder).",
-      "Glueck und Lebensgestaltung (Zukunftswuensche, Verantwortung, Erfolg/Misserfolg).",
-      "Regeln fuer das Zusammenleben (Regeln und Rituale, Goldene Regel, Regelverletzungen).",
+      "Glück und Lebensgestaltung (Zukunftswünsche, Verantwortung, Erfolg/Misserfolg).",
+      "Regeln für das Zusammenleben (Regeln und Rituale, Goldene Regel, Regelverletzungen).",
       "Leben in Vielfalt (Vorurteile, Klischees, Mobbing, Toleranz).",
-      "Aspekte von Religionen und Weltanschauungen (Goettliches, Schoepfungsmythen, religioese Praxis).",
+      "Aspekte von Religionen und Weltanschauungen (Göttliches, Schöpfungsmythen, religiöse Praxis).",
     ],
   },
 ];
@@ -242,7 +242,7 @@ function createModuleCard(topic) {
     const link = document.createElement("a");
     link.className = "button-link";
     link.href = topic.link;
-    link.textContent = "Modul oeffnen";
+    link.textContent = "Modul öffnen";
     card.append(link);
   } else {
     const note = document.createElement("p");
@@ -276,7 +276,7 @@ function renderSubjects(topics) {
   if (subjects.length === 0) {
     const option = document.createElement("option");
     option.value = "";
-    option.textContent = "Keine Faecher verfuegbar";
+    option.textContent = "Keine Fächer verfügbar";
     subjectSelect.append(option);
     subjectSelect.disabled = true;
     renderModules(topics, "");
@@ -301,3 +301,5 @@ renderSubjects(topics);
 subjectSelect.addEventListener("change", () => {
   renderModules(topics, subjectSelect.value);
 });
+
+
