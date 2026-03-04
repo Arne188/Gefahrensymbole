@@ -1,0 +1,324 @@
+﻿.sp-page {
+  width: min(1160px, 95vw);
+  margin: 20px auto 34px;
+  display: grid;
+  gap: 14px;
+}
+
+.sp-hero,
+.sp-nav,
+.sp-card {
+  border: 1px solid #c9d3de;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 10px 22px rgba(18, 35, 56, 0.12);
+}
+
+.sp-hero {
+  padding: 20px;
+  display: grid;
+  gap: 8px;
+  background:
+    linear-gradient(120deg, rgba(255, 255, 255, 0.98), rgba(241, 250, 255, 0.96)),
+    repeating-linear-gradient(
+      0deg,
+      rgba(150, 190, 230, 0.12),
+      rgba(150, 190, 230, 0.12) 1px,
+      transparent 1px,
+      transparent 24px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(150, 190, 230, 0.12),
+      rgba(150, 190, 230, 0.12) 1px,
+      transparent 1px,
+      transparent 24px
+    );
+}
+
+.sp-tag {
+  margin: 0;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  color: #526678;
+}
+
+.sp-hero h1 {
+  margin: 2px 0 4px;
+}
+
+.sp-hero p {
+  margin: 0;
+  max-width: 76ch;
+  color: #384f63;
+}
+
+.sp-hero-figure {
+  margin: 10px 0 0;
+}
+
+.sp-hero-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #cfdceb;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.sp-nav {
+  padding: 8px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.sp-tab-btn {
+  border: 1px solid #9fb6ca;
+  background: #edf5fb;
+  color: #25455f;
+}
+
+.sp-tab-btn.is-active {
+  border-color: #245d8a;
+  background: #245d8a;
+  color: #fff;
+}
+
+.sp-tab {
+  display: none;
+  gap: 14px;
+}
+
+.sp-tab.is-active {
+  display: grid;
+}
+
+.sp-card {
+  padding: 16px;
+}
+
+.sp-card h2 {
+  margin: 0 0 8px;
+}
+
+.sp-card h3 {
+  margin: 0 0 6px;
+  color: #1f537f;
+}
+
+.sp-card p {
+  margin-top: 0;
+  color: #384f63;
+}
+
+.sp-list {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 6px;
+}
+
+.sp-source-note {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #5a7186;
+}
+
+.sp-source-note a {
+  color: #185f97;
+}
+
+.sp-theme-grid {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+}
+
+.sp-theme-btn {
+  border: 1px solid #c8d7e6;
+  border-radius: 12px;
+  background: #f7fbff;
+  color: #234a6d;
+  padding: 8px;
+  display: grid;
+  gap: 8px;
+}
+
+.sp-theme-btn.is-active {
+  border-color: #207085;
+  background: #eaf7f9;
+  box-shadow: 0 0 0 2px rgba(32, 112, 133, 0.16);
+}
+
+.sp-preview {
+  width: min(100%, 245px);
+  justify-self: center;
+  aspect-ratio: 4 / 3;
+  border-radius: 10px;
+  border: 1px solid #c7d9ea;
+  background-image: url("./achsensymmetrie-und-punktsymmetrie-grafik.png?v=20260304");
+  background-repeat: no-repeat;
+  background-size: 200% auto;
+  background-color: #fff;
+}
+
+.sp-preview-achse {
+  background-position: 9% 28%;
+}
+
+.sp-preview-punkt {
+  background-position: 90% 28%;
+}
+
+.sp-preview-vergleich {
+  background-position: 50% 7%;
+}
+
+.sp-preview-figuren {
+  background-position: 52% 76%;
+}
+
+.sp-theme-label {
+  font-weight: 700;
+}
+
+.sp-detail-box {
+  margin-top: 10px;
+  border: 1px solid #caddec;
+  border-radius: 12px;
+  background: #f8fbff;
+  padding: 12px;
+}
+
+.sp-workbench-grid {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
+  align-items: end;
+}
+
+.sp-workbench-grid label {
+  display: grid;
+  gap: 6px;
+  color: #385066;
+  font-weight: 500;
+}
+
+.sp-workbench-result {
+  margin-top: 12px;
+  border: 1px solid #caddec;
+  border-radius: 12px;
+  background: #f8fbff;
+  padding: 12px;
+}
+
+#spWorkbenchText {
+  margin: 0 0 8px;
+  font-weight: 600;
+  color: #204f79;
+}
+
+#spWorkbenchSvg {
+  width: 100%;
+  max-width: 380px;
+  display: block;
+  border: 1px solid #bed2e5;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.sp-controls {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.sp-generator-grid {
+  margin-top: 8px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+}
+
+.sp-generator-grid label {
+  display: grid;
+  gap: 6px;
+  color: #385066;
+  font-weight: 500;
+}
+
+.sp-type-box {
+  margin-top: 12px;
+  border: 1px solid #c6d9ea;
+  border-radius: 12px;
+  background: #f7fbff;
+  padding: 10px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.sp-type-box legend {
+  padding: 0 6px;
+  color: #234a6d;
+  font-weight: 700;
+}
+
+.sp-type-box label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #385066;
+}
+
+.sp-task-list {
+  margin-top: 10px;
+  display: grid;
+  gap: 8px;
+}
+
+.sp-task-row {
+  border: 1px solid #cfdceb;
+  border-radius: 10px;
+  background: #fff;
+  padding: 10px;
+  display: grid;
+  gap: 8px;
+}
+
+.sp-task-row p {
+  margin: 0;
+}
+
+.sp-task-row.is-correct {
+  border-color: #95d2bc;
+  background: #ebf9f2;
+}
+
+.sp-task-row.is-wrong {
+  border-color: #e4b5b5;
+  background: #fdeeee;
+}
+
+.sp-answer-line {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.sp-input-small {
+  width: 90px;
+}
+
+@media (max-width: 760px) {
+  .sp-theme-grid {
+    grid-template-columns: 1fr;
+  }
+}

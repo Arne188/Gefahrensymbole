@@ -1,0 +1,300 @@
+﻿.ms-page {
+  width: min(1160px, 95vw);
+  margin: 20px auto 34px;
+  display: grid;
+  gap: 14px;
+}
+
+.ms-hero,
+.ms-nav,
+.ms-card {
+  border: 1px solid #c8d8cf;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 10px 22px rgba(23, 45, 33, 0.12);
+}
+
+.ms-hero {
+  padding: 20px;
+  display: grid;
+  gap: 8px;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(200, 229, 214, 0.46), transparent 46%),
+    linear-gradient(120deg, rgba(255, 255, 255, 0.98), rgba(241, 249, 255, 0.96));
+}
+
+.ms-tag {
+  margin: 0;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  color: #556f62;
+}
+
+.ms-hero h1 {
+  margin: 2px 0 4px;
+}
+
+.ms-hero p {
+  margin: 0;
+  max-width: 80ch;
+  color: #3d5b4f;
+}
+
+.ms-hero-visual {
+  margin-top: 10px;
+  border: 1px solid #c5d9cb;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.ms-hero-visual svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.ms-nav {
+  padding: 8px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.ms-tab-btn {
+  border: 1px solid #a9c7b6;
+  background: #eef8f2;
+  color: #24523e;
+}
+
+.ms-tab-btn.is-active {
+  border-color: #1d6a44;
+  background: #1d6a44;
+  color: #fff;
+}
+
+.ms-tab {
+  display: none;
+  gap: 14px;
+}
+
+.ms-tab.is-active {
+  display: grid;
+}
+
+.ms-card {
+  padding: 16px;
+}
+
+.ms-card h2 {
+  margin: 0 0 8px;
+}
+
+.ms-card h3 {
+  margin: 0 0 6px;
+  color: #1f5a48;
+}
+
+.ms-card p {
+  margin-top: 0;
+  color: #3d5b4f;
+}
+
+.ms-list {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 6px;
+}
+
+.ms-source-note {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #5a7468;
+}
+
+.ms-source-note a {
+  color: #1a5f98;
+}
+
+.ms-concept-buttons {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.ms-concept-btn {
+  border: 1px solid #a7c8b4;
+  background: #f3fbf7;
+  color: #24523e;
+}
+
+.ms-concept-btn.is-active {
+  border-color: #1d6a44;
+  background: #1d6a44;
+  color: #fff;
+}
+
+.ms-detail-box {
+  margin-top: 10px;
+  border: 1px solid #cee3d7;
+  border-radius: 12px;
+  background: #f8fcfa;
+  padding: 12px;
+}
+
+.ms-lab-grid {
+  margin-top: 8px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 10px;
+}
+
+.ms-lab-grid label {
+  display: grid;
+  gap: 6px;
+  color: #3d5b4f;
+  font-weight: 500;
+}
+
+.ms-controls {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.ms-lab-result {
+  margin-top: 10px;
+  border: 1px solid #cadfd2;
+  border-radius: 10px;
+  background: #fff;
+  padding: 10px;
+  min-height: 50px;
+  display: grid;
+  gap: 8px;
+}
+
+.ms-lab-result p {
+  margin: 0;
+}
+
+.ms-lab-calc-line {
+  font-weight: 700;
+  color: #225d48;
+}
+
+.ms-generator-grid {
+  margin-top: 8px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+}
+
+.ms-generator-grid label {
+  display: grid;
+  gap: 6px;
+  color: #3d5b4f;
+  font-weight: 500;
+}
+
+.ms-type-box {
+  margin-top: 12px;
+  border: 1px solid #cbe0d3;
+  border-radius: 12px;
+  background: #f8fcfa;
+  padding: 10px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.ms-type-box legend {
+  padding: 0 6px;
+  color: #24523e;
+  font-weight: 700;
+}
+
+.ms-type-box label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #3d5b4f;
+}
+
+.ms-task-list {
+  margin-top: 10px;
+  display: grid;
+  gap: 8px;
+}
+
+.ms-task-row {
+  border: 1px solid #cfded6;
+  border-radius: 10px;
+  background: #fff;
+  padding: 10px;
+  display: grid;
+  gap: 8px;
+}
+
+.ms-task-row p {
+  margin: 0;
+}
+
+.ms-task-row.is-correct {
+  border-color: #95d2bc;
+  background: #ebf9f2;
+}
+
+.ms-task-row.is-wrong {
+  border-color: #e4b5b5;
+  background: #fdeeee;
+}
+
+.ms-answer-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.ms-number-input {
+  width: 170px;
+}
+
+.ms-unit-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 42px;
+  border: 1px solid #b7ccbf;
+  border-radius: 999px;
+  padding: 5px 10px;
+  background: #f6fbf8;
+  color: #24523e;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.ms-quiz-option {
+  width: 100%;
+  text-align: left;
+  border: 1px solid #c9dbd2;
+  border-radius: 10px;
+  background: #f4faf7;
+  color: #223d31;
+}
+
+@media (max-width: 760px) {
+  .ms-concept-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ms-number-input {
+    width: 140px;
+  }
+}

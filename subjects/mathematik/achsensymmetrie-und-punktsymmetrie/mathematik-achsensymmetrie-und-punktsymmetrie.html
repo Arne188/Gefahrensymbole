@@ -1,0 +1,179 @@
+﻿<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mathematik - Achsensymmetrie und Punktsymmetrie</title>
+  <link rel="icon" type="image/svg+xml" href="../../../assets/tab-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../styles.css">
+  <link rel="stylesheet" href="mathematik-achsensymmetrie-und-punktsymmetrie.css">
+</head>
+<body>
+  <main class="sp-page">
+    <header class="sp-hero">
+      <a class="back-link" href="../../../index.html">Zurück zur Startseite</a>
+      <p class="sp-tag">Mathematik Klasse 5</p>
+      <h1>Achsensymmetrie und Punktsymmetrie</h1>
+      <p>
+        Du lernst, wie man Symmetrien erkennt, Symmetrieachsen bestimmt und Bildpunkte konstruiert.
+        Danach übst du mit einem Aufgaben-Generator, der bei jeder Runde neue Aufgaben erstellt.
+      </p>
+      <figure class="sp-hero-figure">
+        <img src="./achsensymmetrie-und-punktsymmetrie-grafik.png?v=20260304" alt="Schaubild zu Achsensymmetrie und Punktsymmetrie mit Beispielen aus Figuren">
+      </figure>
+    </header>
+
+    <nav class="sp-nav" aria-label="Modulnavigation">
+      <button class="sp-tab-btn is-active" type="button" data-tab="lernen">Lernen</button>
+      <button class="sp-tab-btn" type="button" data-tab="trainieren">Trainieren</button>
+      <button class="sp-tab-btn" type="button" data-tab="test">Test</button>
+    </nav>
+
+    <section id="tab-lernen" class="sp-tab is-active">
+      <article class="sp-card">
+        <h2>Lehrplanbezug Niedersachsen (Gymnasium 5/6)</h2>
+        <p>
+          Das Modul orientiert sich am Kerncurriculum Mathematik für das Gymnasium in Niedersachsen.
+          Im Kompetenzbereich <strong>Raum und Form</strong> sind für Jahrgang 5/6 insbesondere
+          <strong>Symmetrien</strong>, das Zeichnen ebener Figuren und das Beschreiben geometrischer Eigenschaften zentral.
+        </p>
+        <ul class="sp-list">
+          <li>Du erkennst und beschreibst achsensymmetrische und punktsymmetrische Figuren.</li>
+          <li>Du konstruierst Bildpunkte bei Spiegelung und Punktspiegelung.</li>
+          <li>Du nutzt Fachbegriffe wie Symmetrieachse, Symmetriezentrum und deckungsgleich korrekt.</li>
+          <li>Du überprüfst Ergebnisse mit Merksätzen und Plausibilität.</li>
+        </ul>
+        <p class="sp-source-note">
+          Offizielle Quelle:
+          <a href="https://cuvo.nibis.de/index.php?p=search&k0_0=Dokumentenart&v0_0=Kerncurriculum&f0_0=off&k0_1=Schulbereich&v0_1=Sek+I&f0_1=off&k0_2=Schulform&v0_2=Gymnasium-Sek.I&f0_2=off" target="_blank" rel="noopener noreferrer">NIBIS/CuVo - Kerncurricula Sek I Gymnasium</a>
+          |
+          <a href="https://cuvo.nibis.de/index.php?p=download&upload=188" target="_blank" rel="noopener noreferrer">Kerncurriculum Mathematik Gymnasium 5-10 (PDF)</a>
+          | Ergänzend:
+          <a href="https://de.wikipedia.org/wiki/Achsensymmetrie" target="_blank" rel="noopener noreferrer">Achsensymmetrie</a>
+          |
+          <a href="https://de.wikipedia.org/wiki/Punktsymmetrie" target="_blank" rel="noopener noreferrer">Punktsymmetrie</a>
+        </p>
+      </article>
+
+      <article class="sp-card">
+        <h2>Begriffe verstehen (interaktiv mit Grafik)</h2>
+        <p>Klicke auf ein Thema. Unten siehst du die einfache Erklärung mit Beispielen.</p>
+
+        <div class="sp-theme-grid">
+          <button class="sp-theme-btn is-active" type="button" data-theme="achse">
+            <span class="sp-preview sp-preview-achse" aria-hidden="true"></span>
+            <span class="sp-theme-label">Achsensymmetrie</span>
+          </button>
+          <button class="sp-theme-btn" type="button" data-theme="punkt">
+            <span class="sp-preview sp-preview-punkt" aria-hidden="true"></span>
+            <span class="sp-theme-label">Punktsymmetrie</span>
+          </button>
+          <button class="sp-theme-btn" type="button" data-theme="vergleich">
+            <span class="sp-preview sp-preview-vergleich" aria-hidden="true"></span>
+            <span class="sp-theme-label">Unterschiede</span>
+          </button>
+          <button class="sp-theme-btn" type="button" data-theme="figuren">
+            <span class="sp-preview sp-preview-figuren" aria-hidden="true"></span>
+            <span class="sp-theme-label">Typische Figuren</span>
+          </button>
+        </div>
+
+        <div class="sp-detail-box">
+          <h3 id="spThemeTitle"></h3>
+          <p id="spThemeText"></p>
+          <ul id="spThemeList" class="sp-list"></ul>
+        </div>
+      </article>
+
+      <article class="sp-card">
+        <h2>Symmetrie-Werkstatt (interaktiv)</h2>
+        <p>Setze einen Punkt und wähle eine Symmetrieart. Das Modul zeigt dir sofort den Bildpunkt.</p>
+        <div class="sp-workbench-grid">
+          <label>
+            Symmetrieart
+            <select id="spWorkbenchMode">
+              <option value="axisY" selected>Spiegelung an der y-Achse</option>
+              <option value="axisX">Spiegelung an der x-Achse</option>
+              <option value="point">Punktspiegelung am Ursprung</option>
+            </select>
+          </label>
+          <label>
+            Punkt x
+            <input id="spWorkbenchX" type="number" min="-8" max="8" step="1" value="3">
+          </label>
+          <label>
+            Punkt y
+            <input id="spWorkbenchY" type="number" min="-8" max="8" step="1" value="2">
+          </label>
+          <button id="spWorkbenchApply" type="button">Darstellen</button>
+        </div>
+        <div class="sp-workbench-result">
+          <p id="spWorkbenchText"></p>
+          <svg id="spWorkbenchSvg" viewBox="0 0 320 320" role="img" aria-label="Koordinatensystem mit Originalpunkt und Bildpunkt"></svg>
+        </div>
+      </article>
+    </section>
+
+    <section id="tab-trainieren" class="sp-tab">
+      <article class="sp-card">
+        <h2>Aufgaben-Generator (unendlich viele Aufgaben)</h2>
+        <p>Jede Runde ist neu. Wähle Schwierigkeit, Anzahl und Aufgabentypen.</p>
+        <div class="sp-generator-grid">
+          <label>
+            Schwierigkeit
+            <select id="spGenDifficulty">
+              <option value="leicht">Leicht</option>
+              <option value="mittel" selected>Mittel</option>
+              <option value="schwer">Schwer</option>
+            </select>
+          </label>
+          <label>
+            Anzahl
+            <select id="spGenCount">
+              <option value="6">6</option>
+              <option value="10" selected>10</option>
+              <option value="14">14</option>
+            </select>
+          </label>
+        </div>
+        <fieldset class="sp-type-box">
+          <legend>Aufgabentypen</legend>
+          <label><input type="checkbox" class="sp-gen-type" value="axisPoint" checked> Bildpunkt bei Achsenspiegelung</label>
+          <label><input type="checkbox" class="sp-gen-type" value="pointSym" checked> Bildpunkt bei Punktspiegelung</label>
+          <label><input type="checkbox" class="sp-gen-type" value="figureProps" checked> Figur-Eigenschaften</label>
+          <label><input type="checkbox" class="sp-gen-type" value="axisCount" checked> Anzahl Symmetrieachsen</label>
+        </fieldset>
+        <div class="sp-controls">
+          <button id="spGenerateTasks" type="button">Aufgaben erstellen</button>
+          <button id="spCheckTasks" type="button">Prüfen</button>
+        </div>
+        <div id="spTaskList" class="sp-task-list"></div>
+        <div id="spTaskFeedback"></div>
+      </article>
+    </section>
+
+    <section id="tab-test" class="sp-tab">
+      <article class="sp-card">
+        <h2>Wissens-Test (dynamisch)</h2>
+        <p>12 Fragen, automatisch neu gemischt bei jedem Neustart.</p>
+        <div class="quiz-controls">
+          <button id="spQuizStart" type="button">Test starten</button>
+          <button id="spQuizNext" type="button" disabled>Nächste Frage</button>
+          <p id="spQuizScore" class="score">Punkte: 0 / 12</p>
+        </div>
+        <div class="quiz-box">
+          <p id="spQuizStatus" class="quiz-status">Test noch nicht gestartet.</p>
+          <h3 id="spQuizPrompt">Klicke auf "Test starten".</h3>
+          <div id="spQuizAnswers" class="choice-list"></div>
+          <div id="spQuizFeedback"></div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="mathematik-achsensymmetrie-und-punktsymmetrie.js"></script>
+</body>
+</html>

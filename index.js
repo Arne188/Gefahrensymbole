@@ -38,6 +38,30 @@ const defaultTopics = [
     description: "Vierecke erkennen, Eigenschaften vergleichen und im Test anwenden.",
   },
   {
+    subject: "Mathematik",
+    title: "Längeneinheiten und Umrechnungen",
+    link: "subjects/mathematik/laengeneinheiten-und-umrechnungen/mathematik-laengeneinheiten-und-umrechnungen.html",
+    description: "Längeneinheiten sicher umrechnen, mit Einheitenleiter verstehen und mit unendlichem Aufgaben-Generator trainieren.",
+  },
+  {
+    subject: "Mathematik",
+    title: "Maßstab",
+    link: "subjects/mathematik/massstab/mathematik-massstab.html",
+    description: "Maßstäbe lesen, Karte und Wirklichkeit umrechnen und mit unendlichem Aufgaben-Generator trainieren.",
+  },
+  {
+    subject: "Mathematik",
+    title: "Achsensymmetrie und Punktsymmetrie",
+    link: "subjects/mathematik/achsensymmetrie-und-punktsymmetrie/mathematik-achsensymmetrie-und-punktsymmetrie.html",
+    description: "Symmetrien verstehen, Bildpunkte konstruieren und mit unendlichem Aufgaben-Generator trainieren.",
+  },
+  {
+    subject: "Mathematik",
+    title: "Das Koordinatensystem",
+    link: "subjects/mathematik/das-koordinatensystem/mathematik-das-koordinatensystem.html",
+    description: "Koordinaten-Labor, Quadranten verstehen und mit unendlichem Aufgaben-Generator trainieren.",
+  },
+  {
     subject: "Englisch",
     title: "Sentences with if - Part 1",
     link: "subjects/englisch/if-sentences-part-1/englisch-if-sentences.html",
@@ -48,6 +72,24 @@ const defaultTopics = [
     title: "Ägypten - Geschenk des Nils",
     link: "subjects/geschichte/aegypten-geschenk-des-nils/geschichte-aegypten-nil.html",
     description: "Hochkultur am Nil verstehen, Ursache-Folge trainieren und mit Feedback testen.",
+  },
+  {
+    subject: "Erdkunde",
+    title: "Himmelsrichtungen",
+    link: "subjects/erdkunde/himmelsrichtungen/erdkunde-himmelsrichtungen.html",
+    description: "Dummy-Modul (Platzhalter) - Inhalte folgen.",
+  },
+  {
+    subject: "Chemie",
+    title: "Gasbrenner",
+    link: "subjects/chemie/gasbrenner/chemie-gasbrenner.html",
+    description: "Dummy-Modul (Platzhalter) - Inhalte folgen.",
+  },
+  {
+    subject: "Deutsch",
+    title: "Groß- und Kleinschreibung",
+    link: "subjects/deutsch/gross-und-kleinschreibung/deutsch-gross-und-kleinschreibung.html",
+    description: "Dummy-Modul (Platzhalter) - Inhalte folgen.",
   },
   {
     subject: "Geschichte",
