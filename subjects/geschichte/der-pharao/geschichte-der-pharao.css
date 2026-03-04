@@ -1,20 +1,20 @@
-﻿.sa-page {
+﻿.ph-page {
   width: min(1120px, 94vw);
   margin: 20px auto 34px;
   display: grid;
   gap: 14px;
 }
 
-.sa-hero,
-.sa-nav,
-.sa-card {
-  border: 1px solid #d4c5a8;
+.ph-hero,
+.ph-nav,
+.ph-card {
+  border: 1px solid #d3bf98;
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.95);
   box-shadow: 0 10px 22px rgba(43, 31, 14, 0.12);
 }
 
-.sa-hero {
+.ph-hero {
   padding: 20px;
   display: grid;
   gap: 8px;
@@ -23,7 +23,7 @@
     #fff;
 }
 
-.sa-tag {
+.ph-tag {
   margin: 0;
   letter-spacing: 0.09em;
   text-transform: uppercase;
@@ -32,21 +32,21 @@
   color: #6f614a;
 }
 
-.sa-hero h1 {
+.ph-hero h1 {
   margin: 2px 0 4px;
 }
 
-.sa-hero p {
+.ph-hero p {
   margin: 0;
   max-width: 72ch;
   color: #4d4d4d;
 }
 
-.sa-hero-figure {
+.ph-hero-figure {
   margin: 8px 0 0;
 }
 
-.sa-hero-figure img {
+.ph-hero-figure img {
   width: 100%;
   height: auto;
   display: block;
@@ -55,77 +55,77 @@
   background: #fff;
 }
 
-.sa-nav {
+.ph-nav {
   padding: 8px;
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
 }
 
-.sa-tab-btn {
+.ph-tab-btn {
   border: 1px solid #d3c198;
   background: #f7efe2;
   color: #5a4525;
 }
 
-.sa-tab-btn.is-active {
-  border-color: #9c6a26;
-  background: #9c6a26;
+.ph-tab-btn.is-active {
+  border-color: #926020;
+  background: #926020;
   color: #fff;
 }
 
-.sa-tab {
+.ph-tab {
   display: none;
   gap: 14px;
 }
 
-.sa-tab.is-active {
+.ph-tab.is-active {
   display: grid;
 }
 
-.sa-card {
+.ph-card {
   padding: 16px;
 }
 
-.sa-card h2 {
+.ph-card h2 {
   margin: 0 0 8px;
 }
 
-.sa-card h3 {
+.ph-card h3 {
   margin: 0 0 6px;
   color: #6d4b1d;
 }
 
-.sa-card p {
+.ph-card p {
   margin-top: 0;
   color: #4d4d4d;
 }
 
-.sa-list {
+.ph-list {
   margin: 0;
   padding-left: 20px;
   display: grid;
   gap: 6px;
 }
 
-.sa-source-note {
+.ph-source-note {
   margin-top: 10px;
   font-size: 14px;
   color: #6f614a;
 }
 
-.sa-source-note a {
+.ph-source-note a {
   color: #7b4b0d;
 }
 
-.sa-theme-grid {
+.ph-theme-grid {
   margin-top: 10px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
   gap: 10px;
 }
 
-.sa-theme-btn {
+.ph-theme-btn {
   border: 1px solid #dac9a8;
   border-radius: 12px;
   background: #fffaf0;
@@ -135,45 +135,49 @@
   gap: 8px;
 }
 
-.sa-theme-btn.is-active {
-  border-color: #9c6a26;
-  background: #fff5df;
-  box-shadow: 0 0 0 2px rgba(156, 106, 38, 0.18);
+.ph-theme-btn.is-active {
+  border-color: #926020;
+  background: #fff4dd;
+  box-shadow: 0 0 0 2px rgba(146, 96, 32, 0.18);
 }
 
-.sa-preview {
-  width: min(100%, 255px);
+.ph-preview {
+  width: min(100%, 250px);
   justify-self: center;
-  aspect-ratio: 11 / 6;
+  aspect-ratio: 4 / 3;
   border-radius: 10px;
   border: 1px solid #dbc8aa;
-  background-image: url("./staat-im-alten-aegypten-grafik.png?v=20260304");
+  background-image: url("./der-pharao-grafik.png?v=20260304");
   background-repeat: no-repeat;
-  background-size: 220% auto;
+  background-size: 230% auto;
   background-color: #fff;
 }
 
-.sa-preview-pharao {
-  background-position: 11% 18%;
+.ph-preview-goettlich {
+  background-position: 10% 22%;
 }
 
-.sa-preview-verwaltung {
-  background-position: 51% 31%;
+.ph-preview-aufgaben {
+  background-position: 88% 24%;
 }
 
-.sa-preview-nil {
-  background-position: 89% 24%;
+.ph-preview-insignien {
+  background-position: 52% 40%;
 }
 
-.sa-preview-gesellschaft {
-  background-position: 18% 78%;
+.ph-preview-ewigkeit {
+  background-position: 90% 78%;
 }
 
-.sa-theme-label {
+.ph-preview-pharaonen {
+  background-position: 14% 76%;
+}
+
+.ph-theme-label {
   font-weight: 700;
 }
 
-.sa-detail-box {
+.ph-detail-box {
   margin-top: 10px;
   border: 1px solid #dbcdb3;
   border-radius: 12px;
@@ -181,39 +185,39 @@
   padding: 12px;
 }
 
-.sa-step-controls {
+.ph-step-controls {
   margin-top: 10px;
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
 }
 
-.sa-step-btn {
+.ph-step-btn {
   border: 1px solid #d8c6a6;
   background: #f9f1e5;
   color: #5a4525;
 }
 
-.sa-step-btn.is-active {
+.ph-step-btn.is-active {
   border-color: #8d5f24;
   background: #8d5f24;
   color: #fff;
 }
 
-.sa-controls {
+.ph-controls {
   margin-top: 10px;
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
 }
 
-.sa-task-list {
+.ph-task-list {
   margin-top: 10px;
   display: grid;
   gap: 8px;
 }
 
-.sa-task-row {
+.ph-task-row {
   border: 1px solid #e3d6bc;
   border-radius: 10px;
   background: #fff;
@@ -222,44 +226,44 @@
   gap: 8px;
 }
 
-.sa-task-row p {
+.ph-task-row p {
   margin: 0;
 }
 
-.sa-task-row.is-correct {
+.ph-task-row.is-correct {
   border-color: #95d2bc;
   background: #ebf9f2;
 }
 
-.sa-task-row.is-wrong {
+.ph-task-row.is-wrong {
   border-color: #e4b5b5;
   background: #fdeeee;
 }
 
-.sa-select {
+.ph-select {
   width: 100%;
   max-width: 480px;
 }
 
-.sa-choice-grid {
+.ph-choice-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 8px;
 }
 
-.sa-choice-item {
+.ph-choice-item {
   border: 1px solid #e1d2b6;
   border-radius: 10px;
   background: #fff9ee;
   padding: 8px 10px;
 }
 
-.sa-choice-item input {
+.ph-choice-item input {
   margin-right: 6px;
 }
 
 @media (max-width: 760px) {
-  .sa-choice-grid {
+  .ph-choice-grid {
     grid-template-columns: 1fr;
   }
 }

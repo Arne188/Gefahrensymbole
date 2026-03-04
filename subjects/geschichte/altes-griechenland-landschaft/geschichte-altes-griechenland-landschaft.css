@@ -1,29 +1,29 @@
-﻿.sa-page {
+﻿.gg-page {
   width: min(1120px, 94vw);
   margin: 20px auto 34px;
   display: grid;
   gap: 14px;
 }
 
-.sa-hero,
-.sa-nav,
-.sa-card {
-  border: 1px solid #d4c5a8;
+.gg-hero,
+.gg-nav,
+.gg-card {
+  border: 1px solid #cdbf9d;
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.95);
   box-shadow: 0 10px 22px rgba(43, 31, 14, 0.12);
 }
 
-.sa-hero {
+.gg-hero {
   padding: 20px;
   display: grid;
   gap: 8px;
   background:
-    linear-gradient(120deg, rgba(255, 255, 255, 0.97), rgba(252, 242, 219, 0.96)),
+    linear-gradient(120deg, rgba(255, 255, 255, 0.97), rgba(250, 243, 224, 0.96)),
     #fff;
 }
 
-.sa-tag {
+.gg-tag {
   margin: 0;
   letter-spacing: 0.09em;
   text-transform: uppercase;
@@ -32,21 +32,21 @@
   color: #6f614a;
 }
 
-.sa-hero h1 {
+.gg-hero h1 {
   margin: 2px 0 4px;
 }
 
-.sa-hero p {
+.gg-hero p {
   margin: 0;
-  max-width: 72ch;
+  max-width: 74ch;
   color: #4d4d4d;
 }
 
-.sa-hero-figure {
+.gg-hero-figure {
   margin: 8px 0 0;
 }
 
-.sa-hero-figure img {
+.gg-hero-figure img {
   width: 100%;
   height: auto;
   display: block;
@@ -55,166 +55,170 @@
   background: #fff;
 }
 
-.sa-nav {
+.gg-nav {
   padding: 8px;
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
 }
 
-.sa-tab-btn {
-  border: 1px solid #d3c198;
-  background: #f7efe2;
-  color: #5a4525;
+.gg-tab-btn {
+  border: 1px solid #c2c9d9;
+  background: #edf3ff;
+  color: #2e4066;
 }
 
-.sa-tab-btn.is-active {
-  border-color: #9c6a26;
-  background: #9c6a26;
+.gg-tab-btn.is-active {
+  border-color: #2f5686;
+  background: #2f5686;
   color: #fff;
 }
 
-.sa-tab {
+.gg-tab {
   display: none;
   gap: 14px;
 }
 
-.sa-tab.is-active {
+.gg-tab.is-active {
   display: grid;
 }
 
-.sa-card {
+.gg-card {
   padding: 16px;
 }
 
-.sa-card h2 {
+.gg-card h2 {
   margin: 0 0 8px;
 }
 
-.sa-card h3 {
+.gg-card h3 {
   margin: 0 0 6px;
-  color: #6d4b1d;
+  color: #35547d;
 }
 
-.sa-card p {
+.gg-card p {
   margin-top: 0;
   color: #4d4d4d;
 }
 
-.sa-list {
+.gg-list {
   margin: 0;
   padding-left: 20px;
   display: grid;
   gap: 6px;
 }
 
-.sa-source-note {
+.gg-source-note {
   margin-top: 10px;
   font-size: 14px;
-  color: #6f614a;
+  color: #5b6370;
 }
 
-.sa-source-note a {
-  color: #7b4b0d;
+.gg-source-note a {
+  color: #285d98;
 }
 
-.sa-theme-grid {
+.gg-theme-grid {
   margin-top: 10px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
   gap: 10px;
 }
 
-.sa-theme-btn {
-  border: 1px solid #dac9a8;
+.gg-theme-btn {
+  border: 1px solid #cad7e8;
   border-radius: 12px;
-  background: #fffaf0;
-  color: #5a4525;
+  background: #f8fbff;
+  color: #2a456e;
   padding: 8px;
   display: grid;
   gap: 8px;
 }
 
-.sa-theme-btn.is-active {
-  border-color: #9c6a26;
-  background: #fff5df;
-  box-shadow: 0 0 0 2px rgba(156, 106, 38, 0.18);
+.gg-theme-btn.is-active {
+  border-color: #2f5686;
+  background: #eef5ff;
+  box-shadow: 0 0 0 2px rgba(47, 86, 134, 0.18);
 }
 
-.sa-preview {
-  width: min(100%, 255px);
+.gg-preview {
+  width: min(100%, 248px);
   justify-self: center;
-  aspect-ratio: 11 / 6;
+  aspect-ratio: 4 / 3;
   border-radius: 10px;
-  border: 1px solid #dbc8aa;
-  background-image: url("./staat-im-alten-aegypten-grafik.png?v=20260304");
+  border: 1px solid #c6d8e8;
+  background-image: url("./altes-griechenland-geographie-grafik.png?v=20260304");
   background-repeat: no-repeat;
   background-size: 220% auto;
   background-color: #fff;
 }
 
-.sa-preview-pharao {
-  background-position: 11% 18%;
+.gg-preview-gebirge {
+  background-position: 10% 24%;
 }
 
-.sa-preview-verwaltung {
-  background-position: 51% 31%;
+.gg-preview-meer {
+  background-position: 88% 24%;
 }
 
-.sa-preview-nil {
-  background-position: 89% 24%;
+.gg-preview-inseln {
+  background-position: 51% 34%;
 }
 
-.sa-preview-gesellschaft {
-  background-position: 18% 78%;
+.gg-preview-anbau {
+  background-position: 18% 82%;
 }
 
-.sa-theme-label {
+.gg-preview-polis {
+  background-position: 86% 58%;
+}
+
+.gg-theme-label {
   font-weight: 700;
 }
 
-.sa-detail-box {
+.gg-detail-box {
   margin-top: 10px;
-  border: 1px solid #dbcdb3;
+  border: 1px solid #ced8e8;
   border-radius: 12px;
-  background: #fffaf1;
+  background: #f8fbff;
   padding: 12px;
 }
 
-.sa-step-controls {
+.gg-step-controls {
   margin-top: 10px;
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
 }
 
-.sa-step-btn {
-  border: 1px solid #d8c6a6;
-  background: #f9f1e5;
-  color: #5a4525;
+.gg-step-btn {
+  border: 1px solid #c6d4e4;
+  background: #f1f7ff;
+  color: #2a456e;
 }
 
-.sa-step-btn.is-active {
-  border-color: #8d5f24;
-  background: #8d5f24;
+.gg-step-btn.is-active {
+  border-color: #2f5686;
+  background: #2f5686;
   color: #fff;
 }
 
-.sa-controls {
+.gg-controls {
   margin-top: 10px;
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
 }
 
-.sa-task-list {
+.gg-task-list {
   margin-top: 10px;
   display: grid;
   gap: 8px;
 }
 
-.sa-task-row {
-  border: 1px solid #e3d6bc;
+.gg-task-row {
+  border: 1px solid #cfdceb;
   border-radius: 10px;
   background: #fff;
   padding: 10px;
@@ -222,44 +226,44 @@
   gap: 8px;
 }
 
-.sa-task-row p {
+.gg-task-row p {
   margin: 0;
 }
 
-.sa-task-row.is-correct {
+.gg-task-row.is-correct {
   border-color: #95d2bc;
   background: #ebf9f2;
 }
 
-.sa-task-row.is-wrong {
+.gg-task-row.is-wrong {
   border-color: #e4b5b5;
   background: #fdeeee;
 }
 
-.sa-select {
+.gg-select {
   width: 100%;
-  max-width: 480px;
+  max-width: 500px;
 }
 
-.sa-choice-grid {
+.gg-choice-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 8px;
 }
 
-.sa-choice-item {
-  border: 1px solid #e1d2b6;
+.gg-choice-item {
+  border: 1px solid #c9d9ea;
   border-radius: 10px;
-  background: #fff9ee;
+  background: #f7fbff;
   padding: 8px 10px;
 }
 
-.sa-choice-item input {
+.gg-choice-item input {
   margin-right: 6px;
 }
 
 @media (max-width: 760px) {
-  .sa-choice-grid {
+  .gg-choice-grid {
     grid-template-columns: 1fr;
   }
 }

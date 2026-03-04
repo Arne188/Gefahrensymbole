@@ -1,32 +1,166 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Geschichte - Der Pharao (Dummy)</title>
+  <title>Geschichte - Der Pharao</title>
   <link rel="icon" type="image/svg+xml" href="../../../assets/tab-logo.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../../styles.css">
+  <link rel="stylesheet" href="geschichte-der-pharao.css">
 </head>
 <body>
-  <main class="layout">
-    <section class="hero">
+  <main class="ph-page">
+    <header class="ph-hero">
       <a class="back-link" href="../../../index.html">Zurück zur Startseite</a>
-      <p class="tag">Geschichte Klasse 5</p>
-      <h1>Dummy-Modul: Der Pharao</h1>
-      <p class="intro">Dieses Modul ist als Platzhalter angelegt und wird später ausgearbeitet.</p>
+      <p class="ph-tag">Geschichte Klasse 5</p>
+      <h1>Der Pharao</h1>
+      <p>
+        Du lernst, warum der Pharao im Alten Ägypten als Gottkönig galt,
+        welche Aufgaben er im Staat hatte, was seine Herrschaftssymbole bedeuteten
+        und wie bekannte Pharaonen ihre Macht zeigten.
+      </p>
+      <figure class="ph-hero-figure">
+        <img src="./der-pharao-grafik.png?v=20260304" alt="Schaubild zum Pharao mit göttlicher Rolle, Herrschaftssymbolen und Aufgaben im Alten Ägypten">
+      </figure>
+    </header>
+
+    <nav class="ph-nav" aria-label="Modulnavigation">
+      <button class="ph-tab-btn is-active" type="button" data-tab="lernen">Lernen</button>
+      <button class="ph-tab-btn" type="button" data-tab="trainieren">Trainieren</button>
+      <button class="ph-tab-btn" type="button" data-tab="test">Test</button>
+    </nav>
+
+    <section id="tab-lernen" class="ph-tab is-active">
+      <article class="ph-card">
+        <h2>Lehrplanbezug Niedersachsen (Gymnasium 5/6)</h2>
+        <p>
+          Das Modul orientiert sich am Kerncurriculum Geschichte für das Gymnasium in Niedersachsen.
+          Im Themenfeld frühe Hochkulturen geht es um Herrschaft, Religion, gesellschaftliche Ordnung
+          und die Bedeutung von Symbolen und Bauwerken für politische Macht.
+        </p>
+        <ul class="ph-list">
+          <li>Du beschreibst die religiöse Legitimation des Pharaos (Gottkönig, Maat).</li>
+          <li>Du erklärst zentrale Regierungsaufgaben und Machtbereiche des Pharaos.</li>
+          <li>Du deutest wichtige Herrschaftssymbole wie Doppelkrone, Krummstab und Wedel.</li>
+          <li>Du nutzt historische Beispiele wie Hatschepsut, Tutanchamun und Ramses II. sinnvoll.</li>
+        </ul>
+        <p class="ph-source-note">
+          Offizielle Quelle:
+          <a href="https://cuvo.nibis.de/index.php?p=search&k0_0=Dokumentenart&v0_0=Kerncurriculum&f0_0=off&k0_1=Schulbereich&v0_1=Sek+I&f0_1=off&k0_2=Schulform&v0_2=Gymnasium-Sek.I&f0_2=off" target="_blank" rel="noopener noreferrer">
+            NIBIS/CuVo - Kerncurricula Sek I Gymnasium
+          </a>
+          (Dokument: Geschichte, Schuljahrgänge 5-10).
+        </p>
+      </article>
+
+      <article class="ph-card">
+        <h2>Der Pharao im Überblick (interaktiv mit Grafik)</h2>
+        <p>Klicke auf ein Feld und lies die Erklärung mit Beispielen.</p>
+
+        <div class="ph-theme-grid">
+          <button class="ph-theme-btn is-active" type="button" data-theme="goettlich">
+            <span class="ph-preview ph-preview-goettlich" aria-hidden="true"></span>
+            <span class="ph-theme-label">Göttliche Rolle</span>
+          </button>
+          <button class="ph-theme-btn" type="button" data-theme="aufgaben">
+            <span class="ph-preview ph-preview-aufgaben" aria-hidden="true"></span>
+            <span class="ph-theme-label">Macht und Aufgaben</span>
+          </button>
+          <button class="ph-theme-btn" type="button" data-theme="insignien">
+            <span class="ph-preview ph-preview-insignien" aria-hidden="true"></span>
+            <span class="ph-theme-label">Herrschaftssymbole</span>
+          </button>
+          <button class="ph-theme-btn" type="button" data-theme="ewigkeit">
+            <span class="ph-preview ph-preview-ewigkeit" aria-hidden="true"></span>
+            <span class="ph-theme-label">Ewigkeit und Jenseits</span>
+          </button>
+          <button class="ph-theme-btn" type="button" data-theme="pharaonen">
+            <span class="ph-preview ph-preview-pharaonen" aria-hidden="true"></span>
+            <span class="ph-theme-label">Bekannte Pharaonen</span>
+          </button>
+        </div>
+
+        <div class="ph-detail-box">
+          <h3 id="phThemeTitle"></h3>
+          <p id="phThemeText"></p>
+          <ul id="phThemeList" class="ph-list"></ul>
+        </div>
+      </article>
+
+      <article class="ph-card">
+        <h2>Herrschaftssymbole verstehen (interaktiv)</h2>
+        <p>Klicke auf ein Symbol und prüfe, wofür es stand.</p>
+        <div class="ph-step-controls">
+          <button class="ph-step-btn is-active" type="button" data-step="pschent">Doppelkrone</button>
+          <button class="ph-step-btn" type="button" data-step="krummstab">Krummstab</button>
+          <button class="ph-step-btn" type="button" data-step="wedel">Wedel</button>
+          <button class="ph-step-btn" type="button" data-step="uraeus">Uräus-Schlange</button>
+          <button class="ph-step-btn" type="button" data-step="ritualbart">Ritualbart</button>
+        </div>
+        <div class="ph-detail-box">
+          <h3 id="phStepTitle"></h3>
+          <p id="phStepText"></p>
+        </div>
+      </article>
     </section>
 
-    <section class="card">
-      <h2>Geplante Schwerpunkte</h2>
-      <ul class="module-bullet-list">
-        <li>Rolle des Pharaos als Herrscher und religiöse Figur.</li>
-        <li>Aufgaben, Macht und Verantwortung.</li>
-        <li>Beispiele bedeutender Pharaonen.</li>
-      </ul>
+    <section id="tab-trainieren" class="ph-tab">
+      <article class="ph-card">
+        <h2>Training A: Aussagen zuordnen</h2>
+        <p>Ordne jede Aussage dem passenden Bereich zu.</p>
+        <div class="ph-controls">
+          <button id="phAssignNewRound" type="button">Neue Runde</button>
+          <button id="phAssignCheck" type="button">Prüfen</button>
+        </div>
+        <div id="phAssignList" class="ph-task-list"></div>
+        <div id="phAssignFeedback"></div>
+      </article>
+
+      <article class="ph-card">
+        <h2>Training B: Symbol und Bedeutung</h2>
+        <p>Wähle zu jeder Bedeutung das passende Herrschaftssymbol.</p>
+        <div class="ph-controls">
+          <button id="phSymbolNewRound" type="button">Neue Runde</button>
+          <button id="phSymbolCheck" type="button">Prüfen</button>
+        </div>
+        <div id="phSymbolList" class="ph-task-list"></div>
+        <div id="phSymbolFeedback"></div>
+      </article>
+
+      <article class="ph-card">
+        <h2>Training C: Richtig oder falsch?</h2>
+        <p>Entscheide, ob die Aussage fachlich passt.</p>
+        <div class="ph-controls">
+          <button id="phTfNewRound" type="button">Neue Runde</button>
+          <button id="phTfCheck" type="button">Prüfen</button>
+        </div>
+        <div id="phTfList" class="ph-task-list"></div>
+        <div id="phTfFeedback"></div>
+      </article>
+    </section>
+
+    <section id="tab-test" class="ph-tab">
+      <article class="ph-card">
+        <h2>Wissens-Test</h2>
+        <p>10 Fragen mit direkter Rückmeldung und Punktezähler.</p>
+        <div class="quiz-controls">
+          <button id="phQuizStart" type="button">Test starten</button>
+          <button id="phQuizNext" type="button" disabled>Nächste Frage</button>
+          <p id="phQuizScore" class="score">Punkte: 0 / 10</p>
+        </div>
+        <div class="quiz-box">
+          <p id="phQuizStatus" class="quiz-status">Test noch nicht gestartet.</p>
+          <h3 id="phQuizPrompt">Klicke auf "Test starten".</h3>
+          <div id="phQuizAnswers" class="choice-list"></div>
+          <div id="phQuizFeedback"></div>
+        </div>
+      </article>
     </section>
   </main>
+
+  <script src="geschichte-der-pharao.js"></script>
 </body>
 </html>

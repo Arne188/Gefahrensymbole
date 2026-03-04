@@ -9,27 +9,27 @@ const defaultTopics = [
   },
   {
     subject: "Chemie",
-    title: "LaborgerÃ¤te und Sicherheit",
+    title: "Laborgeräte und Sicherheit",
     link: "subjects/chemie/laborgeraete-und-sicherheit/chemie-laborgeraete.html",
-    description: "GerÃ¤tekunde, Protokoll, Quiz und Sicherheitstest.",
+    description: "Gerätekunde, Protokoll, Quiz und Sicherheitstest.",
   },
   {
     subject: "Erdkunde",
     title: "Vom Luftbild zur Karte",
     link: "subjects/erdkunde/vom-luftbild-zur-karte/erdkunde-luftbild-karte.html",
-    description: "Legende, Himmelsrichtungen, MaÃŸstab und Kartentest.",
+    description: "Legende, Himmelsrichtungen, Maßstab und Kartentest.",
   },
   {
     subject: "Deutsch",
-    title: "MÃ¤rchenanalyse schreiben",
+    title: "Märchenanalyse schreiben",
     link: "subjects/deutsch/maerchenanalyse/deutsch-maerchenanalyse.html",
-    description: "Lehrplanorientierte Schrittanleitung mit Ãœbungen und Kurztest.",
+    description: "Lehrplanorientierte Schrittanleitung mit Übungen und Kurztest.",
   },
   {
     subject: "Deutsch",
-    title: "MÃ¤rchen schreiben",
+    title: "Märchen schreiben",
     link: "subjects/deutsch/maerchen-schreiben/deutsch-maerchen-schreiben.html",
-    description: "Von der Idee bis zur Reinschrift: mit Ãœbungspool, Feedback und Test.",
+    description: "Von der Idee bis zur Reinschrift: mit Übungspool, Feedback und Test.",
   },
   {
     subject: "Mathematik",
@@ -41,23 +41,23 @@ const defaultTopics = [
     subject: "Englisch",
     title: "Sentences with if - Part 1",
     link: "subjects/englisch/if-sentences-part-1/englisch-if-sentences.html",
-    description: "If-SÃ¤tze sicher bilden, Fehler verstehen und mit groÃŸem Aufgabenpool Ã¼ben.",
+    description: "If-Sätze sicher bilden, Fehler verstehen und mit großem Aufgabenpool üben.",
   },
   {
     subject: "Geschichte",
-    title: "Ã„gypten - Geschenk des Nils",
+    title: "Ägypten - Geschenk des Nils",
     link: "subjects/geschichte/aegypten-geschenk-des-nils/geschichte-aegypten-nil.html",
     description: "Hochkultur am Nil verstehen, Ursache-Folge trainieren und mit Feedback testen.",
   },
   {
     subject: "Geschichte",
-    title: "Glaube im Alten Ã„gypten",
+    title: "Glaube im Alten Ägypten",
     link: "subjects/geschichte/glaube-im-alten-aegypten/geschichte-glaube-im-alten-aegypten.html",
     description: "Dummy-Modul (Platzhalter) - Inhalte folgen.",
   },
   {
     subject: "Geschichte",
-    title: "Der Staat im Alten Ã„gypten",
+    title: "Der Staat im Alten Ägypten",
     link: "subjects/geschichte/staat-im-alten-aegypten/geschichte-staat-im-alten-aegypten.html",
     description: "Staatsaufbau, Ämter, Gesellschaft und Nilverwaltung interaktiv lernen, trainieren und prüfen.",
   },
@@ -65,27 +65,27 @@ const defaultTopics = [
     subject: "Geschichte",
     title: "Der Pharao",
     link: "subjects/geschichte/der-pharao/geschichte-der-pharao.html",
-    description: "Dummy-Modul (Platzhalter) - Inhalte folgen.",
+    description: "Gottkönig, Herrschaftssymbole und Aufgaben des Pharaos interaktiv lernen, trainieren und prüfen.",
   },
   {
     subject: "Geschichte",
-    title: "Das alte Griechenland - Landschaft",
+    title: "Das alte Griechenland - Geographie",
     link: "subjects/geschichte/altes-griechenland-landschaft/geschichte-altes-griechenland-landschaft.html",
-    description: "Dummy-Modul (Platzhalter) - Inhalte folgen.",
+    description: "Gebirge, Meer, Poleis und Kolonisation im alten Griechenland interaktiv lernen, trainieren und prüfen.",
   },
   {
     subject: "Werte und Normen",
     title: "Modul 1: Gottesvorstellungen verstehen",
     link: "subjects/werte-und-normen/gottesvorstellungen-grundlagen/werte-und-normen-glaubensrichtungen.html",
     description:
-      "Polytheismus, Monotheismus und Atheismus erklÃ¤ren, vergleichen und im Test sichern.",
+      "Polytheismus, Monotheismus und Atheismus erklären, vergleichen und im Test sichern.",
   },
   {
     subject: "Werte und Normen",
     title: "Modul 2: Gottesvorstellungen im Monotheismus",
     link: "subjects/werte-und-normen/gottesvorstellungen-im-monotheismus/werte-und-normen-monotheistische-gottesvorstellungen.html",
     description:
-      "SchÃ¶pfer, AllmÃ¤chtiger, Offenbarer und Allwissender Gott verstehen und anwenden.",
+      "Schöpfer, Allmächtiger, Offenbarer und Allwissender Gott verstehen und anwenden.",
   },
   {
     subject: "Werte und Normen",
@@ -99,13 +99,13 @@ const defaultTopics = [
     title: "Inhalte Klasse 5 (Niedersachsen)",
     link: "",
     description:
-      "Leitthemen fÃ¼r Jahrgang 5/6 laut Kerncurriculum Gymnasium Sek. I (verbindlich ab 01.08.2017).",
+      "Leitthemen für Jahrgang 5/6 laut Kerncurriculum Gymnasium Sek. I (verbindlich ab 01.08.2017).",
     bulletPoints: [
       "Ich und meine Beziehungen (Freundschaft, Familie, Vorbilder).",
-      "GlÃ¼ck und Lebensgestaltung (ZukunftswÃ¼nsche, Verantwortung, Erfolg/Misserfolg).",
-      "Regeln fÃ¼r das Zusammenleben (Regeln und Rituale, Goldene Regel, Regelverletzungen).",
+      "Glück und Lebensgestaltung (Zukunftswünsche, Verantwortung, Erfolg/Misserfolg).",
+      "Regeln für das Zusammenleben (Regeln und Rituale, Goldene Regel, Regelverletzungen).",
       "Leben in Vielfalt (Vorurteile, Klischees, Mobbing, Toleranz).",
-      "Aspekte von Religionen und Weltanschauungen (GÃ¶ttliches, SchÃ¶pfungsmythen, religiÃ¶se Praxis).",
+      "Aspekte von Religionen und Weltanschauungen (Göttliches, Schöpfungsmythen, religiöse Praxis).",
     ],
   },
 ];
@@ -114,18 +114,29 @@ const subjectSelect = document.getElementById("subjectSelect");
 const moduleList = document.getElementById("moduleList");
 const emptyState = document.getElementById("emptyState");
 
+function repairMojibake(value) {
+  return String(value || "")
+    .replace(/Ã„/g, "Ä")
+    .replace(/Ã–/g, "Ö")
+    .replace(/Ãœ/g, "Ü")
+    .replace(/Ã¤/g, "ä")
+    .replace(/Ã¶/g, "ö")
+    .replace(/Ã¼/g, "ü")
+    .replace(/ÃŸ/g, "ß");
+}
+
 function normalizeTopic(topic) {
   const bulletPoints = Array.isArray(topic.bulletPoints)
     ? topic.bulletPoints
-        .map((entry) => String(entry || "").trim())
+        .map((entry) => repairMojibake(entry).trim())
         .filter(Boolean)
     : [];
 
   return {
-    subject: String(topic.subject || "").trim(),
-    title: String(topic.title || "").trim(),
+    subject: repairMojibake(topic.subject).trim(),
+    title: repairMojibake(topic.title).trim(),
     link: String(topic.link || "").trim(),
-    description: String(topic.description || "").trim(),
+    description: repairMojibake(topic.description).trim(),
     bulletPoints,
   };
 }
@@ -134,10 +145,10 @@ function normalizeKeyPart(value) {
   return String(value || "")
     .trim()
     .toLowerCase()
-    .replace(/Ã¤/g, "ae")
-    .replace(/Ã¶/g, "oe")
-    .replace(/Ã¼/g, "ue")
-    .replace(/ÃŸ/g, "ss")
+    .replace(/ä/g, "ae")
+    .replace(/ö/g, "oe")
+    .replace(/ü/g, "ue")
+    .replace(/ß/g, "ss")
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
     .replace(/\s+/g, " ");
@@ -266,7 +277,7 @@ function createModuleCard(topic) {
     const link = document.createElement("a");
     link.className = "button-link";
     link.href = topic.link;
-    link.textContent = "Modul Ã¶ffnen";
+    link.textContent = "Modul öffnen";
     card.append(link);
   } else {
     const note = document.createElement("p");
@@ -300,7 +311,7 @@ function renderSubjects(topics) {
   if (subjects.length === 0) {
     const option = document.createElement("option");
     option.value = "";
-    option.textContent = "Keine FÃ¤cher verfÃ¼gbar";
+    option.textContent = "Keine Fächer verfügbar";
     subjectSelect.append(option);
     subjectSelect.disabled = true;
     renderModules(topics, "");
@@ -325,6 +336,7 @@ renderSubjects(topics);
 subjectSelect.addEventListener("change", () => {
   renderModules(topics, subjectSelect.value);
 });
+
 
 
 
