@@ -3,30 +3,178 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chemie - Gasbrenner (Dummy)</title>
+  <title>Chemie - Gasbrenner</title>
   <link rel="icon" type="image/svg+xml" href="../../../assets/tab-logo.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../../styles.css">
+  <link rel="stylesheet" href="chemie-gasbrenner.css">
 </head>
 <body>
-  <main class="layout">
-    <section class="hero">
+  <main class="gb-page">
+    <header class="gb-hero">
       <a class="back-link" href="../../../index.html">Zurück zur Startseite</a>
-      <p class="tag">Chemie Klasse 5</p>
-      <h1>Dummy-Modul: Gasbrenner</h1>
-      <p class="intro">Dieses Modul ist als Platzhalter angelegt und wird später ausgearbeitet.</p>
+      <p class="gb-tag">Chemie Klasse 5</p>
+      <h1>Gasbrenner</h1>
+      <p>
+        In diesem Modul lernst du den Aufbau des Gasbrenners, das sichere Einstellen der Flamme
+        und den Grund, warum Flammen unterschiedlich heiß sind.
+      </p>
+      <figure class="gb-image-frame">
+        <img src="gasbrenner-aufbau-und-flammen.png" alt="Übersicht zum Aufbau des Gasbrenners und zu Flammentypen">
+      </figure>
+    </header>
+
+    <nav class="gb-nav" aria-label="Modulnavigation">
+      <button class="gb-tab-btn is-active" type="button" data-tab="lernen">Lernen</button>
+      <button class="gb-tab-btn" type="button" data-tab="trainieren">Trainieren</button>
+      <button class="gb-tab-btn" type="button" data-tab="test">Prüfung</button>
+    </nav>
+
+    <section id="tab-lernen" class="gb-tab is-active">
+      <article class="gb-card">
+        <h2>Lehrplanbezug Niedersachsen (Gymnasium Sek I)</h2>
+        <p>
+          Das Modul orientiert sich am Kerncurriculum Chemie. Für den Einstieg sind besonders wichtig:
+          sicheres Experimentieren, Beobachten und Beschreiben sowie das Deuten von Verbrennungsvorgängen.
+        </p>
+        <ul class="gb-list">
+          <li>Du nennst wichtige Teile des Gasbrenners und ihre Funktion.</li>
+          <li>Du stellst die Flamme passend und sicher ein.</li>
+          <li>Du erklärst einfach, warum mehr Luft zu einer heißeren Flamme führt.</li>
+          <li>Du entscheidest in Alltagssituationen, welche Flamme sinnvoll ist.</li>
+        </ul>
+        <p class="gb-source-note">
+          Offizielle Quellen:
+          <a href="https://cuvo.nibis.de/cuvo.php?p=detail_view&docid=Y3V2bzpsZXNzZW5zb24vY3V2b19ta19mZV9mb2VfZG9rdW1lbnRlL3Nla19pL2d5bS9jaGVfZ3ltX2tjX2NvdmlkLnBkZg==&&id=bGVzc29u" target="_blank" rel="noopener noreferrer">CuVo/NIBIS - Chemie Gymnasium Sek I</a>
+          |
+          <a href="https://cuvo.nibis.de/cuvo.php?p=download&upload=293" target="_blank" rel="noopener noreferrer">Kerncurriculum Chemie Sek I (PDF, Niedersachsen)</a>
+          |
+          <a href="https://db2.nibis.de/1db/cuvo/datei/che_5_10_kc_druck_2017.pdf" target="_blank" rel="noopener noreferrer">Kerncurriculum Chemie 5-10 (PDF)</a>
+        </p>
+      </article>
+
+      <article class="gb-card">
+        <h2>Aufbau des Gasbrenners (interaktiv)</h2>
+        <p>Klicke auf ein Teil und lies die Funktion.</p>
+        <div class="gb-part-buttons">
+          <button class="gb-part-btn is-active" type="button" data-part="brennerkopf">Brennerkopf</button>
+          <button class="gb-part-btn" type="button" data-part="mischrohr">Mischrohr</button>
+          <button class="gb-part-btn" type="button" data-part="luftregler">Luftregler</button>
+          <button class="gb-part-btn" type="button" data-part="gasregler">Gasregler</button>
+          <button class="gb-part-btn" type="button" data-part="fuss">Brennerfuß</button>
+        </div>
+        <div class="gb-detail-box">
+          <h3 id="gbPartTitle"></h3>
+          <p id="gbPartText"></p>
+          <ul id="gbPartList" class="gb-list"></ul>
+        </div>
+      </article>
+
+      <article class="gb-card">
+        <h2>Gasbrenner einstellen (interaktiv)</h2>
+        <p>Klicke auf einen Schritt. So arbeitest du in sinnvoller Reihenfolge.</p>
+        <div class="gb-step-buttons">
+          <button class="gb-step-btn is-active" type="button" data-step="vorbereiten">1. Vorbereiten</button>
+          <button class="gb-step-btn" type="button" data-step="zuenden">2. Zünden</button>
+          <button class="gb-step-btn" type="button" data-step="heizflamme">3. Heizflamme einstellen</button>
+          <button class="gb-step-btn" type="button" data-step="ausschalten">4. Ausschalten</button>
+        </div>
+        <div class="gb-detail-box">
+          <h3 id="gbStepTitle"></h3>
+          <p id="gbStepText"></p>
+          <ul id="gbStepList" class="gb-list"></ul>
+        </div>
+      </article>
+
+      <article class="gb-card">
+        <h2>Flammenlabor: Warum sind Flammen verschieden heiß? (interaktiv)</h2>
+        <p>
+          Verändere die Luft- und Gaseinstellung. Du siehst sofort, wie sich Flammentyp,
+          Farbe, Rußbildung und Temperatur ändern.
+        </p>
+        <div class="gb-lab-grid">
+          <label>
+            Luftzufuhr
+            <input id="gbAirSlider" type="range" min="0" max="100" value="15" step="1">
+          </label>
+          <label>
+            Gaszufuhr
+            <select id="gbGasLevel">
+              <option value="niedrig">niedrig</option>
+              <option value="mittel" selected>mittel</option>
+              <option value="hoch">hoch</option>
+            </select>
+          </label>
+        </div>
+        <div class="gb-lab-visual">
+          <svg id="gbFlameSvg" viewBox="0 0 360 280" aria-label="Interaktive Flamme"></svg>
+          <div class="gb-lab-info">
+            <p class="gb-lab-head" id="gbFlameType">Leuchtende Flamme</p>
+            <p id="gbTempRange">Temperatur: ca. 450 bis 650 °C</p>
+            <ul id="gbWhyList" class="gb-list"></ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="gb-card">
+        <h2>Warum-Check</h2>
+        <p>Prüfe dein Verständnis zu Luftzufuhr, Verbrennung und Temperatur.</p>
+        <div id="gbWhyCheckList" class="gb-task-list"></div>
+        <div class="gb-controls">
+          <button id="gbWhyNew" type="button">Neue Runde</button>
+          <button id="gbWhyCheck" type="button">Prüfen</button>
+        </div>
+        <div id="gbWhyFeedback"></div>
+      </article>
     </section>
 
-    <section class="card">
-      <h2>Geplante Schwerpunkte</h2>
-      <ul class="module-bullet-list">
-        <li>Aufbau und Teile des Gasbrenners kennenlernen.</li>
-        <li>Sicheres Anzünden und Ausschalten üben.</li>
-        <li>Flammentypen und ihre Verwendung unterscheiden.</li>
-      </ul>
+    <section id="tab-trainieren" class="gb-tab">
+      <article class="gb-card">
+        <h2>Training (neu generierbar)</h2>
+        <p>
+          Erzeuge beliebig viele Aufgaben. Die Fragen decken Aufbau, Flammenwahl,
+          Sicherheit und das "Warum" der Temperaturunterschiede ab.
+        </p>
+        <div class="gb-train-grid">
+          <label>
+            Anzahl Aufgaben
+            <select id="gbTrainCount">
+              <option value="6">6</option>
+              <option value="10" selected>10</option>
+              <option value="14">14</option>
+            </select>
+          </label>
+        </div>
+        <div class="gb-controls">
+          <button id="gbTrainGenerate" type="button">Aufgaben erstellen</button>
+          <button id="gbTrainCheck" type="button">Prüfen</button>
+        </div>
+        <div id="gbTrainList" class="gb-task-list"></div>
+        <div id="gbTrainFeedback"></div>
+      </article>
+    </section>
+
+    <section id="tab-test" class="gb-tab">
+      <article class="gb-card">
+        <h2>Prüfungsteil (dynamisch)</h2>
+        <p>10 Fragen mit wechselnder Reihenfolge. Bei jedem Neustart werden neue Fragen gemischt.</p>
+        <div class="quiz-controls">
+          <button id="gbQuizStart" type="button">Prüfung starten</button>
+          <button id="gbQuizNext" type="button" disabled>Nächste Frage</button>
+          <p id="gbQuizScore" class="score">Punkte: 0 / 10</p>
+        </div>
+        <div class="quiz-box">
+          <p id="gbQuizStatus" class="quiz-status">Prüfung noch nicht gestartet.</p>
+          <h3 id="gbQuizPrompt">Klicke auf „Prüfung starten“.</h3>
+          <div id="gbQuizAnswers" class="choice-list"></div>
+          <div id="gbQuizFeedback"></div>
+        </div>
+      </article>
     </section>
   </main>
+
+  <script src="chemie-gasbrenner.js"></script>
 </body>
 </html>

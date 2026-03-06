@@ -83,7 +83,7 @@ const defaultTopics = [
     subject: "Chemie",
     title: "Gasbrenner",
     link: "subjects/chemie/gasbrenner/chemie-gasbrenner.html",
-    description: "Dummy-Modul (Platzhalter) - Inhalte folgen.",
+    description: "Aufbau, sichere Einstellung und Flammentemperaturen des Gasbrenners interaktiv lernen, trainieren und prüfen.",
   },
   {
     subject: "Deutsch",
