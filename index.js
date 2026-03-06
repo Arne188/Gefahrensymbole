@@ -62,6 +62,18 @@ const defaultTopics = [
     description: "Koordinaten-Labor, Quadranten verstehen und mit unendlichem Aufgaben-Generator trainieren.",
   },
   {
+    subject: "Mathematik",
+    title: "Rechengesetze",
+    link: "subjects/mathematik/rechengesetze/mathematik-rechengesetze.html",
+    description: "Distributiv-, Kommutativ- und Assoziativgesetz ausführlich lernen und mit unendlichem Aufgabenpool trainieren.",
+  },
+  {
+    subject: "Mathematik",
+    title: "Kopfrechentrainer",
+    link: "subjects/mathematik/kopfrechentrainer/mathematik-kopfrechentrainer.html",
+    description: "Alle wichtigen Kopfrechenarten der 5. Klasse mit unendlichem Generator, Hilfestrategien und Test trainieren.",
+  },
+  {
     subject: "Englisch",
     title: "Sentences with if - Part 1",
     link: "subjects/englisch/if-sentences-part-1/englisch-if-sentences.html",

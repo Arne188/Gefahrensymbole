@@ -1,0 +1,271 @@
+.kr-page {
+  width: min(1160px, 95vw);
+  margin: 20px auto 34px;
+  display: grid;
+  gap: 14px;
+}
+
+.kr-hero,
+.kr-nav,
+.kr-card {
+  border: 1px solid #c6d5e4;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 10px 22px rgba(20, 40, 64, 0.12);
+}
+
+.kr-hero {
+  padding: 20px;
+  display: grid;
+  gap: 8px;
+  background:
+    radial-gradient(circle at 92% 2%, rgba(255, 228, 182, 0.45), transparent 38%),
+    linear-gradient(130deg, rgba(255, 255, 255, 0.97), rgba(240, 248, 255, 0.96));
+}
+
+.kr-tag {
+  margin: 0;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  color: #4c667f;
+}
+
+.kr-hero h1 {
+  margin: 2px 0 4px;
+}
+
+.kr-hero p {
+  margin: 0;
+  color: #35526c;
+  max-width: 80ch;
+}
+
+.kr-nav {
+  padding: 8px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.kr-tab-btn {
+  border: 1px solid #aac4db;
+  background: #ecf5ff;
+  color: #1a4368;
+}
+
+.kr-tab-btn.is-active {
+  border-color: #1163b3;
+  background: #1163b3;
+  color: #fff;
+}
+
+.kr-tab {
+  display: none;
+  gap: 14px;
+}
+
+.kr-tab.is-active {
+  display: grid;
+}
+
+.kr-card {
+  padding: 16px;
+}
+
+.kr-card h2 {
+  margin: 0 0 8px;
+}
+
+.kr-card h3 {
+  margin: 0 0 6px;
+  color: #1c4c73;
+}
+
+.kr-card p {
+  margin-top: 0;
+  color: #3b5872;
+}
+
+.kr-list {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 6px;
+}
+
+.kr-strategy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.kr-strategy-box {
+  border: 1px solid #cfe0ef;
+  border-radius: 12px;
+  background: #f8fcff;
+  padding: 10px;
+}
+
+.kr-formula {
+  border: 1px solid #c9dcef;
+  border-radius: 10px;
+  background: #eef6ff;
+  color: #1d486d;
+  padding: 8px 10px;
+  font-weight: 700;
+}
+
+.kr-demo-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.kr-demo-btn {
+  border: 1px solid #b6cfe3;
+  background: #f2f8ff;
+  color: #1f4f74;
+}
+
+.kr-demo-btn.is-active {
+  border-color: #1163b3;
+  background: #1163b3;
+  color: #fff;
+}
+
+.kr-demo-box {
+  margin-top: 10px;
+  border: 1px solid #cedeec;
+  border-radius: 12px;
+  background: #f8fcff;
+  padding: 12px;
+}
+
+.kr-tip {
+  border: 1px solid #d6e5f2;
+  border-radius: 10px;
+  background: #ffffff;
+  padding: 8px 10px;
+  font-weight: 600;
+}
+
+.kr-generator-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+}
+
+.kr-topic-filter {
+  margin-top: 12px;
+  border: 1px solid #c8d9ea;
+  border-radius: 12px;
+  background: #f7fbff;
+  padding: 10px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.kr-topic-filter legend {
+  padding: 0 6px;
+  color: #2f5479;
+  font-weight: 700;
+}
+
+.kr-topic-filter label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #35506b;
+}
+
+.kr-controls {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.kr-task-list {
+  margin-top: 10px;
+  display: grid;
+  gap: 8px;
+}
+
+.kr-task-row {
+  border: 1px solid #cfdeec;
+  border-radius: 12px;
+  background: #fff;
+  padding: 10px;
+  display: grid;
+  gap: 8px;
+}
+
+.kr-task-row.is-correct {
+  border-color: #95d2bc;
+  background: #ebf9f2;
+}
+
+.kr-task-row.is-wrong {
+  border-color: #e4b5b5;
+  background: #fdeeee;
+}
+
+.kr-task-head {
+  margin: 0;
+  color: #274867;
+  font-weight: 700;
+}
+
+.kr-answer-line {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.kr-answer-line input {
+  max-width: 220px;
+}
+
+.kr-row-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.kr-help-box {
+  border: 1px solid #cfdeec;
+  border-radius: 10px;
+  background: #f7fbff;
+  padding: 8px 10px;
+}
+
+.kr-help-box p {
+  margin: 0 0 6px;
+}
+
+.kr-help-box ol {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 4px;
+}
+
+#krQuizAnswers .choice-btn.is-correct {
+  border-color: #0f8a6d;
+  background: #d9f4ea;
+}
+
+#krQuizAnswers .choice-btn.is-wrong {
+  border-color: #b63a3a;
+  background: #f7e3e3;
+}
+
+@media (max-width: 780px) {
+  .kr-strategy-grid {
+    grid-template-columns: 1fr;
+  }
+}

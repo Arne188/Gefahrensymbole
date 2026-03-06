@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mathematik - Kopfrechentrainer</title>
+  <link rel="icon" type="image/svg+xml" href="../../../assets/tab-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../styles.css">
+  <link rel="stylesheet" href="mathematik-kopfrechentrainer.css">
+</head>
+<body>
+  <main class="kr-page">
+    <header class="kr-hero">
+      <a class="back-link" href="../../../subject-dashboard.html?subject=Mathematik">Zurück zum Fach-Dashboard</a>
+      <p class="kr-tag">Mathematik Klasse 5</p>
+      <h1>Kopfrechentrainer</h1>
+      <p>
+        Hier trainierst du alle wichtigen Kopfrechenarten für Klasse 5:
+        Plus, Minus, Mal, Geteilt, Punkt-vor-Strich, Klammern und Rechengesetze
+        (Kommutativ-, Assoziativ- und Distributivgesetz).
+      </p>
+    </header>
+
+    <nav class="kr-nav" aria-label="Modulnavigation">
+      <button class="kr-tab-btn is-active" type="button" data-tab="lernen">Lernen</button>
+      <button class="kr-tab-btn" type="button" data-tab="trainieren">Trainieren</button>
+      <button class="kr-tab-btn" type="button" data-tab="test">Test</button>
+    </nav>
+
+    <section id="tab-lernen" class="kr-tab is-active">
+      <article class="kr-card">
+        <h2>Was im Kopfrechnen in Klasse 5 wichtig ist</h2>
+        <ul class="kr-list">
+          <li>Addition und Subtraktion mit sinnvollem Zerlegen.</li>
+          <li>Multiplikation und Division mit Einmaleins und Stellenwerten.</li>
+          <li>Klammern und Punkt-vor-Strich sicher beachten.</li>
+          <li>Rechengesetze nutzen, um Aufgaben einfacher zu machen.</li>
+        </ul>
+      </article>
+
+      <article class="kr-card">
+        <h2>Strategien im Überblick</h2>
+        <div class="kr-strategy-grid">
+          <article class="kr-strategy-box">
+            <h3>Addition und Subtraktion</h3>
+            <p><strong>Ergänzen:</strong> 398 + 27 -> 400 + 25 = 425</p>
+            <p><strong>Zerlegen:</strong> 560 - 190 -> 560 - 200 + 10 = 370</p>
+          </article>
+          <article class="kr-strategy-box">
+            <h3>Multiplikation und Division</h3>
+            <p><strong>Stellenwert:</strong> 24 × 10 = 240</p>
+            <p><strong>Faktorzerlegung:</strong> 48 : 6 = (48 : 3) : 2 = 8</p>
+          </article>
+          <article class="kr-strategy-box">
+            <h3>Kommutativgesetz</h3>
+            <p>Reihenfolge tauschen bei + und ×.</p>
+            <p>Beispiel: 25 × 4 = 4 × 25 = 100</p>
+          </article>
+          <article class="kr-strategy-box">
+            <h3>Assoziativgesetz</h3>
+            <p>Klammern bei + und × anders setzen.</p>
+            <p>Beispiel: (18 + 2) + 35 = 18 + (2 + 35)</p>
+          </article>
+          <article class="kr-strategy-box">
+            <h3>Distributivgesetz</h3>
+            <p>In die Klammer verteilen oder ausklammern.</p>
+            <p>Beispiel: 6 × (30 + 4) = 6 × 30 + 6 × 4</p>
+          </article>
+          <article class="kr-strategy-box">
+            <h3>Reihenfolge im Term</h3>
+            <p>Zuerst Klammern, dann Punkt vor Strich.</p>
+            <p>Beispiel: 8 + 3 × 4 = 8 + 12 = 20</p>
+          </article>
+        </div>
+      </article>
+
+      <article class="kr-card">
+        <h2>Interaktiv: Strategie auswählen</h2>
+        <p>Wähle eine Strategie und lies den passenden Rechenweg.</p>
+        <div class="kr-demo-buttons">
+          <button class="kr-demo-btn is-active" type="button" data-strategy="ergaenzen">Ergänzen</button>
+          <button class="kr-demo-btn" type="button" data-strategy="zerlegen">Zerlegen</button>
+          <button class="kr-demo-btn" type="button" data-strategy="gesetz">Rechengesetz</button>
+          <button class="kr-demo-btn" type="button" data-strategy="reihenfolge">Reihenfolge</button>
+        </div>
+        <div class="kr-demo-box">
+          <h3 id="krDemoTitle"></h3>
+          <p id="krDemoText"></p>
+          <p id="krDemoExample" class="kr-formula"></p>
+          <p id="krDemoTip" class="kr-tip"></p>
+        </div>
+      </article>
+    </section>
+
+    <section id="tab-trainieren" class="kr-tab">
+      <article class="kr-card">
+        <h2>Aufgaben-Generator (unendlich)</h2>
+        <p>
+          Mit jedem Klick auf „Aufgaben erstellen“ bekommst du neue Aufgaben.
+          Hilfe kannst du für jede Aufgabe einzeln einblenden.
+        </p>
+        <div class="kr-generator-grid">
+          <label>
+            Schwierigkeit
+            <select id="krDifficulty">
+              <option value="leicht">Leicht</option>
+              <option value="mittel" selected>Mittel</option>
+              <option value="schwer">Schwer</option>
+            </select>
+          </label>
+          <label>
+            Anzahl
+            <select id="krCount">
+              <option value="8">8</option>
+              <option value="12" selected>12</option>
+              <option value="16">16</option>
+            </select>
+          </label>
+        </div>
+
+        <fieldset class="kr-topic-filter">
+          <legend>Aufgabentypen</legend>
+          <label><input type="checkbox" class="kr-topic" value="addsub" checked> Addition / Subtraktion</label>
+          <label><input type="checkbox" class="kr-topic" value="multdiv" checked> Multiplikation / Division</label>
+          <label><input type="checkbox" class="kr-topic" value="term" checked> Terme und Reihenfolge</label>
+          <label><input type="checkbox" class="kr-topic" value="laws" checked> Rechengesetze</label>
+        </fieldset>
+
+        <div class="kr-controls">
+          <button id="krGenerate" type="button">Aufgaben erstellen</button>
+          <button id="krCheckAll" type="button">Alle prüfen</button>
+        </div>
+
+        <div id="krTaskList" class="kr-task-list"></div>
+        <div id="krTaskSummary"></div>
+      </article>
+    </section>
+
+    <section id="tab-test" class="kr-tab">
+      <article class="kr-card">
+        <h2>Kurztest Kopfrechnen</h2>
+        <p>Der Test mischt automatisch alle Bereiche.</p>
+        <div class="quiz-controls">
+          <button id="krQuizStart" type="button">Test starten</button>
+          <button id="krQuizNext" type="button" disabled>Nächste Frage</button>
+          <p id="krQuizScore" class="score">Punkte: 0 / 12</p>
+        </div>
+        <div class="quiz-box">
+          <p id="krQuizStatus" class="quiz-status">Test noch nicht gestartet.</p>
+          <h3 id="krQuizPrompt">Klicke auf „Test starten“.</h3>
+          <div id="krQuizAnswers" class="choice-list"></div>
+          <div id="krQuizFeedback"></div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="mathematik-kopfrechentrainer.js"></script>
+  <script src="../../../global-menu.js"></script>
+</body>
+</html>

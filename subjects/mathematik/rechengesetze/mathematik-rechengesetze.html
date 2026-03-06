@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mathematik - Rechengesetze</title>
+  <link rel="icon" type="image/svg+xml" href="../../../assets/tab-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../styles.css">
+  <link rel="stylesheet" href="mathematik-rechengesetze.css">
+</head>
+<body>
+  <main class="rg-page">
+    <header class="rg-hero">
+      <a class="back-link" href="../../../subject-dashboard.html?subject=Mathematik">Zurück zum Fach-Dashboard</a>
+      <p class="rg-tag">Mathematik Klasse 5</p>
+      <h1>Distributivgesetz, Kommutativgesetz und Assoziativgesetz</h1>
+      <p>
+        In diesem Modul lernst du drei wichtige Rechengesetze. Sie helfen dir,
+        Aufgaben schneller zu lösen, Rechenwege klar zu erklären und Fehler zu vermeiden.
+      </p>
+    </header>
+
+    <nav class="rg-nav" aria-label="Modulnavigation">
+      <button class="rg-tab-btn is-active" type="button" data-tab="lernen">Lernen</button>
+      <button class="rg-tab-btn" type="button" data-tab="trainieren">Trainieren</button>
+      <button class="rg-tab-btn" type="button" data-tab="test">Test</button>
+    </nav>
+
+    <section id="tab-lernen" class="rg-tab is-active">
+      <article class="rg-card">
+        <h2>Lehrplanbezug Klasse 5 (Niedersachsen)</h2>
+        <p>
+          Das Modul passt zu den Inhalten des Kerncurriculums Mathematik Sekundarstufe I:
+          Terme verstehen, Rechenstrategien nutzen, Gesetzmäßigkeiten erkennen und Rechenwege begründen.
+        </p>
+        <ul class="rg-list">
+          <li>Du erkennst, welches Gesetz zu einer Aufgabe passt.</li>
+          <li>Du rechnest mit kluger Umformung schneller und sicherer.</li>
+          <li>Du kannst Rechenwege in klaren Schritten erklären.</li>
+        </ul>
+      </article>
+
+      <article class="rg-card">
+        <h2>Die 3 Gesetze ausführlich erklärt</h2>
+        <div class="rg-law-grid">
+          <article class="rg-law-box">
+            <h3>Kommutativgesetz (Vertauschungsgesetz)</h3>
+            <p>
+              Bei <strong>Addition</strong> und <strong>Multiplikation</strong> darfst du die Reihenfolge
+              der Zahlen vertauschen.
+            </p>
+            <p class="rg-formula">a + b = b + a &nbsp; und &nbsp; a × b = b × a</p>
+            <p><strong>Beispiel:</strong> 37 + 19 = 19 + 37 und 4 × 25 = 25 × 4</p>
+            <p class="rg-warning">Gilt nicht für Subtraktion und Division.</p>
+          </article>
+
+          <article class="rg-law-box">
+            <h3>Assoziativgesetz (Verbindungsgesetz)</h3>
+            <p>
+              Bei <strong>Addition</strong> und <strong>Multiplikation</strong> darfst du die Klammern
+              anders setzen, wenn die Reihenfolge der Zahlen gleich bleibt.
+            </p>
+            <p class="rg-formula">(a + b) + c = a + (b + c) &nbsp; und &nbsp; (a × b) × c = a × (b × c)</p>
+            <p><strong>Beispiel:</strong> (18 + 2) + 35 = 18 + (2 + 35)</p>
+            <p><strong>Nutzen:</strong> Du bildest zuerst einfache Teilergebnisse.</p>
+          </article>
+
+          <article class="rg-law-box">
+            <h3>Distributivgesetz (Verteilungsgesetz)</h3>
+            <p>
+              Eine Zahl vor der Klammer wird auf alle Zahlen in der Klammer verteilt.
+              Du kannst in beide Richtungen umformen.
+            </p>
+            <p class="rg-formula">a × (b + c) = a × b + a × c</p>
+            <p><strong>Beispiel:</strong> 6 × (30 + 4) = 6 × 30 + 6 × 4 = 180 + 24 = 204</p>
+            <p><strong>Rückwärts:</strong> 6 × 30 + 6 × 4 = 6 × (30 + 4)</p>
+          </article>
+        </div>
+      </article>
+
+      <article class="rg-card">
+        <h2>Interaktiv: Welches Gesetz passt?</h2>
+        <p>Klicke auf ein Gesetz. Du bekommst eine passende Beispielstrategie mit Erklärung.</p>
+        <div class="rg-demo-buttons">
+          <button class="rg-demo-btn is-active" type="button" data-law="kommutativ">Kommutativgesetz</button>
+          <button class="rg-demo-btn" type="button" data-law="assoziativ">Assoziativgesetz</button>
+          <button class="rg-demo-btn" type="button" data-law="distributiv">Distributivgesetz</button>
+        </div>
+        <div class="rg-demo-box">
+          <h3 id="rgDemoTitle"></h3>
+          <p id="rgDemoText"></p>
+          <p id="rgDemoExample" class="rg-formula"></p>
+          <p id="rgDemoTip" class="rg-tip"></p>
+        </div>
+      </article>
+
+      <article class="rg-card">
+        <h2>Lösungsstrategie in 4 Schritten</h2>
+        <ol class="rg-list">
+          <li>Erkenne zuerst den Aufgabentyp: Vertauschen, Klammern umsetzen oder Ausmultiplizieren.</li>
+          <li>Wähle das passende Gesetz.</li>
+          <li>Forme die Aufgabe so um, dass leichte Zahlenpaare entstehen.</li>
+          <li>Rechne sorgfältig fertig und prüfe das Ergebnis.</li>
+        </ol>
+      </article>
+    </section>
+
+    <section id="tab-trainieren" class="rg-tab">
+      <article class="rg-card">
+        <h2>Übungspool mit unendlich neuen Aufgaben</h2>
+        <p>
+          Stelle deinen Aufgabensatz ein. Mit jedem Klick auf „Aufgaben erstellen“
+          werden neue Aufgaben erzeugt.
+        </p>
+        <div class="rg-generator-grid">
+          <label>
+            Schwierigkeit
+            <select id="rgDifficulty">
+              <option value="leicht">Leicht</option>
+              <option value="mittel" selected>Mittel</option>
+              <option value="schwer">Schwer</option>
+            </select>
+          </label>
+          <label>
+            Anzahl Aufgaben
+            <select id="rgTaskCount">
+              <option value="6">6</option>
+              <option value="10" selected>10</option>
+              <option value="14">14</option>
+            </select>
+          </label>
+        </div>
+
+        <fieldset class="rg-law-filter">
+          <legend>Gesetze auswählen</legend>
+          <label><input type="checkbox" class="rg-law-check" value="kommutativ" checked> Kommutativgesetz</label>
+          <label><input type="checkbox" class="rg-law-check" value="assoziativ" checked> Assoziativgesetz</label>
+          <label><input type="checkbox" class="rg-law-check" value="distributiv" checked> Distributivgesetz</label>
+        </fieldset>
+
+        <div class="rg-controls">
+          <button id="rgGenerate" type="button">Aufgaben erstellen</button>
+          <button id="rgCheckAll" type="button">Alle prüfen</button>
+        </div>
+        <div id="rgTasks" class="rg-task-list"></div>
+        <div id="rgSummary"></div>
+      </article>
+    </section>
+
+    <section id="tab-test" class="rg-tab">
+      <article class="rg-card">
+        <h2>Abschlusstest</h2>
+        <p>
+          Der Test mischt Verständnisfragen und Rechenaufgaben zu allen drei Gesetzen.
+          Bei jeder Antwort bekommst du eine kurze Begründung.
+        </p>
+        <div class="quiz-controls">
+          <button id="rgQuizStart" type="button">Test starten</button>
+          <button id="rgQuizNext" type="button" disabled>Nächste Frage</button>
+          <p id="rgQuizScore" class="score">Punkte: 0 / 10</p>
+        </div>
+        <div class="quiz-box">
+          <p id="rgQuizStatus" class="quiz-status">Test noch nicht gestartet.</p>
+          <h3 id="rgQuizPrompt">Klicke auf „Test starten“.</h3>
+          <div id="rgQuizAnswers" class="choice-list"></div>
+          <div id="rgQuizFeedback"></div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="mathematik-rechengesetze.js"></script>
+  <script src="../../../global-menu.js"></script>
+</body>
+</html>

@@ -33,6 +33,8 @@
     { subject: "Mathematik", title: "Maßstab", link: "subjects/mathematik/massstab/mathematik-massstab.html" },
     { subject: "Mathematik", title: "Achsensymmetrie und Punktsymmetrie", link: "subjects/mathematik/achsensymmetrie-und-punktsymmetrie/mathematik-achsensymmetrie-und-punktsymmetrie.html" },
     { subject: "Mathematik", title: "Das Koordinatensystem", link: "subjects/mathematik/das-koordinatensystem/mathematik-das-koordinatensystem.html" },
+    { subject: "Mathematik", title: "Rechengesetze", link: "subjects/mathematik/rechengesetze/mathematik-rechengesetze.html" },
+    { subject: "Mathematik", title: "Kopfrechentrainer", link: "subjects/mathematik/kopfrechentrainer/mathematik-kopfrechentrainer.html" },
     { subject: "Werte und Normen", title: "Modul 1: Gottesvorstellungen verstehen", link: "subjects/werte-und-normen/gottesvorstellungen-grundlagen/werte-und-normen-glaubensrichtungen.html" },
     { subject: "Werte und Normen", title: "Modul 2: Gottesvorstellungen im Monotheismus", link: "subjects/werte-und-normen/gottesvorstellungen-im-monotheismus/werte-und-normen-monotheistische-gottesvorstellungen.html" },
     { subject: "Werte und Normen", title: "Modul 3: Menschen des Glaubens", link: "subjects/werte-und-normen/menschen-des-glaubens/werte-und-normen-menschen-des-glaubens.html" },
