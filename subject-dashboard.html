@@ -1,0 +1,69 @@
+﻿<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fach-Dashboard</title>
+  <link rel="icon" type="image/svg+xml" href="assets/tab-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="subject-dashboard.css">
+</head>
+<body>
+  <button id="drawerToggle" class="sd-menu-toggle" type="button" aria-controls="subjectDrawer" aria-expanded="false">
+    <span class="sd-menu-bars" aria-hidden="true"></span>
+    Menü
+  </button>
+  <div id="drawerOverlay" class="sd-overlay" hidden></div>
+
+  <aside id="subjectDrawer" class="sd-drawer" aria-label="Navigation" aria-hidden="true">
+    <div class="sd-drawer-head">
+      <h2>Navigation</h2>
+      <button id="drawerClose" type="button">Schließen</button>
+    </div>
+
+    <section class="sd-drawer-block">
+      <h3>Fächer</h3>
+      <div id="drawerSubjectList" class="sd-link-list"></div>
+    </section>
+
+    <section class="sd-drawer-block">
+      <h3>Module im Fach</h3>
+      <div id="drawerModuleList" class="sd-link-list"></div>
+    </section>
+  </aside>
+
+  <main class="layout home-layout sd-layout">
+    <header class="hero sd-hero" id="sdHero">
+      <a class="back-link" href="index.html">Zurück zur Startseite</a>
+      <p class="tag" id="sdTag">Fach-Dashboard</p>
+      <h1 id="sdTitle">Fach</h1>
+      <p class="intro" id="sdIntro"></p>
+      <div class="sd-hero-extra">
+        <label class="selector-label" for="sdSubjectSelect">
+          Fach wechseln
+          <select id="sdSubjectSelect" name="subject"></select>
+        </label>
+        <div class="sd-visual" id="sdVisual" aria-hidden="true">
+          <p class="sd-visual-code" id="sdVisualCode">--</p>
+          <p class="sd-visual-text" id="sdVisualText">Fach</p>
+        </div>
+      </div>
+    </header>
+
+    <section class="card selector-card">
+      <div class="sd-section-head">
+        <h2 id="sdModuleHead">Module</h2>
+        <p id="sdModuleCount" class="card-intro"></p>
+      </div>
+      <div id="sdModuleList" class="module-grid"></div>
+      <p id="sdEmptyState" class="card-intro" hidden>Für dieses Fach sind aktuell keine Module hinterlegt.</p>
+    </section>
+  </main>
+
+  <script src="index.js"></script>
+  <script src="subject-dashboard.js"></script>
+</body>
+</html>

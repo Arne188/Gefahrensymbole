@@ -155,6 +155,7 @@ const defaultTopics = [
 const subjectSelect = document.getElementById("subjectSelect");
 const moduleList = document.getElementById("moduleList");
 const emptyState = document.getElementById("emptyState");
+const openSubjectDashboard = document.getElementById("openSubjectDashboard");
 
 function repairMojibake(value) {
   return String(value || "")
@@ -371,13 +372,43 @@ function renderSubjects(topics) {
   renderModules(topics, subjects[0]);
 }
 
-let topics = loadTopics();
-saveTopics(topics);
-renderSubjects(topics);
+function buildSubjectDashboardLink(subject) {
+  const encoded = encodeURIComponent(subject || "");
+  return `subject-dashboard.html?subject=${encoded}`;
+}
 
-subjectSelect.addEventListener("change", () => {
-  renderModules(topics, subjectSelect.value);
-});
+function updateSubjectDashboardLink(subject) {
+  if (!(openSubjectDashboard instanceof HTMLAnchorElement)) {
+    return;
+  }
+  openSubjectDashboard.href = buildSubjectDashboardLink(subject);
+}
+
+window.LERNHUB = {
+  defaultTopics,
+  repairMojibake,
+  normalizeTopic,
+  dedupeTopics,
+  loadTopics,
+  saveTopics,
+  getSubjects,
+};
+
+if (
+  subjectSelect instanceof HTMLSelectElement &&
+  moduleList instanceof HTMLDivElement &&
+  emptyState instanceof HTMLParagraphElement
+) {
+  let topics = loadTopics();
+  saveTopics(topics);
+  renderSubjects(topics);
+  updateSubjectDashboardLink(subjectSelect.value);
+
+  subjectSelect.addEventListener("change", () => {
+    renderModules(topics, subjectSelect.value);
+    updateSubjectDashboardLink(subjectSelect.value);
+  });
+}
 
 
 
