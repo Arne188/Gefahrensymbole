@@ -1,33 +1,270 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Erdkunde - Himmelsrichtungen (Dummy)</title>
+  <title>Erdkunde - Himmelsrichtungen</title>
   <link rel="icon" type="image/svg+xml" href="../../../assets/tab-logo.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../../styles.css">
+  <link rel="stylesheet" href="erdkunde-himmelsrichtungen.css">
 </head>
 <body>
-  <main class="layout">
-    <section class="hero">
+  <main class="hr-page">
+    <header class="hr-hero">
       <a class="back-link" href="../../../subject-dashboard.html?subject=Erdkunde">Zurück zum Fach-Dashboard</a>
-      <p class="tag">Erdkunde Klasse 5</p>
-      <h1>Dummy-Modul: Himmelsrichtungen</h1>
-      <p class="intro">Dieses Modul ist als Platzhalter angelegt und wird später ausgearbeitet.</p>
+      <p class="hr-tag">Erdkunde Klasse 5</p>
+      <h1>Himmelsrichtungen</h1>
+      <p>
+        In diesem Modul lernst du, dich mit den Himmelsrichtungen sicher zu orientieren:
+        mit Kompassrose, Karte, Nordpfeil und einfachen Wegbeschreibungen.
+      </p>
+      <div class="hr-goal-grid">
+        <article class="hr-goal-card">
+          <h2>Das kannst du danach</h2>
+          <ul class="hr-list">
+            <li>Die acht Himmelsrichtungen benennen und anwenden.</li>
+            <li>Karten mit Nordpfeil richtig ausrichten.</li>
+            <li>Lagebeziehungen mit Norden, Osten, Süden und Westen beschreiben.</li>
+            <li>Zwischen Sonne, Kompass, Karte und GPS passend auswählen.</li>
+          </ul>
+        </article>
+        <article class="hr-goal-card">
+          <h2>Mini-Merksatz</h2>
+          <p class="hr-merksatz">
+            <strong>Norden</strong> zeigt auf der Karte meist nach oben.
+            Dann liegt <strong>Osten</strong> rechts, <strong>Süden</strong> unten
+            und <strong>Westen</strong> links.
+          </p>
+        </article>
+      </div>
+    </header>
+
+    <nav class="hr-nav" aria-label="Modulnavigation">
+      <button class="hr-tab-btn is-active" type="button" data-tab="lernen">Lernen</button>
+      <button class="hr-tab-btn" type="button" data-tab="trainieren">Trainieren</button>
+      <button class="hr-tab-btn" type="button" data-tab="pruefung">Prüfung</button>
+    </nav>
+
+    <section id="tab-lernen" class="hr-tab is-active">
+      <article class="hr-card">
+        <h2>Lehrplanbezug Niedersachsen (Gymnasium 5/6)</h2>
+        <p>
+          Das Modul orientiert sich am Kerncurriculum Erdkunde für Niedersachsen.
+          Im Kernthema <strong>Orientierung im Raum</strong> werden genau diese Kompetenzen gefordert:
+          natürliche Orientierung, Orientierung mit Karten, Kompass und GPS sowie das Beschreiben
+          von Lage und Lagebeziehungen.
+        </p>
+        <ul class="hr-list">
+          <li>Richtungen sicher bestimmen und beschreiben.</li>
+          <li>Nordpfeil und Kartenbild richtig deuten.</li>
+          <li>Orientierungsmittel im Alltag sinnvoll einsetzen.</li>
+          <li>Einfache Wege und räumliche Beziehungen sprachlich korrekt darstellen.</li>
+        </ul>
+        <p class="hr-source-note">
+          Quellen:
+          <a href="https://cuvo.nibis.de/index.php?p=download&upload=61" target="_blank" rel="noopener noreferrer">Kerncurriculum Erdkunde Niedersachsen (PDF)</a>
+          |
+          <a href="https://www.planet-schule.de/wissenspool/safer-internet/inhalt/unterricht/wo-bin-ich/wo-bin-ich-kompass.html" target="_blank" rel="noopener noreferrer">Planet Schule - Orientierung mit Kompass</a>
+          |
+          <a href="https://www.gfz.de/wissen-und-dialog/toolbox/faq/earth-magnetic-field" target="_blank" rel="noopener noreferrer">GFZ - Erdmagnetfeld und Kompass</a>
+        </p>
+      </article>
+
+      <article class="hr-card">
+        <h2>Übersichtsgrafik</h2>
+        <p>
+          Die Grafik zeigt dir die wichtigsten Inhalte als Gesamtüberblick.
+          Danach vertiefst du die Bereiche in interaktiven Übungen.
+        </p>
+        <figure class="hr-overview">
+          <img src="himmelsrichtungen-uebersicht.png" alt="Übersichtsgrafik zu Himmelsrichtungen, Orientierung und Kartenarbeit">
+          <figcaption>
+            Gesamtbild: Himmelsrichtungen benennen, auf Karten anwenden und im Alltag nutzen.
+          </figcaption>
+        </figure>
+      </article>
+
+      <article class="hr-card">
+        <h2>Schritt für Schritt: Richtungen sicher bestimmen</h2>
+        <p>
+          Nutze diese feste Reihenfolge, wenn du eine Richtung bestimmen sollst.
+          So vermeidest du typische Verwechslungen.
+        </p>
+        <ol class="hr-list">
+          <li>Suche zuerst den Nordpfeil oder lege fest: Norden ist oben.</li>
+          <li>Leite danach Osten, Süden und Westen ab.</li>
+          <li>Prüfe, ob die Richtung gerade (N, O, S, W) oder diagonal (NO, SO, SW, NW) ist.</li>
+          <li>Formuliere die Lage als vollständigen Satz, zum Beispiel: "Der Bahnhof liegt östlich der Schule."</li>
+        </ol>
+        <p class="hr-note-box">
+          Tipp: Wenn ein Ort sowohl weiter rechts als auch weiter oben liegt, dann ist die Richtung
+          meistens <strong>Nordosten</strong>.
+        </p>
+      </article>
+
+      <article class="hr-card">
+        <h2>Ausführliche Beispiele aus dem Alltag</h2>
+        <p>Diese Beispiele zeigen, wie du Himmelsrichtungen in echten Situationen verwendest.</p>
+        <div class="hr-example-grid">
+          <article class="hr-example-card">
+            <h3>Beispiel 1: Schulweg</h3>
+            <p>
+              Du gehst von der Schule zuerst nach Osten zur Kreuzung und dann nach Süden zum Sportplatz.
+              Diese Wegbeschreibung ist klar, weil beide Richtungen genannt werden.
+            </p>
+          </article>
+          <article class="hr-example-card">
+            <h3>Beispiel 2: Karte drehen</h3>
+            <p>
+              Wenn Norden auf einer Karte rechts liegt, musst du alle Richtungen mitdrehen.
+              Dann liegt Westen oben und Osten unten.
+            </p>
+          </article>
+          <article class="hr-example-card">
+            <h3>Beispiel 3: Orientierungsmittel wählen</h3>
+            <p>
+              Für eine schnelle Schätzung reicht Sonne und Schatten.
+              Für genaue Richtungen ist der Kompass passender.
+              Für Wegplanung nutzt du eine Karte oder GPS.
+            </p>
+          </article>
+        </div>
+      </article>
+
+      <article class="hr-card">
+        <h2>Kompassrose interaktiv</h2>
+        <p>Klicke auf die geforderte Richtung. Danach bekommst du sofort eine Rückmeldung.</p>
+        <p id="hrDirectionPrompt" class="hr-task-prompt">Aufgabe wird geladen...</p>
+        <div class="hr-rose" id="hrRose" aria-label="Kompassrose mit acht Richtungen">
+          <button type="button" class="hr-dir-btn" data-dir="NW">NW</button>
+          <button type="button" class="hr-dir-btn" data-dir="N">N</button>
+          <button type="button" class="hr-dir-btn" data-dir="NE">NO</button>
+          <button type="button" class="hr-dir-btn" data-dir="W">W</button>
+          <div class="hr-center">Kompass</div>
+          <button type="button" class="hr-dir-btn" data-dir="E">O</button>
+          <button type="button" class="hr-dir-btn" data-dir="SW">SW</button>
+          <button type="button" class="hr-dir-btn" data-dir="S">S</button>
+          <button type="button" class="hr-dir-btn" data-dir="SE">SO</button>
+        </div>
+        <div class="hr-controls">
+          <button id="hrDirectionNext" type="button">Neue Richtung</button>
+        </div>
+        <div id="hrDirectionFeedback"></div>
+      </article>
+
+      <article class="hr-card">
+        <h2>Karte ausrichten: Was ändert sich?</h2>
+        <p>
+          Wähle, wo auf deiner Karte Norden liegt. Die anderen Richtungen werden automatisch ergänzt.
+          So siehst du sofort, wie sich die Orientierung dreht.
+        </p>
+        <label class="hr-inline-label" for="hrNorthSelect">
+          Norden liegt auf der Karte:
+          <select id="hrNorthSelect">
+            <option value="top">oben</option>
+            <option value="right">rechts</option>
+            <option value="bottom">unten</option>
+            <option value="left">links</option>
+          </select>
+        </label>
+        <div class="hr-map-frame" aria-live="polite">
+          <span class="hr-map-label hr-top" id="hrLabelTop"></span>
+          <span class="hr-map-label hr-right" id="hrLabelRight"></span>
+          <span class="hr-map-label hr-bottom" id="hrLabelBottom"></span>
+          <span class="hr-map-label hr-left" id="hrLabelLeft"></span>
+          <div class="hr-map-center">Kartenmitte</div>
+        </div>
+        <p id="hrNorthExplain" class="hr-note-box"></p>
+      </article>
+
+      <article class="hr-card">
+        <h2>Orientierungsmittel im Vergleich</h2>
+        <p>Klicke auf ein Mittel und lies, wann es besonders hilfreich ist.</p>
+        <div class="hr-method-buttons">
+          <button type="button" class="hr-method-btn is-active" data-method="sonne">Sonne und Schatten</button>
+          <button type="button" class="hr-method-btn" data-method="kompass">Kompass</button>
+          <button type="button" class="hr-method-btn" data-method="karte">Karte mit Nordpfeil</button>
+          <button type="button" class="hr-method-btn" data-method="gps">GPS</button>
+        </div>
+        <div class="hr-method-box">
+          <h3 id="hrMethodTitle"></h3>
+          <p id="hrMethodText"></p>
+          <ul id="hrMethodList" class="hr-list"></ul>
+        </div>
+      </article>
     </section>
 
-    <section class="card">
-      <h2>Geplante Schwerpunkte</h2>
-      <ul class="module-bullet-list">
-        <li>Haupthimmelsrichtungen sicher bestimmen.</li>
-        <li>Karten mit Nordpfeil richtig orientieren.</li>
-        <li>Routen mit Himmelsrichtungen beschreiben.</li>
-      </ul>
+    <section id="tab-trainieren" class="hr-tab">
+      <article class="hr-card">
+        <h2>Training A: Richtungen erkennen (Generator)</h2>
+        <p>Bei jedem Klick entsteht eine neue Aufgabe.</p>
+        <p id="hrTrainDirectionPrompt" class="hr-task-prompt">Aufgabe wird geladen...</p>
+        <div id="hrTrainDirectionAnswers" class="hr-answer-grid"></div>
+        <div class="hr-controls">
+          <button id="hrTrainDirectionNext" type="button">Neue Aufgabe</button>
+        </div>
+        <div id="hrTrainDirectionFeedback"></div>
+      </article>
+
+      <article class="hr-card">
+        <h2>Training B: Lagen auf der Ortskarte</h2>
+        <p>
+          Lies die Ortskarte und bestimme die Richtung zwischen zwei Orten.
+          Die Karte bleibt gleich, die Fragen wechseln.
+        </p>
+        <div class="hr-town-map" id="hrTownMap" aria-label="Ortskarte mit markierten Orten"></div>
+        <p id="hrTownPrompt" class="hr-task-prompt">Aufgabe wird geladen...</p>
+        <div id="hrTownAnswers" class="hr-answer-grid"></div>
+        <div class="hr-controls">
+          <button id="hrTownNext" type="button">Neue Aufgabe</button>
+        </div>
+        <div id="hrTownFeedback"></div>
+      </article>
+
+      <article class="hr-card">
+        <h2>Training C: Das passende Orientierungsmittel</h2>
+        <p>Wähle das Mittel, das zur Situation am besten passt.</p>
+        <p id="hrMethodTrainPrompt" class="hr-task-prompt">Aufgabe wird geladen...</p>
+        <div id="hrMethodTrainAnswers" class="hr-answer-grid"></div>
+        <div class="hr-controls">
+          <button id="hrMethodTrainNext" type="button">Neue Aufgabe</button>
+        </div>
+        <div id="hrMethodTrainFeedback"></div>
+      </article>
+    </section>
+
+    <section id="tab-pruefung" class="hr-tab">
+      <article class="hr-card">
+        <h2>Abschlusstest</h2>
+        <p>
+          Der Test mischt Richtungen, Kartenorientierung und Alltagssituationen.
+          Nach jeder Antwort erhältst du eine kurze Begründung.
+        </p>
+        <div class="quiz-controls">
+          <button id="hrQuizStart" type="button">Test starten</button>
+          <button id="hrQuizNext" type="button" disabled>Nächste Frage</button>
+          <p id="hrQuizScore" class="score">Punkte: 0 / 10</p>
+        </div>
+        <div class="quiz-box">
+          <div class="hr-quiz-context">
+            <p class="hr-quiz-context-title">Ortskarte für Lagefragen (Norden ist oben)</p>
+            <div class="hr-town-map" id="hrQuizTownMap" aria-label="Ortskarte für Fragen im Abschlusstest"></div>
+          </div>
+          <p id="hrQuizStatus" class="quiz-status">Test noch nicht gestartet.</p>
+          <h3 id="hrQuizPrompt">Klicke auf "Test starten".</h3>
+          <div id="hrQuizAnswers" class="hr-answer-grid"></div>
+          <div id="hrQuizFeedback"></div>
+        </div>
+      </article>
     </section>
   </main>
+
+  <script src="erdkunde-himmelsrichtungen.js"></script>
+
+  <script src="../../../global-menu.js"></script>
 </body>
 </html>
 

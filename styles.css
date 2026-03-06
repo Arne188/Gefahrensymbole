@@ -485,3 +485,140 @@ input:disabled {
     flex-direction: column;
   }
 }
+
+.gm-menu-toggle {
+  position: fixed;
+  left: 14px;
+  top: 14px;
+  z-index: 990;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #b4c8de;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.96);
+  color: #173654;
+  padding: 9px 12px;
+  font-weight: 700;
+}
+
+.gm-menu-bars,
+.gm-menu-bars::before,
+.gm-menu-bars::after {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+}
+
+.gm-menu-bars {
+  position: relative;
+}
+
+.gm-menu-bars::before {
+  position: absolute;
+  top: -5px;
+  left: 0;
+}
+
+.gm-menu-bars::after {
+  position: absolute;
+  top: 5px;
+  left: 0;
+}
+
+.gm-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(18, 28, 42, 0.42);
+  z-index: 980;
+}
+
+.gm-drawer {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: min(320px, 88vw);
+  transform: translateX(-100%);
+  transition: transform 180ms ease;
+  z-index: 995;
+  border-right: 1px solid #bfd0e2;
+  background: #ffffff;
+  box-shadow: 12px 0 24px rgba(20, 32, 49, 0.16);
+  padding: 14px;
+  overflow-y: auto;
+  display: grid;
+  align-content: start;
+  gap: 14px;
+}
+
+body.gm-drawer-open .gm-drawer {
+  transform: translateX(0);
+}
+
+.gm-drawer-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.gm-drawer-head h2 {
+  margin: 0;
+  font-family: "Newsreader", "Georgia", serif;
+}
+
+.gm-drawer-head button {
+  background: #eef4fb;
+  color: #163553;
+  border: 1px solid #c2d3e7;
+}
+
+.gm-drawer-block {
+  border: 1px solid #cedaea;
+  border-radius: 12px;
+  background: #f9fbff;
+  padding: 10px;
+  display: grid;
+  gap: 8px;
+}
+
+.gm-drawer-block h3 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.gm-link-list {
+  display: grid;
+  gap: 6px;
+}
+
+.gm-link-list a {
+  border: 1px solid #cad8ea;
+  border-radius: 10px;
+  background: #fff;
+  color: #173654;
+  text-decoration: none;
+  padding: 8px 10px;
+  font-weight: 600;
+  display: block;
+}
+
+.gm-link-list a.is-current {
+  border-color: #0f5ea9;
+  background: #e7f2ff;
+  color: #0f5ea9;
+}
+
+.gm-link-list .is-disabled {
+  border: 1px solid #d9e1eb;
+  border-radius: 10px;
+  background: #f7f9fc;
+  color: #6a7788;
+  padding: 8px 10px;
+  font-weight: 600;
+  display: block;
+}

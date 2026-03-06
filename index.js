@@ -1,4 +1,4 @@
-﻿const storageKey = "lernbereich_themen_v1";
+const storageKey = "lernbereich_themen_v1";
 
 const defaultTopics = [
   {
@@ -77,7 +77,7 @@ const defaultTopics = [
     subject: "Erdkunde",
     title: "Himmelsrichtungen",
     link: "subjects/erdkunde/himmelsrichtungen/erdkunde-himmelsrichtungen.html",
-    description: "Dummy-Modul (Platzhalter) - Inhalte folgen.",
+    description: "Kompassrose, Kartenorientierung, Lagebeziehungen und Abschlusstest interaktiv trainieren.",
   },
   {
     subject: "Chemie",
@@ -159,13 +159,13 @@ const openSubjectDashboard = document.getElementById("openSubjectDashboard");
 
 function repairMojibake(value) {
   return String(value || "")
-    .replace(/Ã„/g, "Ä")
-    .replace(/Ã–/g, "Ö")
-    .replace(/Ãœ/g, "Ü")
-    .replace(/Ã¤/g, "ä")
-    .replace(/Ã¶/g, "ö")
-    .replace(/Ã¼/g, "ü")
-    .replace(/ÃŸ/g, "ß");
+    .replace(/\u00C3\u201E/g, "Ä")
+    .replace(/\u00C3\u2013/g, "Ö")
+    .replace(/\u00C3\u0153/g, "Ü")
+    .replace(/\u00C3\u00A4/g, "ä")
+    .replace(/\u00C3\u00B6/g, "ö")
+    .replace(/\u00C3\u00BC/g, "ü")
+    .replace(/\u00C3\u0178/g, "ß");
 }
 
 function normalizeTopic(topic) {
