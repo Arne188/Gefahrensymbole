@@ -24,6 +24,12 @@ const subjectThemes = {
     accent: "#0f5ea9",
     accentSoft: "#e7f2ff",
   },
+  Biologie: {
+    code: "BIO",
+    intro: "Alle Biologie-Module geordnet: Lebewesen untersuchen, vergleichen und Zusammenhänge verstehen.",
+    accent: "#2f7d32",
+    accentSoft: "#e9f6ea",
+  },
   Mathematik: {
     code: "MAT",
     intro: "Alle Mathematik-Module geordnet: verstehen, trainieren und im Test sichern.",
