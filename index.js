@@ -98,6 +98,71 @@ const defaultTopics = [
     description: "Aufbau, sichere Einstellung und Flammentemperaturen des Gasbrenners interaktiv lernen, trainieren und prüfen.",
   },
   {
+    subject: "Biologie",
+    title: "Modul 1: Der Hund - Haustier und Abstammung",
+    link: "",
+    description:
+      "Haustiermerkmale, Züchtung und Angepasstheit am Beispiel Hund verstehen.",
+    bulletPoints: [
+      "Haustierbewertung: Was macht ein Tier zum Haustier?",
+      "Abstammung des Hundes vom Wolf in Grundzügen erklären.",
+      "Züchtung: Wie der Mensch Merkmale gezielt verändert.",
+      "Angepasstheit von Sinnesorganen und Körperbau des Hundes.",
+    ],
+  },
+  {
+    subject: "Biologie",
+    title: "Modul 2: Tiere im Winter",
+    link: "",
+    description:
+      "Überwinterungsstrategien vergleichen und die Begriffe gleichwarm und wechselwarm sicher anwenden.",
+    bulletPoints: [
+      "Unterschied zwischen gleichwarmen und wechselwarmen Tieren.",
+      "Winterruhe, Winterschlaf und Winterstarre unterscheiden.",
+      "Beispiele heimischer Tiere korrekt zuordnen.",
+      "Anpassung von Verhalten und Körperfunktionen an Kälte.",
+    ],
+  },
+  {
+    subject: "Biologie",
+    title: "Modul 3: Wirbeltiere ordnen",
+    link: "",
+    description:
+      "Wirbeltierklassen erkennen, beschreiben und mit Merkmalen begründet einordnen.",
+    bulletPoints: [
+      "Die fünf Wirbeltierklassen nennen und unterscheiden.",
+      "Typische Merkmale (Körperbedeckung, Fortpflanzung, Lebensraum) vergleichen.",
+      "Tiere anhand beobachtbarer Merkmale richtig klassifizieren.",
+      "Einfache Bestimmungstabellen nutzen.",
+    ],
+  },
+  {
+    subject: "Biologie",
+    title: "Modul 4: Der Mensch als Wirbeltier",
+    link: "",
+    description:
+      "Skelett, Muskeln und Bewegung des Menschen als Wirbeltier untersuchen.",
+    bulletPoints: [
+      "Grundaufbau des menschlichen Skeletts benennen.",
+      "Zusammenspiel von Muskeln, Knochen und Gelenken erklären.",
+      "Bedeutung von Bewegung und Haltung für die Gesundheit begründen.",
+      "Mensch und andere Wirbeltiere vergleichend betrachten.",
+    ],
+  },
+  {
+    subject: "Biologie",
+    title: "Inhalte Klasse 5 (Niedersachsen)",
+    link: "",
+    description:
+      "Lehrplanorientierte Themen für Jahrgang 5 auf Grundlage des Kerncurriculums Naturwissenschaften (Gymnasium Sek. I, verbindlich ab 01.08.2015).",
+    bulletPoints: [
+      "Der Hund - ein Haustier und seine Geschichte.",
+      "Tiere im Winter (gleichwarm/wechselwarm).",
+      "Ordnen von Wirbeltieren.",
+      "Der Mensch - auch ein Wirbeltier (Skelettaufbau, Muskeln, Bewegung).",
+    ],
+  },
+  {
     subject: "Deutsch",
     title: "Groß- und Kleinschreibung",
     link: "subjects/deutsch/gross-und-kleinschreibung/deutsch-gross-und-kleinschreibung.html",
@@ -421,7 +486,6 @@ if (
     updateSubjectDashboardLink(subjectSelect.value);
   });
 }
-
 
 
 
