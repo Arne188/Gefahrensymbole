@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biologie - Modul 2: Tiere im Winter</title>
+  <link rel="icon" type="image/svg+xml" href="../../../assets/tab-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../styles.css">
+  <link rel="stylesheet" href="biologie-tiere-im-winter.css">
+</head>
+<body>
+  <main class="btw-page">
+    <header class="btw-hero">
+      <a class="back-link" href="../../../subject-dashboard.html?subject=Biologie">Zurueck zum Fach-Dashboard</a>
+      <p class="btw-tag">Biologie Klasse 5</p>
+      <h1>Modul 2: Tiere im Winter</h1>
+      <p>
+        In diesem Modul vergleichst du Ueberwinterungsstrategien und wendest die Begriffe
+        gleichwarm und wechselwarm sicher an.
+      </p>
+      <figure class="btw-image-frame">
+        <img src="biologie-tiere-im-winter-uebersicht.png" alt="Infografik zum Modul Tiere im Winter">
+      </figure>
+    </header>
+
+    <nav class="btw-nav" aria-label="Modulnavigation">
+      <button class="btw-tab-btn is-active" type="button" data-tab="lernen">Lernen</button>
+      <button class="btw-tab-btn" type="button" data-tab="trainieren">Trainieren</button>
+      <button class="btw-tab-btn" type="button" data-tab="test">Testmodul</button>
+    </nav>
+
+    <section id="tab-lernen" class="btw-tab is-active">
+      <article class="btw-card">
+        <h2>Lehrplanbezug Niedersachsen</h2>
+        <p>
+          Das Modul greift die Inhalte des Kerncurriculums Naturwissenschaften in Jahrgang 5 auf:
+          gleichwarm und wechselwarm unterscheiden, Ueberwinterungsstrategien vergleichen und
+          Anpassungen an Kaelte erklaeren.
+        </p>
+        <ul class="btw-list">
+          <li>gleichwarme und wechselwarme Tiere unterscheiden</li>
+          <li>Winterruhe, Winterschlaf, Winterstarre vergleichen</li>
+          <li>heimische Tiere begruendet zuordnen</li>
+          <li>koerperliche und verhaltensbezogene Anpassung erklaeren</li>
+        </ul>
+        <p class="btw-source-note">
+          Quellen:
+          <a href="https://cuvo.nibis.de/index.php?p=download&upload=18" target="_blank" rel="noopener noreferrer">Kerncurriculum Naturwissenschaften (Niedersachsen, PDF)</a>
+          |
+          <a href="https://cuvo.nibis.de/index.php?p=download&upload=453" target="_blank" rel="noopener noreferrer">KMK-Bildungsstandards Biologie (2024, PDF)</a>
+          |
+          <a href="didaktisches-konzept.md" target="_blank" rel="noopener noreferrer">Didaktisches Konzept</a>
+        </p>
+      </article>
+
+      <article class="btw-card">
+        <h2>Interaktiv 1: Gleichwarm oder wechselwarm?</h2>
+        <p class="btw-help">Waehle bei jeder Aussage die passende Kategorie und pruefe dein Ergebnis.</p>
+        <div id="btwWarmthList" class="btw-task-list"></div>
+        <div class="btw-controls">
+          <button id="btwWarmthReset" type="button">Neu laden</button>
+          <button id="btwWarmthCheck" type="button">Pruefen</button>
+        </div>
+        <p id="btwWarmthFeedback" class="btw-feedback">Noch nicht geprueft.</p>
+      </article>
+
+      <article class="btw-card">
+        <h2>Interaktiv 2: Drei Strategien durchlaufen</h2>
+        <p class="btw-help">Nutze Zurueck/Weiter oder die Stationsbuttons, um die Unterschiede sicher zu verstehen.</p>
+        <div class="btw-strategy-toolbar">
+          <button id="btwStrategyPrev" class="btw-mini-btn" type="button">Zurueck</button>
+          <p id="btwStrategyProgress" class="btw-progress" aria-live="polite">Strategie 1 von 3</p>
+          <button id="btwStrategyNext" class="btw-mini-btn" type="button">Weiter</button>
+        </div>
+        <div class="btw-step-row">
+          <button class="btw-step-btn is-active" type="button" data-strategy-index="0">1 Winterruhe</button>
+          <button class="btw-step-btn" type="button" data-strategy-index="1">2 Winterschlaf</button>
+          <button class="btw-step-btn" type="button" data-strategy-index="2">3 Winterstarre</button>
+        </div>
+        <div class="btw-detail-box">
+          <h3 id="btwStrategyTitle"></h3>
+          <p id="btwStrategyText"></p>
+          <ul id="btwStrategyFacts" class="btw-list"></ul>
+        </div>
+      </article>
+
+      <article class="btw-card">
+        <h2>Interaktiv 3: Tiere den Strategien zuordnen</h2>
+        <p class="btw-help">Ordne alle Tiere zu und pruefe dann. Du bekommst direkt Feedback pro Zeile.</p>
+        <div id="btwAssignList" class="btw-task-list"></div>
+        <div class="btw-controls">
+          <button id="btwAssignReset" type="button">Neu mischen</button>
+          <button id="btwAssignCheck" type="button">Pruefen</button>
+        </div>
+        <p id="btwAssignFeedback" class="btw-feedback">Noch nicht geprueft.</p>
+      </article>
+    </section>
+
+    <section id="tab-trainieren" class="btw-tab">
+      <article class="btw-card">
+        <h2>Training (neu generierbar)</h2>
+        <p>Erstelle neue Aufgaben und trainiere beliebig oft.</p>
+        <div class="btw-train-grid">
+          <label>
+            Anzahl Aufgaben
+            <select id="btwTrainCount" class="btw-select">
+              <option value="6">6</option>
+              <option value="10" selected>10</option>
+              <option value="12">12</option>
+            </select>
+          </label>
+        </div>
+        <div class="btw-controls">
+          <button id="btwTrainGenerate" type="button">Aufgaben erstellen</button>
+          <button id="btwTrainCheck" type="button">Pruefen</button>
+        </div>
+        <div id="btwTrainList" class="btw-task-list"></div>
+        <p id="btwTrainFeedback" class="btw-feedback">Noch keine Aufgaben erzeugt.</p>
+      </article>
+    </section>
+
+    <section id="tab-test" class="btw-tab">
+      <article class="btw-card">
+        <h2>Testmodul</h2>
+        <p>10 dynamische Fragen in wechselnder Reihenfolge mit direkter Auswertung.</p>
+        <div class="btw-controls">
+          <button id="btwTestStart" type="button">Test starten</button>
+          <button id="btwTestNext" type="button" disabled>Naechste Frage</button>
+          <p id="btwTestScore" class="btw-score">Punkte: 0 / 10</p>
+        </div>
+        <div class="btw-quiz-box">
+          <p id="btwTestStatus" class="btw-feedback">Test noch nicht gestartet.</p>
+          <h3 id="btwTestPrompt">Klicke auf "Test starten".</h3>
+          <div id="btwTestAnswers" class="btw-choice-list"></div>
+          <p id="btwTestFeedback" class="btw-feedback"></p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="biologie-tiere-im-winter.js"></script>
+  <script src="../../../global-menu.js"></script>
+</body>
+</html>

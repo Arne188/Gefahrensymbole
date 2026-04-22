@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biologie - Modul 3: Ordnen von Wirbeltieren</title>
+  <link rel="icon" type="image/svg+xml" href="../../../assets/tab-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../styles.css">
+  <link rel="stylesheet" href="biologie-ordnen-von-wirbeltieren.css">
+</head>
+<body>
+  <main class="bow-page">
+    <header class="bow-hero">
+      <a class="back-link" href="../../../subject-dashboard.html?subject=Biologie">Zurueck zum Fach-Dashboard</a>
+      <p class="bow-tag">Biologie Klasse 5</p>
+      <h1>Modul 3: Ordnen von Wirbeltieren</h1>
+      <p>
+        Du erkennst die fuenf Wirbeltierklassen, vergleichst typische Merkmale und
+        ordnest Tiere mit einer einfachen Bestimmungstabelle begruendet ein.
+      </p>
+    </header>
+
+    <nav class="bow-nav" aria-label="Modulnavigation">
+      <button class="bow-tab-btn is-active" type="button" data-tab="lernen">Lernen</button>
+      <button class="bow-tab-btn" type="button" data-tab="trainieren">Trainieren</button>
+      <button class="bow-tab-btn" type="button" data-tab="test">Testmodul</button>
+    </nav>
+
+    <section id="tab-lernen" class="bow-tab is-active">
+      <article class="bow-card">
+        <h2>Lehrplanbezug Niedersachsen</h2>
+        <p>
+          Das Modul folgt den Inhalten des Kerncurriculums Naturwissenschaften (Jahrgang 5):
+          Wirbeltierklassen benennen, Merkmale vergleichen, Tiere klassifizieren und
+          Bestimmungstabellen anwenden.
+        </p>
+        <p class="bow-source-note">
+          Quellen:
+          <a href="https://cuvo.nibis.de/index.php?p=download&upload=18" target="_blank" rel="noopener noreferrer">Kerncurriculum Naturwissenschaften (Niedersachsen, PDF)</a>
+          |
+          <a href="https://cuvo.nibis.de/index.php?p=download&upload=453" target="_blank" rel="noopener noreferrer">KMK-Bildungsstandards Biologie (2024, PDF)</a>
+          |
+          <a href="didaktisches-konzept.md" target="_blank" rel="noopener noreferrer">Didaktisches Konzept</a>
+        </p>
+      </article>
+
+      <article class="bow-card">
+        <h2>1) Die fuenf Wirbeltierklassen</h2>
+        <p class="bow-help">Waehle eine Klasse und lies die wichtigsten Merkmale.</p>
+        <figure class="bow-slice">
+          <img src="slices/modul-teil-1-wirbeltierklassen.png" alt="Infografik Ausschnitt Wirbeltierklassen">
+        </figure>
+        <div class="bow-chip-group">
+          <button class="bow-chip is-active" type="button" data-class="saeugetiere">Saeugetiere</button>
+          <button class="bow-chip" type="button" data-class="voegel">Voegel</button>
+          <button class="bow-chip" type="button" data-class="reptilien">Reptilien</button>
+          <button class="bow-chip" type="button" data-class="amphibien">Amphibien</button>
+          <button class="bow-chip" type="button" data-class="fische">Fische</button>
+        </div>
+        <div class="bow-detail-box">
+          <h3 id="bowClassTitle"></h3>
+          <p id="bowClassText"></p>
+          <ul id="bowClassFacts" class="bow-list"></ul>
+        </div>
+      </article>
+
+      <article class="bow-card">
+        <h2>2) Typische Merkmale vergleichen</h2>
+        <p class="bow-help">Ordne jede Aussage der passenden Wirbeltierklasse zu.</p>
+        <figure class="bow-slice">
+          <img src="slices/modul-teil-2-merkmale.png" alt="Infografik Ausschnitt Merkmaltabelle">
+        </figure>
+        <div id="bowFeatureList" class="bow-task-list"></div>
+        <div class="bow-controls">
+          <button id="bowFeatureReset" type="button">Neu laden</button>
+          <button id="bowFeatureCheck" type="button">Pruefen</button>
+        </div>
+        <p id="bowFeatureFeedback" class="bow-feedback">Noch nicht geprueft.</p>
+      </article>
+
+      <article class="bow-card">
+        <h2>3) Tiere einordnen</h2>
+        <p class="bow-help">Ordne die Tiere ihrer Wirbeltierklasse zu.</p>
+        <figure class="bow-slice">
+          <img src="slices/modul-teil-3-tiere-einordnen.png" alt="Infografik Ausschnitt Tiere einordnen">
+        </figure>
+        <div id="bowAssignList" class="bow-task-list"></div>
+        <div class="bow-controls">
+          <button id="bowAssignReset" type="button">Neu mischen</button>
+          <button id="bowAssignCheck" type="button">Pruefen</button>
+        </div>
+        <p id="bowAssignFeedback" class="bow-feedback">Noch nicht geprueft.</p>
+      </article>
+
+      <article class="bow-card">
+        <h2>4) Bestimmungstabelle anwenden</h2>
+        <p class="bow-help">Beantworte die Fragen mit Ja/Nein und finde die passende Klasse.</p>
+        <figure class="bow-slice">
+          <img src="slices/modul-teil-4-bestimmungstabelle.png" alt="Infografik Ausschnitt Bestimmungstabelle">
+        </figure>
+        <div class="bow-key-box">
+          <p id="bowKeyQuestion" class="bow-key-question"></p>
+          <div class="bow-controls">
+            <button id="bowKeyYes" type="button">Ja</button>
+            <button id="bowKeyNo" type="button">Nein</button>
+            <button id="bowKeyReset" type="button">Neu starten</button>
+          </div>
+          <p id="bowKeyResult" class="bow-feedback">Noch nicht gestartet.</p>
+        </div>
+      </article>
+
+      <article class="bow-card">
+        <h2>5) Beobachten und beschreiben</h2>
+        <p class="bow-help">Waehle ein Tier und formuliere eine kurze Begruendung mit Merkmalen.</p>
+        <figure class="bow-slice">
+          <img src="slices/modul-teil-5-beobachten.png" alt="Infografik Ausschnitt Beobachten und beschreiben">
+        </figure>
+        <label for="bowObserveAnimal" class="bow-label">Tier</label>
+        <select id="bowObserveAnimal" class="bow-select">
+          <option value="igel">Igel</option>
+          <option value="hecht">Hecht</option>
+          <option value="salamander">Salamander</option>
+          <option value="schwan">Schwan</option>
+          <option value="ringelnatter">Ringelnatter</option>
+        </select>
+        <p id="bowObserveHint" class="bow-feedback"></p>
+      </article>
+    </section>
+
+    <section id="tab-trainieren" class="bow-tab">
+      <article class="bow-card">
+        <h2>Trainieren</h2>
+        <p>Erzeuge neue Aufgaben und sichere dein Wissen.</p>
+        <div class="bow-train-grid">
+          <label>
+            Anzahl Aufgaben
+            <select id="bowTrainCount" class="bow-select">
+              <option value="6">6</option>
+              <option value="10" selected>10</option>
+              <option value="12">12</option>
+            </select>
+          </label>
+        </div>
+        <div class="bow-controls">
+          <button id="bowTrainGenerate" type="button">Aufgaben erstellen</button>
+          <button id="bowTrainCheck" type="button">Pruefen</button>
+        </div>
+        <div id="bowTrainList" class="bow-task-list"></div>
+        <p id="bowTrainFeedback" class="bow-feedback">Noch keine Aufgaben erzeugt.</p>
+      </article>
+    </section>
+
+    <section id="tab-test" class="bow-tab">
+      <article class="bow-card">
+        <h2>6) Check dich selbst - Testmodul</h2>
+        <p>10 dynamische Fragen mit direkter Rueckmeldung.</p>
+        <figure class="bow-slice">
+          <img src="slices/modul-teil-6-check.png" alt="Infografik Ausschnitt Check dich selbst">
+        </figure>
+        <div class="bow-controls">
+          <button id="bowTestStart" type="button">Test starten</button>
+          <button id="bowTestNext" type="button" disabled>Naechste Frage</button>
+          <p id="bowTestScore" class="bow-score">Punkte: 0 / 10</p>
+        </div>
+        <div class="bow-quiz-box">
+          <p id="bowTestStatus" class="bow-feedback">Test noch nicht gestartet.</p>
+          <h3 id="bowTestPrompt">Klicke auf "Test starten".</h3>
+          <div id="bowTestAnswers" class="bow-choice-list"></div>
+          <p id="bowTestFeedback" class="bow-feedback"></p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="biologie-ordnen-von-wirbeltieren.js"></script>
+  <script src="../../../global-menu.js"></script>
+</body>
+</html>

@@ -99,8 +99,8 @@ const defaultTopics = [
   },
   {
     subject: "Biologie",
-    title: "Modul 1: Der Hund - Haustier und Abstammung",
-    link: "",
+    title: "Modul 1: Der Hund - ein Haustier und seine Geschichte",
+    link: "subjects/biologie/der-hund-ein-haustier-und-seine-geschichte/biologie-der-hund.html",
     description:
       "Haustiermerkmale, Züchtung und Angepasstheit am Beispiel Hund verstehen.",
     bulletPoints: [
@@ -113,7 +113,7 @@ const defaultTopics = [
   {
     subject: "Biologie",
     title: "Modul 2: Tiere im Winter",
-    link: "",
+    link: "subjects/biologie/tiere-im-winter/biologie-tiere-im-winter.html",
     description:
       "Überwinterungsstrategien vergleichen und die Begriffe gleichwarm und wechselwarm sicher anwenden.",
     bulletPoints: [
@@ -125,8 +125,8 @@ const defaultTopics = [
   },
   {
     subject: "Biologie",
-    title: "Modul 3: Wirbeltiere ordnen",
-    link: "",
+    title: "Modul 3: Ordnen von Wirbeltieren",
+    link: "subjects/biologie/ordnen-von-wirbeltieren/biologie-ordnen-von-wirbeltieren.html",
     description:
       "Wirbeltierklassen erkennen, beschreiben und mit Merkmalen begründet einordnen.",
     bulletPoints: [
@@ -138,8 +138,8 @@ const defaultTopics = [
   },
   {
     subject: "Biologie",
-    title: "Modul 4: Der Mensch als Wirbeltier",
-    link: "",
+    title: "Modul 4: Der Mensch - auch ein Wirbeltier",
+    link: "subjects/biologie/der-mensch-auch-ein-wirbeltier/biologie-der-mensch-wirbeltier.html",
     description:
       "Skelett, Muskeln und Bewegung des Menschen als Wirbeltier untersuchen.",
     bulletPoints: [

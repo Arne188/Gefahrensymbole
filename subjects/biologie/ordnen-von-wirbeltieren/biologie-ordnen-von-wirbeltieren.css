@@ -1,0 +1,287 @@
+.bow-page {
+  width: min(1120px, 94vw);
+  margin: 0 auto;
+  padding: 2rem 0 3.5rem;
+  display: grid;
+  gap: 1.2rem;
+}
+
+.bow-hero {
+  background: linear-gradient(140deg, #eef3fb 0%, #ffffff 70%);
+  border: 1px solid #cfdcf0;
+  border-radius: 22px;
+  padding: 1.5rem;
+  box-shadow: 0 12px 30px rgba(23, 50, 88, 0.08);
+}
+
+.bow-tag {
+  display: inline-flex;
+  margin: 0;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  background: #dce8f8;
+  color: #1f4e87;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.bow-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.bow-tab-btn {
+  border: 1px solid #9ab8df;
+  background: #f4f8ff;
+  color: #1f4d83;
+  border-radius: 999px;
+  padding: 0.55rem 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.bow-tab-btn.is-active {
+  background: #245d98;
+  border-color: #245d98;
+  color: #ffffff;
+}
+
+.bow-tab {
+  display: none;
+  gap: 1rem;
+}
+
+.bow-tab.is-active {
+  display: grid;
+}
+
+.bow-card {
+  background: #ffffff;
+  border: 1px solid #d4e2f6;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 10px 22px rgba(30, 62, 104, 0.06);
+}
+
+.bow-card h2 {
+  margin-top: 0;
+}
+
+.bow-source-note {
+  margin-top: 0.85rem;
+  font-size: 0.95rem;
+}
+
+.bow-help {
+  margin: 0.35rem 0 0.65rem;
+  color: #2b5078;
+}
+
+.bow-slice {
+  width: 100%;
+  margin: 0 0 0.75rem;
+  border: 1px solid #d2e1f6;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f5f9ff;
+}
+
+.bow-slice img {
+  width: 100%;
+  display: block;
+}
+
+.bow-chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.bow-chip {
+  border: 1px solid #95b6dd;
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  background: #ffffff;
+  color: #244f82;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.bow-chip.is-active {
+  background: #245d98;
+  border-color: #245d98;
+  color: #ffffff;
+}
+
+.bow-detail-box {
+  margin-top: 0.8rem;
+  border: 1px solid #d6e4f8;
+  border-radius: 12px;
+  padding: 0.85rem;
+  background: #f7fbff;
+}
+
+.bow-detail-box h3 {
+  margin-top: 0;
+}
+
+.bow-list {
+  margin: 0.7rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.bow-list li + li {
+  margin-top: 0.3rem;
+}
+
+.bow-task-list {
+  display: grid;
+  gap: 0.7rem;
+  margin-top: 0.8rem;
+}
+
+.bow-task-item {
+  border: 1px solid #d6e4f8;
+  border-radius: 12px;
+  padding: 0.75rem;
+  background: #fbfdff;
+}
+
+.bow-task-item label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.bow-task-item.is-correct {
+  border-color: #539c61;
+  background: #edf8ee;
+}
+
+.bow-task-item.is-wrong {
+  border-color: #c56f6f;
+  background: #fff4f4;
+}
+
+.bow-select {
+  width: 100%;
+  max-width: 380px;
+  border: 1px solid #b8cfea;
+  border-radius: 9px;
+  padding: 0.4rem 0.5rem;
+  background: #ffffff;
+  font: inherit;
+}
+
+.bow-label {
+  display: inline-block;
+  font-weight: 700;
+}
+
+.bow-controls {
+  margin-top: 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  align-items: center;
+}
+
+.bow-controls button {
+  border: 1px solid #5e88b9;
+  border-radius: 999px;
+  padding: 0.45rem 0.9rem;
+  background: #ffffff;
+  color: #244f81;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.bow-controls button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.bow-feedback {
+  margin: 0.7rem 0 0;
+  font-weight: 600;
+}
+
+.bow-key-box {
+  border: 1px solid #d5e3f8;
+  border-radius: 12px;
+  padding: 0.85rem;
+  background: #f8fbff;
+}
+
+.bow-key-question {
+  margin: 0;
+  font-weight: 700;
+}
+
+.bow-train-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 0.8rem;
+}
+
+.bow-choice-list {
+  display: grid;
+  gap: 0.55rem;
+  margin-top: 0.8rem;
+}
+
+.bow-choice-btn {
+  text-align: left;
+  border: 1px solid #c3d9f3;
+  border-radius: 10px;
+  background: #ffffff;
+  padding: 0.65rem 0.7rem;
+  cursor: pointer;
+}
+
+.bow-choice-btn:hover:enabled {
+  background: #f1f7ff;
+}
+
+.bow-choice-btn.is-correct {
+  border-color: #539c61;
+  background: #edf8ee;
+}
+
+.bow-choice-btn.is-wrong {
+  border-color: #c56f6f;
+  background: #fff3f3;
+}
+
+.bow-score {
+  margin: 0;
+  font-weight: 700;
+}
+
+.bow-quiz-box {
+  margin-top: 0.9rem;
+  border: 1px solid #d4e2f8;
+  border-radius: 12px;
+  padding: 0.9rem;
+  background: #fcfeff;
+}
+
+@media (max-width: 760px) {
+  .bow-page {
+    width: min(1120px, 96vw);
+    padding-top: 1.25rem;
+  }
+
+  .bow-hero {
+    padding: 1rem;
+  }
+
+  .bow-card {
+    padding: 0.85rem;
+  }
+
+  .bow-slice {
+    border-radius: 10px;
+  }
+}

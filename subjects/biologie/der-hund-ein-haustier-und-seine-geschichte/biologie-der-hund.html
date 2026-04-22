@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biologie - Modul 1: Der Hund</title>
+  <link rel="icon" type="image/svg+xml" href="../../../assets/tab-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../styles.css">
+  <link rel="stylesheet" href="biologie-der-hund.css">
+</head>
+<body>
+  <main class="bdh-page">
+    <header class="bdh-hero">
+      <a class="back-link" href="../../../subject-dashboard.html?subject=Biologie">Zurueck zum Fach-Dashboard</a>
+      <p class="bdh-tag">Biologie Klasse 5</p>
+      <h1>Modul 1: Der Hund - ein Haustier und seine Geschichte</h1>
+      <p>
+        Du lernst, was ein Tier zum Haustier macht, wie der Hund aus dem Wolf hervorging,
+        wie Zuechtung wirkt und warum Koerperbau und Sinne des Hundes gut zu seinen Aufgaben passen.
+      </p>
+      <figure class="bdh-image-frame">
+        <img src="biologie-der-hund-uebersicht.png" alt="Uebersichtsgrafik zum Biologie Modul Der Hund">
+      </figure>
+    </header>
+
+    <nav class="bdh-nav" aria-label="Modulnavigation">
+      <button class="bdh-tab-btn is-active" type="button" data-tab="lernen">Lernen</button>
+      <button class="bdh-tab-btn" type="button" data-tab="trainieren">Trainieren</button>
+      <button class="bdh-tab-btn" type="button" data-tab="test">Testmodul</button>
+    </nav>
+
+    <section id="tab-lernen" class="bdh-tab is-active">
+      <article class="bdh-card">
+        <h2>Lehrplanbezug Niedersachsen</h2>
+        <p>
+          Das Modul orientiert sich am Kerncurriculum Naturwissenschaften fuer die Sekundarstufe I.
+          Die dort genannten Inhalte fuer Jahrgang 5 werden hier in einem klaren Lernpfad umgesetzt.
+        </p>
+        <ul class="bdh-list">
+          <li>Haustierbewertung: Was macht ein Tier zum Haustier?</li>
+          <li>Abstammung des Hundes vom Wolf in Grundzuegen erklaeren.</li>
+          <li>Zuechtung als gezielte Veraenderung von Merkmalen verstehen.</li>
+          <li>Angepasstheit von Sinnesorganen und Koerperbau beschreiben.</li>
+        </ul>
+        <p class="bdh-source-note">
+          Quellen:
+          <a href="https://cuvo.nibis.de/index.php?p=download&upload=18" target="_blank" rel="noopener noreferrer">Kerncurriculum Naturwissenschaften (Niedersachsen, PDF)</a>
+          |
+          <a href="https://cuvo.nibis.de/index.php?p=download&upload=453" target="_blank" rel="noopener noreferrer">KMK-Bildungsstandards Biologie (2024, PDF)</a>
+          |
+          <a href="didaktisches-konzept.md" target="_blank" rel="noopener noreferrer">Didaktisches Konzept zum Modul</a>
+        </p>
+      </article>
+
+      <article class="bdh-card">
+        <h2>Lernweg im Modul</h2>
+        <ol class="bdh-list bdh-list-numbered">
+          <li>Vorwissen aktivieren mit Haustier-Check.</li>
+          <li>Zusammenhaenge verstehen ueber Abstammung und Zuechtung.</li>
+          <li>Merkmale anwenden bei Sinnesorganen und Koerperbau.</li>
+          <li>Wissen sichern durch Training und Testmodul.</li>
+        </ol>
+      </article>
+
+      <article class="bdh-card">
+        <h2>Interaktiv: Haustier-Check</h2>
+        <p>Ordne jede Aussage zu. Danach bekommst du direkt Rueckmeldung.</p>
+        <div id="bdhPetCheckList" class="bdh-task-list"></div>
+        <div class="bdh-controls">
+          <button id="bdhPetCheckReset" type="button">Neu laden</button>
+          <button id="bdhPetCheckCheck" type="button">Pruefen</button>
+        </div>
+        <p id="bdhPetCheckFeedback" class="bdh-feedback">Noch nicht geprueft.</p>
+      </article>
+
+      <article class="bdh-card">
+        <h2>Interaktiv: Abstammung in Stationen</h2>
+        <p>Bewege den Regler und lies, was sich ueber viele Generationen veraendert hat.</p>
+        <p class="bdh-timeline-help">Tipp: Du kannst den Regler ziehen oder unten auf "Zurueck/Weiter" klicken.</p>
+        <label class="bdh-slider-label" for="bdhTimelineSlider">Station waehlen</label>
+        <input id="bdhTimelineSlider" class="bdh-slider" type="range" min="0" max="3" step="1" value="0">
+        <div class="bdh-timeline-toolbar">
+          <button id="bdhTimelinePrev" class="bdh-timeline-nav-btn" type="button">Zurueck</button>
+          <p id="bdhTimelineProgress" class="bdh-timeline-progress" aria-live="polite">Station 1 von 4</p>
+          <button id="bdhTimelineNext" class="bdh-timeline-nav-btn" type="button">Weiter</button>
+        </div>
+        <div class="bdh-timeline-steps" aria-label="Station direkt waehlen">
+          <button class="bdh-timeline-step is-active" type="button" data-timeline-index="0">1 Wolf</button>
+          <button class="bdh-timeline-step" type="button" data-timeline-index="1">2 Annaeherung</button>
+          <button class="bdh-timeline-step" type="button" data-timeline-index="2">3 Domestikation</button>
+          <button class="bdh-timeline-step" type="button" data-timeline-index="3">4 Zuechtung</button>
+        </div>
+        <div class="bdh-detail-box">
+          <h3 id="bdhTimelineTitle"></h3>
+          <p id="bdhTimelineText"></p>
+          <ul id="bdhTimelineFacts" class="bdh-list"></ul>
+        </div>
+      </article>
+
+      <article class="bdh-card">
+        <h2>Interaktiv: Sinnesorgane und Koerperbau</h2>
+        <p>Klicke auf ein Merkmal und begruende, warum es fuer den Hund hilfreich ist.</p>
+        <div class="bdh-chip-group">
+          <button class="bdh-chip is-active" type="button" data-sense="geruch">Geruchssinn</button>
+          <button class="bdh-chip" type="button" data-sense="gehoer">Gehoer</button>
+          <button class="bdh-chip" type="button" data-sense="sehen">Sehsinn</button>
+          <button class="bdh-chip" type="button" data-sense="pfoten">Pfoten und Bewegung</button>
+          <button class="bdh-chip" type="button" data-sense="tasthaare">Tasthaare</button>
+        </div>
+        <div class="bdh-detail-box">
+          <h3 id="bdhSenseTitle"></h3>
+          <p id="bdhSenseText"></p>
+          <ul id="bdhSenseFacts" class="bdh-list"></ul>
+        </div>
+      </article>
+
+      <article class="bdh-card">
+        <h2>Interaktiv: Zuechtung und Verantwortung</h2>
+        <p>Waehle ein Zuchtziel. Du siehst Chancen und moegliche Risiken.</p>
+        <label for="bdhBreedGoal" class="bdh-slider-label">Zuchtziel</label>
+        <select id="bdhBreedGoal" class="bdh-select">
+          <option value="groesse">Koerpergroesse</option>
+          <option value="fell">Fellfarbe und Fellstruktur</option>
+          <option value="kopf">Kopf- und Koerperform</option>
+          <option value="verhalten">Verhalten und Leistung</option>
+        </select>
+        <div class="bdh-dual-grid">
+          <div class="bdh-note-box">
+            <h3 id="bdhBreedChanceTitle">Nutzen</h3>
+            <ul id="bdhBreedChanceList" class="bdh-list"></ul>
+          </div>
+          <div class="bdh-note-box bdh-note-box-warning">
+            <h3 id="bdhBreedRiskTitle">Risiken</h3>
+            <ul id="bdhBreedRiskList" class="bdh-list"></ul>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section id="tab-trainieren" class="bdh-tab">
+      <article class="bdh-card">
+        <h2>Training (neu generierbar)</h2>
+        <p>Erzeuge neue Aufgaben und pruefe dein Wissen selbststaendig.</p>
+        <div class="bdh-train-grid">
+          <label>
+            Anzahl Aufgaben
+            <select id="bdhTrainCount" class="bdh-select">
+              <option value="6">6</option>
+              <option value="10" selected>10</option>
+              <option value="12">12</option>
+            </select>
+          </label>
+        </div>
+        <div class="bdh-controls">
+          <button id="bdhTrainGenerate" type="button">Aufgaben erstellen</button>
+          <button id="bdhTrainCheck" type="button">Pruefen</button>
+        </div>
+        <div id="bdhTrainList" class="bdh-task-list"></div>
+        <p id="bdhTrainFeedback" class="bdh-feedback">Noch keine Aufgaben erzeugt.</p>
+      </article>
+    </section>
+
+    <section id="tab-test" class="bdh-tab">
+      <article class="bdh-card">
+        <h2>Testmodul</h2>
+        <p>10 dynamische Fragen in wechselnder Reihenfolge.</p>
+        <div class="bdh-controls">
+          <button id="bdhTestStart" type="button">Test starten</button>
+          <button id="bdhTestNext" type="button" disabled>Naechste Frage</button>
+          <p id="bdhTestScore" class="bdh-score">Punkte: 0 / 10</p>
+        </div>
+        <div class="bdh-quiz-box">
+          <p id="bdhTestStatus" class="bdh-feedback">Test noch nicht gestartet.</p>
+          <h3 id="bdhTestPrompt">Klicke auf "Test starten".</h3>
+          <div id="bdhTestAnswers" class="bdh-choice-list"></div>
+          <p id="bdhTestFeedback" class="bdh-feedback"></p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="biologie-der-hund.js"></script>
+  <script src="../../../global-menu.js"></script>
+</body>
+</html>
