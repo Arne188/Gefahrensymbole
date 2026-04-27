@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biologie - Modul 7: Temperaturbegriffe verstehen</title>
+  <link rel="icon" type="image/svg+xml" href="../../../assets/tab-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../styles.css">
+  <link rel="stylesheet" href="biologie-temperaturbegriffe.css">
+</head>
+<body>
+  <main class="btg-page">
+    <header class="btg-hero">
+      <a class="back-link" href="../../../subject-dashboard.html?subject=Biologie">Zurueck zum Fach-Dashboard</a>
+      <p class="btg-tag">Biologie Klasse 5</p>
+      <h1>Modul 7: Temperaturbegriffe verstehen</h1>
+      <p>
+        Du unterscheidest die Begriffe Winterschlaf, Winterruhe, Waermestarre,
+        Hitzetod, Kaeltestarre und Kaeltetod und wendest sie auf biologische
+        Situationen begruendet an.
+      </p>
+      <figure class="btg-slice">
+        <img src="slices/teil-0-header.png" alt="Titelgrafik wichtige Begriffe">
+      </figure>
+    </header>
+
+    <nav class="btg-nav" aria-label="Modulnavigation">
+      <button class="btg-tab-btn is-active" type="button" data-tab="lernen">Lernen</button>
+      <button class="btg-tab-btn" type="button" data-tab="trainieren">Trainieren</button>
+      <button class="btg-tab-btn" type="button" data-tab="test">Testmodul</button>
+    </nav>
+
+    <section id="tab-lernen" class="btg-tab is-active">
+      <article class="btg-card">
+        <h2>Lehrplanbezug Niedersachsen</h2>
+        <p>
+          Das Modul passt zum Kompetenzbereich "Tiere und Angepasstheiten" im
+          Kerncurriculum Naturwissenschaften (Sek I): Beobachten, Vergleichen,
+          Erklaeren von Anpassungen an Umweltbedingungen und Grenzen des Lebens.
+        </p>
+        <ul class="btg-list">
+          <li>Temperaturabhaengigkeit von Tieren erklaeren</li>
+          <li>Begriffe fachsprachlich korrekt verwenden</li>
+          <li>Beispiele begruendet zuordnen</li>
+          <li>Grenzbereiche und Risiken biologisch deuten</li>
+        </ul>
+        <p class="btg-source-note">
+          Quellen:
+          <a href="https://cuvo.nibis.de/index.php?p=download&upload=18" target="_blank" rel="noopener noreferrer">Kerncurriculum Naturwissenschaften Niedersachsen (Sek I)</a>
+          |
+          <a href="https://cuvo.nibis.de/index.php?p=download&upload=453" target="_blank" rel="noopener noreferrer">KMK-Bildungsstandards Biologie 2024</a>
+          |
+          <a href="didaktisches-konzept.md" target="_blank" rel="noopener noreferrer">Didaktisches Konzept</a>
+        </p>
+        <figure class="btg-slice">
+          <img src="slices/teil-1-einstieg.png" alt="Einstiegsgrafik zu den Begriffen">
+        </figure>
+      </article>
+
+      <article class="btg-card">
+        <h2>Begriffe-Explorer</h2>
+        <p class="btg-help">Klicke auf einen Begriff und lies Definition, Merkmale und Beispiel.</p>
+        <div class="btg-chip-group">
+          <button class="btg-chip is-active" type="button" data-term="winterschlaf">Winterschlaf</button>
+          <button class="btg-chip" type="button" data-term="winterruhe">Winterruhe</button>
+          <button class="btg-chip" type="button" data-term="waermestarre">Waermestarre</button>
+          <button class="btg-chip" type="button" data-term="hitzetod">Hitzetod</button>
+          <button class="btg-chip" type="button" data-term="kaeltestarre">Kaeltestarre</button>
+          <button class="btg-chip" type="button" data-term="kaeltetod">Kaeltetod</button>
+        </div>
+        <figure class="btg-slice btg-slice-term">
+          <img id="btgTermSlice" src="slices/teil-2-winterschlaf.png" alt="Grafikausschnitt zum Begriff">
+        </figure>
+        <div class="btg-detail-box">
+          <h3 id="btgTermTitle"></h3>
+          <p id="btgTermText"></p>
+          <ul id="btgTermFacts" class="btg-list"></ul>
+        </div>
+      </article>
+
+      <article class="btg-card">
+        <h2>Interaktiv 1: Begriff korrekt zuordnen</h2>
+        <p class="btg-help">Ordne jeder Aussage den passenden Begriff zu.</p>
+        <div id="btgMatchList" class="btg-task-list"></div>
+        <div class="btg-controls">
+          <button id="btgMatchReset" type="button">Neu laden</button>
+          <button id="btgMatchCheck" type="button">Pruefen</button>
+        </div>
+        <p id="btgMatchFeedback" class="btg-feedback">Noch nicht geprueft.</p>
+      </article>
+
+      <article class="btg-card">
+        <h2>Interaktiv 2: Temperatur-Entscheider</h2>
+        <p class="btg-help">
+          Waehle Tiergruppe und Temperatur. Das Tool zeigt dir, welcher Begriff am besten passt.
+        </p>
+        <div class="btg-thermo-grid">
+          <label>
+            Tiergruppe
+            <select id="btgAnimalType" class="btg-select">
+              <option value="gleichwarm">gleichwarmes Tier</option>
+              <option value="wechselwarm">wechselwarmes Tier</option>
+            </select>
+          </label>
+          <label>
+            Temperatur (in C)
+            <input id="btgTempSlider" type="range" min="-20" max="50" step="1" value="5">
+          </label>
+          <p id="btgTempValue" class="btg-temp-value">5 C</p>
+        </div>
+        <div class="btg-detail-box">
+          <h3 id="btgDecisionTitle"></h3>
+          <p id="btgDecisionText"></p>
+          <ul id="btgDecisionFacts" class="btg-list"></ul>
+        </div>
+      </article>
+
+      <article class="btg-card">
+        <h2>Interaktiv 3: Mini-Szenarien</h2>
+        <p class="btg-help">Lies die Situation und waehle den treffendsten Begriff.</p>
+        <div id="btgScenarioList" class="btg-task-list"></div>
+        <div class="btg-controls">
+          <button id="btgScenarioReset" type="button">Neu laden</button>
+          <button id="btgScenarioCheck" type="button">Pruefen</button>
+        </div>
+        <p id="btgScenarioFeedback" class="btg-feedback">Noch nicht geprueft.</p>
+      </article>
+
+      <article class="btg-card">
+        <h2>Merke dir und Lerntipp</h2>
+        <figure class="btg-slice">
+          <img src="slices/teil-8-merken-lerntipp.png" alt="Merke dir und Lerntipp">
+        </figure>
+      </article>
+    </section>
+
+    <section id="tab-trainieren" class="btg-tab">
+      <article class="btg-card">
+        <h2>Training</h2>
+        <p>Erzeuge neue Aufgaben und sichere die Begriffsanwendung.</p>
+        <div class="btg-train-grid">
+          <label>
+            Anzahl Aufgaben
+            <select id="btgTrainCount" class="btg-select">
+              <option value="6">6</option>
+              <option value="10" selected>10</option>
+              <option value="12">12</option>
+            </select>
+          </label>
+        </div>
+        <div class="btg-controls">
+          <button id="btgTrainGenerate" type="button">Aufgaben erstellen</button>
+          <button id="btgTrainCheck" type="button">Pruefen</button>
+        </div>
+        <div id="btgTrainList" class="btg-task-list"></div>
+        <p id="btgTrainFeedback" class="btg-feedback">Noch keine Aufgaben erzeugt.</p>
+      </article>
+    </section>
+
+    <section id="tab-test" class="btg-tab">
+      <article class="btg-card">
+        <h2>Testmodul</h2>
+        <p>10 dynamische Fragen mit Punktestand und Rueckmeldung.</p>
+        <div class="btg-controls">
+          <button id="btgTestStart" type="button">Test starten</button>
+          <button id="btgTestNext" type="button" disabled>Naechste Frage</button>
+          <p id="btgTestScore" class="btg-score">Punkte: 0 / 10</p>
+        </div>
+        <div class="btg-quiz-box">
+          <p id="btgTestStatus" class="btg-feedback">Test noch nicht gestartet.</p>
+          <h3 id="btgTestPrompt">Klicke auf "Test starten".</h3>
+          <div id="btgTestAnswers" class="btg-choice-list"></div>
+          <p id="btgTestFeedback" class="btg-feedback"></p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="biologie-temperaturbegriffe.js"></script>
+  <script src="../../../global-menu.js"></script>
+</body>
+</html>

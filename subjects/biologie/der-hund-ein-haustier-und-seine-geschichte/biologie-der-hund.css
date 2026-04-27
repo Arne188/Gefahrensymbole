@@ -352,6 +352,7 @@
   border: 1px solid #c3dcbc;
   border-radius: 10px;
   background: #ffffff;
+  color: #163a17;
   padding: 0.65rem 0.7rem;
   cursor: pointer;
 }
@@ -368,6 +369,11 @@
 .bdh-choice-btn.is-wrong {
   border-color: #cc7171;
   background: #fff2f2;
+}
+
+.bdh-choice-btn:disabled {
+  color: #163a17;
+  opacity: 1;
 }
 
 .bdh-score {

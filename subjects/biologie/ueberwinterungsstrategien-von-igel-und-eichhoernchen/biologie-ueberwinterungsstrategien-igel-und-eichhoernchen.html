@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biologie - Modul 6: Ueberwinterungsstrategien von Igel und Eichhoernchen</title>
+  <link rel="icon" type="image/svg+xml" href="../../../assets/tab-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../styles.css">
+  <link rel="stylesheet" href="biologie-ueberwinterungsstrategien-igel-und-eichhoernchen.css">
+</head>
+<body>
+  <main class="uie-page">
+    <header class="uie-hero">
+      <a class="back-link" href="../../../subject-dashboard.html?subject=Biologie">Zurueck zum Fach-Dashboard</a>
+      <p class="uie-tag">Biologie Klasse 5</p>
+      <h1>Modul 6: Ueberwinterungsstrategien von Igel und Eichhoernchen</h1>
+      <p>
+        Du vergleichst Winterruhe und Winteraktivitaet am Beispiel von Igel und Eichhoernchen
+        und begruendest, wie beide Tiere mit Kaelte und Nahrungsmangel umgehen.
+      </p>
+      <figure class="uie-slice">
+        <img src="slices/teil-0-header.png" alt="Titelgrafik Ueberwinterungsstrategien von Igel und Eichhoernchen">
+      </figure>
+    </header>
+
+    <nav class="uie-nav" aria-label="Modulnavigation">
+      <button class="uie-tab-btn is-active" type="button" data-tab="lernen">Lernen</button>
+      <button class="uie-tab-btn" type="button" data-tab="trainieren">Trainieren</button>
+      <button class="uie-tab-btn" type="button" data-tab="test">Testmodul</button>
+    </nav>
+
+    <section id="tab-lernen" class="uie-tab is-active">
+      <article class="uie-card">
+        <h2>Grundlagen: Warum Ueberwinterung wichtig ist</h2>
+        <p class="uie-help">Nutze den Ueberblick als Start: Kaelte, wenig Nahrung und Energiesparen.</p>
+        <figure class="uie-slice">
+          <img src="slices/teil-1-grundlagen.png" alt="Grundlagen der Ueberwinterung">
+        </figure>
+        <p class="uie-source-note">
+          Lehrplanbezug:
+          <a href="https://cuvo.nibis.de/index.php?p=download&upload=18" target="_blank" rel="noopener noreferrer">Kerncurriculum Naturwissenschaften Niedersachsen (Sek I)</a>
+          |
+          <a href="https://cuvo.nibis.de/index.php?p=download&upload=453" target="_blank" rel="noopener noreferrer">KMK-Bildungsstandards Biologie 2024</a>
+          |
+          <a href="didaktisches-konzept.md" target="_blank" rel="noopener noreferrer">Didaktisches Konzept</a>
+        </p>
+      </article>
+
+      <article class="uie-card">
+        <h2>1) Igel oder Eichhoernchen?</h2>
+        <p class="uie-help">Ordne Aussagen zur richtigen Tierart zu.</p>
+        <div class="uie-slice-grid">
+          <figure class="uie-slice">
+            <img src="slices/teil-2-igel.png" alt="Ausschnitt Ueberwinterung beim Igel">
+          </figure>
+          <figure class="uie-slice">
+            <img src="slices/teil-3-eichhoernchen.png" alt="Ausschnitt Ueberwinterung beim Eichhoernchen">
+          </figure>
+        </div>
+        <div id="uieAnimalList" class="uie-task-list"></div>
+        <div class="uie-controls">
+          <button id="uieAnimalReset" type="button">Neu laden</button>
+          <button id="uieAnimalCheck" type="button">Pruefen</button>
+        </div>
+        <p id="uieAnimalFeedback" class="uie-feedback">Noch nicht geprueft.</p>
+      </article>
+
+      <article class="uie-card">
+        <h2>2) Gemeinsamkeiten und Unterschiede</h2>
+        <p class="uie-help">Ordne jede Aussage passend ein.</p>
+        <figure class="uie-slice">
+          <img src="slices/teil-4-gemeinsamkeiten-unterschiede.png" alt="Ausschnitt Gemeinsamkeiten und Unterschiede">
+        </figure>
+        <div id="uieCompareList" class="uie-task-list"></div>
+        <div class="uie-controls">
+          <button id="uieCompareReset" type="button">Neu laden</button>
+          <button id="uieCompareCheck" type="button">Pruefen</button>
+        </div>
+        <p id="uieCompareFeedback" class="uie-feedback">Noch nicht geprueft.</p>
+      </article>
+
+      <article class="uie-card">
+        <h2>3) Wusstest-du-Check</h2>
+        <p class="uie-help">Entscheide: Aussage richtig oder falsch.</p>
+        <figure class="uie-slice uie-slice-narrow">
+          <img src="slices/teil-5-wusstest-du.png" alt="Ausschnitt Wusstest du">
+        </figure>
+        <div id="uieFactList" class="uie-task-list"></div>
+        <div class="uie-controls">
+          <button id="uieFactReset" type="button">Neu laden</button>
+          <button id="uieFactCheck" type="button">Pruefen</button>
+        </div>
+        <p id="uieFactFeedback" class="uie-feedback">Noch nicht geprueft.</p>
+      </article>
+
+      <article class="uie-card">
+        <h2>Merke dir</h2>
+        <figure class="uie-slice">
+          <img src="slices/teil-6-merken.png" alt="Ausschnitt Merke dir">
+        </figure>
+      </article>
+
+      <article class="uie-card">
+        <h2>Lerntipp</h2>
+        <figure class="uie-slice">
+          <img src="slices/teil-8-lerntipp.png" alt="Ausschnitt Lerntipp">
+        </figure>
+      </article>
+    </section>
+
+    <section id="tab-trainieren" class="uie-tab">
+      <article class="uie-card">
+        <h2>Training</h2>
+        <p>Erzeuge neue Aufgaben und trainiere die Unterschiede sicher.</p>
+        <div class="uie-train-grid">
+          <label>
+            Anzahl Aufgaben
+            <select id="uieTrainCount" class="uie-select">
+              <option value="6">6</option>
+              <option value="10" selected>10</option>
+              <option value="12">12</option>
+            </select>
+          </label>
+        </div>
+        <div class="uie-controls">
+          <button id="uieTrainGenerate" type="button">Aufgaben erstellen</button>
+          <button id="uieTrainCheck" type="button">Pruefen</button>
+        </div>
+        <div id="uieTrainList" class="uie-task-list"></div>
+        <p id="uieTrainFeedback" class="uie-feedback">Noch keine Aufgaben erzeugt.</p>
+      </article>
+    </section>
+
+    <section id="tab-test" class="uie-tab">
+      <article class="uie-card">
+        <h2>Pruefe dein Wissen - Testmodul</h2>
+        <figure class="uie-slice">
+          <img src="slices/teil-7-pruefe-wissen.png" alt="Ausschnitt Pruefe dein Wissen">
+        </figure>
+        <p>10 dynamische Fragen mit Punktestand und Rueckmeldung.</p>
+        <div class="uie-controls">
+          <button id="uieTestStart" type="button">Test starten</button>
+          <button id="uieTestNext" type="button" disabled>Naechste Frage</button>
+          <p id="uieTestScore" class="uie-score">Punkte: 0 / 10</p>
+        </div>
+        <div class="uie-quiz-box">
+          <p id="uieTestStatus" class="uie-feedback">Test noch nicht gestartet.</p>
+          <h3 id="uieTestPrompt">Klicke auf "Test starten".</h3>
+          <div id="uieTestAnswers" class="uie-choice-list"></div>
+          <p id="uieTestFeedback" class="uie-feedback"></p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="biologie-ueberwinterungsstrategien-igel-und-eichhoernchen.js"></script>
+  <script src="../../../global-menu.js"></script>
+</body>
+</html>

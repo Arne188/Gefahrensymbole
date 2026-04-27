@@ -236,6 +236,7 @@
   border: 1px solid #c3d9f3;
   border-radius: 10px;
   background: #ffffff;
+  color: #183a63;
   padding: 0.65rem 0.7rem;
   cursor: pointer;
 }
@@ -252,6 +253,11 @@
 .bow-choice-btn.is-wrong {
   border-color: #c56f6f;
   background: #fff3f3;
+}
+
+.bow-choice-btn:disabled {
+  color: #183a63;
+  opacity: 1;
 }
 
 .bow-score {

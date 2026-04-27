@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biologie - Modul 5: Ueberwinterung von Amphibien und Reptilien</title>
+  <link rel="icon" type="image/svg+xml" href="../../../assets/tab-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../styles.css">
+  <link rel="stylesheet" href="biologie-ueberwinterung-amphibien-und-reptilien.css">
+</head>
+<body>
+  <main class="uar-page">
+    <header class="uar-hero">
+      <a class="back-link" href="../../../subject-dashboard.html?subject=Biologie">Zurueck zum Fach-Dashboard</a>
+      <p class="uar-tag">Biologie Klasse 5</p>
+      <h1>Modul 5: Ueberwinterung von Amphibien und Reptilien</h1>
+      <p>
+        Du erklaerst, warum Amphibien und Reptilien im Winter in Winterruhe fallen,
+        vergleichst ihre Strategien und ordnest typische Ueberwinterungsplaetze sicher zu.
+      </p>
+      <figure class="uar-slice">
+        <img src="slices/teil-0-header.png" alt="Titelgrafik Ueberwinterung von Amphibien und Reptilien">
+      </figure>
+    </header>
+
+    <nav class="uar-nav" aria-label="Modulnavigation">
+      <button class="uar-tab-btn is-active" type="button" data-tab="lernen">Lernen</button>
+      <button class="uar-tab-btn" type="button" data-tab="trainieren">Trainieren</button>
+      <button class="uar-tab-btn" type="button" data-tab="test">Testmodul</button>
+    </nav>
+
+    <section id="tab-lernen" class="uar-tab is-active">
+      <article class="uar-card">
+        <h2>Grundlagen und Jahreslauf</h2>
+        <p class="uar-help">Der erste Block zeigt die zentrale Idee: wechselwarm, Temperaturabhaengigkeit und Winterruhe.</p>
+        <figure class="uar-slice">
+          <img src="slices/teil-1-grundlagen.png" alt="Grundlagen und Jahreslauf">
+        </figure>
+        <p class="uar-source-note">
+          Lehrplanbezug:
+          <a href="https://cuvo.nibis.de/index.php?p=download&upload=18" target="_blank" rel="noopener noreferrer">Kerncurriculum Naturwissenschaften Niedersachsen (Sek I)</a>
+          |
+          <a href="https://cuvo.nibis.de/index.php?p=download&upload=453" target="_blank" rel="noopener noreferrer">KMK-Bildungsstandards Biologie 2024</a>
+          |
+          <a href="didaktisches-konzept.md" target="_blank" rel="noopener noreferrer">Didaktisches Konzept</a>
+        </p>
+      </article>
+
+      <article class="uar-card">
+        <h2>1) Ueberwinterungsplaetze zuordnen</h2>
+        <p class="uar-help">Ordne die Tiere typischen Ueberwinterungsplaetzen zu.</p>
+        <div class="uar-slice-grid">
+          <figure class="uar-slice">
+            <img src="slices/teil-2-amphibien.png" alt="Ausschnitt Amphibien">
+          </figure>
+          <figure class="uar-slice">
+            <img src="slices/teil-3-reptilien.png" alt="Ausschnitt Reptilien">
+          </figure>
+        </div>
+        <div id="uarPlaceList" class="uar-task-list"></div>
+        <div class="uar-controls">
+          <button id="uarPlaceReset" type="button">Neu laden</button>
+          <button id="uarPlaceCheck" type="button">Pruefen</button>
+        </div>
+        <p id="uarPlaceFeedback" class="uar-feedback">Noch nicht geprueft.</p>
+      </article>
+
+      <article class="uar-card">
+        <h2>2) Gemeinsamkeiten und Unterschiede</h2>
+        <p class="uar-help">Ordne jede Aussage: Gemeinsamkeit, Amphibien-spezifisch oder Reptilien-spezifisch.</p>
+        <figure class="uar-slice">
+          <img src="slices/teil-4-gemeinsamkeiten-unterschiede.png" alt="Ausschnitt Gemeinsamkeiten und Unterschiede">
+        </figure>
+        <div id="uarCompareList" class="uar-task-list"></div>
+        <div class="uar-controls">
+          <button id="uarCompareReset" type="button">Neu laden</button>
+          <button id="uarCompareCheck" type="button">Pruefen</button>
+        </div>
+        <p id="uarCompareFeedback" class="uar-feedback">Noch nicht geprueft.</p>
+      </article>
+
+      <article class="uar-card">
+        <h2>3) Wusstest-du-Check</h2>
+        <p class="uar-help">Pruefe kurze Aussagen zu Kaelte, Schutz und Naturschutz.</p>
+        <figure class="uar-slice uar-slice-narrow">
+          <img src="slices/teil-5-wusstest-du.png" alt="Ausschnitt Wusstest du">
+        </figure>
+        <div id="uarFactList" class="uar-task-list"></div>
+        <div class="uar-controls">
+          <button id="uarFactReset" type="button">Neu laden</button>
+          <button id="uarFactCheck" type="button">Pruefen</button>
+        </div>
+        <p id="uarFactFeedback" class="uar-feedback">Noch nicht geprueft.</p>
+      </article>
+
+      <article class="uar-card">
+        <h2>4) Merke dir</h2>
+        <figure class="uar-slice">
+          <img src="slices/teil-6-merken.png" alt="Ausschnitt Merke dir">
+        </figure>
+        <ul class="uar-list">
+          <li>Amphibien und Reptilien sind wechselwarme Tiere.</li>
+          <li>Sie suchen geschuetzte Plaetze und fallen in Winterruhe.</li>
+          <li>Atmung, Herzschlag und Stoffwechsel werden langsamer.</li>
+          <li>Im Fruehjahr werden sie bei Waerme wieder aktiv.</li>
+        </ul>
+      </article>
+
+      <article class="uar-card">
+        <h2>Lerntipp</h2>
+        <figure class="uar-slice">
+          <img src="slices/teil-8-lerntipp.png" alt="Ausschnitt Lerntipp">
+        </figure>
+      </article>
+    </section>
+
+    <section id="tab-trainieren" class="uar-tab">
+      <article class="uar-card">
+        <h2>Training</h2>
+        <p>Erzeuge neue Aufgaben und trainiere die Begriffe und Zusammenhaenge.</p>
+        <div class="uar-train-grid">
+          <label>
+            Anzahl Aufgaben
+            <select id="uarTrainCount" class="uar-select">
+              <option value="6">6</option>
+              <option value="10" selected>10</option>
+              <option value="12">12</option>
+            </select>
+          </label>
+        </div>
+        <div class="uar-controls">
+          <button id="uarTrainGenerate" type="button">Aufgaben erstellen</button>
+          <button id="uarTrainCheck" type="button">Pruefen</button>
+        </div>
+        <div id="uarTrainList" class="uar-task-list"></div>
+        <p id="uarTrainFeedback" class="uar-feedback">Noch keine Aufgaben erzeugt.</p>
+      </article>
+    </section>
+
+    <section id="tab-test" class="uar-tab">
+      <article class="uar-card">
+        <h2>Pruefe dein Wissen - Testmodul</h2>
+        <figure class="uar-slice">
+          <img src="slices/teil-7-pruefe-wissen.png" alt="Ausschnitt Pruefe dein Wissen">
+        </figure>
+        <p>10 dynamische Fragen mit direkter Rueckmeldung und Punktestand.</p>
+        <div class="uar-controls">
+          <button id="uarTestStart" type="button">Test starten</button>
+          <button id="uarTestNext" type="button" disabled>Naechste Frage</button>
+          <p id="uarTestScore" class="uar-score">Punkte: 0 / 10</p>
+        </div>
+        <div class="uar-quiz-box">
+          <p id="uarTestStatus" class="uar-feedback">Test noch nicht gestartet.</p>
+          <h3 id="uarTestPrompt">Klicke auf "Test starten".</h3>
+          <div id="uarTestAnswers" class="uar-choice-list"></div>
+          <p id="uarTestFeedback" class="uar-feedback"></p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="biologie-ueberwinterung-amphibien-und-reptilien.js"></script>
+  <script src="../../../global-menu.js"></script>
+</body>
+</html>

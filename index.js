@@ -151,6 +151,45 @@ const defaultTopics = [
   },
   {
     subject: "Biologie",
+    title: "Modul 5: Ueberwinterung von Amphibien und Reptilien",
+    link: "subjects/biologie/ueberwinterung-von-amphibien-und-reptilien/biologie-ueberwinterung-amphibien-und-reptilien.html",
+    description:
+      "Ueberwinterungsstrategien von Amphibien und Reptilien vergleichen und begruendet anwenden.",
+    bulletPoints: [
+      "Warum wechselwarme Tiere im Winter in Winterruhe fallen.",
+      "Typische Ueberwinterungsplaetze sicher zuordnen.",
+      "Gemeinsamkeiten und Unterschiede von Amphibien und Reptilien vergleichen.",
+      "Naturschutzbezug: Rueckzugsorte erhalten und begruenden.",
+    ],
+  },
+  {
+    subject: "Biologie",
+    title: "Modul 6: Ueberwinterungsstrategien von Igel und Eichhoernchen",
+    link: "subjects/biologie/ueberwinterungsstrategien-von-igel-und-eichhoernchen/biologie-ueberwinterungsstrategien-igel-und-eichhoernchen.html",
+    description:
+      "Winterruhe und Winteraktivitaet von Igel und Eichhoernchen vergleichen und anwenden.",
+    bulletPoints: [
+      "Igel (Winterruhe) und Eichhoernchen (winteraktiv) gezielt unterscheiden.",
+      "Vorbereitung, Verstecke und Nahrungssicherung vergleichen.",
+      "Gemeinsamkeiten und Unterschiede fachlich begruenden.",
+      "Naturschutzmassnahmen fuer den Winter ableiten.",
+    ],
+  },
+  {
+    subject: "Biologie",
+    title: "Modul 7: Temperaturbegriffe verstehen",
+    link: "subjects/biologie/temperaturbegriffe-winter-und-extreme/biologie-temperaturbegriffe.html",
+    description:
+      "Winterschlaf, Winterruhe, Waermestarre, Hitzetod, Kaeltestarre und Kaeltetod sicher unterscheiden und anwenden.",
+    bulletPoints: [
+      "Die sechs zentralen Begriffe fachlich korrekt definieren.",
+      "Temperaturabhaengige Situationen biologisch deuten.",
+      "Begriffe in Transferaufgaben sicher anwenden.",
+      "Grenzbereiche und Risiken fuer Tiere begruendet erklaeren.",
+    ],
+  },
+  {
+    subject: "Biologie",
     title: "Inhalte Klasse 5 (Niedersachsen)",
     link: "",
     description:
@@ -160,6 +199,9 @@ const defaultTopics = [
       "Tiere im Winter (gleichwarm/wechselwarm).",
       "Ordnen von Wirbeltieren.",
       "Der Mensch - auch ein Wirbeltier (Skelettaufbau, Muskeln, Bewegung).",
+      "Ueberwinterung von Amphibien und Reptilien.",
+      "Ueberwinterungsstrategien von Igel und Eichhoernchen.",
+      "Temperaturbegriffe: Winterschlaf, Winterruhe, Waermestarre, Hitzetod, Kaeltestarre, Kaeltetod.",
     ],
   },
   {

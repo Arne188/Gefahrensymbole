@@ -1,0 +1,248 @@
+.uar-page {
+  width: min(1120px, 94vw);
+  margin: 0 auto;
+  padding: 2rem 0 3.5rem;
+  display: grid;
+  gap: 1.2rem;
+}
+
+.uar-hero {
+  background: linear-gradient(140deg, #eef8ef 0%, #ffffff 72%);
+  border: 1px solid #cfe6d0;
+  border-radius: 22px;
+  padding: 1.5rem;
+  box-shadow: 0 12px 30px rgba(24, 65, 24, 0.08);
+}
+
+.uar-tag {
+  display: inline-flex;
+  margin: 0;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  background: #dff1e1;
+  color: #275d2b;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.uar-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.uar-tab-btn {
+  border: 1px solid #94bf97;
+  background: #f4fbf4;
+  color: #245227;
+  border-radius: 999px;
+  padding: 0.55rem 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.uar-tab-btn.is-active {
+  background: #2f7f35;
+  border-color: #2f7f35;
+  color: #ffffff;
+}
+
+.uar-tab {
+  display: none;
+  gap: 1rem;
+}
+
+.uar-tab.is-active {
+  display: grid;
+}
+
+.uar-card {
+  background: #ffffff;
+  border: 1px solid #d4ead5;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 10px 22px rgba(33, 78, 33, 0.06);
+}
+
+.uar-card h2 {
+  margin-top: 0;
+}
+
+.uar-help {
+  margin: 0.35rem 0 0.7rem;
+  color: #2d6031;
+}
+
+.uar-source-note {
+  margin-top: 0.8rem;
+  font-size: 0.95rem;
+}
+
+.uar-slice-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.uar-slice {
+  width: 100%;
+  margin: 0 0 0.75rem;
+  border: 1px solid #d4e7d6;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f6fbf6;
+}
+
+.uar-slice img {
+  width: 100%;
+  display: block;
+}
+
+.uar-slice-narrow {
+  max-width: 420px;
+}
+
+.uar-list {
+  margin: 0.7rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.uar-list li + li {
+  margin-top: 0.3rem;
+}
+
+.uar-task-list {
+  display: grid;
+  gap: 0.7rem;
+  margin-top: 0.8rem;
+}
+
+.uar-task-item {
+  border: 1px solid #d6e9d8;
+  border-radius: 12px;
+  padding: 0.75rem;
+  background: #fbfefb;
+}
+
+.uar-task-item label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.uar-task-item.is-correct {
+  border-color: #529a5e;
+  background: #edf8ef;
+}
+
+.uar-task-item.is-wrong {
+  border-color: #c76f6f;
+  background: #fff3f3;
+}
+
+.uar-select {
+  width: 100%;
+  max-width: 420px;
+  border: 1px solid #b8d8bc;
+  border-radius: 9px;
+  padding: 0.4rem 0.5rem;
+  background: #ffffff;
+  font: inherit;
+}
+
+.uar-controls {
+  margin-top: 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  align-items: center;
+}
+
+.uar-controls button {
+  border: 1px solid #5d9862;
+  border-radius: 999px;
+  padding: 0.45rem 0.9rem;
+  background: #ffffff;
+  color: #255c2a;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.uar-controls button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.uar-feedback {
+  margin: 0.7rem 0 0;
+  font-weight: 600;
+}
+
+.uar-train-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 0.8rem;
+}
+
+.uar-choice-list {
+  display: grid;
+  gap: 0.55rem;
+  margin-top: 0.8rem;
+}
+
+.uar-choice-btn {
+  text-align: left;
+  border: 1px solid #c5dec7;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #163a17;
+  padding: 0.65rem 0.7rem;
+  cursor: pointer;
+}
+
+.uar-choice-btn:hover:enabled {
+  background: #f2faf2;
+}
+
+.uar-choice-btn.is-correct {
+  border-color: #529a5e;
+  background: #edf8ef;
+}
+
+.uar-choice-btn.is-wrong {
+  border-color: #c76f6f;
+  background: #fff3f3;
+}
+
+.uar-choice-btn:disabled {
+  color: #163a17;
+  opacity: 1;
+}
+
+.uar-score {
+  margin: 0;
+  font-weight: 700;
+}
+
+.uar-quiz-box {
+  margin-top: 0.9rem;
+  border: 1px solid #d5e9d7;
+  border-radius: 12px;
+  padding: 0.9rem;
+  background: #fcfffc;
+}
+
+@media (max-width: 760px) {
+  .uar-page {
+    width: min(1120px, 96vw);
+    padding-top: 1.25rem;
+  }
+
+  .uar-hero {
+    padding: 1rem;
+  }
+
+  .uar-card {
+    padding: 0.85rem;
+  }
+}
