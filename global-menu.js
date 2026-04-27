@@ -24,6 +24,7 @@
     { subject: "Biologie", title: "Modul 5: Ueberwinterung von Amphibien und Reptilien", link: "subjects/biologie/ueberwinterung-von-amphibien-und-reptilien/biologie-ueberwinterung-amphibien-und-reptilien.html" },
     { subject: "Biologie", title: "Modul 6: Ueberwinterungsstrategien von Igel und Eichhoernchen", link: "subjects/biologie/ueberwinterungsstrategien-von-igel-und-eichhoernchen/biologie-ueberwinterungsstrategien-igel-und-eichhoernchen.html" },
     { subject: "Biologie", title: "Modul 7: Temperaturbegriffe verstehen", link: "subjects/biologie/temperaturbegriffe-winter-und-extreme/biologie-temperaturbegriffe.html" },
+    { subject: "Biologie", title: "Modul 8: Diagramme beschreiben und erklaeren", link: "subjects/biologie/diagramme-beschreiben-und-erklaeren/biologie-diagramme-beschreiben-und-erklaeren.html" },
     { subject: "Deutsch", title: "Märchenanalyse schreiben", link: "subjects/deutsch/maerchenanalyse/deutsch-maerchenanalyse.html" },
     { subject: "Deutsch", title: "Märchen schreiben", link: "subjects/deutsch/maerchen-schreiben/deutsch-maerchen-schreiben.html" },
     { subject: "Deutsch", title: "Groß- und Kleinschreibung", link: "subjects/deutsch/gross-und-kleinschreibung/deutsch-gross-und-kleinschreibung.html" },

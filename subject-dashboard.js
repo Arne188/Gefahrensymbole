@@ -86,31 +86,14 @@ function createModuleCard(topic) {
   const card = document.createElement("article");
   card.className = "module-callout";
 
-  const kicker = document.createElement("p");
-  kicker.className = "module-kicker";
-  kicker.textContent = topic.subject;
-
   const title = document.createElement("h3");
   title.textContent = topic.title;
-  card.append(kicker, title);
+  card.append(title);
 
   if (topic.description) {
     const description = document.createElement("p");
     description.textContent = topic.description;
     card.append(description);
-  }
-
-  if (Array.isArray(topic.bulletPoints) && topic.bulletPoints.length > 0) {
-    const bulletList = document.createElement("ul");
-    bulletList.className = "module-bullet-list";
-
-    topic.bulletPoints.forEach((item) => {
-      const bullet = document.createElement("li");
-      bullet.textContent = item;
-      bulletList.append(bullet);
-    });
-
-    card.append(bulletList);
   }
 
   if (topic.link) {
@@ -119,11 +102,6 @@ function createModuleCard(topic) {
     link.href = topic.link;
     link.textContent = "Modul öffnen";
     card.append(link);
-  } else {
-    const note = document.createElement("p");
-    note.className = "topic-note";
-    note.textContent = "Kein Link hinterlegt";
-    card.append(note);
   }
 
   return card;
@@ -157,8 +135,8 @@ function renderDrawerSubjects(subjects, currentSubject) {
 function renderDrawerModules(topics, currentSubject) {
   drawerModuleList.replaceChildren();
   const modules = topics
-    .filter((topic) => topic.subject === currentSubject)
-    .sort((a, b) => a.title.localeCompare(b.title, "de", { sensitivity: "base" }));
+    .filter((topic) => topic.subject === currentSubject && topic.link)
+    .sort((a, b) => a.title.localeCompare(b.title, "de", { sensitivity: "base", numeric: true }));
 
   if (modules.length === 0) {
     const note = document.createElement("p");
@@ -169,19 +147,11 @@ function renderDrawerModules(topics, currentSubject) {
   }
 
   modules.forEach((topic) => {
-    if (topic.link) {
-      const link = document.createElement("a");
-      link.href = topic.link;
-      link.textContent = topic.title;
-      link.title = `${topic.title} öffnen`;
-      drawerModuleList.append(link);
-      return;
-    }
-
-    const note = document.createElement("span");
-    note.className = "is-disabled";
-    note.textContent = `${topic.title} (ohne Link)`;
-    drawerModuleList.append(note);
+    const link = document.createElement("a");
+    link.href = topic.link;
+    link.textContent = topic.title;
+    link.title = `${topic.title} öffnen`;
+    drawerModuleList.append(link);
   });
 }
 
@@ -210,17 +180,19 @@ function applySubjectTheme(subject) {
 }
 
 function renderModules(topics, subject) {
-  const modules = topics.filter((topic) => topic.subject === subject);
+  const modules = topics
+    .filter((topic) => topic.subject === subject && topic.link)
+    .sort((a, b) => a.title.localeCompare(b.title, "de", { sensitivity: "base", numeric: true }));
   sdModuleList.replaceChildren();
 
   if (modules.length === 0) {
     sdEmptyState.hidden = false;
-    sdModuleCount.textContent = "0 Module";
+    sdModuleCount.textContent = "0 Lernmodule";
     return;
   }
 
   sdEmptyState.hidden = true;
-  sdModuleCount.textContent = `${modules.length} Module`;
+  sdModuleCount.textContent = `${modules.length} Lernmodule`;
   modules.forEach((topic) => {
     sdModuleList.append(createModuleCard(topic));
   });

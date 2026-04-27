@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biologie - Modul 8: Diagramme beschreiben und erklaeren</title>
+  <link rel="icon" type="image/svg+xml" href="../../../assets/tab-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../styles.css">
+  <link rel="stylesheet" href="biologie-diagramme-beschreiben-und-erklaeren.css">
+</head>
+<body>
+  <main class="bde-page">
+    <header class="bde-hero">
+      <a class="back-link" href="../../../subject-dashboard.html?subject=Biologie">Zurueck zum Fach-Dashboard</a>
+      <p class="bde-tag">Biologie Klasse 5</p>
+      <h1>Modul 8: Diagramme beschreiben und erklaeren</h1>
+      <p>
+        Du lernst eine klare 4-Schritt-Methode fuer Diagramme:
+        Einleitung, Beschreibung, Deutung/Erklaerung und Fazit.
+        Danach trainierst du mit zwei echten Uebungsdiagrammen.
+      </p>
+      <figure class="bde-slice">
+        <img src="slices/teil-0-header.png" alt="Titelgrafik Diagramme beschreiben Schritt fuer Schritt">
+      </figure>
+    </header>
+
+    <nav class="bde-nav" aria-label="Modulnavigation">
+      <button class="bde-tab-btn is-active" type="button" data-tab="lernen">Lernen</button>
+      <button class="bde-tab-btn" type="button" data-tab="trainieren">Trainieren</button>
+      <button class="bde-tab-btn" type="button" data-tab="test">Testmodul</button>
+    </nav>
+
+    <section id="tab-lernen" class="bde-tab is-active">
+      <article class="bde-card">
+        <h2>Lehrplanbezug Niedersachsen</h2>
+        <p>
+          Das Modul orientiert sich am Kerncurriculum Naturwissenschaften
+          (Gymnasium Sek. I), besonders an den Bereichen Kommunikation und Erkenntnisgewinnung.
+        </p>
+        <ul class="bde-list">
+          <li>Wesentliche Aussagen von Diagrammen sachgerecht wiedergeben</li>
+          <li>Messdaten in Tabellen und Diagrammen darstellen und auswerten</li>
+          <li>Operatoren korrekt anwenden: erst beschreiben, dann erklaeren</li>
+          <li>Fachsprache (z. B. Achsen, Verlauf, Ursache-Wirkung) gezielt nutzen</li>
+        </ul>
+        <p class="bde-source-note">
+          Quellen:
+          <a href="https://cuvo.nibis.de/index.php?p=download&upload=18" target="_blank" rel="noopener noreferrer">Kerncurriculum Naturwissenschaften Niedersachsen (Sek I)</a>
+          |
+          <a href="didaktisches-konzept.md" target="_blank" rel="noopener noreferrer">Didaktisches Konzept</a>
+        </p>
+      </article>
+
+      <article class="bde-card">
+        <h2>Die 4-Schritt-Methode interaktiv</h2>
+        <p class="bde-help">Waehle einen Schritt und pruefe, was in diesem Teil erwartet wird.</p>
+        <div class="bde-step-buttons">
+          <button class="bde-step-btn is-active" type="button" data-step="1">1 Einleitung</button>
+          <button class="bde-step-btn" type="button" data-step="2">2 Beschreibung</button>
+          <button class="bde-step-btn" type="button" data-step="3">3 Erklaerung</button>
+          <button class="bde-step-btn" type="button" data-step="4">4 Fazit</button>
+        </div>
+        <div class="bde-step-layout">
+          <figure class="bde-slice">
+            <img src="slices/teil-1-schritte-links.png" alt="Schrittuebersicht links">
+          </figure>
+          <figure class="bde-slice">
+            <img src="slices/teil-3-schritte-rechts-clean.png" alt="Schrittbeispiel rechts">
+          </figure>
+        </div>
+        <div class="bde-detail-box">
+          <h3 id="bdeStepTitle">Einleitung - Was sehe ich?</h3>
+          <p id="bdeStepText"></p>
+          <ul id="bdeStepChecklist" class="bde-list"></ul>
+        </div>
+      </article>
+
+      <article class="bde-card">
+        <h2>Beispielanalyse am Igel-Diagramm</h2>
+        <p class="bde-help">
+          Nutze das Beispiel und ordne die Aussagen in die richtige Reihenfolge 1 bis 4.
+        </p>
+        <figure class="bde-slice">
+          <img src="slices/teil-2-beispiel-chart.png" alt="Beispieldiagramm Koerpertemperatur des Igels">
+        </figure>
+        <div id="bdeOrderTask" class="bde-task-list"></div>
+        <div class="bde-controls">
+          <button id="bdeOrderReset" type="button">Neu mischen</button>
+          <button id="bdeOrderCheck" type="button">Pruefen</button>
+        </div>
+        <p id="bdeOrderFeedback" class="bde-feedback">Noch nicht geprueft.</p>
+      </article>
+
+      <article class="bde-card">
+        <h2>Sprachbaukasten fuer gute Saetze</h2>
+        <p class="bde-help">Baue aus den Bausteinen einen sachlichen Diagrammsatz.</p>
+        <div class="bde-builder-grid">
+          <label>
+            Subjekt
+            <select id="bdeBuilderSubject" class="bde-select"></select>
+          </label>
+          <label>
+            Verlauf
+            <select id="bdeBuilderVerb" class="bde-select"></select>
+          </label>
+          <label>
+            Zeitraum
+            <select id="bdeBuilderTime" class="bde-select"></select>
+          </label>
+          <label>
+            Erklaerungsteil (optional)
+            <select id="bdeBuilderReason" class="bde-select"></select>
+          </label>
+        </div>
+        <p id="bdeBuilderSentence" class="bde-builder-result"></p>
+        <div class="bde-controls">
+          <button id="bdeBuilderUseGenerated" type="button">Satz uebernehmen</button>
+        </div>
+        <div class="bde-builder-review">
+          <label for="bdeBuilderInput">Schreibe den Satz selbst (oder verbessere ihn) und pruefe ihn:</label>
+          <textarea id="bdeBuilderInput" class="bde-builder-input" placeholder="Beispiel: Die Koerpertemperatur des Igels sinkt von Oktober bis Dezember stark, weil er Energie spart."></textarea>
+          <div class="bde-controls">
+            <button id="bdeBuilderCheck" type="button">Satz pruefen</button>
+            <button id="bdeBuilderReset" type="button">Eingabe leeren</button>
+          </div>
+          <p id="bdeBuilderFeedback" class="bde-feedback">Noch nicht geprueft.</p>
+        </div>
+        <div class="bde-slice-grid">
+          <figure class="bde-slice">
+            <img src="slices/teil-4-formulierungen.png" alt="Nuetzliche Formulierungen">
+          </figure>
+          <figure class="bde-slice">
+            <img src="slices/teil-5-weitere-beispiele.png" alt="Weitere Beispiele">
+          </figure>
+          <figure class="bde-slice">
+            <img src="slices/teil-6-checkliste-fehler.png" alt="Typische Fehler und Checkliste">
+          </figure>
+        </div>
+        <figure class="bde-slice">
+          <img src="slices/teil-7-merkdir.png" alt="Merksatz zum Diagramm beschreiben">
+        </figure>
+      </article>
+    </section>
+
+    <section id="tab-trainieren" class="bde-tab">
+      <article class="bde-card">
+        <h2>Training A: Igel und Eichhoernchen</h2>
+        <p class="bde-help">
+          Bearbeite die vier Schreibfelder in der Reihenfolge 1 bis 4.
+          Danach bekommst du kriterienorientiertes Feedback.
+        </p>
+        <div class="bde-slice-grid bde-slice-grid-train">
+          <figure class="bde-slice">
+            <img src="slices/uebung1-0-header.png" alt="Uebung 1 Kopfbereich">
+          </figure>
+          <figure class="bde-slice">
+            <img src="slices/uebung1-1-chart.png" alt="Uebung 1 Diagramm Igel und Eichhoernchen">
+          </figure>
+          <figure class="bde-slice">
+            <img src="slices/uebung1-2-methode.png" alt="Uebung 1 Methode">
+          </figure>
+        </div>
+        <div id="bdeCaseAFields" class="bde-writing-grid"></div>
+        <div class="bde-controls">
+          <button id="bdeCaseACheck" type="button">Antworten pruefen</button>
+          <button id="bdeCaseAReset" type="button">Zuruecksetzen</button>
+          <button id="bdeCaseAModelToggle" type="button">Musterloesung anzeigen</button>
+        </div>
+        <p id="bdeCaseAFeedback" class="bde-feedback">Noch nicht geprueft.</p>
+        <div id="bdeCaseAModel" class="bde-model" hidden></div>
+        <div class="bde-slice-grid">
+          <figure class="bde-slice">
+            <img src="slices/uebung1-3-aufgaben.png" alt="Uebung 1 Aufgaben">
+          </figure>
+          <figure class="bde-slice">
+            <img src="slices/uebung1-4-formulierungen.png" alt="Uebung 1 Formulierungen">
+          </figure>
+          <figure class="bde-slice">
+            <img src="slices/uebung1-5-fachbegriffe.png" alt="Uebung 1 Fachbegriffe">
+          </figure>
+        </div>
+        <figure class="bde-slice">
+          <img src="slices/uebung1-6-tipp.png" alt="Uebung 1 Tipp">
+        </figure>
+      </article>
+
+      <article class="bde-card">
+        <h2>Training B: Frosch und Eidechse</h2>
+        <p class="bde-help">
+          Zweiter Trainingsfall mit gleichem Schreibraster. Ziel: sicherer Transfer.
+        </p>
+        <div class="bde-slice-grid bde-slice-grid-train">
+          <figure class="bde-slice">
+            <img src="slices/uebung2-0-header.png" alt="Uebung 2 Kopfbereich">
+          </figure>
+          <figure class="bde-slice">
+            <img src="slices/uebung2-1-chart.png" alt="Uebung 2 Diagramm Frosch und Eidechse">
+          </figure>
+          <figure class="bde-slice">
+            <img src="slices/uebung2-2-methode.png" alt="Uebung 2 Methode">
+          </figure>
+        </div>
+        <div id="bdeCaseBFields" class="bde-writing-grid"></div>
+        <div class="bde-controls">
+          <button id="bdeCaseBCheck" type="button">Antworten pruefen</button>
+          <button id="bdeCaseBReset" type="button">Zuruecksetzen</button>
+          <button id="bdeCaseBModelToggle" type="button">Musterloesung anzeigen</button>
+        </div>
+        <p id="bdeCaseBFeedback" class="bde-feedback">Noch nicht geprueft.</p>
+        <div id="bdeCaseBModel" class="bde-model" hidden></div>
+        <div class="bde-slice-grid">
+          <figure class="bde-slice">
+            <img src="slices/uebung2-3-aufgaben.png" alt="Uebung 2 Aufgaben">
+          </figure>
+          <figure class="bde-slice">
+            <img src="slices/uebung2-4-fachbegriffe.png" alt="Uebung 2 Fachbegriffe">
+          </figure>
+          <figure class="bde-slice">
+            <img src="slices/uebung2-5-checkliste.png" alt="Uebung 2 Checkliste">
+          </figure>
+        </div>
+        <figure class="bde-slice">
+          <img src="slices/uebung2-6-tipp.png" alt="Uebung 2 Tipp">
+        </figure>
+      </article>
+    </section>
+
+    <section id="tab-test" class="bde-tab">
+      <article class="bde-card">
+        <h2>Testmodul</h2>
+        <p>10 dynamische Fragen zur Diagrammbeschreibung mit Punktestand und Rueckmeldung.</p>
+        <div class="bde-controls">
+          <button id="bdeTestStart" type="button">Test starten</button>
+          <button id="bdeTestNext" type="button" disabled>Naechste Frage</button>
+          <p id="bdeTestScore" class="bde-score">Punkte: 0 / 10</p>
+        </div>
+        <div class="bde-quiz-box">
+          <p id="bdeTestStatus" class="bde-feedback">Test noch nicht gestartet.</p>
+          <h3 id="bdeTestPrompt">Klicke auf "Test starten".</h3>
+          <div id="bdeTestAnswers" class="bde-choice-list"></div>
+          <p id="bdeTestFeedback" class="bde-feedback"></p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="biologie-diagramme-beschreiben-und-erklaeren.js"></script>
+  <script src="../../../global-menu.js"></script>
+</body>
+</html>

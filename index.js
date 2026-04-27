@@ -190,6 +190,19 @@ const defaultTopics = [
   },
   {
     subject: "Biologie",
+    title: "Modul 8: Diagramme beschreiben und erklaeren",
+    link: "subjects/biologie/diagramme-beschreiben-und-erklaeren/biologie-diagramme-beschreiben-und-erklaeren.html",
+    description:
+      "Diagramme in 4 klaren Schritten beschreiben und erklaeren: mit zwei Trainingsfaellen und Testmodul.",
+    bulletPoints: [
+      "Diagrammtyp, Thema und Achsen mit Einheit korrekt nennen.",
+      "Verlaeufe sachlich entlang der Zeitachse beschreiben.",
+      "Mit Fachwissen biologische Ursachen und Zusammenhaenge erklaeren.",
+      "Kernaussage als praezises Fazit formulieren.",
+    ],
+  },
+  {
+    subject: "Biologie",
     title: "Inhalte Klasse 5 (Niedersachsen)",
     link: "",
     description:
@@ -202,6 +215,7 @@ const defaultTopics = [
       "Ueberwinterung von Amphibien und Reptilien.",
       "Ueberwinterungsstrategien von Igel und Eichhoernchen.",
       "Temperaturbegriffe: Winterschlaf, Winterruhe, Waermestarre, Hitzetod, Kaeltestarre, Kaeltetod.",
+      "Diagramme beschreiben und erklaeren (Einleitung, Beschreibung, Erklaerung, Fazit).",
     ],
   },
   {
