@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erdkunde - Arbeiten und Ueben mit dem Atlas</title>
+  <link rel="icon" type="image/svg+xml" href="../../../assets/tab-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../styles.css">
+  <link rel="stylesheet" href="erdkunde-arbeiten-und-ueben-mit-dem-atlas.css">
+</head>
+<body>
+  <main class="aua-page">
+    <header class="aua-hero">
+      <a class="back-link" href="../../../subject-dashboard.html?subject=Erdkunde">Zurueck zum Fach-Dashboard</a>
+      <p class="aua-tag">Erdkunde Klasse 5</p>
+      <h1>Arbeiten und Ueben mit dem Atlas</h1>
+      <p>
+        In diesem Modul trainierst du, wie du mit deinem Westermann Atlas schnell und sicher arbeitest:
+        Register nutzen, Planquadrate lesen, Kartenarten unterscheiden, Legenden verstehen und Lage beschreiben.
+      </p>
+      <div class="aua-roadmap">
+        <span>Atlas aufbauen</span>
+        <span>Ort finden</span>
+        <span>Karte deuten</span>
+        <span>Selbst pruefen</span>
+      </div>
+    </header>
+
+    <nav class="aua-nav" aria-label="Modulnavigation">
+      <button class="aua-tab-btn is-active" type="button" data-tab="lernen">Lernen</button>
+      <button class="aua-tab-btn" type="button" data-tab="trainieren">Trainieren</button>
+      <button class="aua-tab-btn" type="button" data-tab="pruefung">Pruefung</button>
+    </nav>
+
+    <section id="tab-lernen" class="aua-tab is-active">
+      <article class="aua-card">
+        <h2>Lehrplanbezug Niedersachsen (Gymnasium 5/6)</h2>
+        <p>
+          Das Modul passt zum Kompetenzbereich Orientierung im Raum: Du entnimmst Karten Informationen,
+          beschreibst Raeume fachlich korrekt und nutzt den Atlas als Arbeitswerkzeug.
+        </p>
+        <ul class="aua-list">
+          <li>Register und Inhaltsverzeichnis zielgerichtet einsetzen.</li>
+          <li>Seite, Planquadrat und Lagebeziehungen sicher anwenden.</li>
+          <li>Kartenarten und Legenden fachlich korrekt auswerten.</li>
+          <li>Ergebnisse in ganzen Atlas-Saetzen dokumentieren.</li>
+        </ul>
+      </article>
+
+      <article class="aua-card">
+        <h2>Uebersichtsgrafik</h2>
+        <p>
+          Die Grafik zeigt den kompletten Werkzeugkasten fuer die Atlasarbeit.
+          Darunter trainierst du alle Schritte interaktiv.
+        </p>
+        <figure class="aua-overview">
+          <img
+            src="../../../assets/erdkunde/arbeiten-und-ueben-mit-dem-atlas-uebersicht.png"
+            alt="Uebersichtsgrafik zum sicheren Arbeiten mit dem Atlas"
+          >
+          <figcaption>Vom Register bis zur Legende: so arbeitest du strukturiert mit dem Atlas.</figcaption>
+        </figure>
+      </article>
+
+      <article class="aua-card">
+        <h2>Atlas-Kompass: Die 4-Schritte-Methode</h2>
+        <div class="aua-step-buttons">
+          <button class="aua-step-btn is-active" type="button" data-step="0">1. Suchbegriff klaeren</button>
+          <button class="aua-step-btn" type="button" data-step="1">2. Register lesen</button>
+          <button class="aua-step-btn" type="button" data-step="2">3. Seite + Planquadrat</button>
+          <button class="aua-step-btn" type="button" data-step="3">4. Lage formulieren</button>
+        </div>
+        <div class="aua-detail-box">
+          <h3 id="auaStepTitle"></h3>
+          <p id="auaStepText"></p>
+          <ul id="auaStepList" class="aua-list"></ul>
+        </div>
+      </article>
+
+      <article class="aua-card">
+        <h2>Interaktiv: Register-Simulator</h2>
+        <p>
+          Uebe den ersten Atlas-Schritt: Du siehst einen Suchbegriff und waehlst den passenden
+          Register-Eintrag aus (Stadt + Seite + Planquadrat).
+        </p>
+        <p id="auaRegisterPrompt" class="aua-task-prompt">Aufgabe wird geladen...</p>
+        <div id="auaRegisterAnswers" class="aua-answer-grid"></div>
+        <div class="aua-controls">
+          <button id="auaRegisterNext" type="button">Neue Aufgabe</button>
+        </div>
+        <div id="auaRegisterFeedback"></div>
+      </article>
+
+      <article class="aua-card">
+        <h2>Interaktiv: Kartenarten und Legende</h2>
+        <p>Wird hier eher eine physische, politische oder thematische Karte gebraucht?</p>
+        <p id="auaMapTypePrompt" class="aua-task-prompt">Aufgabe wird geladen...</p>
+        <div id="auaMapTypeAnswers" class="aua-answer-grid"></div>
+        <div class="aua-controls">
+          <button id="auaMapTypeNext" type="button">Neue Aufgabe</button>
+        </div>
+        <div id="auaMapTypeFeedback"></div>
+      </article>
+
+      <article class="aua-card">
+        <h2>Westermann-Atlas Missionen (frei ueben)</h2>
+        <p>
+          Diese Aufgaben loest du direkt in deinem Atlas. Die Loesung kann je nach Ausgabe auf
+          anderen Seiten stehen, deshalb arbeitest du mit Kriterien statt festen Seitenzahlen.
+        </p>
+        <ol class="aua-list">
+          <li>Suche eine Stadt in Niedersachsen und notiere Seite + Planquadrat + Nachbarfluss.</li>
+          <li>Finde eine physische Karte von Deutschland und beschreibe zwei hohe und zwei niedrige Gebiete.</li>
+          <li>Finde eine thematische Karte (z. B. Klima/Bevoelkerung) und erklaere die Legende in 3 Saetzen.</li>
+        </ol>
+        <p class="aua-note-box">
+          Selbstcheck: Hast du Register genutzt, Planquadrat genannt, Legende ausgewertet und einen
+          vollstaendigen Lagesatz geschrieben?
+        </p>
+      </article>
+    </section>
+
+    <section id="tab-trainieren" class="aua-tab">
+      <article class="aua-card">
+        <h2>Training A: Atlas-Werkzeugwissen</h2>
+        <p id="auaTrainPrompt" class="aua-task-prompt">Aufgabe wird geladen...</p>
+        <div id="auaTrainAnswers" class="aua-answer-grid"></div>
+        <div class="aua-controls">
+          <button id="auaTrainNext" type="button">Neue Aufgabe</button>
+        </div>
+        <div id="auaTrainFeedback"></div>
+      </article>
+
+      <article class="aua-card">
+        <h2>Training B: Planquadrat lesen</h2>
+        <p id="auaGridPrompt" class="aua-task-prompt">Aufgabe wird geladen...</p>
+        <div class="aua-grid-shell">
+          <div id="auaGridMap"></div>
+        </div>
+        <div class="aua-input-row">
+          <label for="auaGridInput">Planquadrat:</label>
+          <input id="auaGridInput" type="text" autocomplete="off" placeholder="z. B. C3">
+          <button id="auaGridCheck" type="button">Pruefen</button>
+          <button id="auaGridNext" type="button">Neue Aufgabe</button>
+        </div>
+        <div id="auaGridFeedback"></div>
+      </article>
+
+      <article class="aua-card">
+        <h2>Training C: Lage beschreiben</h2>
+        <p id="auaDirectionPrompt" class="aua-task-prompt">Aufgabe wird geladen...</p>
+        <div id="auaDirectionAnswers" class="aua-answer-grid"></div>
+        <div class="aua-controls">
+          <button id="auaDirectionNext" type="button">Neue Aufgabe</button>
+        </div>
+        <div id="auaDirectionFeedback"></div>
+      </article>
+    </section>
+
+    <section id="tab-pruefung" class="aua-tab">
+      <article class="aua-card">
+        <h2>Abschlusstest</h2>
+        <p>10 Fragen aus einem eigenen Pruefungspool: Register, Planquadrat, Kartenart, Legende und Lage.</p>
+        <div class="quiz-controls">
+          <button id="auaQuizStart" type="button">Test starten</button>
+          <button id="auaQuizNext" type="button" disabled>Naechste Frage</button>
+          <p id="auaQuizScore" class="score">Punkte: 0 / 10</p>
+        </div>
+        <div class="quiz-box">
+          <p id="auaQuizStatus" class="quiz-status">Test noch nicht gestartet.</p>
+          <h3 id="auaQuizPrompt">Klicke auf "Test starten".</h3>
+          <div id="auaQuizContext" class="aua-quiz-context" hidden></div>
+          <div id="auaQuizAnswers" class="aua-answer-grid"></div>
+          <div id="auaQuizFeedback"></div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="erdkunde-arbeiten-und-ueben-mit-dem-atlas.js"></script>
+  <script src="../../../global-menu.js"></script>
+</body>
+</html>

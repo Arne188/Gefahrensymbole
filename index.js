@@ -110,6 +110,12 @@ const defaultTopics = [
     description: "Mit klarem roten Faden den Kartenmassstab verstehen, interaktiv anwenden und in der Pruefung sichern.",
   },
   {
+    subject: "Erdkunde",
+    title: "Arbeiten und Ueben mit dem Atlas",
+    link: "subjects/erdkunde/arbeiten-und-ueben-mit-dem-atlas/erdkunde-arbeiten-und-ueben-mit-dem-atlas.html",
+    description: "Westermann-Atlas sicher nutzen: Register, Planquadrat, Kartenarten, Legende und Lage mit vielen Uebungen trainieren.",
+  },
+  {
     subject: "Chemie",
     title: "Gasbrenner",
     link: "subjects/chemie/gasbrenner/chemie-gasbrenner.html",
