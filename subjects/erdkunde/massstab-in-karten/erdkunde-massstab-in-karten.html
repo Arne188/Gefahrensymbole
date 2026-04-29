@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erdkunde - Massstab in Karten</title>
+  <link rel="icon" type="image/svg+xml" href="../../../assets/tab-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../styles.css">
+  <link rel="stylesheet" href="erdkunde-massstab-in-karten.css">
+</head>
+<body>
+  <main class="mk-page">
+    <header class="mk-hero">
+      <a class="back-link" href="../../../subject-dashboard.html?subject=Erdkunde">Zurueck zum Fach-Dashboard</a>
+      <p class="mk-tag">Erdkunde Klasse 5</p>
+      <h1>Massstab in Karten</h1>
+      <p>
+        Dieses Modul fuehrt dich mit einem klaren roten Faden vom Verstehen bis zur sicheren Anwendung:
+        Was bedeutet 1:n, wie rechnest du in beide Richtungen und wie waehlst du den passenden Massstab?
+      </p>
+      <div class="mk-roadmap">
+        <span>1. Verstehen</span>
+        <span>2. Rechnen</span>
+        <span>3. Anwenden</span>
+        <span>4. Pruefen</span>
+      </div>
+    </header>
+
+    <nav class="mk-nav" aria-label="Modulnavigation">
+      <button class="mk-tab-btn is-active" type="button" data-tab="lernen">Lernen</button>
+      <button class="mk-tab-btn" type="button" data-tab="trainieren">Trainieren</button>
+      <button class="mk-tab-btn" type="button" data-tab="pruefung">Pruefung</button>
+    </nav>
+
+    <section id="tab-lernen" class="mk-tab is-active">
+      <article class="mk-card">
+        <h2>Roter Faden: Schritt fuer Schritt</h2>
+        <div class="mk-step-buttons">
+          <button class="mk-step-btn is-active" type="button" data-step="0">1. Was ist der Massstab?</button>
+          <button class="mk-step-btn" type="button" data-step="1">2. Karte -> Wirklichkeit</button>
+          <button class="mk-step-btn" type="button" data-step="2">3. Wirklichkeit -> Karte</button>
+          <button class="mk-step-btn" type="button" data-step="3">4. Plausibilitaet pruefen</button>
+        </div>
+        <div class="mk-detail-box">
+          <h3 id="mkStepTitle"></h3>
+          <p id="mkStepText"></p>
+          <ul id="mkStepList" class="mk-list"></ul>
+        </div>
+      </article>
+
+      <article class="mk-card">
+        <h2>Lernplakate</h2>
+        <p>Nutze die beiden Grafiken als Uebersicht. Sie zeigen dasselbe Thema aus zwei Perspektiven.</p>
+        <div class="mk-poster-switch">
+          <button class="mk-poster-btn is-active" type="button" data-poster="1">Plakat 1</button>
+          <button class="mk-poster-btn" type="button" data-poster="2">Plakat 2</button>
+        </div>
+        <figure class="mk-poster-figure">
+          <img id="mkPosterImage" src="../../../assets/erdkunde/massstab-in-karten-uebersicht-1.png" alt="Lernplakat zum Thema Massstab">
+          <figcaption id="mkPosterCaption">Plakat 1: Grundlagen und typische Rechenwege.</figcaption>
+        </figure>
+      </article>
+
+      <article class="mk-card">
+        <h2>Massstab-Werkstatt (interaktiv)</h2>
+        <p>Waehle die Richtung und rechne mit dem Werkzeug Schritt fuer Schritt.</p>
+        <div class="mk-control-grid">
+          <label class="mk-inline-label" for="mkMode">
+            Richtung
+            <select id="mkMode">
+              <option value="karte-real">Karte -> Wirklichkeit</option>
+              <option value="real-karte">Wirklichkeit -> Karte</option>
+            </select>
+          </label>
+          <label class="mk-inline-label" for="mkScaleN">
+            Massstab 1:n
+            <input id="mkScaleN" type="number" min="2" step="1" value="50000">
+          </label>
+          <label class="mk-inline-label" for="mkInputValue">
+            Gegebene Strecke
+            <input id="mkInputValue" type="text" value="4">
+          </label>
+          <label class="mk-inline-label" for="mkInputUnit">
+            Einheit der gegebenen Strecke
+            <select id="mkInputUnit">
+              <option value="mm">mm</option>
+              <option value="cm" selected>cm</option>
+              <option value="m">m</option>
+              <option value="km">km</option>
+            </select>
+          </label>
+          <label class="mk-inline-label" for="mkOutputUnit">
+            Ergebnis-Einheit
+            <select id="mkOutputUnit">
+              <option value="cm">cm</option>
+              <option value="m" selected>m</option>
+              <option value="km">km</option>
+            </select>
+          </label>
+        </div>
+        <div class="mk-controls">
+          <button id="mkCalcRun" type="button">Berechnen</button>
+          <button id="mkCalcScenario" type="button">Beispiel einsetzen</button>
+        </div>
+        <div id="mkCalcResult" class="mk-calc-result"></div>
+      </article>
+
+      <article class="mk-card">
+        <h2>Grosser oder kleiner Massstab?</h2>
+        <p>Schiebe den Regler und beobachte, wie sich Ausschnitt und Detailgrad veraendern.</p>
+        <label class="mk-inline-label" for="mkScaleSlider">
+          Vergleichsregler
+          <input id="mkScaleSlider" type="range" min="0" max="6" step="1" value="3">
+        </label>
+        <div class="mk-compare-grid">
+          <div class="mk-compare-box">
+            <p id="mkScaleLabel" class="mk-compare-head"></p>
+            <p id="mkScaleExplain"></p>
+          </div>
+          <div class="mk-compare-box">
+            <p class="mk-compare-head">Flaechenidee (10 cm Kartenbreite)</p>
+            <p id="mkScaleArea"></p>
+            <div class="mk-bar-wrap"><div id="mkScaleBar" class="mk-scale-bar"></div></div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section id="tab-trainieren" class="mk-tab">
+      <article class="mk-card">
+        <h2>Training A: Grundwissen</h2>
+        <p id="mkConceptPrompt" class="mk-task-prompt">Aufgabe wird geladen...</p>
+        <div id="mkConceptAnswers" class="mk-answer-grid"></div>
+        <div class="mk-controls">
+          <button id="mkConceptNext" type="button">Neue Aufgabe</button>
+        </div>
+        <div id="mkConceptFeedback"></div>
+      </article>
+
+      <article class="mk-card">
+        <h2>Training B: Rechenaufgaben</h2>
+        <p id="mkMathPrompt" class="mk-task-prompt">Aufgabe wird geladen...</p>
+        <div class="mk-input-row">
+          <label for="mkMathInput">Deine Antwort:</label>
+          <input id="mkMathInput" type="text" autocomplete="off" placeholder="Zahl eingeben">
+          <span id="mkMathUnit" class="mk-unit-chip"></span>
+          <button id="mkMathCheck" type="button">Pruefen</button>
+          <button id="mkMathNext" type="button">Neue Aufgabe</button>
+        </div>
+        <div id="mkMathFeedback"></div>
+      </article>
+
+      <article class="mk-card">
+        <h2>Training C: Passender Massstab</h2>
+        <p id="mkScenarioPrompt" class="mk-task-prompt">Aufgabe wird geladen...</p>
+        <div id="mkScenarioAnswers" class="mk-answer-grid"></div>
+        <div class="mk-controls">
+          <button id="mkScenarioNext" type="button">Neue Aufgabe</button>
+        </div>
+        <div id="mkScenarioFeedback"></div>
+      </article>
+    </section>
+
+    <section id="tab-pruefung" class="mk-tab">
+      <article class="mk-card">
+        <h2>Abschlusstest</h2>
+        <p>10 gemischte Fragen mit eigenem Pruefungspool und direktem Feedback.</p>
+        <div class="quiz-controls">
+          <button id="mkQuizStart" type="button">Test starten</button>
+          <button id="mkQuizNext" type="button" disabled>Naechste Frage</button>
+          <p id="mkQuizScore" class="score">Punkte: 0 / 10</p>
+        </div>
+        <div class="quiz-box">
+          <p id="mkQuizStatus" class="quiz-status">Test noch nicht gestartet.</p>
+          <h3 id="mkQuizPrompt">Klicke auf "Test starten".</h3>
+          <div id="mkQuizContext" class="mk-quiz-context" hidden></div>
+          <div id="mkQuizAnswers" class="mk-answer-grid"></div>
+          <div id="mkQuizFeedback"></div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="erdkunde-massstab-in-karten.js"></script>
+  <script src="../../../global-menu.js"></script>
+</body>
+</html>

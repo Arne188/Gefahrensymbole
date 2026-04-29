@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erdkunde - Planquadrate</title>
+  <link rel="icon" type="image/svg+xml" href="../../../assets/tab-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../styles.css">
+  <link rel="stylesheet" href="erdkunde-planquadrate.css">
+</head>
+<body>
+  <main class="pq-page">
+    <header class="pq-hero">
+      <a class="back-link" href="../../../subject-dashboard.html?subject=Erdkunde">Zurueck zum Fach-Dashboard</a>
+      <p class="pq-tag">Erdkunde Klasse 5</p>
+      <h1>Planquadrate</h1>
+      <p>
+        In diesem Modul lernst du, Orte auf Karten schnell zu finden und eindeutig zu beschreiben.
+        Du trainierst das Benennen von Planquadraten und das Erklaeren von Wegen entlang der Quadrate.
+      </p>
+      <div class="pq-goal-grid">
+        <article class="pq-goal-card">
+          <h2>Das kannst du danach</h2>
+          <ul class="pq-list">
+            <li>Planquadrate sicher als Buchstabe plus Zahl angeben.</li>
+            <li>Orte ueber Koordinaten auf einer Karte finden.</li>
+            <li>Einfache Wege als Folge von Planquadraten beschreiben.</li>
+            <li>Typische Fehler bei Kartenarbeit vermeiden.</li>
+          </ul>
+        </article>
+        <article class="pq-goal-card">
+          <h2>Mini-Merksatz</h2>
+          <p class="pq-merksatz">
+            <strong>Immer erst der Buchstabe, dann die Zahl:</strong>
+            Buchstaben laufen waagerecht von links nach rechts, Zahlen senkrecht von unten nach oben.
+          </p>
+        </article>
+      </div>
+    </header>
+
+    <nav class="pq-nav" aria-label="Modulnavigation">
+      <button class="pq-tab-btn is-active" type="button" data-tab="lernen">Lernen</button>
+      <button class="pq-tab-btn" type="button" data-tab="trainieren">Trainieren</button>
+      <button class="pq-tab-btn" type="button" data-tab="pruefung">Pruefung</button>
+    </nav>
+
+    <section id="tab-lernen" class="pq-tab is-active">
+      <article class="pq-card">
+        <h2>Lehrplanbezug Niedersachsen (Gymnasium 5/6)</h2>
+        <p>
+          Das Thema gehoert zum Kompetenzbereich Orientierung im Raum.
+          Du entnimmst Karten Informationen, beschreibst Orte mit Fachbegriffen
+          und nutzt Darstellungen zur Orientierung.
+        </p>
+        <ul class="pq-list">
+          <li>Kartenfelder korrekt lesen und benennen.</li>
+          <li>Orte ueber Planquadrate eindeutig zuordnen.</li>
+          <li>Wegbeschreibungen mit klarer Reihenfolge formulieren.</li>
+          <li>Richtige Schreibweise von Koordinaten sicher anwenden.</li>
+        </ul>
+      </article>
+
+      <article class="pq-card">
+        <h2>Uebersichtsgrafik</h2>
+        <p>
+          Diese Grafik fasst die Grundlagen zusammen und zeigt Beispiele fuer die
+          Angabe von Planquadraten.
+        </p>
+        <figure class="pq-overview">
+          <img
+            src="../../../assets/erdkunde/planquadrate-uebersicht.png"
+            alt="Uebersichtsgrafik zu Planquadraten mit Beispielkarte und Ortsangaben"
+          >
+          <figcaption>
+            Planquadrate helfen, Orte schnell und eindeutig auf einer Karte zu finden.
+          </figcaption>
+        </figure>
+      </article>
+
+      <article class="pq-card">
+        <h2>Schrittfolge fuer sichere Angaben</h2>
+        <ol class="pq-list">
+          <li>Suche den Ort auf der Karte.</li>
+          <li>Lies zuerst den Buchstaben auf der waagerechten Achse.</li>
+          <li>Lies danach die Zahl auf der senkrechten Achse.</li>
+          <li>Notiere beides ohne Leerzeichen, zum Beispiel <strong>C3</strong>.</li>
+        </ol>
+        <p class="pq-note-box">
+          Wenn du einen Weg beschreibst, nennst du die Quadrate in der Reihenfolge
+          deines Weges: Startfeld, Zwischenfelder, Zielfeld.
+        </p>
+      </article>
+    </section>
+
+    <section id="tab-trainieren" class="pq-tab">
+      <article class="pq-card">
+        <h2>Karte fuer alle Uebungen</h2>
+        <p>
+          Nutze diese Uebungskarte fuer die Aufgaben. Die Orte bleiben gleich, die Fragen wechseln.
+        </p>
+        <div class="pq-map-shell">
+          <div id="pqTrainMap"></div>
+        </div>
+      </article>
+
+      <article class="pq-card">
+        <h2>Training A: Planquadrat angeben</h2>
+        <p id="pqCoordPrompt" class="pq-task-prompt">Aufgabe wird geladen...</p>
+        <div class="pq-input-row">
+          <label for="pqCoordInput">Planquadrat:</label>
+          <input id="pqCoordInput" type="text" placeholder="z. B. C3" autocomplete="off" maxlength="3">
+          <button id="pqCoordCheck" type="button">Pruefen</button>
+          <button id="pqCoordNext" type="button">Neue Aufgabe</button>
+        </div>
+        <div id="pqCoordFeedback"></div>
+      </article>
+
+      <article class="pq-card">
+        <h2>Training B: Ort zum Planquadrat finden</h2>
+        <p id="pqPlacePrompt" class="pq-task-prompt">Aufgabe wird geladen...</p>
+        <div id="pqPlaceAnswers" class="pq-answer-grid"></div>
+        <div class="pq-controls">
+          <button id="pqPlaceNext" type="button">Neue Aufgabe</button>
+        </div>
+        <div id="pqPlaceFeedback"></div>
+      </article>
+
+      <article class="pq-card">
+        <h2>Training C: Weg ueber Planquadrate beschreiben</h2>
+        <p id="pqRoutePrompt" class="pq-task-prompt">Aufgabe wird geladen...</p>
+        <div class="pq-map-shell">
+          <div id="pqRouteMap"></div>
+        </div>
+        <div class="pq-input-row">
+          <label for="pqRouteInput">Reihenfolge:</label>
+          <input
+            id="pqRouteInput"
+            type="text"
+            placeholder="z. B. B5 -> C5 -> C4 -> C3"
+            autocomplete="off"
+          >
+          <button id="pqRouteCheck" type="button">Pruefen</button>
+          <button id="pqRouteNext" type="button">Neue Aufgabe</button>
+        </div>
+        <p class="pq-help-text">Tipp: Du kannst Pfeile, Kommas oder Leerzeichen als Trenner nutzen.</p>
+        <div id="pqRouteFeedback"></div>
+      </article>
+    </section>
+
+    <section id="tab-pruefung" class="pq-tab">
+      <article class="pq-card">
+        <h2>Abschlusstest</h2>
+        <p>
+          Der Test mischt Wissensfragen, Koordinatenaufgaben und eine Wegbeschreibung.
+          Nach jeder Antwort bekommst du direkt Feedback.
+        </p>
+        <div class="quiz-controls">
+          <button id="pqQuizStart" type="button">Test starten</button>
+          <button id="pqQuizNext" type="button" disabled>Naechste Frage</button>
+          <p id="pqQuizScore" class="score">Punkte: 0 / 10</p>
+        </div>
+        <div class="quiz-box">
+          <div class="pq-quiz-context">
+            <p class="pq-quiz-context-title">Uebungskarte fuer den Test</p>
+            <div class="pq-map-shell">
+              <div id="pqQuizMap"></div>
+            </div>
+          </div>
+          <p id="pqQuizStatus" class="quiz-status">Test noch nicht gestartet.</p>
+          <h3 id="pqQuizPrompt">Klicke auf "Test starten".</h3>
+          <div id="pqQuizAnswers" class="pq-answer-grid"></div>
+          <div id="pqQuizFeedback"></div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="erdkunde-planquadrate.js"></script>
+  <script src="../../../global-menu.js"></script>
+</body>
+</html>

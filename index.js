@@ -92,6 +92,24 @@ const defaultTopics = [
     description: "Kompassrose, Kartenorientierung, Lagebeziehungen und Abschlusstest interaktiv trainieren.",
   },
   {
+    subject: "Erdkunde",
+    title: "Planquadrate",
+    link: "subjects/erdkunde/planquadrate/erdkunde-planquadrate.html",
+    description: "Planquadrate benennen, Orte auf Karten finden und Wege entlang von Quadraten sicher beschreiben.",
+  },
+  {
+    subject: "Erdkunde",
+    title: "Wie kommt der Berg in die Karte?",
+    link: "subjects/erdkunde/wie-kommt-der-berg-in-die-karte/erdkunde-wie-kommt-der-berg-in-die-karte.html",
+    description: "Hoehenlinien (Isolinien) ausfuehrlich verstehen, interaktiv trainieren und im Test sicher anwenden.",
+  },
+  {
+    subject: "Erdkunde",
+    title: "Massstab in Karten",
+    link: "subjects/erdkunde/massstab-in-karten/erdkunde-massstab-in-karten.html",
+    description: "Mit klarem roten Faden den Kartenmassstab verstehen, interaktiv anwenden und in der Pruefung sichern.",
+  },
+  {
     subject: "Chemie",
     title: "Gasbrenner",
     link: "subjects/chemie/gasbrenner/chemie-gasbrenner.html",

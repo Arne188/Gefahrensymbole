@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erdkunde - Wie kommt der Berg in die Karte?</title>
+  <link rel="icon" type="image/svg+xml" href="../../../assets/tab-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../styles.css">
+  <link rel="stylesheet" href="erdkunde-wie-kommt-der-berg-in-die-karte.css">
+</head>
+<body>
+  <main class="bk-page">
+    <header class="bk-hero">
+      <a class="back-link" href="../../../subject-dashboard.html?subject=Erdkunde">Zurueck zum Fach-Dashboard</a>
+      <p class="bk-tag">Erdkunde Klasse 5</p>
+      <h1>Wie kommt der Berg in die Karte?</h1>
+      <p>
+        In diesem Modul lernst du Schritt fuer Schritt, wie aus einem echten Berg
+        eine Kartenzeichnung mit Hoehenlinien (Isolinien) wird.
+      </p>
+      <div class="bk-goal-grid">
+        <article class="bk-goal-card">
+          <h2>Das kannst du danach</h2>
+          <ul class="bk-list">
+            <li>Erklaeren, was Hoehenlinien und Isolinien sind.</li>
+            <li>Ablesen, ob ein Hang steil oder flach ist.</li>
+            <li>Geschlossene Linien als Gipfelbereich deuten.</li>
+            <li>Einfache Hoehenaufgaben mit Linienabstand loesen.</li>
+          </ul>
+        </article>
+        <article class="bk-goal-card">
+          <h2>Mini-Merksatz</h2>
+          <p class="bk-merksatz">
+            <strong>Hoehenlinien verbinden Punkte gleicher Hoehe.</strong>
+            Enge Linien bedeuten steil, weite Linien bedeuten flach.
+          </p>
+        </article>
+      </div>
+    </header>
+
+    <nav class="bk-nav" aria-label="Modulnavigation">
+      <button class="bk-tab-btn is-active" type="button" data-tab="lernen">Lernen</button>
+      <button class="bk-tab-btn" type="button" data-tab="trainieren">Trainieren</button>
+      <button class="bk-tab-btn" type="button" data-tab="pruefung">Pruefung</button>
+    </nav>
+
+    <section id="tab-lernen" class="bk-tab is-active">
+      <article class="bk-card">
+        <h2>Lehrplanbezug Niedersachsen (Gymnasium 5/6)</h2>
+        <p>
+          Das Thema passt zum Kompetenzbereich Orientierung im Raum und Kartenarbeit.
+          Du lernst, wie Relief auf Karten dargestellt wird und wie man diese Darstellungen auswertet.
+        </p>
+        <ul class="bk-list">
+          <li>Informationen aus Karten entnehmen und mit Fachbegriffen beschreiben.</li>
+          <li>Hoehenunterschiede in Darstellungen erkennen und deuten.</li>
+          <li>Erklaeren, wie Wirklichkeit in Kartensprache uebersetzt wird.</li>
+        </ul>
+      </article>
+
+      <article class="bk-card">
+        <h2>Uebersichtsgrafik</h2>
+        <p>
+          Diese Grafik zeigt den gesamten Weg von der 3D-Landschaft zur 2D-Karte
+          mit Hoehenlinien, Farbtoenen und Hoehenangaben.
+        </p>
+        <figure class="bk-overview">
+          <img
+            src="../../../assets/erdkunde/wie-kommt-der-berg-in-die-karte-uebersicht.png"
+            alt="Uebersichtsgrafik: Wie aus einem Berg eine Karte mit Hoehenlinien entsteht"
+          >
+          <figcaption>
+            Vom Berg zur Karte: Schneidebenen, gleiche Hoehen, Linienbild und Deutung.
+          </figcaption>
+        </figure>
+      </article>
+
+      <article class="bk-card">
+        <h2>Prinzip der Isolinien interaktiv</h2>
+        <p>
+          Isolinien verbinden Punkte mit gleichem Wert. Bei Hoehenlinien ist das die gleiche Hoehe
+          ueber dem Meeresspiegel. Veraendere den Linienabstand und beobachte die Wirkung.
+        </p>
+        <div class="bk-control-grid">
+          <label class="bk-inline-label" for="bkIntervalSelect">
+            Linienabstand:
+            <select id="bkIntervalSelect">
+              <option value="50">50 m</option>
+              <option value="100" selected>100 m</option>
+              <option value="200">200 m</option>
+            </select>
+          </label>
+          <label class="bk-inline-label" for="bkSliceSlider">
+            Aktuelle Schnittebene:
+            <input id="bkSliceSlider" type="range" min="0" max="600" step="100" value="300">
+            <span id="bkSliceValue">300 m</span>
+          </label>
+        </div>
+        <div class="bk-demo-grid">
+          <div class="bk-demo-card">
+            <h3>Berg mit Schnittebenen (Seitenansicht)</h3>
+            <div id="bkSideView" class="bk-side-view" aria-label="Bergansicht mit Schnittebenen"></div>
+          </div>
+          <div class="bk-demo-card">
+            <h3>Linienbild von oben (Kartenansicht)</h3>
+            <div id="bkTopView" class="bk-top-view" aria-label="Kartenansicht mit Hoehenlinien"></div>
+          </div>
+        </div>
+        <p id="bkSliceExplain" class="bk-note-box"></p>
+      </article>
+
+      <article class="bk-card">
+        <h2>Mini-Labor: Linien lesen</h2>
+        <p id="bkLabPrompt" class="bk-task-prompt">Aufgabe wird geladen...</p>
+        <div id="bkLabAnswers" class="bk-answer-grid"></div>
+        <div class="bk-controls">
+          <button id="bkLabNext" type="button">Neue Aufgabe</button>
+        </div>
+        <div id="bkLabFeedback"></div>
+      </article>
+    </section>
+
+    <section id="tab-trainieren" class="bk-tab">
+      <article class="bk-card">
+        <h2>Training A: Kartenwissen anwenden</h2>
+        <p id="bkTrainPrompt" class="bk-task-prompt">Aufgabe wird geladen...</p>
+        <div id="bkTrainAnswers" class="bk-answer-grid"></div>
+        <div class="bk-controls">
+          <button id="bkTrainNext" type="button">Neue Aufgabe</button>
+        </div>
+        <div id="bkTrainFeedback"></div>
+      </article>
+
+      <article class="bk-card">
+        <h2>Training B: Hoehenlinien-Rechner</h2>
+        <p id="bkCalcPrompt" class="bk-task-prompt">Aufgabe wird geladen...</p>
+        <div class="bk-input-row">
+          <label for="bkCalcInput">Deine Antwort in m:</label>
+          <input id="bkCalcInput" type="text" autocomplete="off" inputmode="numeric" placeholder="z. B. 500">
+          <button id="bkCalcCheck" type="button">Pruefen</button>
+          <button id="bkCalcNext" type="button">Neue Aufgabe</button>
+        </div>
+        <div id="bkCalcFeedback"></div>
+      </article>
+
+      <article class="bk-card">
+        <h2>Training C: Wegprofil verstehen</h2>
+        <p id="bkPathPrompt" class="bk-task-prompt">Aufgabe wird geladen...</p>
+        <div class="bk-path-box">
+          <p id="bkPathData" class="bk-path-data"></p>
+        </div>
+        <div id="bkPathAnswers" class="bk-answer-grid"></div>
+        <div class="bk-controls">
+          <button id="bkPathNext" type="button">Neue Aufgabe</button>
+        </div>
+        <div id="bkPathFeedback"></div>
+      </article>
+    </section>
+
+    <section id="tab-pruefung" class="bk-tab">
+      <article class="bk-card">
+        <h2>Abschlusstest</h2>
+        <p>
+          Der Test mischt Grundlagen, Deutung und Rechenaufgaben zu Hoehenlinien.
+          Nach jeder Antwort bekommst du eine kurze Begruendung.
+        </p>
+        <div class="quiz-controls">
+          <button id="bkQuizStart" type="button">Test starten</button>
+          <button id="bkQuizNext" type="button" disabled>Naechste Frage</button>
+          <p id="bkQuizScore" class="score">Punkte: 0 / 10</p>
+        </div>
+        <div class="quiz-box">
+          <p id="bkQuizStatus" class="quiz-status">Test noch nicht gestartet.</p>
+          <h3 id="bkQuizPrompt">Klicke auf "Test starten".</h3>
+          <div id="bkQuizContext" class="bk-quiz-context" hidden></div>
+          <div id="bkQuizAnswers" class="bk-answer-grid"></div>
+          <div id="bkQuizFeedback"></div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="erdkunde-wie-kommt-der-berg-in-die-karte.js"></script>
+  <script src="../../../global-menu.js"></script>
+</body>
+</html>
