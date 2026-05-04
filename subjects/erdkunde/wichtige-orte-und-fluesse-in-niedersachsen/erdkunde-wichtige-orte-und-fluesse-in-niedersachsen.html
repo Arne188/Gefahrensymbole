@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erdkunde - Wichtige Orte und Fluesse in Niedersachsen</title>
+  <link rel="icon" type="image/svg+xml" href="../../../assets/tab-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../styles.css">
+  <link rel="stylesheet" href="erdkunde-wichtige-orte-und-fluesse-in-niedersachsen.css">
+</head>
+<body>
+  <main class="nio-page">
+    <header class="nio-hero">
+      <a class="back-link" href="../../../subject-dashboard.html?subject=Erdkunde">Zurueck zum Fach-Dashboard</a>
+      <p class="nio-tag">Erdkunde Klasse 5</p>
+      <h1>Wichtige Orte und Fluesse in Niedersachsen</h1>
+      <p>
+        In diesem Modul lernst du wichtige Staedte, Fluesse und Landschaften in Niedersachsen
+        sicher kennen und trainierst das geographische Einordnen mit vielen Uebungen und einem Quiz.
+      </p>
+      <div class="nio-roadmap">
+        <span>Karte lesen</span>
+        <span>Orte zuordnen</span>
+        <span>Fluesse verstehen</span>
+        <span>Quiz bestehen</span>
+      </div>
+    </header>
+
+    <nav class="nio-nav" aria-label="Modulnavigation">
+      <button class="nio-tab-btn is-active" type="button" data-tab="lernen">Lernen</button>
+      <button class="nio-tab-btn" type="button" data-tab="trainieren">Trainieren</button>
+      <button class="nio-tab-btn" type="button" data-tab="pruefung">Geographie-Quiz</button>
+    </nav>
+
+    <section id="tab-lernen" class="nio-tab is-active">
+      <article class="nio-card">
+        <h2>Uebersicht Niedersachsen</h2>
+        <p>
+          Nutze diese Karte als Hauptgrundlage. In den Aufgaben arbeitest du immer wieder mit
+          Staedten, Fluessen, Himmelsrichtungen und Landschaftsraeumen.
+        </p>
+        <figure class="nio-overview">
+          <img
+            src="../../../assets/erdkunde/wichtige-orte-und-fluesse-in-niedersachsen-uebersicht.png"
+            alt="Karte und Lernuebersicht zu wichtigen Orten, Fluessen und Landschaften in Niedersachsen"
+          >
+          <figcaption>Lernkarte: Staedte, Fluesse, Landschaften und Merkpunkte zu Niedersachsen.</figcaption>
+        </figure>
+      </article>
+
+      <article class="nio-card">
+        <h2>Merkschritte fuer Kartenaufgaben</h2>
+        <div class="nio-step-buttons">
+          <button class="nio-step-btn is-active" type="button" data-step="0">1. Orientierung</button>
+          <button class="nio-step-btn" type="button" data-step="1">2. Staedte</button>
+          <button class="nio-step-btn" type="button" data-step="2">3. Fluesse</button>
+          <button class="nio-step-btn" type="button" data-step="3">4. Landschaften</button>
+        </div>
+        <div class="nio-detail-box">
+          <h3 id="nioStepTitle"></h3>
+          <p id="nioStepText"></p>
+          <ul id="nioStepList" class="nio-list"></ul>
+        </div>
+      </article>
+
+      <article class="nio-card">
+        <h2>Westermann-Atlas-Auftraege (frei)</h2>
+        <p>
+          Diese Aufgaben loest du direkt mit deinem Atlas. Seiten koennen je nach Ausgabe variieren,
+          daher arbeitest du mit klaren Kriterien.
+        </p>
+        <ol class="nio-list">
+          <li>Finde Hannover, Braunschweig und Goettingen im Atlas und notiere jeweils Seite + Planquadrat.</li>
+          <li>Suche die Fluesse Weser, Ems und Elbe und beschreibe ihren Verlauf in 1-2 Saetzen.</li>
+          <li>Finde den Harz und die Lueneburger Heide und notiere je zwei typische Merkmale.</li>
+          <li>Beschreibe die Lage Niedersachsens in Deutschland mit mindestens drei Nachbarbundeslaendern.</li>
+        </ol>
+      </article>
+    </section>
+
+    <section id="tab-trainieren" class="nio-tab">
+      <article class="nio-card">
+        <h2>Training A: Niedersachsen-Wissen</h2>
+        <p id="nioKnowledgePrompt" class="nio-task-prompt">Aufgabe wird geladen...</p>
+        <div id="nioKnowledgeAnswers" class="nio-answer-grid"></div>
+        <div class="nio-controls">
+          <button id="nioKnowledgeNext" type="button">Neue Aufgabe</button>
+        </div>
+        <div id="nioKnowledgeFeedback"></div>
+      </article>
+
+      <article class="nio-card">
+        <h2>Training B: Orte im Planquadrat</h2>
+        <p id="nioGridPrompt" class="nio-task-prompt">Aufgabe wird geladen...</p>
+        <div class="nio-grid-shell">
+          <div id="nioGridMap"></div>
+        </div>
+        <div class="nio-input-row">
+          <label for="nioGridInput">Planquadrat:</label>
+          <input id="nioGridInput" type="text" autocomplete="off" placeholder="z. B. C3">
+          <button id="nioGridCheck" type="button">Pruefen</button>
+          <button id="nioGridNext" type="button">Neue Aufgabe</button>
+        </div>
+        <div id="nioGridFeedback"></div>
+      </article>
+
+      <article class="nio-card">
+        <h2>Training C: Lage und Fluesse</h2>
+        <p id="nioGeoPrompt" class="nio-task-prompt">Aufgabe wird geladen...</p>
+        <div id="nioGeoAnswers" class="nio-answer-grid"></div>
+        <div class="nio-controls">
+          <button id="nioGeoNext" type="button">Neue Aufgabe</button>
+        </div>
+        <div id="nioGeoFeedback"></div>
+      </article>
+    </section>
+
+    <section id="tab-pruefung" class="nio-tab">
+      <article class="nio-card">
+        <h2>Geographie-Quiz Niedersachsen</h2>
+        <p>
+          10 Fragen aus einem eigenen Quiz-Pool zu Orten, Fluessen, Landschaften und Lagebeziehungen.
+          Du bekommst nach jeder Antwort direkt Rueckmeldung.
+        </p>
+        <div class="quiz-controls">
+          <button id="nioQuizStart" type="button">Quiz starten</button>
+          <button id="nioQuizNext" type="button" disabled>Naechste Frage</button>
+          <p id="nioQuizScore" class="score">Punkte: 0 / 10</p>
+        </div>
+        <div class="quiz-box">
+          <p id="nioQuizStatus" class="quiz-status">Quiz noch nicht gestartet.</p>
+          <h3 id="nioQuizPrompt">Klicke auf "Quiz starten".</h3>
+          <div id="nioQuizContext" class="nio-quiz-context" hidden></div>
+          <div id="nioQuizAnswers" class="nio-answer-grid"></div>
+          <div id="nioQuizFeedback"></div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="erdkunde-wichtige-orte-und-fluesse-in-niedersachsen.js"></script>
+  <script src="../../../global-menu.js"></script>
+</body>
+</html>

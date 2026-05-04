@@ -116,6 +116,12 @@ const defaultTopics = [
     description: "Westermann-Atlas sicher nutzen: Register, Planquadrat, Kartenarten, Legende und Lage mit vielen Uebungen trainieren.",
   },
   {
+    subject: "Erdkunde",
+    title: "Wichtige Orte und Fluesse in Niedersachsen",
+    link: "subjects/erdkunde/wichtige-orte-und-fluesse-in-niedersachsen/erdkunde-wichtige-orte-und-fluesse-in-niedersachsen.html",
+    description: "Staedte, Fluesse und Landschaften in Niedersachsen interaktiv lernen, ueben und im Geographie-Quiz sichern.",
+  },
+  {
     subject: "Chemie",
     title: "Gasbrenner",
     link: "subjects/chemie/gasbrenner/chemie-gasbrenner.html",
