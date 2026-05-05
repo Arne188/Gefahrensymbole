@@ -1,0 +1,280 @@
+.pl-page {
+  width: min(1120px, 94vw);
+  margin: 20px auto 34px;
+  display: grid;
+  gap: 14px;
+}
+
+.pl-hero,
+.pl-nav,
+.pl-card {
+  border: 1px solid #d5c49d;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 10px 22px rgba(38, 31, 22, 0.12);
+}
+
+.pl-hero {
+  padding: 20px;
+  display: grid;
+  gap: 10px;
+  background:
+    linear-gradient(120deg, rgba(255, 255, 255, 0.98), rgba(244, 249, 247, 0.95)),
+    #fff;
+}
+
+.pl-tag {
+  margin: 0;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  color: #6f614a;
+}
+
+.pl-hero h1 {
+  margin: 2px 0 0;
+}
+
+.pl-hero p,
+.pl-card p {
+  margin: 0;
+  color: #3f4b55;
+  max-width: 86ch;
+}
+
+.pl-figure {
+  margin: 8px 0 0;
+}
+
+.pl-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #d7c6a2;
+  border-radius: 8px;
+  background: #f8fbff;
+}
+
+.pl-figure figcaption {
+  margin-top: 8px;
+  color: #586574;
+  font-size: 14px;
+}
+
+.pl-secondary-figure {
+  max-width: 980px;
+}
+
+.pl-nav {
+  padding: 8px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.pl-tab-btn,
+.pl-part-btn,
+.pl-controls button,
+.quiz-controls button {
+  border: 1px solid #bac8d8;
+  border-radius: 8px;
+  background: #eef5ff;
+  color: #24405f;
+  font-weight: 700;
+}
+
+.pl-tab-btn.is-active,
+.pl-part-btn.is-active {
+  border-color: #244f78;
+  background: #244f78;
+  color: #fff;
+}
+
+.pl-tab {
+  display: none;
+  gap: 14px;
+}
+
+.pl-tab.is-active {
+  display: grid;
+}
+
+.pl-card {
+  padding: 16px;
+}
+
+.pl-card h2 {
+  margin: 0 0 8px;
+  color: #173b57;
+}
+
+.pl-card h3 {
+  margin: 0 0 6px;
+  color: #49602d;
+}
+
+.pl-card ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.pl-road,
+.pl-society-grid,
+.pl-compare-grid {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.pl-road section,
+.pl-society-grid section,
+.pl-compare-grid section,
+.pl-detail-box,
+.pl-task-row {
+  border: 1px solid #d4ddc9;
+  border-radius: 8px;
+  background: #fbfcf8;
+  padding: 12px;
+}
+
+.pl-road section {
+  border-left: 5px solid #2d6e8f;
+}
+
+.pl-society-grid section {
+  background: #fff9ed;
+  border-color: #dfc996;
+}
+
+.pl-compare-grid section {
+  background: #f7fbff;
+  border-color: #cad8e8;
+}
+
+.pl-part-controls,
+.pl-controls,
+.quiz-controls {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.pl-detail-box {
+  margin-top: 10px;
+  background: #f7fbff;
+  border-color: #cad7e8;
+}
+
+.pl-note {
+  margin-top: 8px;
+  border-left: 4px solid #2d6e8f;
+  padding-left: 10px;
+  font-weight: 700;
+  color: #24405f;
+}
+
+.pl-big-note {
+  border: 1px solid #dfc996;
+  border-radius: 8px;
+  background: #fff7df;
+  padding: 12px;
+  font-weight: 700;
+}
+
+.pl-task-list {
+  margin-top: 10px;
+  display: grid;
+  gap: 8px;
+}
+
+.pl-task-row {
+  display: grid;
+  gap: 8px;
+  background: #fff;
+  border-color: #ccd7e5;
+}
+
+.pl-task-row p {
+  margin: 0;
+}
+
+.pl-task-row.is-correct {
+  border-color: #92c9a9;
+  background: #eef9f2;
+}
+
+.pl-task-row.is-wrong {
+  border-color: #dfadad;
+  background: #fff0f0;
+}
+
+.pl-select {
+  width: 100%;
+  max-width: 540px;
+}
+
+.quiz-box {
+  margin-top: 10px;
+  border: 1px solid #cad7e8;
+  border-radius: 8px;
+  background: #f8fbff;
+  padding: 12px;
+}
+
+.quiz-status,
+.score {
+  font-weight: 700;
+}
+
+.choice-list {
+  display: grid;
+  gap: 8px;
+}
+
+.choice-list button {
+  width: 100%;
+  text-align: left;
+  border: 1px solid #c8d7e8;
+  border-radius: 8px;
+  background: #fff;
+  color: #173454;
+}
+
+.choice-list button.is-correct {
+  border-color: #69ad89;
+  background: #eaf8f0;
+}
+
+.choice-list button.is-wrong {
+  border-color: #d18888;
+  background: #ffefef;
+}
+
+.pl-feedback {
+  margin-top: 10px;
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: 700;
+}
+
+.pl-feedback.good {
+  border: 1px solid #7ab692;
+  background: #eaf8f0;
+  color: #20543a;
+}
+
+.pl-feedback.bad {
+  border: 1px solid #d49a9a;
+  background: #fff0f0;
+  color: #7a2727;
+}
+
+@media (max-width: 720px) {
+  .pl-page {
+    width: min(95vw, 720px);
+  }
+}

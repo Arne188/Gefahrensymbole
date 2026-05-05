@@ -84,6 +84,7 @@ const defaultTopics = [
     title: "Ägypten - Geschenk des Nils",
     link: "subjects/geschichte/aegypten-geschenk-des-nils/geschichte-aegypten-nil.html",
     description: "Hochkultur am Nil verstehen, Ursache-Folge trainieren und mit Feedback testen.",
+    order: 90,
   },
   {
     subject: "Erdkunde",
@@ -259,24 +260,84 @@ const defaultTopics = [
     title: "Glaube im Alten Ägypten",
     link: "subjects/geschichte/glaube-im-alten-aegypten/geschichte-glaube-im-alten-aegypten.html",
     description: "Dummy-Modul (Platzhalter) - Inhalte folgen.",
+    order: 100,
   },
   {
     subject: "Geschichte",
     title: "Der Staat im Alten Ägypten",
     link: "subjects/geschichte/staat-im-alten-aegypten/geschichte-staat-im-alten-aegypten.html",
     description: "Staatsaufbau, Ämter, Gesellschaft und Nilverwaltung interaktiv lernen, trainieren und prüfen.",
+    order: 110,
   },
   {
     subject: "Geschichte",
     title: "Der Pharao",
     link: "subjects/geschichte/der-pharao/geschichte-der-pharao.html",
     description: "Gottkönig, Herrschaftssymbole und Aufgaben des Pharaos interaktiv lernen, trainieren und prüfen.",
+    order: 120,
   },
   {
     subject: "Geschichte",
     title: "Das alte Griechenland - Geographie",
     link: "subjects/geschichte/altes-griechenland-landschaft/geschichte-altes-griechenland-landschaft.html",
     description: "Gebirge, Meer, Poleis und Kolonisation im alten Griechenland interaktiv lernen, trainieren und prüfen.",
+    order: 200,
+  },
+  {
+    subject: "Geschichte",
+    title: "Die Polis",
+    link: "subjects/geschichte/die-polis/geschichte-die-polis.html",
+    description: "Aufbau der Polis, ungleiche Rechte und Athen-Sparta-Vergleich mit Grafikarbeit, Training und Test.",
+    order: 220,
+  },
+  {
+    subject: "Geschichte",
+    title: "Entstehung der Demokratie",
+    link: "subjects/geschichte/entstehung-der-demokratie/geschichte-entstehung-der-demokratie.html",
+    description: "Platzhalter: Demokratie in Athen mit Solon, Kleisthenes, Volksversammlung und Rat der 500.",
+    order: 250,
+  },
+  {
+    subject: "Geschichte",
+    title: "Die Perserkriege",
+    link: "subjects/geschichte/perserkriege/geschichte-perserkriege.html",
+    description: "Ursachen, Verlauf und Bedeutung der Perserkriege mit Grafikarbeit, Trainingsaufgaben und Geschichts-Test.",
+    order: 260,
+  },
+  {
+    subject: "Geschichte",
+    title: "Logos und Mythos",
+    link: "subjects/geschichte/logos-und-mythos/geschichte-logos-und-mythos.html",
+    description: "Platzhalter: Vom mythologischen Weltbild zum rationalen Denken und ersten Philosophen.",
+    order: 270,
+  },
+  {
+    subject: "Geschichte",
+    title: "Glaube und Goetterwelt",
+    link: "subjects/geschichte/glaube-und-goetterwelt/geschichte-glaube-und-goetterwelt.html",
+    description: "Olympische Goetter, Symbole und Religion im Alltag mit Tempel, Opfer, Orakel, Festen, Training und Test.",
+    order: 230,
+  },
+  {
+    subject: "Geschichte",
+    title: "Kultur und Alltag",
+    link: "subjects/geschichte/kultur-und-alltag/geschichte-kultur-und-alltag.html",
+    description: "Theater, Olympische Spiele, Erziehung und Alltag im alten Griechenland mit Grafikarbeit, Training und Test.",
+    order: 240,
+  },
+  {
+    subject: "Geschichte",
+    title: "Kolonisation und Ausbreitung",
+    link: "subjects/geschichte/kolonisation-und-ausbreitung/geschichte-kolonisation-und-ausbreitung.html",
+    description: "Gruende, Ablauf und Folgen griechischer Kolonisation mit Kartenarbeit, Training und Test.",
+    order: 210,
+  },
+  {
+    subject: "Geschichte",
+    title: "Alexander der Grosse",
+    link: "subjects/geschichte/alexander-der-grosse/geschichte-alexander-der-grosse.html",
+    description: "Platzhalter: Eroberungen Alexanders und Ausbreitung griechischer Kultur im Hellenismus.",
+    order: 280,
   },
   {
     subject: "Werte und Normen",
@@ -337,6 +398,10 @@ function normalizeTopic(topic) {
         .map((entry) => repairMojibake(entry).trim())
         .filter(Boolean)
     : [];
+  const rawOrder = topic && Object.prototype.hasOwnProperty.call(topic, "order")
+    ? Number(topic.order)
+    : NaN;
+  const order = Number.isFinite(rawOrder) ? rawOrder : null;
 
   return {
     subject: repairMojibake(topic.subject).trim(),
@@ -344,6 +409,7 @@ function normalizeTopic(topic) {
     link: String(topic.link || "").trim(),
     description: repairMojibake(topic.description).trim(),
     bulletPoints,
+    order,
   };
 }
 
@@ -391,6 +457,7 @@ function dedupeTopics(topics) {
       description: topic.description || existing.description,
       bulletPoints:
         topic.bulletPoints.length > 0 ? topic.bulletPoints : existing.bulletPoints,
+      order: Number.isFinite(topic.order) ? topic.order : existing.order,
     });
   });
 
@@ -410,6 +477,7 @@ function dedupeTopics(topics) {
       description: topic.description || existing.description,
       bulletPoints:
         topic.bulletPoints.length > 0 ? topic.bulletPoints : existing.bulletPoints,
+      order: Number.isFinite(topic.order) ? topic.order : existing.order,
     });
   });
 
@@ -495,8 +563,29 @@ function createModuleCard(topic) {
   return card;
 }
 
+function compareTopicsForDisplay(a, b) {
+  const hasOrderA = Number.isFinite(a.order);
+  const hasOrderB = Number.isFinite(b.order);
+
+  if (hasOrderA && hasOrderB && a.order !== b.order) {
+    return a.order - b.order;
+  }
+
+  if (hasOrderA && !hasOrderB) {
+    return -1;
+  }
+
+  if (!hasOrderA && hasOrderB) {
+    return 1;
+  }
+
+  return a.title.localeCompare(b.title, "de", { sensitivity: "base", numeric: true });
+}
+
 function renderModules(topics, subject) {
-  const filteredTopics = topics.filter((topic) => topic.subject === subject);
+  const filteredTopics = topics
+    .filter((topic) => topic.subject === subject)
+    .sort(compareTopicsForDisplay);
   moduleList.replaceChildren();
 
   if (filteredTopics.length === 0) {

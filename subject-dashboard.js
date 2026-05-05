@@ -136,7 +136,7 @@ function renderDrawerModules(topics, currentSubject) {
   drawerModuleList.replaceChildren();
   const modules = topics
     .filter((topic) => topic.subject === currentSubject && topic.link)
-    .sort((a, b) => a.title.localeCompare(b.title, "de", { sensitivity: "base", numeric: true }));
+    .sort(compareTopicsForDisplay);
 
   if (modules.length === 0) {
     const note = document.createElement("p");
@@ -182,7 +182,7 @@ function applySubjectTheme(subject) {
 function renderModules(topics, subject) {
   const modules = topics
     .filter((topic) => topic.subject === subject && topic.link)
-    .sort((a, b) => a.title.localeCompare(b.title, "de", { sensitivity: "base", numeric: true }));
+    .sort(compareTopicsForDisplay);
   sdModuleList.replaceChildren();
 
   if (modules.length === 0) {
@@ -196,6 +196,25 @@ function renderModules(topics, subject) {
   modules.forEach((topic) => {
     sdModuleList.append(createModuleCard(topic));
   });
+}
+
+function compareTopicsForDisplay(a, b) {
+  const hasOrderA = Number.isFinite(a.order);
+  const hasOrderB = Number.isFinite(b.order);
+
+  if (hasOrderA && hasOrderB && a.order !== b.order) {
+    return a.order - b.order;
+  }
+
+  if (hasOrderA && !hasOrderB) {
+    return -1;
+  }
+
+  if (!hasOrderA && hasOrderB) {
+    return 1;
+  }
+
+  return a.title.localeCompare(b.title, "de", { sensitivity: "base", numeric: true });
 }
 
 function initDashboard() {

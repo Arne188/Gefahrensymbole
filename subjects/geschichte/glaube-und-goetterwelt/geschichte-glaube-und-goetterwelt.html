@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geschichte - Glaube und Goetterwelt</title>
+  <link rel="icon" type="image/svg+xml" href="../../../assets/tab-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../styles.css">
+  <link rel="stylesheet" href="geschichte-glaube-und-goetterwelt.css">
+</head>
+<body>
+  <main class="gw-page">
+    <header class="gw-hero">
+      <a class="back-link" href="../../../subject-dashboard.html?subject=Geschichte">Zurueck zum Fach-Dashboard</a>
+      <p class="gw-tag">Geschichte Klasse 5/6 - Griechenland</p>
+      <h1>Glaube und Goetterwelt</h1>
+      <p>
+        Die Griechen glaubten an viele Goetter. Diese Goetter hatten Aufgaben,
+        Symbole, Geschichten und Lieblingsstaedte. Religion war deshalb nicht nur
+        Privatsache, sondern gehoerte zu Alltag, Politik, Festen, Tempeln und
+        wichtigen Entscheidungen.
+      </p>
+
+      <figure class="gw-figure">
+        <img src="goetterwelt-uebersicht.png" alt="Infografik Glaube und Goetterwelt im alten Griechenland mit Zeus, Athena, Poseidon, Aphrodite, Apollon, Artemis und Alltagsszenen">
+        <figcaption>Die Uebersicht zeigt die wichtigsten Goetter, ihre Symbole und vier Alltagsszenen: Opfer, Tempel, Orakel und Fest.</figcaption>
+      </figure>
+    </header>
+
+    <nav class="gw-nav" aria-label="Modulnavigation">
+      <button class="gw-tab-btn is-active" type="button" data-tab="lernen">Lernen</button>
+      <button class="gw-tab-btn" type="button" data-tab="trainieren">Trainieren</button>
+      <button class="gw-tab-btn" type="button" data-tab="test">Test</button>
+    </nav>
+
+    <section id="tab-lernen" class="gw-tab is-active">
+      <article class="gw-card">
+        <h2>Lernidee: Warum war Religion so wichtig?</h2>
+        <p>
+          Die griechische Religion half Menschen, die Welt zu ordnen. Naturkraefte,
+          Glueck, Krankheit, Krieg, Liebe, Ernte, Geburt, Tod und politische Entscheidungen
+          wurden mit Goettern verbunden. Wer einen Gott achtete, hoffte auf Schutz,
+          Rat oder Hilfe. Wer ihn missachtete, fuerchtete Unglueck.
+        </p>
+        <div class="gw-road">
+          <section>
+            <h3>1. Welt erklaeren</h3>
+            <p>Goettergeschichten erklaerten Natur, Schicksal und menschliches Verhalten.</p>
+          </section>
+          <section>
+            <h3>2. Gemeinschaft staerken</h3>
+            <p>Feste, Opfer und Tempel brachten Menschen einer Polis zusammen.</p>
+          </section>
+          <section>
+            <h3>3. Entscheidungen absichern</h3>
+            <p>Orakel und Rituale sollten zeigen, ob ein Vorhaben unter goettlichem Schutz stand.</p>
+          </section>
+        </div>
+      </article>
+
+      <article class="gw-card">
+        <h2>Die wichtigsten Goetter</h2>
+        <p>
+          Klicke einen Gott oder eine Goettin an. Achte auf drei Dinge:
+          Aufgabe, Symbol und Bedeutung fuer Menschen oder Poleis.
+        </p>
+        <div class="gw-god-controls">
+          <button class="gw-god-btn is-active" type="button" data-god="zeus">Zeus</button>
+          <button class="gw-god-btn" type="button" data-god="athena">Athena</button>
+          <button class="gw-god-btn" type="button" data-god="poseidon">Poseidon</button>
+          <button class="gw-god-btn" type="button" data-god="aphrodite">Aphrodite</button>
+          <button class="gw-god-btn" type="button" data-god="apollon">Apollon</button>
+          <button class="gw-god-btn" type="button" data-god="artemis">Artemis</button>
+        </div>
+        <div class="gw-detail-box">
+          <h3 id="gwGodTitle"></h3>
+          <p id="gwGodText"></p>
+          <p id="gwGodSymbol" class="gw-note"></p>
+        </div>
+      </article>
+
+      <article class="gw-card">
+        <h2>Religion im Alltag</h2>
+        <p>
+          Religion begegnete den Menschen nicht nur in Geschichten. Sie war im Alltag
+          sichtbar: am Altar, im Tempel, beim Orakel und bei Festen.
+        </p>
+        <figure class="gw-figure gw-secondary-figure">
+          <img src="goetterwelt-alltag.png" alt="Lernuebersicht zur griechischen Goetterwelt mit Olymp, Alltagsritualen, Orakel, Tempelbesuch und Merkleiste">
+        </figure>
+        <div class="gw-practice-controls">
+          <button class="gw-practice-btn is-active" type="button" data-practice="opfer">Opfer</button>
+          <button class="gw-practice-btn" type="button" data-practice="tempel">Tempel</button>
+          <button class="gw-practice-btn" type="button" data-practice="orakel">Orakel</button>
+          <button class="gw-practice-btn" type="button" data-practice="fest">Fest</button>
+        </div>
+        <div class="gw-detail-box">
+          <h3 id="gwPracticeTitle"></h3>
+          <p id="gwPracticeText"></p>
+          <p id="gwPracticeExample" class="gw-note"></p>
+        </div>
+      </article>
+
+      <article class="gw-card">
+        <h2>Warum so viele Goetter?</h2>
+        <p>
+          Die Griechen waren polytheistisch: Sie verehrten viele Goetter. Jeder Gott
+          war mit bestimmten Bereichen verbunden. Das passte zu einer Welt, in der
+          Menschen viele Unsicherheiten erlebten: Sturm auf See, Krankheit, Krieg,
+          Ernte, Geburt, Liebe oder politische Entscheidungen.
+        </p>
+        <div class="gw-why-grid">
+          <section>
+            <h3>Goetter waren menschennah</h3>
+            <p>Sie hatten Gefuehle, Streit, Lieblingsorte und Geschichten. Dadurch wirkten sie nah am menschlichen Leben.</p>
+          </section>
+          <section>
+            <h3>Jede Polis hatte Schutzbeziehungen</h3>
+            <p>Athena war besonders wichtig fuer Athen. Tempel und Feste zeigten: Unsere Stadt steht unter goettlichem Schutz.</p>
+          </section>
+          <section>
+            <h3>Rituale gaben Sicherheit</h3>
+            <p>Opfer, Gebete und Orakel halfen, mit Angst und Unsicherheit umzugehen.</p>
+          </section>
+          <section>
+            <h3>Religion war oeffentlich</h3>
+            <p>Feste und Prozessionen waren Gemeinschaftserlebnisse, nicht nur privater Glaube.</p>
+          </section>
+        </div>
+      </article>
+
+      <article class="gw-card">
+        <h2>Merksatz fuer die Klassenarbeit</h2>
+        <p class="gw-big-note">
+          Die griechische Religion war polytheistisch und alltagsnah. Goetter erklaerten
+          die Welt, schuetzten Staedte, gehoerten zu Festen und halfen Menschen, wichtige
+          Entscheidungen zu deuten.
+        </p>
+      </article>
+    </section>
+
+    <section id="tab-trainieren" class="gw-tab">
+      <article class="gw-card">
+        <h2>Training A: Gott, Symbol und Aufgabe</h2>
+        <p>Ordne Aussagen dem passenden Gott oder der passenden Goettin zu.</p>
+        <div class="gw-controls">
+          <button id="gwGodNewRound" type="button">Neue Runde</button>
+          <button id="gwGodCheck" type="button">Pruefen</button>
+        </div>
+        <div id="gwGodList" class="gw-task-list"></div>
+        <div id="gwGodFeedback"></div>
+      </article>
+
+      <article class="gw-card">
+        <h2>Training B: Alltag und Religion</h2>
+        <p>Ordne die Situation der passenden religioesen Praxis zu.</p>
+        <div class="gw-controls">
+          <button id="gwPracticeNewRound" type="button">Neue Runde</button>
+          <button id="gwPracticeCheck" type="button">Pruefen</button>
+        </div>
+        <div id="gwPracticeList" class="gw-task-list"></div>
+        <div id="gwPracticeFeedback"></div>
+      </article>
+
+      <article class="gw-card">
+        <h2>Training C: Warum war Religion wichtig?</h2>
+        <p>Entscheide, ob eine Aussage Weltdeutung, Stadtschutz, Alltag/Ritual oder Orakel/Rat beschreibt.</p>
+        <div class="gw-controls">
+          <button id="gwMeaningNewRound" type="button">Neue Runde</button>
+          <button id="gwMeaningCheck" type="button">Pruefen</button>
+        </div>
+        <div id="gwMeaningList" class="gw-task-list"></div>
+        <div id="gwMeaningFeedback"></div>
+      </article>
+    </section>
+
+    <section id="tab-test" class="gw-tab">
+      <article class="gw-card">
+        <h2>Geschichts-Test</h2>
+        <p>10 Fragen zu Goettern, Symbolen, Alltag und Bedeutung griechischer Religion.</p>
+        <div class="quiz-controls">
+          <button id="gwQuizStart" type="button">Test starten</button>
+          <button id="gwQuizNext" type="button" disabled>Naechste Frage</button>
+          <p id="gwQuizScore" class="score">Punkte: 0 / 10</p>
+        </div>
+        <div class="quiz-box">
+          <p id="gwQuizStatus" class="quiz-status">Test noch nicht gestartet.</p>
+          <h3 id="gwQuizPrompt">Klicke auf "Test starten".</h3>
+          <div id="gwQuizAnswers" class="choice-list"></div>
+          <div id="gwQuizFeedback"></div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="geschichte-glaube-und-goetterwelt.js"></script>
+  <script src="../../../global-menu.js"></script>
+</body>
+</html>
