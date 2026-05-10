@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="de">
 <head>
   <meta charset="UTF-8">
@@ -9,41 +9,212 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../../styles.css">
-  <link rel="stylesheet" href="../griechenland-placeholder.css">
+  <link rel="stylesheet" href="geschichte-alexander-der-grosse.css">
 </head>
 <body>
-  <main class="gp-page">
-    <header class="gp-hero">
+  <main class="ag-page">
+    <header class="ag-hero">
       <a class="back-link" href="../../../subject-dashboard.html?subject=Geschichte">Zurueck zum Fach-Dashboard</a>
-      <p class="gp-tag">Geschichte Klasse 5/6 - Griechenland</p>
+      <p class="ag-tag">Geschichte Klasse 5/6 - Griechenland</p>
       <h1>Alexander der Grosse</h1>
-      <p class="gp-status">Platzhaltermodul - Grafik und Inhalte folgen</p>
-      <p>Alexander steht am Uebergang: Aus der Welt der griechischen Poleis entsteht ein riesiger Kulturraum des Hellenismus.</p>
+      <p>
+        Alexander baute in kurzer Zeit ein riesiges Reich auf. Dieses Modul zeigt nicht nur seine
+        Eroberungen, sondern auch Folgen: kulturellen Austausch im Hellenismus, neue Staedte,
+        aber auch Gewalt, Widerstand und Konflikte.
+      </p>
+      <figure class="ag-figure ag-main-figure">
+        <img src="alexander-der-grosse-uebersicht.png" alt="Lernuebersicht zu Alexander dem Grossen mit Karte, Stationen, Hellenismus und Einordnung">
+        <figcaption>Leitgrafik des Moduls. Die Lernreise arbeitet mit einzelnen Box-Ausschnitten als Stationen.</figcaption>
+      </figure>
     </header>
 
-    <article class="gp-card">
-      <h2>Grafik-Prompt</h2>
-      <div class="gp-prompt">Erstelle eine historische Lernkarte "Alexander der Grosse und der Hellenismus". Zeige eine Karte vom griechisch-makedonischen Raum ueber Kleinasien, Aegypten, Persien bis nach Indien mit Pfeilen der Eroberungszuege. Links ein kurzer Steckbrief Alexanders (Makedonien, Heer, Eroberungen), rechts ein Feld "Hellenismus" mit Symbolen fuer griechische Sprache, Staedtegruendungen, Handel, Kunst und Wissensaustausch. Wichtig: nicht als Heldenglorifizierung, sondern als historische Einordnung von Eroberung und Kulturverbreitung. Stil: Schulbuch, Klasse 5/6, klare Farben, gut lesbare Labels.</div>
-    </article>
+    <nav class="ag-nav" aria-label="Modulnavigation">
+      <button class="ag-tab-btn is-active" type="button" data-tab="lernen">Lernreise</button>
+      <button class="ag-tab-btn" type="button" data-tab="ueben">Ueben</button>
+      <button class="ag-tab-btn" type="button" data-tab="pruefung">Pruefen</button>
+    </nav>
 
-    <article class="gp-card">
-      <h2>Themenkern</h2>
-      <ul class="gp-list">
-        <li>Alexander aus Makedonien und seine Eroberungszuege.</li>
-        <li>Ausbreitung griechischer Kultur im Hellenismus.</li>
-        <li>Uebergang vom klassischen Griechenland zu groesseren Reichen.</li>
-      </ul>
-    </article>
+    <section id="tab-lernen" class="ag-tab is-active">
+      <article class="ag-card">
+        <h2>Didaktischer Kompass (Klasse 5)</h2>
+        <p>
+          Wir lernen Alexander nicht als Heldensage, sondern als historischen Fall: Wie konnte ein
+          junges Herrscherteam so weit kommen? Was passierte mit den eroberten Regionen? Und warum
+          ist der Hellenismus bis heute wichtig?
+        </p>
+        <div class="ag-roadmap">
+          <section>
+            <h3>1. Ordnen</h3>
+            <p>Wer war Alexander? Wo begann sein Weg?</p>
+          </section>
+          <section>
+            <h3>2. Nachvollziehen</h3>
+            <p>Eroberungszuege auf Karte und Zeitleiste verstehen.</p>
+          </section>
+          <section>
+            <h3>3. Bewerten</h3>
+            <p>Herrschaft als Mischung aus Erfolg, Zwang und Widerstand.</p>
+          </section>
+          <section>
+            <h3>4. Uebertragen</h3>
+            <p>Hellenismus als frueher Kulturkontakt-Raum.</p>
+          </section>
+        </div>
+      </article>
 
-    <article class="gp-card">
-      <h2>Ausbau-Ideen</h2>
-      <div class="gp-next-grid">
-        <section class="gp-next-box"><h3>Karte</h3><p>Eroberungsroute mit Etappen und wichtigen Raeumen.</p></section>
-        <section class="gp-next-box"><h3>Begriff</h3><p>Hellenismus anhand von Beispielen erklaeren.</p></section>
-        <section class="gp-next-box"><h3>Urteil</h3><p>Alexander zwischen Eroberer und Kulturvermittler diskutieren.</p></section>
-      </div>
-    </article>
+      <article class="ag-card">
+        <h2>Stationen-Explorer zur Grafik</h2>
+        <p>Waehle eine Station. Du siehst den Bildausschnitt plus Erklaerung und Faktencheck.</p>
+        <div id="agStationButtons" class="ag-station-buttons"></div>
+        <div class="ag-explorer">
+          <figure class="ag-figure ag-slice-figure">
+            <img id="agStationImage" src="slices/teil-1-wer-war-alexander.png" alt="Ausschnitt aus der Alexander-Grafik">
+          </figure>
+          <div class="ag-explorer-text">
+            <p class="ag-kicker" id="agStationKicker"></p>
+            <h3 id="agStationTitle"></h3>
+            <p id="agStationText"></p>
+            <p class="ag-fact" id="agStationFact"></p>
+          </div>
+        </div>
+      </article>
+
+      <article class="ag-card">
+        <h2>Zeitleiste: 356 bis 323 v. Chr.</h2>
+        <p>Diese Daten helfen dir beim Einordnen in Test und Klassenarbeit.</p>
+        <div class="ag-timeline">
+          <section>
+            <h3>356 v. Chr.</h3>
+            <p>Geburt in Pella (Makedonien).</p>
+          </section>
+          <section>
+            <h3>336 v. Chr.</h3>
+            <p>Alexander wird mit 20 Jahren Koenig von Makedonien.</p>
+          </section>
+          <section>
+            <h3>334 v. Chr.</h3>
+            <p>Sieg am Granikos: Beginn des grossen Asienfeldzugs.</p>
+          </section>
+          <section>
+            <h3>333-331 v. Chr.</h3>
+            <p>Sieg ueber Persien, Eroberung wichtiger Kernraeume.</p>
+          </section>
+          <section>
+            <h3>332 v. Chr.</h3>
+            <p>Gruendung von Alexandria in Aegypten.</p>
+          </section>
+          <section>
+            <h3>326 v. Chr.</h3>
+            <p>Hydaspes in Indien, danach Meuterei des Heeres und Umkehr.</p>
+          </section>
+          <section>
+            <h3>323 v. Chr.</h3>
+            <p>Tod in Babylon; danach Zerfall des Reiches in Nachfolgereiche.</p>
+          </section>
+        </div>
+      </article>
+
+      <article class="ag-card ag-map-card">
+        <h2>Karte lesen: Die Eroberungszuege</h2>
+        <figure class="ag-figure">
+          <img src="slices/teil-3-eroberungszuege.png" alt="Karte der Eroberungszuege Alexanders von Makedonien bis Indien">
+        </figure>
+        <div class="ag-route-buttons">
+          <button class="ag-route-btn is-active" type="button" data-route="start">Start in Makedonien</button>
+          <button class="ag-route-btn" type="button" data-route="persien">Gegen Persien</button>
+          <button class="ag-route-btn" type="button" data-route="aegypten">Aegypten und Alexandria</button>
+          <button class="ag-route-btn" type="button" data-route="indien">Bis nach Indien</button>
+        </div>
+        <div id="agRouteInfo" class="ag-route-info"></div>
+      </article>
+
+      <article class="ag-card ag-balance-card">
+        <h2>Kritische Einordnung: Nicht nur Erfolgsgeschichte</h2>
+        <div class="ag-balance-grid">
+          <section>
+            <h3>Was oft hervorgehoben wird</h3>
+            <p>Militaerische Geschwindigkeit, neue Staedte, Verbindung vieler Regionen, Verbreitung griechischer Sprache und Bildung.</p>
+          </section>
+          <section>
+            <h3>Was man ebenfalls sehen muss</h3>
+            <p>Eroberungen bedeuteten Kaempfe, Tod, Zwang und Machtpolitik. Schon frueh zeigte sich das bei der Zerstoerung von Theben.</p>
+          </section>
+          <section>
+            <h3>Historisches Urteil in Klasse 5</h3>
+            <p>Alexander war ein wirkmaechtiger Eroberer und Ausloeser von Veraenderungen, aber kein unkritisches Vorbild.</p>
+          </section>
+        </div>
+      </article>
+
+      <article class="ag-card ag-source-card">
+        <h2>Quellenbasis</h2>
+        <p>Inhalte wurden zusaetzlich zur Grafik recherchiert und auf Plausibilitaet geprueft.</p>
+        <div class="ag-source-links">
+          <a href="https://www.britannica.com/biography/Alexander-the-Great" target="_blank" rel="noreferrer">Britannica: Alexander the Great</a>
+          <a href="https://www.britannica.com/event/Battle-of-the-Granicus-334" target="_blank" rel="noreferrer">Britannica: Battle of the Granicus</a>
+          <a href="https://www.britannica.com/event/Battle-of-the-Hydaspes" target="_blank" rel="noreferrer">Britannica: Battle of the Hydaspes</a>
+          <a href="https://www.britannica.com/place/Alexandria-Egypt/History" target="_blank" rel="noreferrer">Britannica: History of Alexandria</a>
+          <a href="https://www.britannica.com/event/Hellenistic-Age" target="_blank" rel="noreferrer">Britannica: Hellenistic Age</a>
+          <a href="https://www.britannica.com/place/ancient-Greece/Alexander-the-Great" target="_blank" rel="noreferrer">Britannica: Ancient Greece - Alexander</a>
+        </div>
+      </article>
+    </section>
+
+    <section id="tab-ueben" class="ag-tab">
+      <article class="ag-card">
+        <h2>Uebung A: Datum zuordnen</h2>
+        <p>Ordne Ereignis und Jahreszahl.</p>
+        <div id="agDateList" class="ag-task-list"></div>
+        <div class="ag-controls">
+          <button id="agDateNew" type="button">Neue Runde</button>
+          <button id="agDateCheck" type="button">Pruefen</button>
+        </div>
+        <div id="agDateFeedback" class="ag-feedback" aria-live="polite"></div>
+      </article>
+
+      <article class="ag-card">
+        <h2>Uebung B: Ort, Ereignis, Folge</h2>
+        <p>Waehle den passenden Ort oder Begriff.</p>
+        <div id="agPlaceList" class="ag-task-list"></div>
+        <div class="ag-controls">
+          <button id="agPlaceNew" type="button">Neue Runde</button>
+          <button id="agPlaceCheck" type="button">Pruefen</button>
+        </div>
+        <div id="agPlaceFeedback" class="ag-feedback" aria-live="polite"></div>
+      </article>
+
+      <article class="ag-card">
+        <h2>Uebung C: Hellenismus verstehen</h2>
+        <p>Entscheide: trifft zu oder trifft nicht zu.</p>
+        <div id="agHelList" class="ag-task-list"></div>
+        <div class="ag-controls">
+          <button id="agHelNew" type="button">Neue Runde</button>
+          <button id="agHelCheck" type="button">Pruefen</button>
+        </div>
+        <div id="agHelFeedback" class="ag-feedback" aria-live="polite"></div>
+      </article>
+    </section>
+
+    <section id="tab-pruefung" class="ag-tab">
+      <article class="ag-card">
+        <h2>Pruefungsmodul: Alexander und Hellenismus</h2>
+        <p>10 Fragen aus einem groesseren Pool mit direkter Rueckmeldung.</p>
+        <div class="ag-quiz-controls">
+          <button id="agQuizStart" type="button">Test starten</button>
+          <button id="agQuizNext" type="button" disabled>Naechste Frage</button>
+          <p id="agQuizScore" class="ag-score">Punkte: 0 / 10</p>
+        </div>
+        <div class="ag-quiz-box">
+          <p id="agQuizStatus" class="ag-quiz-status">Test noch nicht gestartet.</p>
+          <h3 id="agQuizPrompt">Klicke auf "Test starten".</h3>
+          <div id="agQuizAnswers" class="ag-answer-list"></div>
+          <div id="agQuizFeedback" class="ag-feedback" aria-live="polite"></div>
+        </div>
+      </article>
+    </section>
   </main>
+
   <script src="../../../global-menu.js"></script>
+  <script src="geschichte-alexander-der-grosse.js"></script>
 </body>
 </html>

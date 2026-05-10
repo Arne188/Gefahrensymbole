@@ -1,0 +1,455 @@
+﻿.og-page {
+  width: min(1180px, 95vw);
+  margin: 20px auto 38px;
+  display: grid;
+  gap: 14px;
+  --og-deep: #18344f;
+  --og-royal: #1d4f90;
+  --og-gold: #c47a1f;
+  --og-leaf: #3f7939;
+  --og-ink: #2d4258;
+}
+
+.og-hero,
+.og-nav,
+.og-card {
+  border: 1px solid #d8c7a2;
+  border-radius: 16px;
+  background: #fffef8;
+  box-shadow: 0 14px 26px rgba(22, 33, 46, 0.13);
+}
+
+.og-hero {
+  padding: 22px;
+  display: grid;
+  gap: 10px;
+  background:
+    radial-gradient(circle at 88% -12%, rgba(25, 94, 156, 0.24), transparent 39%),
+    radial-gradient(circle at 9% 8%, rgba(198, 122, 31, 0.19), transparent 34%),
+    linear-gradient(150deg, #fffef9, #f7f1de);
+}
+
+.og-tag {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 12px;
+  font-weight: 800;
+  color: #74592b;
+  font-family: "Nunito", sans-serif;
+}
+
+.og-hero h1,
+.og-card h2,
+.og-card h3 {
+  margin: 0;
+  color: var(--og-deep);
+  font-family: "Changa", sans-serif;
+  line-height: 1.1;
+}
+
+.og-hero p,
+.og-card p,
+.og-card label,
+.og-card li {
+  margin: 0;
+  color: var(--og-ink);
+  font-family: "Nunito", sans-serif;
+}
+
+.og-figure {
+  margin: 0;
+}
+
+.og-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #d3c4a2;
+  border-radius: 12px;
+  background: #f8f9fc;
+}
+
+.og-figure figcaption {
+  margin-top: 7px;
+  color: #5b6d7f;
+  font-size: 14px;
+  font-family: "Nunito", sans-serif;
+}
+
+.og-nav {
+  padding: 8px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  background: #f4ebd8;
+}
+
+.og-tab-btn,
+.og-controls button,
+.og-ritual-btn,
+.og-station-btn {
+  border: 1px solid #bea77c;
+  border-radius: 11px;
+  background: #fff;
+  color: #27445f;
+  font-weight: 800;
+  font-family: "Nunito", sans-serif;
+  padding: 9px 13px;
+}
+
+.og-tab-btn.is-active,
+.og-ritual-btn.is-active {
+  background: var(--og-royal);
+  border-color: var(--og-royal);
+  color: #fff;
+}
+
+.og-tab {
+  display: none;
+  gap: 14px;
+}
+
+.og-tab.is-active {
+  display: grid;
+}
+
+.og-card {
+  padding: 16px;
+  display: grid;
+  gap: 10px;
+}
+
+.og-steps,
+.og-context-grid,
+.og-check-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+}
+
+.og-steps section,
+.og-context-grid section,
+.og-check-grid section,
+.og-exam-part {
+  border: 1px solid #cfd8e3;
+  border-radius: 12px;
+  background: #fff;
+  padding: 12px;
+  display: grid;
+  gap: 8px;
+}
+
+.og-steps section {
+  border-left: 6px solid var(--og-gold);
+  background: #fff9ef;
+}
+
+.og-context-grid section:nth-child(1) {
+  border-top: 6px solid #1f5a9a;
+}
+
+.og-context-grid section:nth-child(2) {
+  border-top: 6px solid #6b4aa2;
+}
+
+.og-context-grid section:nth-child(3) {
+  border-top: 6px solid #2f7f7a;
+}
+
+.og-context-grid section:nth-child(4) {
+  border-top: 6px solid #5e852d;
+}
+
+.og-check-grid section {
+  border-left: 6px solid #3a6b99;
+  background: #f6fbff;
+}
+
+.og-station-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 8px;
+}
+
+.og-station-btn {
+  text-align: left;
+  border-color: #bdd0e4;
+  background: #f6fbff;
+  color: #214a70;
+}
+
+.og-station-btn small {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  color: #5e7488;
+  font-weight: 600;
+}
+
+.og-station-btn.is-active {
+  border-color: var(--og-royal);
+  background: #e8f1fb;
+}
+
+.og-explorer {
+  display: grid;
+  grid-template-columns: minmax(300px, 42%) 1fr;
+  gap: 12px;
+}
+
+.og-slice-figure img {
+  max-height: 410px;
+  object-fit: contain;
+}
+
+.og-explorer-text {
+  display: grid;
+  gap: 8px;
+  align-content: start;
+}
+
+.og-kicker {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 12px;
+  font-weight: 800;
+  color: #75592f;
+  font-family: "Nunito", sans-serif;
+}
+
+.og-fact {
+  border-left: 4px solid var(--og-leaf);
+  border-radius: 0 10px 10px 0;
+  background: #eef8ee;
+  color: #2f5b32;
+  padding: 9px 0 9px 11px;
+}
+
+.og-ritual-card {
+  background:
+    radial-gradient(circle at 94% 18%, rgba(196, 122, 31, 0.15), transparent 32%),
+    #fffdf6;
+}
+
+.og-ritual-layout {
+  display: grid;
+  grid-template-columns: minmax(250px, 38%) 1fr;
+  gap: 12px;
+}
+
+.og-ritual-buttons {
+  display: grid;
+  gap: 8px;
+}
+
+.og-ritual-btn {
+  text-align: left;
+}
+
+.og-ritual-info {
+  margin-top: 8px;
+  border: 1px solid #c4d5e6;
+  border-radius: 11px;
+  background: #f4f9ff;
+  padding: 11px;
+  color: #294c69;
+}
+
+.og-source-card {
+  background: #fff8ea;
+}
+
+.og-source-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 8px;
+}
+
+.og-source-links a {
+  display: block;
+  border: 1px solid #ddc290;
+  border-radius: 10px;
+  background: #fff;
+  padding: 9px;
+  color: #6a4a17;
+  text-decoration: none;
+  font-family: "Nunito", sans-serif;
+}
+
+.og-source-links a:hover,
+.og-source-links a:focus-visible {
+  outline: none;
+  border-color: #a77422;
+  box-shadow: 0 0 0 2px rgba(167, 116, 34, 0.19);
+}
+
+.og-task-list,
+.og-choice-list {
+  display: grid;
+  gap: 8px;
+}
+
+.og-task-row,
+.og-choice-row {
+  border: 1px solid #ccd6e2;
+  border-radius: 10px;
+  background: #fff;
+  padding: 10px;
+  display: grid;
+  gap: 8px;
+}
+
+.og-task-row.is-correct,
+.og-choice-row.is-correct {
+  border-color: #7fb392;
+  background: #ecf8f1;
+}
+
+.og-task-row.is-wrong,
+.og-choice-row.is-wrong {
+  border-color: #d79b9b;
+  background: #fff1f1;
+}
+
+.og-task-row select {
+  max-width: 760px;
+}
+
+.og-choice-options {
+  display: grid;
+  gap: 6px;
+}
+
+.og-choice-options label {
+  display: block;
+}
+
+.og-controls {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.og-feedback {
+  display: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-weight: 800;
+  border: 1px solid transparent;
+  font-family: "Nunito", sans-serif;
+}
+
+.og-feedback.is-good,
+.og-feedback.is-bad {
+  display: block;
+}
+
+.og-feedback.is-good {
+  border-color: #7ab590;
+  background: #ebf8f1;
+  color: #1f5938;
+}
+
+.og-feedback.is-bad {
+  border-color: #d39595;
+  background: #fff0f0;
+  color: #7d2a2a;
+}
+
+.og-exam-card {
+  background:
+    linear-gradient(178deg, #fffef9, #f8f3e4 49%, #fffef9),
+    repeating-linear-gradient(180deg, transparent, transparent 34px, rgba(102, 129, 156, 0.07) 35px, transparent 36px);
+}
+
+.og-score {
+  margin: 0;
+  color: #214664;
+  font-weight: 800;
+  font-family: "Nunito", sans-serif;
+}
+
+.og-choice-row h4 {
+  margin: 0;
+  color: var(--og-deep);
+  font-family: "Changa", sans-serif;
+}
+
+.og-zoomable {
+  cursor: zoom-in;
+}
+
+.og-lightbox[hidden] {
+  display: none;
+}
+
+.og-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(13, 23, 35, 0.9);
+  padding: min(4vw, 22px);
+  display: grid;
+  place-items: center;
+  gap: 10px;
+}
+
+.og-lightbox-close {
+  justify-self: end;
+  border: 1px solid #d7e3ef;
+  border-radius: 10px;
+  background: #fff;
+  color: #16344f;
+  font-weight: 800;
+  font-family: "Nunito", sans-serif;
+  padding: 8px 12px;
+}
+
+.og-lightbox-figure {
+  margin: 0;
+  max-width: min(97vw, 1420px);
+  max-height: calc(100vh - 98px);
+  display: grid;
+  gap: 8px;
+}
+
+.og-lightbox-figure img {
+  width: auto;
+  max-width: 100%;
+  max-height: calc(100vh - 150px);
+  border-radius: 12px;
+  border: 1px solid #d8c8a6;
+  background: #fff;
+}
+
+.og-lightbox-figure figcaption {
+  color: #ecf5fe;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+}
+
+@media (max-width: 940px) {
+  .og-explorer,
+  .og-ritual-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .og-slice-figure img {
+    max-height: 460px;
+  }
+}
+
+@media (max-width: 700px) {
+  .og-page {
+    width: min(97vw, 700px);
+  }
+
+  .og-tab-btn,
+  .og-controls button,
+  .og-ritual-btn {
+    width: 100%;
+  }
+}

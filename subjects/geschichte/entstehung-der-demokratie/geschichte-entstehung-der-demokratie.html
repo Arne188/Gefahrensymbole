@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="de">
 <head>
   <meta charset="UTF-8">
@@ -9,41 +9,185 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../../styles.css">
-  <link rel="stylesheet" href="../griechenland-placeholder.css">
+  <link rel="stylesheet" href="geschichte-entstehung-der-demokratie.css">
 </head>
 <body>
-  <main class="gp-page">
-    <header class="gp-hero">
+  <main class="dm-page">
+    <header class="dm-hero">
       <a class="back-link" href="../../../subject-dashboard.html?subject=Geschichte">Zurueck zum Fach-Dashboard</a>
-      <p class="gp-tag">Geschichte Klasse 5/6 - Griechenland</p>
-      <h1>Entstehung der Demokratie</h1>
-      <p class="gp-status">Platzhaltermodul - Grafik und Inhalte folgen</p>
-      <p>Dieses Kernmodul erklaert, wie in Athen schrittweise politische Mitbestimmung entstand und wo ihre Grenzen lagen.</p>
+      <p class="dm-tag">Geschichte Klasse 5/6 - Griechenland</p>
+      <h1>Die Entstehung der Demokratie in Athen</h1>
+      <p>
+        Demokratie entstand in Athen nicht auf einmal, sondern in Schritten: aus sozialen Konflikten,
+        Reformen und neuen politischen Regeln. Dieses Modul verbindet die Uebersichtsgrafik mit
+        zusaetzlich recherchierten Fakten, damit du sicher zwischen Bildaussage und historischer
+        Einordnung unterscheiden kannst.
+      </p>
+      <figure class="dm-figure dm-figure-main">
+        <img src="demokratie-athen-uebersicht.png" alt="Lernuebersicht zur Entstehung der Demokratie in Athen mit Solon, Kleisthenes, Volksversammlung und Mitbestimmung">
+        <figcaption>Arbeitsgrafik als roter Faden: Wir nutzen die einzelnen Boxen gezielt in den Lernschritten.</figcaption>
+      </figure>
     </header>
 
-    <article class="gp-card">
-      <h2>Grafik-Prompt</h2>
-      <div class="gp-prompt">Erstelle eine Schulbuch-Infografik "Wie entstand die Demokratie in Athen?" im Querformat. Zeige eine einfache Zeitleiste von Adelsherrschaft zu Reformen durch Solon und Kleisthenes. In der Mitte: Volksversammlung auf der Pnyx mit maennlichen Buergern, daneben Rat der 500 als kleiner Kreis. Rechts: "Wer durfte mitbestimmen?" mit gruenem Haken bei maennlichen Buergern und roten Stoppsymbolen bei Frauen, Sklaven und Fremden. Stil: freundlich, klar, historisch griechisch, mit kurzen Labels, geeignet fuer Klasse 5/6.</div>
-    </article>
+    <nav class="dm-nav" aria-label="Modulnavigation">
+      <button class="dm-tab-btn is-active" type="button" data-tab="lernen">Lernen</button>
+      <button class="dm-tab-btn" type="button" data-tab="ueben">Ueben</button>
+      <button class="dm-tab-btn" type="button" data-tab="pruefung">Pruefung</button>
+    </nav>
 
-    <article class="gp-card">
-      <h2>Themenkern</h2>
-      <ul class="gp-list">
-        <li>Entwicklung in Athen: Solon und Kleisthenes vereinfacht erklaert.</li>
-        <li>Volksversammlung und Rat der 500.</li>
-        <li>Mitbestimmung: Wer durfte teilnehmen und wer war ausgeschlossen?</li>
-      </ul>
-    </article>
+    <section id="tab-lernen" class="dm-tab is-active">
+      <article class="dm-card">
+        <h2>Didaktischer Lernweg fuer Klasse 5</h2>
+        <div class="dm-roadmap">
+          <section>
+            <h3>1. Verstehen</h3>
+            <p>Du klaerst zuerst den Begriff Demokratie und erkennst das Ausgangsproblem in Athen.</p>
+          </section>
+          <section>
+            <h3>2. Zeitlich ordnen</h3>
+            <p>Du setzt Solon, Kleisthenes und spaetere Schritte auf einer einfachen Zeitleiste in die richtige Reihenfolge.</p>
+          </section>
+          <section>
+            <h3>3. Bewerten</h3>
+            <p>Du unterscheidest: Fortschritt fuer Buerger, aber klare Grenzen fuer Frauen, Sklaven und Fremde.</p>
+          </section>
+          <section>
+            <h3>4. Anwenden</h3>
+            <p>Du trainierst mit Aufgaben und ueberpruefst dein Wissen im Pruefungsmodus.</p>
+          </section>
+        </div>
+      </article>
 
-    <article class="gp-card">
-      <h2>Ausbau-Ideen</h2>
-      <div class="gp-next-grid">
-        <section class="gp-next-box"><h3>Simulation</h3><p>Abstimmung in der Volksversammlung mit Rollenkarte.</p></section>
-        <section class="gp-next-box"><h3>Training</h3><p>Begriffe Solon, Kleisthenes, Volksversammlung und Rat zuordnen.</p></section>
-        <section class="gp-next-box"><h3>Transfer</h3><p>Vergleich: Demokratie damals und heute.</p></section>
-      </div>
-    </article>
+      <article class="dm-card">
+        <h2>Boxen-Explorer: Schritt fuer Schritt durch die Grafik</h2>
+        <p>Waehle eine Box. Dazu bekommst du Kernidee, historisches Datum und einen Faktencheck.</p>
+        <div class="dm-box-grid" id="dmBoxButtons"></div>
+        <div class="dm-explorer">
+          <figure class="dm-figure dm-figure-slice">
+            <img id="dmBoxImage" src="slices/teil-1-demokratie-begriff.png" alt="Ausschnitt aus der Lernuebersicht zur Demokratie in Athen">
+          </figure>
+          <div class="dm-explorer-text">
+            <p class="dm-kicker" id="dmBoxKicker"></p>
+            <h3 id="dmBoxTitle"></h3>
+            <p id="dmBoxSummary"></p>
+            <p class="dm-note" id="dmBoxFact"></p>
+          </div>
+        </div>
+      </article>
+
+      <article class="dm-card">
+        <h2>Historischer Taktgeber: Mehr als die Grafik</h2>
+        <p>Diese Zeitleiste ergaenzt die Grafik um wichtige Daten, die in Klassenarbeiten oft abgefragt werden.</p>
+        <div class="dm-timeline">
+          <section>
+            <h3>ca. 621 v. Chr. - Drakon</h3>
+            <p>Erstmal wurden Gesetze in Athen schriftlich festgehalten. Viele Strafen galten als sehr hart.</p>
+          </section>
+          <section>
+            <h3>594 v. Chr. - Solon</h3>
+            <p>Schuldknechtschaft wurde beendet, Schulden wurden erlassen, und mehr Menschen konnten politisch mitwirken.</p>
+          </section>
+          <section>
+            <h3>508/507 v. Chr. - Kleisthenes</h3>
+            <p>Neue Einteilung in zehn Phylen und Ausbau des Rates der 500 staerkten die Beteiligung breiterer Buergergruppen.</p>
+          </section>
+          <section>
+            <h3>462 v. Chr. - Ephialtes</h3>
+            <p>Der Adelsrat Areopag verlor Macht. Mehr Entscheidungen gingen an Rat, Volksversammlung und Gerichte.</p>
+          </section>
+          <section>
+            <h3>5. Jahrhundert v. Chr. - Perikles</h3>
+            <p>Tagegelder (Diaeten) fuer oeffentliche Aufgaben erleichterten auch aermeren Buergern die Teilnahme.</p>
+          </section>
+        </div>
+      </article>
+
+      <article class="dm-card dm-card-places">
+        <h2>Wichtige Orte der Demokratie</h2>
+        <figure class="dm-figure dm-figure-wide">
+          <img src="slices/teil-8-wichtige-orte-athen.png" alt="Agora, Pnyx, Bouleuterion und Akropolis als wichtige Orte in Athen">
+        </figure>
+        <div class="dm-place-buttons">
+          <button class="dm-place-btn is-active" type="button" data-place="agora">Agora</button>
+          <button class="dm-place-btn" type="button" data-place="pnyx">Pnyx</button>
+          <button class="dm-place-btn" type="button" data-place="bouleuterion">Bouleuterion</button>
+          <button class="dm-place-btn" type="button" data-place="akropolis">Akropolis</button>
+        </div>
+        <div class="dm-place-info" id="dmPlaceInfo"></div>
+      </article>
+
+      <article class="dm-card dm-source-card">
+        <h2>Quellenbasis und kritische Einordnung</h2>
+        <p>
+          Die Inhalte wurden gegen Fachquellen geprueft. Wichtiges Ergebnis: Athen war ein fruehes Modell
+          direkter Mitbestimmung, aber keine Demokratie fuer alle Menschen.
+        </p>
+        <div class="dm-source-links">
+          <a href="https://www.bpb.de/shop/zeitschriften/izpb/demokratie-332/248544/grundzuege-der-athenischen-demokratie/" target="_blank" rel="noreferrer">bpb: Grundzuege der athenischen Demokratie</a>
+          <a href="https://www.britannica.com/topic/Solons-laws" target="_blank" rel="noreferrer">Britannica: Solons laws</a>
+          <a href="https://www.britannica.com/place/ancient-Greece/The-reforms-of-Cleisthenes" target="_blank" rel="noreferrer">Britannica: Reforms of Cleisthenes</a>
+          <a href="https://www.britannica.com/topic/Council-of-Five-Hundred-ancient-Greek-council" target="_blank" rel="noreferrer">Britannica: Council of Five Hundred</a>
+          <a href="https://www.britannica.com/place/ancient-Greece/The-reforms-of-Ephialtes" target="_blank" rel="noreferrer">Britannica: Reforms of Ephialtes</a>
+          <a href="https://www.britannica.com/topic/Ecclesia-ancient-Greek-assembly" target="_blank" rel="noreferrer">Britannica: Ecclesia</a>
+        </div>
+      </article>
+    </section>
+
+    <section id="tab-ueben" class="dm-tab">
+      <article class="dm-card">
+        <h2>Uebung A: Zeitstrahl ordnen</h2>
+        <p>Ordne die Ereignisse dem passenden Datum zu.</p>
+        <div id="dmTimelineTasks" class="dm-task-list"></div>
+        <div class="dm-control-row">
+          <button id="dmTimelineNew" type="button">Neue Runde</button>
+          <button id="dmTimelineCheck" type="button">Pruefen</button>
+        </div>
+        <div id="dmTimelineFeedback" class="dm-feedback" aria-live="polite"></div>
+      </article>
+
+      <article class="dm-card">
+        <h2>Uebung B: Wer durfte mitbestimmen?</h2>
+        <p>Entscheide fuer jede Gruppe: politisch mitbestimmen oder ausgeschlossen.</p>
+        <div id="dmRightsTasks" class="dm-task-list"></div>
+        <div class="dm-control-row">
+          <button id="dmRightsNew" type="button">Neue Runde</button>
+          <button id="dmRightsCheck" type="button">Pruefen</button>
+        </div>
+        <div id="dmRightsFeedback" class="dm-feedback" aria-live="polite"></div>
+      </article>
+
+      <article class="dm-card">
+        <h2>Uebung C: Institutionen zuordnen</h2>
+        <p>Ordne Begriff und Funktion richtig zu.</p>
+        <div id="dmInstitutionTasks" class="dm-task-list"></div>
+        <div class="dm-control-row">
+          <button id="dmInstitutionNew" type="button">Neue Runde</button>
+          <button id="dmInstitutionCheck" type="button">Pruefen</button>
+        </div>
+        <div id="dmInstitutionFeedback" class="dm-feedback" aria-live="polite"></div>
+      </article>
+    </section>
+
+    <section id="tab-pruefung" class="dm-tab">
+      <article class="dm-card">
+        <h2>Pruefungsmodul: Demokratie in Athen</h2>
+        <p>10 Fragen. Du bekommst sofort Rueckmeldung und am Ende eine Auswertung.</p>
+        <div class="dm-quiz-controls">
+          <button id="dmQuizStart" type="button">Test starten</button>
+          <button id="dmQuizNext" type="button" disabled>Naechste Frage</button>
+          <p id="dmQuizScore" class="dm-score">Punkte: 0 / 10</p>
+        </div>
+        <div class="dm-quiz-box">
+          <p id="dmQuizStatus" class="dm-quiz-status">Test noch nicht gestartet.</p>
+          <h3 id="dmQuizPrompt">Klicke auf "Test starten".</h3>
+          <div id="dmQuizAnswers" class="dm-answer-list"></div>
+          <div id="dmQuizFeedback" class="dm-feedback" aria-live="polite"></div>
+        </div>
+      </article>
+    </section>
   </main>
+
   <script src="../../../global-menu.js"></script>
+  <script src="geschichte-entstehung-der-demokratie.js"></script>
 </body>
 </html>

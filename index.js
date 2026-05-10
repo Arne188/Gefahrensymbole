@@ -294,7 +294,7 @@ const defaultTopics = [
     subject: "Geschichte",
     title: "Entstehung der Demokratie",
     link: "subjects/geschichte/entstehung-der-demokratie/geschichte-entstehung-der-demokratie.html",
-    description: "Platzhalter: Demokratie in Athen mit Solon, Kleisthenes, Volksversammlung und Rat der 500.",
+    description: "Von Solon bis Kleisthenes: Entstehung der Demokratie in Athen mit Bild-Explorer, Uebungen und Pruefungsmodul.",
     order: 250,
   },
   {
@@ -308,7 +308,7 @@ const defaultTopics = [
     subject: "Geschichte",
     title: "Logos und Mythos",
     link: "subjects/geschichte/logos-und-mythos/geschichte-logos-und-mythos.html",
-    description: "Platzhalter: Vom mythologischen Weltbild zum rationalen Denken und ersten Philosophen.",
+    description: "Mythos und Logos im Vergleich: Denkwege verstehen, ueben und im Pruefungsmodul sichern.",
     order: 270,
   },
   {
@@ -336,8 +336,22 @@ const defaultTopics = [
     subject: "Geschichte",
     title: "Alexander der Grosse",
     link: "subjects/geschichte/alexander-der-grosse/geschichte-alexander-der-grosse.html",
-    description: "Platzhalter: Eroberungen Alexanders und Ausbreitung griechischer Kultur im Hellenismus.",
+    description: "Alexander und Hellenismus mit Karte, Zeitleiste, kritischer Einordnung, Uebungen und Pruefungsmodul.",
     order: 280,
+  },
+  {
+    subject: "Geschichte",
+    title: "Zusammenfassung: Antikes Griechenland",
+    link: "subjects/geschichte/zusammenfassung-antikes-griechenland/geschichte-zusammenfassung-antikes-griechenland.html",
+    description: "Die 6 Leitgrafiken verknuepfen: kompakte Lernwerkstatt, umfassendes Uebungsmodul und Pruefungsarbeit mit Punkten.",
+    order: 290,
+  },
+  {
+    subject: "Geschichte",
+    title: "Die Olympischen Spiele",
+    link: "subjects/geschichte/olympische-spiele-im-alten-griechenland/geschichte-olympische-spiele.html",
+    description: "Olympia als religioeses Fest: Zeus-Kult, Waffenruhe, Rituale, Wettkaempfe und Uebungsarbeit im historischen Kontext.",
+    order: 300,
   },
   {
     subject: "Werte und Normen",

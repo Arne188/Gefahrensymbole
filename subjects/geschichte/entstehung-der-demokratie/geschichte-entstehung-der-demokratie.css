@@ -1,0 +1,395 @@
+﻿.dm-page {
+  width: min(1160px, 94vw);
+  margin: 22px auto 38px;
+  display: grid;
+  gap: 14px;
+  --dm-ink: #1e2b3c;
+  --dm-accent: #b74a1f;
+  --dm-blue: #1f5d95;
+  --dm-green: #2d6f42;
+  --dm-gold: #c69238;
+  --dm-soft: #fdf8ef;
+}
+
+.dm-hero,
+.dm-nav,
+.dm-card {
+  border: 1px solid #d9c9a5;
+  border-radius: 14px;
+  background: #fffef8;
+  box-shadow: 0 12px 26px rgba(20, 28, 40, 0.12);
+}
+
+.dm-hero {
+  padding: 22px;
+  display: grid;
+  gap: 12px;
+  background:
+    radial-gradient(circle at 86% -8%, rgba(206, 158, 73, 0.22), transparent 44%),
+    radial-gradient(circle at -2% 7%, rgba(41, 95, 146, 0.2), transparent 36%),
+    linear-gradient(140deg, #fffefa, #fbf5e6);
+}
+
+.dm-tag {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 12px;
+  font-weight: 700;
+  color: #7f6130;
+}
+
+.dm-hero h1,
+.dm-card h2 {
+  margin: 0;
+  color: var(--dm-ink);
+}
+
+.dm-hero p,
+.dm-card p {
+  margin: 0;
+  color: #344960;
+  max-width: 88ch;
+}
+
+.dm-figure {
+  margin: 0;
+}
+
+.dm-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid #d5c5a0;
+  background: #f6f7fa;
+}
+
+.dm-figure figcaption {
+  margin-top: 8px;
+  color: #5f6d7d;
+  font-size: 14px;
+}
+
+.dm-figure-main {
+  margin-top: 4px;
+}
+
+.dm-nav {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 8px;
+  background: #f6efde;
+}
+
+.dm-tab-btn,
+.dm-control-row button,
+.dm-quiz-controls button,
+.dm-place-btn {
+  border: 1px solid #c7b78f;
+  border-radius: 10px;
+  background: #fff;
+  color: #2f3f53;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 9px 13px;
+}
+
+.dm-tab-btn.is-active,
+.dm-place-btn.is-active {
+  background: var(--dm-blue);
+  border-color: var(--dm-blue);
+  color: #fff;
+}
+
+.dm-tab {
+  display: none;
+  gap: 14px;
+}
+
+.dm-tab.is-active {
+  display: grid;
+}
+
+.dm-card {
+  padding: 16px;
+  display: grid;
+  gap: 10px;
+}
+
+.dm-roadmap,
+.dm-timeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.dm-roadmap section,
+.dm-timeline section {
+  border: 1px solid #d9cfb8;
+  border-radius: 12px;
+  padding: 12px;
+  background: #fff;
+}
+
+.dm-roadmap section {
+  border-left: 5px solid var(--dm-accent);
+}
+
+.dm-timeline section {
+  border-top: 5px solid var(--dm-blue);
+  background: linear-gradient(180deg, #f8fbff, #ffffff);
+}
+
+.dm-roadmap h3,
+.dm-timeline h3,
+.dm-explorer-text h3 {
+  margin: 0;
+  color: #1f3750;
+}
+
+.dm-box-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 8px;
+}
+
+.dm-box-btn {
+  text-align: left;
+  border: 1px solid #b7c9de;
+  border-radius: 10px;
+  background: #f7fbff;
+  color: #23496c;
+  padding: 10px;
+  font-weight: 700;
+}
+
+.dm-box-btn small {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  color: #5d7083;
+  font-weight: 500;
+}
+
+.dm-box-btn.is-active {
+  border-color: var(--dm-blue);
+  background: #e6f0fb;
+}
+
+.dm-explorer {
+  display: grid;
+  grid-template-columns: minmax(300px, 46%) 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+.dm-figure-slice img {
+  max-height: 360px;
+  object-fit: contain;
+}
+
+.dm-explorer-text {
+  display: grid;
+  gap: 8px;
+}
+
+.dm-kicker {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 12px;
+  font-weight: 700;
+  color: #7a6339;
+}
+
+.dm-note {
+  border-left: 4px solid var(--dm-green);
+  padding: 10px 0 10px 12px;
+  background: #f0f9f3;
+  border-radius: 0 10px 10px 0;
+  color: #264d35;
+}
+
+.dm-card-places {
+  background:
+    radial-gradient(circle at 90% 6%, rgba(63, 128, 179, 0.13), transparent 36%),
+    #fffef8;
+}
+
+.dm-place-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.dm-place-info {
+  border: 1px solid #c7d7ea;
+  border-radius: 12px;
+  padding: 12px;
+  background: #f5faff;
+  color: #294965;
+  min-height: 62px;
+}
+
+.dm-source-card {
+  background: #fff8eb;
+}
+
+.dm-source-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 8px;
+}
+
+.dm-source-links a {
+  display: block;
+  border: 1px solid #dec494;
+  border-radius: 10px;
+  padding: 9px 10px;
+  color: #6a4a14;
+  background: #fff;
+  text-decoration: none;
+}
+
+.dm-source-links a:hover,
+.dm-source-links a:focus-visible {
+  outline: none;
+  border-color: #ba8430;
+  box-shadow: 0 0 0 2px rgba(186, 132, 48, 0.2);
+}
+
+.dm-task-list {
+  display: grid;
+  gap: 8px;
+}
+
+.dm-task-row {
+  border: 1px solid #c7d2de;
+  border-radius: 10px;
+  background: #fff;
+  padding: 10px;
+  display: grid;
+  gap: 7px;
+}
+
+.dm-task-row.is-correct {
+  border-color: #7cb490;
+  background: #edf8f1;
+}
+
+.dm-task-row.is-wrong {
+  border-color: #d99595;
+  background: #fff1f1;
+}
+
+.dm-task-row p {
+  margin: 0;
+}
+
+.dm-task-row select {
+  max-width: 600px;
+  width: 100%;
+}
+
+.dm-control-row,
+.dm-quiz-controls {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.dm-feedback {
+  border-radius: 10px;
+  padding: 10px;
+  font-weight: 700;
+  border: 1px solid transparent;
+  display: none;
+}
+
+.dm-feedback.is-good,
+.dm-feedback.is-bad {
+  display: block;
+}
+
+.dm-feedback.is-good {
+  border-color: #78b88f;
+  background: #ecf8f1;
+  color: #1f5636;
+}
+
+.dm-feedback.is-bad {
+  border-color: #d39a9a;
+  background: #fff1f1;
+  color: #7f2b2b;
+}
+
+.dm-score,
+.dm-quiz-status {
+  margin: 0;
+  font-weight: 700;
+  color: #1f3f5f;
+}
+
+.dm-quiz-box {
+  border: 1px solid #c8d5e4;
+  border-radius: 12px;
+  background: #f8fbff;
+  padding: 12px;
+  display: grid;
+  gap: 8px;
+}
+
+.dm-quiz-box h3 {
+  margin: 0;
+  color: #17395a;
+}
+
+.dm-answer-list {
+  display: grid;
+  gap: 8px;
+}
+
+.dm-answer-list button {
+  text-align: left;
+  border: 1px solid #b8cbdd;
+  border-radius: 10px;
+  background: #fff;
+  color: #214563;
+  padding: 9px 10px;
+}
+
+.dm-answer-list button.is-correct {
+  border-color: #72b18b;
+  background: #e8f7ef;
+}
+
+.dm-answer-list button.is-wrong {
+  border-color: #d78989;
+  background: #ffefef;
+}
+
+@media (max-width: 900px) {
+  .dm-explorer {
+    grid-template-columns: 1fr;
+  }
+
+  .dm-figure-slice img {
+    max-height: 420px;
+  }
+}
+
+@media (max-width: 640px) {
+  .dm-page {
+    width: min(96vw, 640px);
+  }
+
+  .dm-tab-btn,
+  .dm-control-row button,
+  .dm-quiz-controls button,
+  .dm-place-btn {
+    width: 100%;
+  }
+}

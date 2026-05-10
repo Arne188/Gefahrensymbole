@@ -1,0 +1,225 @@
+﻿<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geschichte - Die Olympischen Spiele im alten Griechenland</title>
+  <link rel="icon" type="image/svg+xml" href="../../../assets/tab-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Changa:wght@500;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../styles.css">
+  <link rel="stylesheet" href="geschichte-olympische-spiele.css">
+</head>
+<body>
+  <main class="og-page">
+    <header class="og-hero">
+      <a class="back-link" href="../../../subject-dashboard.html?subject=Geschichte">Zurueck zum Fach-Dashboard</a>
+      <p class="og-tag">Geschichte Klasse 5/6 - Griechenland</p>
+      <h1>Die Olympischen Spiele im alten Griechenland</h1>
+      <p>
+        Dieses Modul zeigt die Spiele nicht nur als Sportereignis, sondern als religioeses Fest zu Ehren des Zeus.
+        Wir setzen Olympia in den Zusammenhang von Heiligtum, Ritualen, Politik und griechischer Gemeinschaft.
+      </p>
+      <figure class="og-figure">
+        <img class="og-zoomable" src="olympische-spiele-uebersicht.png" alt="Lernuebersicht zu den Olympischen Spielen im alten Griechenland">
+        <figcaption>Klicke die Grafik fuer eine Grossansicht.</figcaption>
+      </figure>
+    </header>
+
+    <nav class="og-nav" aria-label="Modulnavigation">
+      <button class="og-tab-btn is-active" type="button" data-tab="lernen">Lernen</button>
+      <button class="og-tab-btn" type="button" data-tab="ueben">Ueben</button>
+      <button class="og-tab-btn" type="button" data-tab="pruefung">Uebungsarbeit</button>
+    </nav>
+
+    <section id="tab-lernen" class="og-tab is-active">
+      <article class="og-card">
+        <h2>Didaktisches Konzept fuer Klasse 5</h2>
+        <div class="og-steps">
+          <section>
+            <h3>1. Verstehen</h3>
+            <p>Was waren die Spiele und warum fanden sie in Olympia statt?</p>
+          </section>
+          <section>
+            <h3>2. Verbinden</h3>
+            <p>Sport, Religion und Gemeinschaft werden als zusammenhaengendes System erkannt.</p>
+          </section>
+          <section>
+            <h3>3. Einordnen</h3>
+            <p>Ekecheiria, Teilnahme-Regeln und Ehrvorstellungen kritisch, aber altersgerecht beurteilen.</p>
+          </section>
+          <section>
+            <h3>4. Anwenden</h3>
+            <p>Wissen in Uebungen und einer Uebungsarbeit mit Punkten sicher anwenden.</p>
+          </section>
+        </div>
+      </article>
+
+      <article class="og-card">
+        <h2>Boxen-Explorer aus der Root-Grafik</h2>
+        <p>Waehle eine Station. Zu jedem Bildausschnitt gibt es Erklaerung und Faktencheck.</p>
+        <div id="ogStationButtons" class="og-station-buttons"></div>
+        <div class="og-explorer">
+          <figure class="og-figure og-slice-figure">
+            <img id="ogStationImage" class="og-zoomable" src="slices/teil-1-was-waren-die-spiele.png" alt="Station Olympische Spiele">
+          </figure>
+          <div class="og-explorer-text">
+            <p id="ogStationKicker" class="og-kicker"></p>
+            <h3 id="ogStationTitle"></h3>
+            <p id="ogStationText"></p>
+            <p id="ogStationFact" class="og-fact"></p>
+          </div>
+        </div>
+      </article>
+
+      <article class="og-card">
+        <h2>Kontext: Sportfeste waren auch Religionsfeste</h2>
+        <div class="og-context-grid">
+          <section>
+            <h3>Olympia - Zeus</h3>
+            <p>Die Olympischen Spiele gehoerten zu einem Fest fuer Zeus im Heiligtum von Olympia.</p>
+          </section>
+          <section>
+            <h3>Delphi - Apollo</h3>
+            <p>Die Pythischen Spiele waren ein Fest zu Ehren Apollons am Heiligtum von Delphi.</p>
+          </section>
+          <section>
+            <h3>Isthmia - Poseidon</h3>
+            <p>Am Isthmus von Korinth wurden Spiele zu Ehren des Meeresgottes Poseidon gefeiert.</p>
+          </section>
+          <section>
+            <h3>Nemea - Zeus</h3>
+            <p>Auch die Nemeischen Spiele verbanden Wettkaempfe mit religioeser Verehrung.</p>
+          </section>
+        </div>
+      </article>
+
+      <article class="og-card og-ritual-card">
+        <h2>Religion im Ablauf der Spiele</h2>
+        <div class="og-ritual-layout">
+          <figure class="og-figure">
+            <img class="og-zoomable" src="slices/teil-11-rituale-opfer-umzuege.png" alt="Rituale und Opferhandlungen in Olympia">
+          </figure>
+          <div>
+            <div class="og-ritual-buttons">
+              <button class="og-ritual-btn is-active" type="button" data-ritual="anreise">Anreise ins Heiligtum</button>
+              <button class="og-ritual-btn" type="button" data-ritual="opfer">Opfer und Gebet</button>
+              <button class="og-ritual-btn" type="button" data-ritual="wettkampf">Wettkampf als Ehrung</button>
+              <button class="og-ritual-btn" type="button" data-ritual="sieg">Sieg und Dank</button>
+            </div>
+            <p id="ogRitualInfo" class="og-ritual-info"></p>
+          </div>
+        </div>
+      </article>
+
+      <article class="og-card">
+        <h2>Kritischer Faktencheck</h2>
+        <div class="og-check-grid">
+          <section>
+            <h3>1. Ekecheiria war keine Voll-Friedenszeit</h3>
+            <p>Die Waffenruhe schuetzte vor allem Wege nach Olympia und das Heiligtum selbst. Kriege endeten dadurch nicht automatisch.</p>
+          </section>
+          <section>
+            <h3>2. Teilnahme war ungleich</h3>
+            <p>Athleten waren in der Regel freie griechische Maenner. Das zeigt, dass "Gemeinschaft" nicht "Gleichheit fuer alle" bedeutete.</p>
+          </section>
+          <section>
+            <h3>3. Religion und Sport gehoerten zusammen</h3>
+            <p>Die Spiele waren nicht "Sport plus ein bisschen Tempel", sondern ein religioeses Fest mit Wettkaempfen als Teil der Verehrung.</p>
+          </section>
+        </div>
+      </article>
+
+      <article class="og-card og-source-card">
+        <h2>Recherchequellen</h2>
+        <div class="og-source-links">
+          <a href="https://www.britannica.com/sports/ancient-Greek-Olympic-Games" target="_blank" rel="noreferrer">Britannica: Ancient Olympic Games</a>
+          <a href="https://www.britannica.com/place/Olympia-ancient-site-Greece" target="_blank" rel="noreferrer">Britannica: Olympia</a>
+          <a href="https://www.britannica.com/place/Altis" target="_blank" rel="noreferrer">Britannica: Altis</a>
+          <a href="https://www.britannica.com/sports/Olympic-truce" target="_blank" rel="noreferrer">Britannica: Olympic Truce</a>
+          <a href="https://www.britannica.com/topic/The-Olympic-Truce-1688469" target="_blank" rel="noreferrer">Britannica: The Olympic Truce</a>
+          <a href="https://www.britannica.com/sports/Pythian-Games" target="_blank" rel="noreferrer">Britannica: Pythian Games</a>
+          <a href="https://www.britannica.com/sports/Isthmian-Games" target="_blank" rel="noreferrer">Britannica: Isthmian Games</a>
+          <a href="https://www.britannica.com/sports/Nemean-Games" target="_blank" rel="noreferrer">Britannica: Nemean Games</a>
+          <a href="https://www.britannica.com/sports/Olympic-Games/Women-and-the-Olympic-Games" target="_blank" rel="noreferrer">Britannica: Women and the Olympic Games</a>
+          <a href="https://www.britannica.com/topic/Zeus" target="_blank" rel="noreferrer">Britannica: Zeus</a>
+        </div>
+      </article>
+    </section>
+
+    <section id="tab-ueben" class="og-tab">
+      <article class="og-card">
+        <h2>Uebung A: Begriff zuordnen</h2>
+        <div id="ogTermList" class="og-task-list"></div>
+        <div class="og-controls">
+          <button id="ogTermNew" type="button">Neue Runde</button>
+          <button id="ogTermCheck" type="button">Pruefen</button>
+        </div>
+        <div id="ogTermFeedback" class="og-feedback" aria-live="polite"></div>
+      </article>
+
+      <article class="og-card">
+        <h2>Uebung B: Richtig oder falsch?</h2>
+        <div id="ogTrueFalseList" class="og-task-list"></div>
+        <div class="og-controls">
+          <button id="ogTrueFalseNew" type="button">Neue Runde</button>
+          <button id="ogTrueFalseCheck" type="button">Pruefen</button>
+        </div>
+        <div id="ogTrueFalseFeedback" class="og-feedback" aria-live="polite"></div>
+      </article>
+
+      <article class="og-card">
+        <h2>Uebung C: Kontext anwenden</h2>
+        <div id="ogContextList" class="og-choice-list"></div>
+        <div class="og-controls">
+          <button id="ogContextNew" type="button">Neue Runde</button>
+          <button id="ogContextCheck" type="button">Pruefen</button>
+        </div>
+        <div id="ogContextFeedback" class="og-feedback" aria-live="polite"></div>
+      </article>
+    </section>
+
+    <section id="tab-pruefung" class="og-tab">
+      <article class="og-card og-exam-card">
+        <h2>Pruefungsmodul: Uebungsarbeit Olympische Spiele</h2>
+        <p>3 Teile, 24 Punkte. Aufbau wie eine kleine Klassenarbeit mit Auswertung.</p>
+        <div class="og-controls">
+          <button id="ogExamStart" type="button">Uebungsarbeit starten</button>
+          <button id="ogExamNew" type="button">Neue Variante</button>
+          <button id="ogExamCheck" type="button">Auswerten</button>
+          <p id="ogExamScore" class="og-score">Punkte: 0 / 24</p>
+        </div>
+
+        <section class="og-exam-part">
+          <h3>Teil A - Grundwissen (8 Punkte)</h3>
+          <div id="ogExamPartA" class="og-task-list"></div>
+        </section>
+
+        <section class="og-exam-part">
+          <h3>Teil B - Verstehen (10 Punkte)</h3>
+          <div id="ogExamPartB" class="og-choice-list"></div>
+        </section>
+
+        <section class="og-exam-part">
+          <h3>Teil C - Zusammenhaenge (6 Punkte)</h3>
+          <div id="ogExamPartC" class="og-choice-list"></div>
+        </section>
+
+        <div id="ogExamFeedback" class="og-feedback" aria-live="polite"></div>
+      </article>
+    </section>
+  </main>
+
+  <div id="ogLightbox" class="og-lightbox" hidden aria-hidden="true">
+    <button id="ogLightboxClose" class="og-lightbox-close" type="button" aria-label="Grossansicht schliessen">Schliessen</button>
+    <figure class="og-lightbox-figure">
+      <img id="ogLightboxImage" src="" alt="">
+      <figcaption id="ogLightboxCaption"></figcaption>
+    </figure>
+  </div>
+
+  <script src="../../../global-menu.js"></script>
+  <script src="geschichte-olympische-spiele.js"></script>
+</body>
+</html>

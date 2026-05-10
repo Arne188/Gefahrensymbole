@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="de">
 <head>
   <meta charset="UTF-8">
@@ -9,41 +9,186 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../../styles.css">
-  <link rel="stylesheet" href="../griechenland-placeholder.css">
+  <link rel="stylesheet" href="geschichte-logos-und-mythos.css">
 </head>
 <body>
-  <main class="gp-page">
-    <header class="gp-hero">
+  <main class="lm-page">
+    <header class="lm-hero">
       <a class="back-link" href="../../../subject-dashboard.html?subject=Geschichte">Zurueck zum Fach-Dashboard</a>
-      <p class="gp-tag">Geschichte Klasse 5/6 - Griechenland</p>
-      <h1>Logos und Mythos</h1>
-      <p class="gp-status">Platzhaltermodul - Grafik und Inhalte folgen</p>
-      <p>Dieses Modul zeigt den Uebergang von mythologischen Erklaerungen zu rationalem Fragen und Denken.</p>
+      <p class="lm-tag">Geschichte Klasse 5/6 - Griechenland</p>
+      <h1>Logos und Mythos im alten Griechenland</h1>
+      <p>
+        Dieses Modul zeigt eine wichtige Denkbewegung der Antike: Menschen erklaerten die Welt
+        zuerst stark ueber Goettergeschichten (Mythos) und zunehmend auch ueber Beobachtung,
+        Begruendung und Nachdenken (Logos).
+      </p>
+      <figure class="lm-figure lm-main-figure">
+        <img src="logos-und-mythos-uebersicht.png" alt="Lernuebersicht Logos und Mythos im alten Griechenland mit Vergleich, Beispielen und Gewittererklaerung">
+        <figcaption>Die Grafik ist unser Leitfaden. In der Lernreise arbeiten wir gezielt mit den einzelnen Boxen.</figcaption>
+      </figure>
     </header>
 
-    <article class="gp-card">
-      <h2>Grafik-Prompt</h2>
-      <div class="gp-prompt">Erstelle eine klare Lernillustration "Logos und Mythos im alten Griechenland". Links: mythologische Weltdeutung mit Zeus, Blitz, Poseidon und Meer, Menschen erklaeren Naturereignisse durch Goetter. Rechts: fruehe Denker/Philosophen beobachten Natur, Sterne, Wasser, Erde und stellen Fragen. In der Mitte eine Bruecke oder ein Pfeil: "Vom Mythos zum Logos". Ergaenze kurze Labels: Mythos = Erklaerung durch Geschichten und Goetter; Logos = Erklaerung durch Nachdenken, Beobachten und Begruenden. Stil: Schulbuch, Klasse 5/6, hell, nicht kitschig, gut lesbar.</div>
-    </article>
+    <nav class="lm-nav" aria-label="Modulnavigation">
+      <button class="lm-tab-btn is-active" type="button" data-tab="lernen">Lernreise</button>
+      <button class="lm-tab-btn" type="button" data-tab="ueben">Ueben</button>
+      <button class="lm-tab-btn" type="button" data-tab="pruefung">Pruefen</button>
+    </nav>
 
-    <article class="gp-card">
-      <h2>Themenkern</h2>
-      <ul class="gp-list">
-        <li>Mythologisches Weltbild: Geschichten, Goetter, Sinnstiftung.</li>
-        <li>Rationales Denken: Beobachten, Fragen, Begruenden.</li>
-        <li>Erste Philosophen vereinfacht erklaert.</li>
-      </ul>
-    </article>
+    <section id="tab-lernen" class="lm-tab is-active">
+      <article class="lm-card">
+        <h2>Lernidee fuer Klasse 5</h2>
+        <p>
+          Wir trennen nicht in "richtig" gegen "falsch". Stattdessen lernst du zwei Denkwege kennen:
+          <strong>Mythos erzaehlt</strong> und <strong>Logos erklaert</strong>. Beide halfen Menschen, die Welt
+          zu verstehen, aber auf unterschiedliche Weise.
+        </p>
+        <div class="lm-roadmap">
+          <section>
+            <h3>1. Verstehen</h3>
+            <p>Was ist Mythos? Was ist Logos?</p>
+          </section>
+          <section>
+            <h3>2. Vergleichen</h3>
+            <p>Wie unterscheiden sich Erklaerungen?</p>
+          </section>
+          <section>
+            <h3>3. Anwenden</h3>
+            <p>Selbst Aussagen zuordnen und pruefen.</p>
+          </section>
+          <section>
+            <h3>4. Bewerten</h3>
+            <p>Warum war der Uebergang fuer Wissenschaft wichtig?</p>
+          </section>
+        </div>
+      </article>
 
-    <article class="gp-card">
-      <h2>Ausbau-Ideen</h2>
-      <div class="gp-next-grid">
-        <section class="gp-next-box"><h3>Sortieren</h3><p>Aussagen Mythos oder Logos zuordnen.</p></section>
-        <section class="gp-next-box"><h3>Vergleich</h3><p>Naturereignis einmal mythisch, einmal rational erklaeren.</p></section>
-        <section class="gp-next-box"><h3>Transfer</h3><p>Warum Begruenden fuer Wissenschaft wichtig ist.</p></section>
-      </div>
-    </article>
+      <article class="lm-card">
+        <h2>Boxen-Explorer</h2>
+        <p>Klicke eine Station an. Du bekommst jeweils Bildausschnitt, Kernidee und Faktencheck.</p>
+        <div id="lmStationButtons" class="lm-station-buttons"></div>
+        <div class="lm-explorer">
+          <figure class="lm-figure lm-slice-figure">
+            <img id="lmStationImage" src="slices/teil-1-was-ist-mythos.png" alt="Ausschnitt aus der Logos-Mythos-Grafik">
+          </figure>
+          <div class="lm-explorer-text">
+            <p class="lm-kicker" id="lmStationKicker"></p>
+            <h3 id="lmStationTitle"></h3>
+            <p id="lmStationText"></p>
+            <p class="lm-fact" id="lmStationFact"></p>
+          </div>
+        </div>
+      </article>
+
+      <article class="lm-card lm-split-card">
+        <div>
+          <h2>Gewitter doppelt erklaert</h2>
+          <p>
+            In Mythen kann ein Gewitter als Eingriff eines Gottes erscheinen (z. B. Zeus). Logos fragt:
+            Welche natuerlichen Prozesse kann man beobachten? So entstand Schritt fuer Schritt
+            naturkundliches Denken.
+          </p>
+          <p>
+            Moderne Naturwissenschaft erklaert Donner als Folge von stark erhitzter Luft entlang
+            eines Blitzkanals. Das zeigt den Kern von Logos: nachvollziehbare Gruende statt
+            reine Erzaehlung.
+          </p>
+        </div>
+        <figure class="lm-figure">
+          <img src="slices/teil-7-beispiel-gewitter.png" alt="Vergleich Gewittererklaerung durch Mythos und Logos">
+          <figcaption>Am Beispiel Gewitter erkennt man den Denkwechsel besonders gut.</figcaption>
+        </figure>
+      </article>
+
+      <article class="lm-card">
+        <h2>Fruehe Denker und der Beginn von Naturerklaerungen</h2>
+        <div class="lm-thinker-grid">
+          <section>
+            <h3>Thales von Milet</h3>
+            <p>Gilt als frueher Philosoph, der Natur ohne Goettergeschichten zu erklaeren versuchte.</p>
+          </section>
+          <section>
+            <h3>Anaximander</h3>
+            <p>Suchte nach einheitlichen Naturerklaerungen und beschaeftigte sich auch mit Wetterphaenomenen.</p>
+          </section>
+          <section>
+            <h3>Wichtig fuer Klasse 5</h3>
+            <p>Mythos verschwand nicht ploetzlich. Erzaehlen und Nachdenken existierten lange nebeneinander.</p>
+          </section>
+        </div>
+      </article>
+
+      <article class="lm-card lm-source-card">
+        <h2>Quellen und kritische Pruefung</h2>
+        <p>
+          Die Inhalte wurden mit Fachquellen abgeglichen: Begriffe, historische Einordnung und
+          Naturbeispiel (Donner/Gewitter). So wird die Grafik sinnvoll ergaenzt statt nur nacherzaehlt.
+        </p>
+        <div class="lm-source-links">
+          <a href="https://www.britannica.com/topic/myth" target="_blank" rel="noreferrer">Britannica: Myth</a>
+          <a href="https://www.britannica.com/topic/logos" target="_blank" rel="noreferrer">Britannica: Logos</a>
+          <a href="https://www.britannica.com/topic/pre-Socratic-philosophy" target="_blank" rel="noreferrer">Britannica: Pre-Socratic philosophy</a>
+          <a href="https://www.britannica.com/biography/Anaximander" target="_blank" rel="noreferrer">Britannica: Anaximander</a>
+          <a href="https://www.britannica.com/science/What-Causes-Thunder-After-Lightning" target="_blank" rel="noreferrer">Britannica: Thunder after lightning</a>
+          <a href="https://www.usgs.gov/faqs/what-earthquake-and-what-causes-them-happen" target="_blank" rel="noreferrer">USGS: What causes earthquakes?</a>
+        </div>
+      </article>
+    </section>
+
+    <section id="tab-ueben" class="lm-tab">
+      <article class="lm-card">
+        <h2>Uebung A: Mythos, Logos oder beides?</h2>
+        <p>Ordne Aussagen dem passenden Denkweg zu.</p>
+        <div id="lmClassifyList" class="lm-task-list"></div>
+        <div class="lm-controls">
+          <button id="lmClassifyNew" type="button">Neue Runde</button>
+          <button id="lmClassifyCheck" type="button">Pruefen</button>
+        </div>
+        <div id="lmClassifyFeedback" class="lm-feedback" aria-live="polite"></div>
+      </article>
+
+      <article class="lm-card">
+        <h2>Uebung B: Begriff zuordnen</h2>
+        <p>Ordne Fachbegriffe den richtigen Erklaerungen zu.</p>
+        <div id="lmTermsList" class="lm-task-list"></div>
+        <div class="lm-controls">
+          <button id="lmTermsNew" type="button">Neue Runde</button>
+          <button id="lmTermsCheck" type="button">Pruefen</button>
+        </div>
+        <div id="lmTermsFeedback" class="lm-feedback" aria-live="polite"></div>
+      </article>
+
+      <article class="lm-card">
+        <h2>Uebung C: Welche Erklaerung passt besser?</h2>
+        <p>Waehle die passendere Aussage und begruende kurz mit dem Hinweistext.</p>
+        <div id="lmReasoningList" class="lm-choice-list"></div>
+        <div class="lm-controls">
+          <button id="lmReasoningNew" type="button">Neue Runde</button>
+          <button id="lmReasoningCheck" type="button">Pruefen</button>
+        </div>
+        <div id="lmReasoningFeedback" class="lm-feedback" aria-live="polite"></div>
+      </article>
+    </section>
+
+    <section id="tab-pruefung" class="lm-tab">
+      <article class="lm-card">
+        <h2>Pruefungsmodul: Logos und Mythos</h2>
+        <p>10 Fragen aus einem groesseren Pool. Direkte Rueckmeldung nach jeder Antwort.</p>
+        <div class="lm-quiz-controls">
+          <button id="lmQuizStart" type="button">Test starten</button>
+          <button id="lmQuizNext" type="button" disabled>Naechste Frage</button>
+          <p id="lmQuizScore" class="lm-score">Punkte: 0 / 10</p>
+        </div>
+        <div class="lm-quiz-box">
+          <p id="lmQuizStatus" class="lm-quiz-status">Test noch nicht gestartet.</p>
+          <h3 id="lmQuizPrompt">Klicke auf "Test starten".</h3>
+          <div id="lmQuizAnswers" class="lm-quiz-answers"></div>
+          <div id="lmQuizFeedback" class="lm-feedback" aria-live="polite"></div>
+        </div>
+      </article>
+    </section>
   </main>
+
   <script src="../../../global-menu.js"></script>
+  <script src="geschichte-logos-und-mythos.js"></script>
 </body>
 </html>

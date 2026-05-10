@@ -1,0 +1,383 @@
+﻿.lm-page {
+  width: min(1160px, 94vw);
+  margin: 20px auto 38px;
+  display: grid;
+  gap: 14px;
+  --lm-deep: #203043;
+  --lm-blue: #1f5b8b;
+  --lm-green: #2f7147;
+  --lm-amber: #c57a1d;
+  --lm-ink: #304457;
+}
+
+.lm-hero,
+.lm-nav,
+.lm-card {
+  border: 1px solid #d8c69f;
+  border-radius: 14px;
+  background: #fffef8;
+  box-shadow: 0 12px 24px rgba(26, 33, 42, 0.12);
+}
+
+.lm-hero {
+  padding: 22px;
+  display: grid;
+  gap: 10px;
+  background:
+    radial-gradient(circle at 90% -12%, rgba(52, 114, 176, 0.25), transparent 40%),
+    radial-gradient(circle at 4% 6%, rgba(198, 129, 24, 0.19), transparent 35%),
+    linear-gradient(150deg, #fffef9, #f7f1df);
+}
+
+.lm-tag {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 12px;
+  font-weight: 700;
+  color: #7a5c2d;
+}
+
+.lm-hero h1,
+.lm-card h2,
+.lm-card h3 {
+  margin: 0;
+  color: var(--lm-deep);
+}
+
+.lm-hero p,
+.lm-card p {
+  margin: 0;
+  color: var(--lm-ink);
+  max-width: 90ch;
+}
+
+.lm-figure {
+  margin: 0;
+}
+
+.lm-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #d4c5a2;
+  border-radius: 12px;
+  background: #f8f9fc;
+}
+
+.lm-figure figcaption {
+  margin-top: 7px;
+  color: #5e6f80;
+  font-size: 14px;
+}
+
+.lm-nav {
+  padding: 8px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  background: #f7efdd;
+}
+
+.lm-tab-btn,
+.lm-controls button,
+.lm-quiz-controls button {
+  border: 1px solid #bea97d;
+  border-radius: 10px;
+  background: #fff;
+  color: #2e425a;
+  font-weight: 700;
+  padding: 9px 13px;
+}
+
+.lm-tab-btn.is-active {
+  border-color: var(--lm-blue);
+  background: var(--lm-blue);
+  color: #fff;
+}
+
+.lm-tab {
+  display: none;
+  gap: 14px;
+}
+
+.lm-tab.is-active {
+  display: grid;
+}
+
+.lm-card {
+  padding: 16px;
+  display: grid;
+  gap: 10px;
+}
+
+.lm-roadmap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 10px;
+}
+
+.lm-roadmap section {
+  border: 1px solid #d4dfcb;
+  border-left: 5px solid var(--lm-green);
+  border-radius: 12px;
+  background: #fbfef9;
+  padding: 12px;
+}
+
+.lm-station-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 8px;
+}
+
+.lm-station-btn {
+  text-align: left;
+  border: 1px solid #c2d2e4;
+  border-radius: 10px;
+  background: #f7fbff;
+  color: #224b70;
+  padding: 10px;
+  font-weight: 700;
+}
+
+.lm-station-btn small {
+  display: block;
+  font-size: 12px;
+  color: #5e7388;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.lm-station-btn.is-active {
+  border-color: var(--lm-blue);
+  background: #e7f1fb;
+}
+
+.lm-explorer {
+  display: grid;
+  grid-template-columns: minmax(300px, 45%) 1fr;
+  gap: 12px;
+}
+
+.lm-slice-figure img {
+  max-height: 340px;
+  object-fit: contain;
+}
+
+.lm-explorer-text {
+  display: grid;
+  gap: 8px;
+  align-content: start;
+}
+
+.lm-kicker {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 12px;
+  font-weight: 700;
+  color: #7c5f31;
+}
+
+.lm-fact {
+  margin-top: 3px;
+  border-left: 4px solid var(--lm-amber);
+  background: #fff8e8;
+  padding: 9px 0 9px 11px;
+  border-radius: 0 10px 10px 0;
+  color: #704a15;
+}
+
+.lm-split-card {
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 12px;
+}
+
+.lm-thinker-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+}
+
+.lm-thinker-grid section {
+  border: 1px solid #d0d9e5;
+  border-radius: 12px;
+  background: #f8fbff;
+  padding: 12px;
+}
+
+.lm-source-card {
+  background: #fff9ec;
+}
+
+.lm-source-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 8px;
+}
+
+.lm-source-links a {
+  display: block;
+  border: 1px solid #dbc38f;
+  border-radius: 10px;
+  padding: 9px;
+  color: #6e4c18;
+  text-decoration: none;
+  background: #fff;
+}
+
+.lm-source-links a:hover,
+.lm-source-links a:focus-visible {
+  outline: none;
+  border-color: #af7a22;
+  box-shadow: 0 0 0 2px rgba(175, 122, 34, 0.2);
+}
+
+.lm-task-list,
+.lm-choice-list {
+  display: grid;
+  gap: 8px;
+}
+
+.lm-task-row,
+.lm-choice-row {
+  border: 1px solid #ccd5e2;
+  border-radius: 10px;
+  background: #fff;
+  padding: 10px;
+  display: grid;
+  gap: 8px;
+}
+
+.lm-task-row.is-correct,
+.lm-choice-row.is-correct {
+  border-color: #7db292;
+  background: #edf8f2;
+}
+
+.lm-task-row.is-wrong,
+.lm-choice-row.is-wrong {
+  border-color: #d89b9b;
+  background: #fff2f2;
+}
+
+.lm-task-row p,
+.lm-choice-row p {
+  margin: 0;
+}
+
+.lm-task-row select {
+  max-width: 620px;
+}
+
+.lm-choice-options {
+  display: grid;
+  gap: 6px;
+}
+
+.lm-choice-options label {
+  display: block;
+}
+
+.lm-controls,
+.lm-quiz-controls {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.lm-feedback {
+  display: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-weight: 700;
+  border: 1px solid transparent;
+}
+
+.lm-feedback.is-good,
+.lm-feedback.is-bad {
+  display: block;
+}
+
+.lm-feedback.is-good {
+  border-color: #78b58f;
+  background: #ebf8f1;
+  color: #1f5838;
+}
+
+.lm-feedback.is-bad {
+  border-color: #d59a9a;
+  background: #fff1f1;
+  color: #7f2c2c;
+}
+
+.lm-quiz-box {
+  border: 1px solid #c8d5e4;
+  border-radius: 12px;
+  background: #f8fbff;
+  padding: 12px;
+  display: grid;
+  gap: 8px;
+}
+
+.lm-quiz-status,
+.lm-score {
+  margin: 0;
+  font-weight: 700;
+  color: #234563;
+}
+
+.lm-quiz-box h3 {
+  margin: 0;
+  color: #1f3f5f;
+}
+
+.lm-quiz-answers {
+  display: grid;
+  gap: 8px;
+}
+
+.lm-quiz-answers button {
+  text-align: left;
+  border: 1px solid #b8cadc;
+  border-radius: 10px;
+  background: #fff;
+  color: #234563;
+  padding: 9px;
+}
+
+.lm-quiz-answers button.is-correct {
+  border-color: #78b58f;
+  background: #eaf8f0;
+}
+
+.lm-quiz-answers button.is-wrong {
+  border-color: #d88989;
+  background: #ffefef;
+}
+
+@media (max-width: 920px) {
+  .lm-explorer,
+  .lm-split-card {
+    grid-template-columns: 1fr;
+  }
+
+  .lm-slice-figure img {
+    max-height: 420px;
+  }
+}
+
+@media (max-width: 680px) {
+  .lm-page {
+    width: min(96vw, 680px);
+  }
+
+  .lm-tab-btn,
+  .lm-controls button,
+  .lm-quiz-controls button {
+    width: 100%;
+  }
+}
