@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mathematik - Zusammengesetzte Flaechen</title>
+  <link rel="icon" type="image/svg+xml" href="../../../assets/tab-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../styles.css">
+  <link rel="stylesheet" href="mathematik-zusammengesetzte-flaechen.css">
+</head>
+<body>
+  <main class="zf-page">
+    <header class="zf-hero">
+      <a class="back-link" href="../../../subject-dashboard.html?subject=Mathematik">Zurueck zum Fach-Dashboard</a>
+      <p class="zf-tag">Mathematik Klasse 5 - Modul 3</p>
+      <h1>Zusammengesetzte Flaechen</h1>
+      <p class="zf-intro">
+        Du lernst zwei sichere Strategien: <strong>Zerlegen</strong> und <strong>Ergaenzen</strong>.
+        So berechnest du L-Formen und andere zusammengesetzte Figuren mit Verstand statt Raten.
+      </p>
+    </header>
+
+    <nav class="zf-nav" aria-label="Modulnavigation">
+      <button class="zf-tab-btn is-active" type="button" data-tab="lernen">Lernreise</button>
+      <button class="zf-tab-btn" type="button" data-tab="ueben">Unbegrenzt ueben</button>
+      <button class="zf-tab-btn" type="button" data-tab="check">Check</button>
+    </nav>
+
+    <section id="tab-lernen" class="zf-tab is-active">
+      <article class="zf-card">
+        <h2>Lernkonzept fuer Klasse 5</h2>
+        <div class="zf-steps">
+          <section>
+            <h3>1. Erkennen</h3>
+            <p>Welche Teilrechtecke sehe ich?</p>
+          </section>
+          <section>
+            <h3>2. Entscheiden</h3>
+            <p>Zerlegen (plus) oder Ergaenzen (minus)?</p>
+          </section>
+          <section>
+            <h3>3. Rechnen</h3>
+            <p>Teilflaechen berechnen und zusammenfassen.</p>
+          </section>
+          <section>
+            <h3>4. Pruefen</h3>
+            <p>Einheit cm^2 und Ergebnis grob abschaetzen.</p>
+          </section>
+        </div>
+      </article>
+
+      <article class="zf-card">
+        <h2>Strategie 1: Zerlegen</h2>
+        <p>Zerlege die Figur in zwei Rechtecke. Addiere danach die Flaecheninhalte.</p>
+        <div class="zf-demo" id="zfDemoAdd" aria-label="Beispiel Zerlegen mit Zeichnung"></div>
+      </article>
+
+      <article class="zf-card">
+        <h2>Strategie 2: Ergaenzen</h2>
+        <p>Denke dir ein grosses Rechteck. Ziehe die fehlende Ecke ab.</p>
+        <div class="zf-demo" id="zfDemoSubtract" aria-label="Beispiel Ergaenzen mit Zeichnung"></div>
+      </article>
+
+      <article class="zf-card">
+        <h2>Kritische Einordnung</h2>
+        <ul class="zf-list">
+          <li>Staerke: klare Strategien reduzieren Rechenfehler sichtbar.</li>
+          <li>Risiko: bei vielen Zahlen verlieren Lernende schnell den Ueberblick.</li>
+          <li>Anpassung: erst einfache Werte, dann gemischte Figuren mit groesseren Zahlen.</li>
+          <li>Qualitaetscheck: jede Aufgabe mit Skizze und Einheit absichern.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="tab-ueben" class="zf-tab">
+      <article class="zf-card">
+        <h2>Aufgaben-Generator mit Zeichnungen</h2>
+        <p>Jede Runde erzeugt neue Figuren. So kannst du unbegrenzt trainieren.</p>
+        <div class="zf-controls-grid">
+          <label>
+            Schwierigkeit
+            <select id="zfDifficulty">
+              <option value="basis">Basis</option>
+              <option value="standard" selected>Standard</option>
+              <option value="profi">Profi</option>
+            </select>
+          </label>
+          <label>
+            Anzahl Aufgaben
+            <select id="zfCount">
+              <option value="8">8</option>
+              <option value="12" selected>12</option>
+              <option value="16">16</option>
+            </select>
+          </label>
+        </div>
+        <fieldset class="zf-fieldset">
+          <legend>Aufgabentypen</legend>
+          <label><input class="zf-type-check" type="checkbox" value="add" checked> Zerlegen (Teilflaechen addieren)</label>
+          <label><input class="zf-type-check" type="checkbox" value="subtract" checked> Ergaenzen (Aussen minus Ecke)</label>
+        </fieldset>
+        <div class="zf-actions">
+          <button id="zfGenerate" type="button">Neue Runde</button>
+          <button id="zfCheck" type="button">Runde pruefen</button>
+          <button id="zfReset" type="button">Eingaben leeren</button>
+        </div>
+        <div id="zfTaskList" class="zf-task-list"></div>
+        <div id="zfFeedback" class="zf-feedback" aria-live="polite"></div>
+      </article>
+    </section>
+
+    <section id="tab-check" class="zf-tab">
+      <article class="zf-card">
+        <h2>Schnell-Check</h2>
+        <p>8 Fragen mit Zeichnungen. Jede Runde wird neu gemischt.</p>
+        <div class="quiz-controls">
+          <button id="zfQuizStart" type="button">Check starten</button>
+          <button id="zfQuizNext" type="button" disabled>Naechste Frage</button>
+          <p id="zfQuizScore" class="score">Punkte: 0 / 8</p>
+        </div>
+        <div class="quiz-box">
+          <p id="zfQuizStatus" class="quiz-status">Noch nicht gestartet.</p>
+          <h3 id="zfQuizPrompt">Klicke auf "Check starten".</h3>
+          <div id="zfQuizDrawing" class="zf-quiz-drawing"></div>
+          <div id="zfQuizOptions" class="choice-list"></div>
+          <div id="zfQuizFeedback" class="zf-feedback" aria-live="polite"></div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="../../../global-menu.js"></script>
+  <script src="mathematik-zusammengesetzte-flaechen.js"></script>
+</body>
+</html>

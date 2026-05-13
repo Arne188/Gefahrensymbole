@@ -210,6 +210,45 @@ body.sd-drawer-open .sd-drawer {
   margin: 0;
 }
 
+.sd-toolbar {
+  display: flex;
+  gap: 10px;
+  align-items: end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.sd-search-label {
+  flex: 1 1 320px;
+  max-width: 520px;
+  font-weight: 600;
+  color: #2d4a68;
+}
+
+#sdModuleSearch {
+  margin-top: 4px;
+  width: 100%;
+  border: 1px solid #bed0e4;
+  background: #fff;
+}
+
+#sdModuleSearch:focus {
+  outline: 2px solid rgba(15, 94, 169, 0.25);
+  outline-offset: 1px;
+  border-color: var(--sd-accent);
+}
+
+.sd-clear-btn {
+  white-space: nowrap;
+  background: #ecf3fb;
+  color: #184469;
+  border: 1px solid #b7cce3;
+}
+
+.sd-layout .module-grid {
+  margin-top: 8px;
+}
+
 .sd-layout .module-grid {
   align-items: stretch;
 }
@@ -219,6 +258,64 @@ body.sd-drawer-open .sd-drawer {
   flex-direction: column;
   gap: 8px;
   height: 100%;
+  padding: 14px;
+  border-color: #c8d8ea;
+  box-shadow: 0 6px 14px rgba(25, 40, 58, 0.06);
+}
+
+.sd-layout .module-callout h3 {
+  font-size: 1.06rem;
+}
+
+.sd-module-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.sd-module-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 52px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  border: 1px solid var(--sd-accent);
+  background: var(--sd-accent-soft);
+  color: var(--sd-accent);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.sd-module-status {
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 3px 9px;
+}
+
+.sd-module-status.is-ready {
+  border: 1px solid #2f7d32;
+  color: #1f6124;
+  background: #e9f6ea;
+}
+
+.sd-module-status.is-draft {
+  border: 1px solid #bd8d2a;
+  color: #7a5b1e;
+  background: #fcf3de;
+}
+
+.sd-module-description {
+  margin: 0;
+  color: #39566f;
+  line-height: 1.45;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .sd-layout .module-callout .button-link,
@@ -230,6 +327,14 @@ body.sd-drawer-open .sd-drawer {
 @media (max-width: 760px) {
   .sd-hero-extra {
     grid-template-columns: 1fr;
+  }
+
+  .sd-toolbar {
+    align-items: stretch;
+  }
+
+  .sd-clear-btn {
+    width: 100%;
   }
 
   .sd-menu-toggle {

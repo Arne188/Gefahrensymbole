@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mathematik - Koerper und Darstellungen</title>
+  <link rel="icon" type="image/svg+xml" href="../../../assets/tab-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../styles.css">
+  <link rel="stylesheet" href="mathematik-koerper-und-darstellungen.css">
+</head>
+<body>
+  <main class="kd-page">
+    <header class="kd-hero">
+      <a class="back-link" href="../../../subject-dashboard.html?subject=Mathematik">Zurueck zum Fach-Dashboard</a>
+      <p class="kd-tag">Mathematik Klasse 5 - Modul 1</p>
+      <h1>Koerper und Darstellungen</h1>
+      <p class="kd-intro">
+        Dieses Modul verbindet Grundkoerper, Kantenmodelle, Netze, Modellbau und Schraegbilder.
+        Schwerpunkt ist das raeumliche Vorstellungsvermoegen: <strong>Objekt -> Kantenmodell -> Netz -> gebautes Modell -> Schraegbild</strong>.
+      </p>
+      <figure class="kd-figure kd-main-figure">
+        <img src="koerper-netze-schraegbilder-uebersicht.png" alt="Infografik zu Koerpern, Netzen, Kantenmodellen und Schraegbildern">
+        <figcaption>
+          Leitgrafik fuer das Modul. In der Lernreise arbeiten wir abschnittsweise mit einzelnen Bildausschnitten.
+        </figcaption>
+      </figure>
+    </header>
+
+    <nav class="kd-nav" aria-label="Modulnavigation">
+      <button class="kd-tab-btn is-active" type="button" data-tab="lernen">Lernreise</button>
+      <button class="kd-tab-btn" type="button" data-tab="ueben">Unbegrenzt ueben</button>
+      <button class="kd-tab-btn" type="button" data-tab="check">Diagnose und Check</button>
+    </nav>
+
+    <section id="tab-lernen" class="kd-tab is-active">
+      <article class="kd-card">
+        <h2>Eigenes Lernkonzept fuer Klasse 5</h2>
+        <p>
+          Didaktischer Aufbau nach deinem Kontext: vom realen Koerper zur Darstellung und wieder zurueck.
+          So bleibt der Schwerpunkt auf Raumvorstellung statt auf frueher Formalisierung.
+        </p>
+        <div class="kd-roadmap">
+          <section>
+            <h3>1. Koerper erkennen</h3>
+            <p>Wuerfel, Quader und weitere Grundkoerper mit Fachbegriffen beschreiben.</p>
+          </section>
+          <section>
+            <h3>2. Kantenmodell lesen</h3>
+            <p>Kanten, Ecken und Flaechenbeziehungen im Drahtmodell erkennen.</p>
+          </section>
+          <section>
+            <h3>3. Netze pruefen und bauen</h3>
+            <p>Gueltige Netze unterscheiden und in echte Modelle ueberfuehren.</p>
+          </section>
+          <section>
+            <h3>4. Schraegbild sichern</h3>
+            <p>Schraegbilder lesen und begonnene Darstellungen korrekt ergaenzen.</p>
+          </section>
+        </div>
+      </article>
+
+      <article class="kd-card">
+        <h2>Slice-Explorer (wie in den Geschichtsmodulen)</h2>
+        <p>Klicke auf eine Station und arbeite gezielt mit dem passenden Bildteil.</p>
+        <div id="kdStationButtons" class="kd-station-buttons"></div>
+        <div class="kd-explorer">
+          <figure class="kd-figure kd-slice-figure">
+            <img id="kdStationImage" src="slices/teil-1-grundkoerper.png" alt="Ausschnitt aus der Koerper-Grafik">
+          </figure>
+          <div class="kd-explorer-text">
+            <p class="kd-kicker" id="kdStationKicker"></p>
+            <h3 id="kdStationTitle"></h3>
+            <p id="kdStationText"></p>
+            <p class="kd-fact" id="kdStationFact"></p>
+          </div>
+        </div>
+      </article>
+
+      <article class="kd-card">
+        <h2>Lehrplanbezug (Niedersachsen, Gymnasium 5/6)</h2>
+        <ul class="kd-list">
+          <li>Grundkoerper charakterisieren und in der Umwelt identifizieren.</li>
+          <li>Kantenmodelle nutzen, Netze entwerfen und Modelle herstellen.</li>
+          <li>Schraegbilder von Wuerfeln/Quadern lesen, vergleichen und sinnvoll ergaenzen.</li>
+          <li>Zusammengesetzte Koerper auf bekannte Koerper zurueckfuehren.</li>
+        </ul>
+        <p class="kd-source-note">
+          Quellen fuer Aufgabenfamilien und Kompetenzabgleich:
+          <a href="https://cuvo.nibis.de/cuvo.php?f0=Kerncurriculum+Mathematik+Gymnasium-Sek.I&p=search" target="_blank" rel="noopener noreferrer">NIBIS/CuVo - KC Mathematik Gymnasium Sek I</a>,
+          <a href="https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-geometry-topic" target="_blank" rel="noopener noreferrer">Khan Academy - 3D Shapes, Parts, Nets</a>,
+          <a href="https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-geometry-topic/geometric-solids/e/identify-parts-of-3d-shapes" target="_blank" rel="noopener noreferrer">Khan Academy - Identify Parts of 3D Shapes</a>,
+          <a href="https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-geometry-topic/x0267d782%3Acc-6th-nets-of-3d-figures/e/nets-of-3d-figures" target="_blank" rel="noopener noreferrer">Khan Academy - Nets of Polyhedra</a>.
+        </p>
+      </article>
+    </section>
+
+    <section id="tab-ueben" class="kd-tab">
+      <article class="kd-card">
+        <h2>Aufgaben-Generator (unbegrenzt)</h2>
+        <p>
+          Jede Runde ist neu. Die Aufgaben bleiben altersgemaess: klar strukturiert, visuell unterstuetzt
+          und in drei Schwierigkeitsstufen.
+        </p>
+
+        <div class="kd-grid">
+          <label>
+            Schwierigkeit
+            <select id="kdDifficulty">
+              <option value="basis">Basis</option>
+              <option value="standard" selected>Standard</option>
+              <option value="profi">Profi</option>
+            </select>
+          </label>
+          <label>
+            Anzahl Aufgaben
+            <select id="kdCount">
+              <option value="10">10</option>
+              <option value="14" selected>14</option>
+              <option value="20">20</option>
+            </select>
+          </label>
+        </div>
+
+        <fieldset class="kd-fieldset">
+          <legend>Aufgabentypen</legend>
+          <label><input class="kd-type-check" type="checkbox" value="body" checked> Grundkoerper erkennen</label>
+          <label><input class="kd-type-check" type="checkbox" value="parts" checked> Ecken/Kanten/Flaechen bestimmen</label>
+          <label><input class="kd-type-check" type="checkbox" value="wire" checked> Kantenmodell zuordnen</label>
+          <label><input class="kd-type-check" type="checkbox" value="netcheck" checked> Gueltiges/ungueltiges Netz</label>
+          <label><input class="kd-type-check" type="checkbox" value="netbody" checked> Netz passt zu welchem Koerper?</label>
+          <label><input class="kd-type-check" type="checkbox" value="schraeg" checked> Schraegbild lesen/ergaenzen</label>
+          <label><input class="kd-type-check" type="checkbox" value="robot" checked> Modellbau-Reihenfolge</label>
+        </fieldset>
+
+        <div class="kd-controls">
+          <button id="kdGenerate" type="button">Neue Runde erstellen</button>
+          <button id="kdCheck" type="button">Runde pruefen</button>
+          <button id="kdReset" type="button">Eingaben leeren</button>
+        </div>
+
+        <div id="kdTaskList" class="kd-task-list"></div>
+        <div id="kdTaskFeedback" class="kd-feedback" aria-live="polite"></div>
+      </article>
+    </section>
+
+    <section id="tab-check" class="kd-tab">
+      <article class="kd-card">
+        <h2>Abschluss-Check (dynamisch)</h2>
+        <p>12 gemischte Fragen, direktes Feedback, bei jedem Start neu kombiniert.</p>
+        <div class="quiz-controls">
+          <button id="kdQuizStart" type="button">Check starten</button>
+          <button id="kdQuizNext" type="button" disabled>Naechste Frage</button>
+          <p id="kdQuizScore" class="score">Punkte: 0 / 12</p>
+        </div>
+        <div class="quiz-box">
+          <p id="kdQuizStatus" class="quiz-status">Noch nicht gestartet.</p>
+          <h3 id="kdQuizPrompt">Klicke auf "Check starten".</h3>
+          <div id="kdQuizOptions" class="choice-list"></div>
+          <div id="kdQuizFeedback" class="kd-feedback" aria-live="polite"></div>
+        </div>
+      </article>
+
+      <article class="kd-card">
+        <h2>Reflexion fuer Lernkontrolle</h2>
+        <p>
+          1. Erklaere den Unterschied zwischen Flaechenmodell, Kantenmodell und Netz.<br>
+          2. Beschreibe, woran du ein gueltiges Wuerfelnetz erkennst.<br>
+          3. Erklaere, welche Kanten im Schraegbild gestrichelt dargestellt werden und warum.
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <script src="../../../global-menu.js"></script>
+  <script src="mathematik-koerper-und-darstellungen.js"></script>
+</body>
+</html>

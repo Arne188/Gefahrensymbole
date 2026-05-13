@@ -9,6 +9,8 @@ const sdModuleHead = document.getElementById("sdModuleHead");
 const sdModuleCount = document.getElementById("sdModuleCount");
 const sdModuleList = document.getElementById("sdModuleList");
 const sdEmptyState = document.getElementById("sdEmptyState");
+const sdModuleSearch = document.getElementById("sdModuleSearch");
+const sdSearchClear = document.getElementById("sdSearchClear");
 
 const drawerToggle = document.getElementById("drawerToggle");
 const drawerClose = document.getElementById("drawerClose");
@@ -72,6 +74,80 @@ function subjectLink(subject) {
   return `subject-dashboard.html?subject=${encodeURIComponent(subject)}`;
 }
 
+function normalizeSearchText(value) {
+  return String(value || "")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function parseModuleTitle(title) {
+  const text = String(title || "").trim();
+  const match = text.match(/^modul\s*(\d+)\s*:\s*(.+)$/i);
+  if (!match) {
+    return {
+      number: null,
+      displayTitle: text,
+      shortTag: null,
+    };
+  }
+  return {
+    number: Number(match[1]),
+    displayTitle: match[2].trim(),
+    shortTag: `M${match[1]}`,
+  };
+}
+
+function moduleMatchesSearch(topic, term) {
+  if (!term) {
+    return true;
+  }
+  const haystack = normalizeSearchText(
+    [
+      topic.title,
+      topic.description,
+      ...(Array.isArray(topic.bulletPoints) ? topic.bulletPoints : []),
+    ].join(" ")
+  );
+  return haystack.includes(term);
+}
+
+function updateSearchControls(searchTerm) {
+  if (sdSearchClear instanceof HTMLButtonElement) {
+    sdSearchClear.disabled = !searchTerm;
+  }
+}
+
+function shortenText(text, maxLength = 110) {
+  const cleaned = String(text || "").replace(/\s+/g, " ").trim();
+  if (!cleaned) {
+    return "";
+  }
+  if (cleaned.length <= maxLength) {
+    return cleaned;
+  }
+
+  const rawSlice = cleaned.slice(0, maxLength);
+  const boundary = rawSlice.lastIndexOf(" ");
+  const cutoff = boundary > 65 ? boundary : maxLength;
+  return `${cleaned.slice(0, cutoff).trim()}...`;
+}
+
+function getTopicSortInfo(topic) {
+  const moduleInfo = parseModuleTitle(topic.title);
+  const hasOrder = Number.isFinite(topic.order);
+  return {
+    moduleNumber: Number.isFinite(moduleInfo.number) ? moduleInfo.number : null,
+    hasOrder,
+    order: hasOrder ? topic.order : null,
+    hasLink: Boolean(topic.link),
+    isMathCoreSeries: topic.subject === "Mathematik" && Number.isFinite(moduleInfo.number) && moduleInfo.number >= 1 && moduleInfo.number <= 4,
+    title: topic.title,
+  };
+}
+
 function parseSubjectFromQuery() {
   const params = new URLSearchParams(window.location.search);
   return params.get("subject") || "";
@@ -85,14 +161,30 @@ function updateUrlSubject(subject) {
 function createModuleCard(topic) {
   const card = document.createElement("article");
   card.className = "module-callout";
+  const moduleInfo = parseModuleTitle(topic.title);
+
+  const header = document.createElement("div");
+  header.className = "sd-module-head";
+
+  const moduleTag = document.createElement("span");
+  moduleTag.className = "sd-module-tag";
+  moduleTag.textContent = moduleInfo.shortTag || "Thema";
+  header.append(moduleTag);
+
+  const status = document.createElement("span");
+  status.className = topic.link ? "sd-module-status is-ready" : "sd-module-status is-draft";
+  status.textContent = topic.link ? "Verfügbar" : "In Vorbereitung";
+  header.append(status);
+  card.append(header);
 
   const title = document.createElement("h3");
-  title.textContent = topic.title;
+  title.textContent = moduleInfo.displayTitle;
   card.append(title);
 
   if (topic.description) {
     const description = document.createElement("p");
-    description.textContent = topic.description;
+    description.className = "sd-module-description";
+    description.textContent = shortenText(topic.description);
     card.append(description);
   }
 
@@ -102,6 +194,11 @@ function createModuleCard(topic) {
     link.href = topic.link;
     link.textContent = "Modul öffnen";
     card.append(link);
+  } else {
+    const note = document.createElement("p");
+    note.className = "topic-note";
+    note.textContent = "Noch kein Link hinterlegt";
+    card.append(note);
   }
 
   return card;
@@ -135,7 +232,7 @@ function renderDrawerSubjects(subjects, currentSubject) {
 function renderDrawerModules(topics, currentSubject) {
   drawerModuleList.replaceChildren();
   const modules = topics
-    .filter((topic) => topic.subject === currentSubject && topic.link)
+    .filter((topic) => topic.subject === currentSubject)
     .sort(compareTopicsForDisplay);
 
   if (modules.length === 0) {
@@ -147,11 +244,24 @@ function renderDrawerModules(topics, currentSubject) {
   }
 
   modules.forEach((topic) => {
-    const link = document.createElement("a");
-    link.href = topic.link;
-    link.textContent = topic.title;
-    link.title = `${topic.title} öffnen`;
-    drawerModuleList.append(link);
+    const moduleInfo = parseModuleTitle(topic.title);
+    const label = moduleInfo.shortTag
+      ? `${moduleInfo.shortTag}: ${moduleInfo.displayTitle}`
+      : moduleInfo.displayTitle;
+
+    if (topic.link) {
+      const link = document.createElement("a");
+      link.href = topic.link;
+      link.textContent = label;
+      link.title = `${topic.title} öffnen`;
+      drawerModuleList.append(link);
+      return;
+    }
+
+    const note = document.createElement("span");
+    note.className = "is-disabled";
+    note.textContent = `${label} (ohne Link)`;
+    drawerModuleList.append(note);
   });
 }
 
@@ -179,42 +289,79 @@ function applySubjectTheme(subject) {
   document.documentElement.style.setProperty("--sd-accent-soft", theme.accentSoft);
 }
 
-function renderModules(topics, subject) {
-  const modules = topics
-    .filter((topic) => topic.subject === subject && topic.link)
+function renderModules(topics, subject, searchTerm = "") {
+  const subjectModules = topics
+    .filter((topic) => topic.subject === subject)
     .sort(compareTopicsForDisplay);
+  const normalizedSearchTerm = normalizeSearchText(searchTerm);
+  updateSearchControls(normalizedSearchTerm);
+  const modules = subjectModules.filter((topic) => moduleMatchesSearch(topic, normalizedSearchTerm));
   sdModuleList.replaceChildren();
 
-  if (modules.length === 0) {
+  if (subjectModules.length === 0) {
     sdEmptyState.hidden = false;
+    sdEmptyState.textContent = "Für dieses Fach sind aktuell keine Module hinterlegt.";
     sdModuleCount.textContent = "0 Lernmodule";
     return;
   }
 
+  if (modules.length === 0) {
+    sdEmptyState.hidden = false;
+    sdEmptyState.textContent = "Kein Modul passt zum aktuellen Filter.";
+    sdModuleCount.textContent = `0 von ${subjectModules.length} Lernmodulen`;
+    return;
+  }
+
   sdEmptyState.hidden = true;
-  sdModuleCount.textContent = `${modules.length} Lernmodule`;
+  sdModuleCount.textContent = normalizedSearchTerm
+    ? `${modules.length} von ${subjectModules.length} Lernmodulen`
+    : `${modules.length} Lernmodule`;
   modules.forEach((topic) => {
     sdModuleList.append(createModuleCard(topic));
   });
 }
 
 function compareTopicsForDisplay(a, b) {
-  const hasOrderA = Number.isFinite(a.order);
-  const hasOrderB = Number.isFinite(b.order);
+  const infoA = getTopicSortInfo(a);
+  const infoB = getTopicSortInfo(b);
 
-  if (hasOrderA && hasOrderB && a.order !== b.order) {
-    return a.order - b.order;
+  if (infoA.isMathCoreSeries !== infoB.isMathCoreSeries) {
+    return infoA.isMathCoreSeries ? 1 : -1;
   }
 
-  if (hasOrderA && !hasOrderB) {
+  if (infoA.isMathCoreSeries && infoB.isMathCoreSeries && infoA.moduleNumber !== infoB.moduleNumber) {
+    return infoA.moduleNumber - infoB.moduleNumber;
+  }
+
+  if (infoA.moduleNumber !== null && infoB.moduleNumber !== null && infoA.moduleNumber !== infoB.moduleNumber) {
+    return infoA.moduleNumber - infoB.moduleNumber;
+  }
+
+  if (infoA.moduleNumber !== null && infoB.moduleNumber === null) {
     return -1;
   }
 
-  if (!hasOrderA && hasOrderB) {
+  if (infoA.moduleNumber === null && infoB.moduleNumber !== null) {
     return 1;
   }
 
-  return a.title.localeCompare(b.title, "de", { sensitivity: "base", numeric: true });
+  if (infoA.hasOrder && infoB.hasOrder && infoA.order !== infoB.order) {
+    return infoA.order - infoB.order;
+  }
+
+  if (infoA.hasOrder && !infoB.hasOrder) {
+    return -1;
+  }
+
+  if (!infoA.hasOrder && infoB.hasOrder) {
+    return 1;
+  }
+
+  if (infoA.hasLink !== infoB.hasLink) {
+    return infoA.hasLink ? -1 : 1;
+  }
+
+  return infoA.title.localeCompare(infoB.title, "de", { sensitivity: "base", numeric: true });
 }
 
 function initDashboard() {
@@ -250,7 +397,8 @@ function initDashboard() {
   function renderCurrentSubject() {
     sdSubjectSelect.value = currentSubject;
     applySubjectTheme(currentSubject);
-    renderModules(topics, currentSubject);
+    const searchTerm = sdModuleSearch instanceof HTMLInputElement ? sdModuleSearch.value : "";
+    renderModules(topics, currentSubject, searchTerm);
     renderDrawerSubjects(subjects, currentSubject);
     renderDrawerModules(topics, currentSubject);
     updateUrlSubject(currentSubject);
@@ -260,6 +408,20 @@ function initDashboard() {
     currentSubject = sdSubjectSelect.value;
     renderCurrentSubject();
   });
+
+  if (sdModuleSearch instanceof HTMLInputElement) {
+    sdModuleSearch.addEventListener("input", () => {
+      renderCurrentSubject();
+    });
+  }
+
+  if (sdSearchClear instanceof HTMLButtonElement && sdModuleSearch instanceof HTMLInputElement) {
+    sdSearchClear.addEventListener("click", () => {
+      sdModuleSearch.value = "";
+      renderCurrentSubject();
+      sdModuleSearch.focus();
+    });
+  }
 
   renderCurrentSubject();
 }

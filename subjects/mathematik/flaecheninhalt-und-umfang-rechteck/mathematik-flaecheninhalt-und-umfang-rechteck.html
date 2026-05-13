@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mathematik - Flaecheninhalt und Umfang am Rechteck</title>
+  <link rel="icon" type="image/svg+xml" href="../../../assets/tab-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../styles.css">
+  <link rel="stylesheet" href="mathematik-flaecheninhalt-und-umfang-rechteck.css">
+</head>
+<body>
+  <main class="fu-page">
+    <header class="fu-hero">
+      <a class="back-link" href="../../../subject-dashboard.html?subject=Mathematik">Zurueck zum Fach-Dashboard</a>
+      <p class="fu-tag">Mathematik Klasse 5 - Modul 2</p>
+      <h1>Flaecheninhalt und Umfang am Rechteck</h1>
+      <p class="fu-intro">
+        Dieses Modul setzt den fachlichen Kern deiner Reihe um: Umfang als Randlaenge,
+        Flaecheninhalt als Bedeckung mit Einheitsquadraten, danach die Verallgemeinerung
+        zu <strong>U = 2a + 2b</strong> und <strong>A = a * b</strong>.
+      </p>
+      <figure class="fu-figure fu-main-figure">
+        <img src="flaechenumfang-uebersicht.png" alt="Infografik zu Flaeche und Umfang am Rechteck mit Unterschied, Formeln, Vergleichen und Sachaufgaben">
+        <figcaption>
+          Die Grafik wird im Modul als Leitfaden genutzt. In der Lernreise arbeiten wir mit
+          thematisch passenden Ausschnitten und eigenen Aufgabenformaten.
+        </figcaption>
+      </figure>
+    </header>
+
+    <nav class="fu-nav" aria-label="Modulnavigation">
+      <button class="fu-tab-btn is-active" type="button" data-tab="lernen">Lernreise</button>
+      <button class="fu-tab-btn" type="button" data-tab="ueben">Unbegrenzt ueben</button>
+      <button class="fu-tab-btn" type="button" data-tab="check">Diagnose und Check</button>
+    </nav>
+
+    <section id="tab-lernen" class="fu-tab is-active">
+      <article class="fu-card">
+        <h2>Eigenes Lernkonzept fuer Klasse 5</h2>
+        <p>
+          Aufbau nach deinem Kontext: erst tragfaehige Grundvorstellungen, dann Formelbildung,
+          dann Anwendung und Begruendung.
+        </p>
+        <div class="fu-roadmap">
+          <section>
+            <h3>1. Unterscheiden</h3>
+            <p>Umfang ist Randlaenge, Flaecheninhalt ist Innenflaeche.</p>
+          </section>
+          <section>
+            <h3>2. Begruenden</h3>
+            <p>Mit Reihen, Spalten und Einheitsquadraten zur Formel.</p>
+          </section>
+          <section>
+            <h3>3. Variieren</h3>
+            <p>Gleicher Umfang, verschiedene Flaechen und umgekehrt.</p>
+          </section>
+          <section>
+            <h3>4. Anwenden</h3>
+            <p>Sachaufgaben, fehlende Seiten und Einheiten sicher loesen.</p>
+          </section>
+        </div>
+      </article>
+
+      <article class="fu-card">
+        <h2>Slice-Explorer (wie in den Geschichtsmodulen)</h2>
+        <p>Klicke eine Station an. Du bekommst Bildausschnitt, Kernidee und mathematische Bruecke.</p>
+        <div id="fuStationButtons" class="fu-station-buttons"></div>
+        <div class="fu-explorer">
+          <figure class="fu-figure fu-slice-figure">
+            <img id="fuStationImage" src="slices/teil-1-einheiten.png" alt="Ausschnitt aus der Grafik zu Umfang und Flaeche">
+          </figure>
+          <div class="fu-explorer-text">
+            <p class="fu-kicker" id="fuStationKicker"></p>
+            <h3 id="fuStationTitle"></h3>
+            <p id="fuStationText"></p>
+            <p class="fu-fact" id="fuStationFact"></p>
+          </div>
+        </div>
+      </article>
+
+      <article class="fu-card fu-split-card">
+        <div>
+          <h2>Formeln verstehend aufbauen</h2>
+          <ul class="fu-list">
+            <li>Rechteck mit Einheitsquadraten auslegen: Anzahl der Quadrate ist der Flaecheninhalt.</li>
+            <li>Zeilen mal Spalten fuehrt zu A = a * b.</li>
+            <li>Rand ablaufen: zwei lange und zwei kurze Seiten fuehren zu U = 2a + 2b.</li>
+            <li>Immer Einheiten sauber angeben: U in cm/m, A in cm^2/m^2.</li>
+          </ul>
+        </div>
+        <figure class="fu-figure">
+          <img src="slices/teil-4-sachaufgabe.png" alt="Sachaufgabenabschnitt der Infografik">
+          <figcaption>Sachaufgaben sind der Uebergang vom Verfahren zur Anwendung.</figcaption>
+        </figure>
+      </article>
+
+      <article class="fu-card">
+        <h2>Lehrplanbezug und Aufgabenabgleich</h2>
+        <p>
+          Der Schwerpunkt liegt auf Verstehen und Begruenden (nicht nur Einsetzen in Formeln):
+          genau passend zum KC Mathematik Gymnasium Niedersachsen (Doppelschuljahrgang 5/6).
+        </p>
+        <ul class="fu-list">
+          <li>Formeln fuer U und A am Rechteck aus Grundvorstellungen entwickeln und deuten.</li>
+          <li>Rechtecke und einfache zusammengesetzte Figuren berechnen und Ergebnisse beurteilen.</li>
+          <li>Kurzdiagnosen mit Skizze, Einheit und Begruendung statt reiner Rechenroutine.</li>
+        </ul>
+        <p class="fu-source-note">
+          Quellen fuer Aufgabentypen und Kompetenzabgleich:
+          <a href="https://cuvo.nibis.de/cuvo.php?f0=Kerncurriculum+Mathematik+Gymnasium-Sek.I&p=search" target="_blank" rel="noopener noreferrer">NIBIS/CuVo - Kerncurriculum Mathematik Sek I</a>,
+          <a href="https://nrich.maths.org/problems/perimeter-possibilities" target="_blank" rel="noopener noreferrer">NRICH - Perimeter Possibilities</a>,
+          <a href="https://nrich.maths.org/problems/changing-areas-changing-perimeters" target="_blank" rel="noopener noreferrer">NRICH - Changing Areas, Changing Perimeters</a>,
+          <a href="https://www.khanacademy.org/math/basic-geo/basic-geo-area-and-perimeter" target="_blank" rel="noopener noreferrer">Khan Academy - Area & Perimeter Task Families</a>.
+        </p>
+      </article>
+    </section>
+
+    <section id="tab-ueben" class="fu-tab">
+      <article class="fu-card">
+        <h2>Aufgaben-Generator (unbegrenzt)</h2>
+        <p>
+          Die Runde wird jedes Mal neu erstellt. Du kannst Schwierigkeit, Umfang und Aufgabentypen steuern.
+          Ziel: Verstehen plus sichere Anwendung.
+        </p>
+
+        <div class="fu-grid">
+          <label>
+            Schwierigkeit
+            <select id="fuDifficulty">
+              <option value="basis">Basis</option>
+              <option value="standard" selected>Standard</option>
+              <option value="profi">Profi</option>
+            </select>
+          </label>
+          <label>
+            Anzahl Aufgaben
+            <select id="fuCount">
+              <option value="10">10</option>
+              <option value="14" selected>14</option>
+              <option value="18">18</option>
+              <option value="24">24</option>
+            </select>
+          </label>
+        </div>
+
+        <fieldset class="fu-fieldset">
+          <legend>Aufgabentypen</legend>
+          <label><input class="fu-type-check" type="checkbox" value="concept" checked> Umfang oder Flaeche?</label>
+          <label><input class="fu-type-check" type="checkbox" value="u" checked> Umfang berechnen</label>
+          <label><input class="fu-type-check" type="checkbox" value="a" checked> Flaeche berechnen</label>
+          <label><input class="fu-type-check" type="checkbox" value="missingU" checked> Fehlende Seite aus U</label>
+          <label><input class="fu-type-check" type="checkbox" value="missingA" checked> Fehlende Seite aus A</label>
+          <label><input class="fu-type-check" type="checkbox" value="sameU" checked> Gleicher Umfang, Flaeche vergleichen</label>
+          <label><input class="fu-type-check" type="checkbox" value="sameA" checked> Gleiche Flaeche, Umfang vergleichen</label>
+          <label><input class="fu-type-check" type="checkbox" value="story" checked> Sachaufgaben</label>
+        </fieldset>
+
+        <div class="fu-controls">
+          <button id="fuGenerate" type="button">Neue Runde erstellen</button>
+          <button id="fuCheck" type="button">Runde pruefen</button>
+          <button id="fuReset" type="button">Eingaben leeren</button>
+        </div>
+
+        <div id="fuTaskList" class="fu-task-list"></div>
+        <div id="fuTaskFeedback" class="fu-feedback" aria-live="polite"></div>
+      </article>
+    </section>
+
+    <section id="tab-check" class="fu-tab">
+      <article class="fu-card">
+        <h2>Diagnose-Check (Formelverstaendnis + Anwendung)</h2>
+        <p>12 dynamische Fragen mit direkter Rueckmeldung. Jeder Neustart mischt neu.</p>
+        <div class="quiz-controls">
+          <button id="fuQuizStart" type="button">Check starten</button>
+          <button id="fuQuizNext" type="button" disabled>Naechste Frage</button>
+          <p id="fuQuizScore" class="score">Punkte: 0 / 12</p>
+        </div>
+        <div class="quiz-box">
+          <p id="fuQuizStatus" class="quiz-status">Noch nicht gestartet.</p>
+          <h3 id="fuQuizPrompt">Klicke auf "Check starten".</h3>
+          <div id="fuQuizOptions" class="choice-list"></div>
+          <div id="fuQuizFeedback" class="fu-feedback" aria-live="polite"></div>
+        </div>
+      </article>
+
+      <article class="fu-card">
+        <h2>Mini-Reflexion (nicht automatisch bewertet)</h2>
+        <p>
+          1. Erklaere in einem Satz den Unterschied zwischen Umfang und Flaecheninhalt.<br>
+          2. Begruende, warum bei A = a * b die Einheit ein Quadrat (z. B. cm^2) ist.<br>
+          3. Erklaere an einem Beispiel, wie du eine fehlende Seite aus dem Umfang berechnest.
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <script src="../../../global-menu.js"></script>
+  <script src="mathematik-flaecheninhalt-und-umfang-rechteck.js"></script>
+</body>
+</html>

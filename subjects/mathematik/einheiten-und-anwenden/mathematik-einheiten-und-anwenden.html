@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mathematik - Einheiten und Anwenden</title>
+  <link rel="icon" type="image/svg+xml" href="../../../assets/tab-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../styles.css">
+  <link rel="stylesheet" href="mathematik-einheiten-und-anwenden.css">
+</head>
+<body>
+  <main class="ea-page">
+    <header class="ea-hero">
+      <a class="back-link" href="../../../subject-dashboard.html?subject=Mathematik">Zurueck zum Fach-Dashboard</a>
+      <p class="ea-tag">Mathematik Klasse 5 - Modul 1</p>
+      <h1>Einheiten und Anwenden</h1>
+      <p class="ea-intro">
+        Dieses Modul wurde aus <strong>Blanko-Modul 4</strong> entwickelt und als Startmodul gesetzt.
+        Du lernst Flachen-, Massen- und Zeiteinheiten sicher umzurechnen und nutzt das Wissen in
+        alltagsnahen Sachaufgaben. Alle Uebungsbereiche sind dynamisch und koennen unbegrenzt neu erzeugt werden.
+      </p>
+      <figure class="ea-infographic-wrap">
+        <img
+          src="einheiten-und-anwenden-infografik.png"
+          alt="Infografik zu Einheiten und Anwenden mit Uebersicht, Umrechnungsregeln und Beispiel-Sachaufgabe">
+        <figcaption>
+          Die Infografik dient als visueller Leitfaden. Das Lernkonzept darunter ist eigenstaendig aufgebaut
+          und auf deinen Unterrichtsverlauf zugeschnitten.
+        </figcaption>
+      </figure>
+    </header>
+
+    <nav class="ea-nav" aria-label="Modulnavigation">
+      <button class="ea-tab-btn is-active" type="button" data-tab="konzept">Lernkonzept</button>
+      <button class="ea-tab-btn" type="button" data-tab="ueben">Unbegrenzt ueben</button>
+      <button class="ea-tab-btn" type="button" data-tab="check">Abschluss-Check</button>
+    </nav>
+
+    <section id="tab-konzept" class="ea-tab is-active">
+      <article class="ea-card">
+        <h2>Didaktischer Kern (eigenes Lernkonzept)</h2>
+        <p>
+          Das Modul folgt einem 4-Phasen-Modell: <strong>Aktivieren -> Strukturieren -> Anwenden -> Reflektieren</strong>.
+          Dabei bleiben wir nah an den Kompetenzen fuer Jahrgang 5/6 (Gymnasium Niedersachsen):
+          Groessen passend waehlen, in Einheiten umrechnen, Ergebnisse begruenden und in Sachaufgaben einsetzen.
+        </p>
+        <ol class="ea-list ea-list-numbered">
+          <li>Aktivieren: Vorwissen mit der Infografik und kurzen Einheitensprints sichtbar machen.</li>
+          <li>Strukturieren: Umrechnungsregeln je Groesse trennen (Flaeche, Masse, Zeit) und sicher benennen.</li>
+          <li>Anwenden: Direkte Umrechnungen, Vergleichsaufgaben, gemischte Angaben und Textaufgaben loesen.</li>
+          <li>Reflektieren: Plausibilitaetscheck, Fehleranalyse und neue Uebungsrunde mit angepasster Schwierigkeit.</li>
+        </ol>
+      </article>
+
+      <article class="ea-card">
+        <h2>Regel-Coach</h2>
+        <p>Waehle einen Bereich und erhalte die passende Regel mit Beispiel.</p>
+        <div class="ea-domain-buttons" id="eaCoachButtons">
+          <button class="ea-domain-btn is-active" type="button" data-domain="area">Flaeche</button>
+          <button class="ea-domain-btn" type="button" data-domain="mass">Masse</button>
+          <button class="ea-domain-btn" type="button" data-domain="time">Zeit</button>
+        </div>
+        <div class="ea-coach-box">
+          <h3 id="eaCoachTitle"></h3>
+          <p id="eaCoachText"></p>
+          <ul id="eaCoachList" class="ea-list"></ul>
+        </div>
+      </article>
+
+      <article class="ea-card">
+        <h2>Lehrplanbezug (Niedersachsen)</h2>
+        <ul class="ea-list">
+          <li>Groessen und Messen: Einheiten sachgerecht verwenden, umrechnen, schaetzen und vergleichen.</li>
+          <li>Flaecheninhalt und Umfang von Rechtecken und zusammengesetzten Figuren im Anwendungskontext nutzen.</li>
+          <li>Mathematisch modellieren: Sachtexte in Rechnungen ueberfuehren und Ergebnisse bewerten.</li>
+        </ul>
+        <p class="ea-source-note">
+          Quellen fuer Kompetenz- und Aufgabentypabgleich:
+          <a href="https://cuvo.nibis.de/cuvo.php?f0=Kerncurriculum+Mathematik+Gymnasium-Sek.I&p=search" target="_blank" rel="noopener noreferrer">NIBIS/CuVo - KC Mathematik Gymnasium Sek I</a>,
+          <a href="https://de.serlo.org/mathe/1603/umrechnen-von-einheiten" target="_blank" rel="noopener noreferrer">Serlo - Umrechnen von Einheiten</a>,
+          <a href="https://de.serlo.org/mathe/1673/flaecheneinheiten" target="_blank" rel="noopener noreferrer">Serlo - Flaecheneinheiten</a>,
+          <a href="https://www.khanacademy.org/math/cc-fifth-grade-math/imp-measurement-and-data-3" target="_blank" rel="noopener noreferrer">Khan Academy - Unit Conversion & Word Problems</a>.
+        </p>
+      </article>
+    </section>
+
+    <section id="tab-ueben" class="ea-tab">
+      <article class="ea-card">
+        <h2>Aufgaben-Generator (immer neue Aufgaben)</h2>
+        <p>
+          Jede Runde ist neu. Du kannst Aufgabenarten, Bereiche, Schwierigkeit und Umfang variieren.
+          Komma und Punkt werden bei Zahlenantworten akzeptiert.
+        </p>
+        <div class="ea-grid">
+          <label>
+            Schwierigkeit
+            <select id="eaDifficulty">
+              <option value="basis">Basis</option>
+              <option value="standard" selected>Standard</option>
+              <option value="profi">Profi</option>
+            </select>
+          </label>
+          <label>
+            Anzahl Aufgaben
+            <select id="eaCount">
+              <option value="8">8</option>
+              <option value="12" selected>12</option>
+              <option value="16">16</option>
+              <option value="20">20</option>
+            </select>
+          </label>
+        </div>
+
+        <fieldset class="ea-fieldset">
+          <legend>Bereiche</legend>
+          <label><input class="ea-domain-check" type="checkbox" value="area" checked> Flaeche</label>
+          <label><input class="ea-domain-check" type="checkbox" value="mass" checked> Masse</label>
+          <label><input class="ea-domain-check" type="checkbox" value="time" checked> Zeit</label>
+        </fieldset>
+
+        <fieldset class="ea-fieldset">
+          <legend>Aufgabentypen</legend>
+          <label><input class="ea-type-check" type="checkbox" value="convert" checked> Direkte Umrechnung</label>
+          <label><input class="ea-type-check" type="checkbox" value="mixed" checked> Gemischte Angaben</label>
+          <label><input class="ea-type-check" type="checkbox" value="compare" checked> Vergleichen (&lt; &gt; =)</label>
+          <label><input class="ea-type-check" type="checkbox" value="unit" checked> Passende Einheit</label>
+          <label><input class="ea-type-check" type="checkbox" value="story" checked> Sachaufgabe</label>
+        </fieldset>
+
+        <div class="ea-controls">
+          <button id="eaGenerate" type="button">Neue Runde erstellen</button>
+          <button id="eaCheck" type="button">Runde pruefen</button>
+          <button id="eaReset" type="button">Eingaben leeren</button>
+        </div>
+
+        <div id="eaTaskList" class="ea-task-list"></div>
+        <div id="eaTaskFeedback"></div>
+      </article>
+    </section>
+
+    <section id="tab-check" class="ea-tab">
+      <article class="ea-card">
+        <h2>Abschluss-Check (dynamisch)</h2>
+        <p>12 neue Fragen pro Durchlauf, gemischt aus allen Bereichen und Aufgabentypen.</p>
+        <div class="quiz-controls">
+          <button id="eaQuizStart" type="button">Check starten</button>
+          <button id="eaQuizNext" type="button" disabled>Naechste Frage</button>
+          <p id="eaQuizScore" class="score">Punkte: 0 / 12</p>
+        </div>
+        <div class="quiz-box">
+          <p id="eaQuizStatus" class="quiz-status">Noch nicht gestartet.</p>
+          <h3 id="eaQuizPrompt">Klicke auf "Check starten".</h3>
+          <div id="eaQuizOptions" class="choice-list"></div>
+          <div id="eaQuizFeedback"></div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="mathematik-einheiten-und-anwenden.js"></script>
+  <script src="../../../global-menu.js"></script>
+</body>
+</html>

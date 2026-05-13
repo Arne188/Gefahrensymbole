@@ -74,6 +74,59 @@ const defaultTopics = [
     description: "Alle wichtigen Kopfrechenarten der 5. Klasse mit unendlichem Generator, Hilfestrategien und Test trainieren.",
   },
   {
+    subject: "Mathematik",
+    title: "Modul 1: Koerper, Netze und Schraegbilder",
+    link: "subjects/mathematik/koerper-und-darstellungen/mathematik-koerper-und-darstellungen.html",
+    description: "Grundkoerper erkennen, Kantenmodelle lesen, Netze pruefen und Schraegbilder vervollstaendigen.",
+    bulletPoints: [
+      "Didaktische Kette: Objekt -> Kantenmodell -> Netz -> gebautes Modell -> Schraegbild.",
+      "Altersgerechte Visualisierungen und viele neu generierbare Uebungsaufgaben.",
+      "Netzpruefung (gueltig/ungueltig), Koerperzuordnung und Schraegbild-Ergaenzung.",
+      "Abschluss-Check mit gemischten Fragen und direktem Feedback.",
+    ],
+    order: 1,
+  },
+  {
+    subject: "Mathematik",
+    title: "Modul 2: Flaecheninhalt und Umfang am Rechteck",
+    link: "subjects/mathematik/flaecheninhalt-und-umfang-rechteck/mathematik-flaecheninhalt-und-umfang-rechteck.html",
+    description: "Grundvorstellungen aufbauen, Formeln verstehen und Rechteckaufgaben sicher anwenden.",
+    bulletPoints: [
+      "Grundvorstellungen: Umfang als Randlaenge, Flaeche als Bedeckung.",
+      "Formelaufbau verstehend: U = 2a + 2b und A = a * b.",
+      "Aufgabentypen inkl. fehlende Seiten, Vergleiche (gleicher U / gleiche A) und Sachaufgaben.",
+      "Dynamischer Diagnose-Check plus Reflexionsimpulse.",
+    ],
+    order: 2,
+  },
+  {
+    subject: "Mathematik",
+    title: "Modul 3: Zusammengesetzte Flaechen",
+    link: "subjects/mathematik/zusammengesetzte-flaechen/mathematik-zusammengesetzte-flaechen.html",
+    description: "Zerlegen und Ergaenzen bei zusammengesetzten Figuren mit Zeichnungen und unbegrenztem Uebungsgenerator.",
+    bulletPoints: [
+      "Zeitraum: ___",
+      "Lernziele: ___",
+      "Methoden: ___",
+      "Material: ___",
+      "Diagnose/Leistungsnachweis: ___",
+    ],
+    order: 3,
+  },
+  {
+    subject: "Mathematik",
+    title: "Modul 4: Einheiten und Anwenden",
+    link: "subjects/mathematik/einheiten-und-anwenden/mathematik-einheiten-und-anwenden.html",
+    description: "Einheiten sicher umrechnen und in Sachaufgaben anwenden (Flaeche, Masse, Zeit).",
+    bulletPoints: [
+      "Regel-Coach fuer Flaeche, Masse und Zeit.",
+      "Unbegrenzt neue Aufgaben: Umrechnen, Vergleichen, passende Einheit, Sachaufgaben.",
+      "Mehrere Schwierigkeitsstufen und direkte Auswertung mit Erklaerungen.",
+      "Dynamischer Abschluss-Check mit 12 neu generierten Fragen.",
+    ],
+    order: 4,
+  },
+  {
     subject: "Englisch",
     title: "Sentences with if - Part 1",
     link: "subjects/englisch/if-sentences-part-1/englisch-if-sentences.html",
@@ -540,7 +593,7 @@ function createModuleCard(topic) {
 
   if (topic.description) {
     const description = document.createElement("p");
-    description.textContent = topic.description;
+    description.textContent = shortenText(topic.description);
     card.append(description);
   }
 
@@ -577,9 +630,63 @@ function createModuleCard(topic) {
   return card;
 }
 
+function shortenText(text, maxLength = 110) {
+  const cleaned = String(text || "").replace(/\s+/g, " ").trim();
+  if (!cleaned) {
+    return "";
+  }
+  if (cleaned.length <= maxLength) {
+    return cleaned;
+  }
+
+  const rawSlice = cleaned.slice(0, maxLength);
+  const boundary = rawSlice.lastIndexOf(" ");
+  const cutoff = boundary > 65 ? boundary : maxLength;
+  return `${cleaned.slice(0, cutoff).trim()}...`;
+}
+
+function parseModuleSortNumber(title) {
+  const match = String(title || "").trim().match(/^modul\s*(\d+)\s*:/i);
+  return match ? Number(match[1]) : null;
+}
+
+function isMathCoreSeriesModule(topic) {
+  if (topic.subject !== "Mathematik") {
+    return false;
+  }
+  const title = String(topic.title || "").trim();
+  return /^modul\s*[1-4]\s*:/i.test(title);
+}
+
 function compareTopicsForDisplay(a, b) {
+  const moduleNumberA = parseModuleSortNumber(a.title);
+  const moduleNumberB = parseModuleSortNumber(b.title);
   const hasOrderA = Number.isFinite(a.order);
   const hasOrderB = Number.isFinite(b.order);
+  const hasLinkA = Boolean(a.link);
+  const hasLinkB = Boolean(b.link);
+  const isSeriesA = isMathCoreSeriesModule(a);
+  const isSeriesB = isMathCoreSeriesModule(b);
+
+  if (isSeriesA !== isSeriesB) {
+    return isSeriesA ? 1 : -1;
+  }
+
+  if (isSeriesA && isSeriesB && moduleNumberA !== null && moduleNumberB !== null && moduleNumberA !== moduleNumberB) {
+    return moduleNumberA - moduleNumberB;
+  }
+
+  if (moduleNumberA !== null && moduleNumberB !== null && moduleNumberA !== moduleNumberB) {
+    return moduleNumberA - moduleNumberB;
+  }
+
+  if (moduleNumberA !== null && moduleNumberB === null) {
+    return -1;
+  }
+
+  if (moduleNumberA === null && moduleNumberB !== null) {
+    return 1;
+  }
 
   if (hasOrderA && hasOrderB && a.order !== b.order) {
     return a.order - b.order;
@@ -591,6 +698,10 @@ function compareTopicsForDisplay(a, b) {
 
   if (!hasOrderA && hasOrderB) {
     return 1;
+  }
+
+  if (hasLinkA !== hasLinkB) {
+    return hasLinkA ? -1 : 1;
   }
 
   return a.title.localeCompare(b.title, "de", { sensitivity: "base", numeric: true });
