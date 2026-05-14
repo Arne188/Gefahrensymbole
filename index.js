@@ -32,6 +32,126 @@ const defaultTopics = [
     description: "Von der Idee bis zur Reinschrift: mit Übungspool, Feedback und Test.",
   },
   {
+    subject: "Deutsch",
+    title: "Modul 1: Wortarten-Grundlagen",
+    link: "subjects/deutsch/wortarten-grundlagen/deutsch-wortarten-grundlagen.html",
+    description: "Wortarten erkennen, sortieren und ihre Funktion im Satz verstehen.",
+    bulletPoints: [
+      "Verb, Nomen, Artikel, Pronomen, Adjektiv, Praeposition und Konjunktion.",
+      "Wortarten markieren, Woerter sortieren und falsche Zuordnungen finden.",
+      "Lueckentexte mit passenden Wortarten ergaenzen.",
+    ],
+    order: 1,
+  },
+  {
+    subject: "Deutsch",
+    title: "Modul 2: Nomen, Artikel, Kasus, Numerus, Genus",
+    link: "subjects/deutsch/nomen-artikel-kasus-numerus-genus/deutsch-nomen-artikel-kasus-numerus-genus.html",
+    description: "Nomen und Artikel sicher bestimmen: Fall, Zahl und grammatisches Geschlecht.",
+    bulletPoints: [
+      "Genus: der, die, das.",
+      "Numerus: Einzahl und Mehrzahl.",
+      "Kasusfragen: wer, wen, wem, wessen.",
+    ],
+    order: 2,
+  },
+  {
+    subject: "Deutsch",
+    title: "Modul 3: Verben und Zeitformen",
+    link: "subjects/deutsch/verben-und-zeitformen/deutsch-verben-und-zeitformen.html",
+    description: "Verben konjugieren und wichtige Zeitformen erkennen und bilden.",
+    bulletPoints: [
+      "Praesens, Praeteritum, Perfekt und Futur I.",
+      "Verbformen bestimmen und Saetze umformen.",
+      "Personalformen sicher bilden.",
+    ],
+    order: 3,
+  },
+  {
+    subject: "Deutsch",
+    title: "Modul 4: Adjektive und Steigerung",
+    link: "",
+    description: "Adjektive erkennen, sinnvoll verwenden und in drei Stufen steigern.",
+    bulletPoints: [
+      "Adjektive in Saetzen finden.",
+      "Grundstufe, Vergleichsstufe und Hoechststufe.",
+      "Gegenteile finden und Gegenstaende beschreiben.",
+    ],
+    order: 4,
+  },
+  {
+    subject: "Deutsch",
+    title: "Modul 5: Satzglieder - Subjekt, Praedikat, Objekte",
+    link: "",
+    description: "Satzglieder mit Fragen und Proben bestimmen und verschieben.",
+    bulletPoints: [
+      "Subjekt, Praedikat und Objekte erkennen.",
+      "Frageprobe, Umstellprobe, Ersatzprobe und Weglassprobe.",
+      "Satzglieder verschieben und Satzbau verstehen.",
+    ],
+    order: 5,
+  },
+  {
+    subject: "Deutsch",
+    title: "Modul 6: Satzarten und Satzschlusszeichen",
+    link: "",
+    description: "Aussage-, Frage- und Aufforderungssaetze unterscheiden und richtig beenden.",
+    bulletPoints: [
+      "Satzart bestimmen.",
+      "Punkt, Fragezeichen und Ausrufezeichen setzen.",
+      "Saetze umformen und eigene Beispiele schreiben.",
+    ],
+    order: 6,
+  },
+  {
+    subject: "Deutsch",
+    title: "Modul 7: Hauptsatz, Nebensatz und Komma",
+    link: "",
+    description: "Einfache Haupt- und Nebensaetze erkennen und das Komma setzen.",
+    bulletPoints: [
+      "Hauptsatz und Nebensatz unterscheiden.",
+      "Konjunktionen wie weil, dass, wenn und obwohl verwenden.",
+      "Kommas in einfachen Satzgefuegen setzen.",
+    ],
+    order: 7,
+  },
+  {
+    subject: "Deutsch",
+    title: "Modul 8: Wortbildung, Wortfamilien, Wortfelder",
+    link: "",
+    description: "Woerter ueber Bausteine, Wortstamm, Wortfamilien und Wortfelder untersuchen.",
+    bulletPoints: [
+      "Wortfamilien bilden und Wortfelder sammeln.",
+      "Zusammensetzungen und Ableitungen erkennen.",
+      "Wortstamm und Wortbausteine nutzen.",
+    ],
+    order: 8,
+  },
+  {
+    subject: "Deutsch",
+    title: "Modul 9: Rechtschreibung mit Grammatik",
+    link: "",
+    description: "Rechtschreibstrategien mit Grammatik verbinden und sicher anwenden.",
+    bulletPoints: [
+      "Grossschreibung und Substantivierung.",
+      "Verlaengern, Ableiten und Wortstamm nutzen.",
+      "s-Laute und das/dass unterscheiden.",
+    ],
+    order: 9,
+  },
+  {
+    subject: "Deutsch",
+    title: "Modul 10: Zeichensetzung",
+    link: "",
+    description: "Satzschluss, Aufzaehlungen, direkte Rede und einfache Kommasetzung ueben.",
+    bulletPoints: [
+      "Satzzeichen am Satzende setzen.",
+      "Kommas bei Aufzaehlungen und Satzgefuegen.",
+      "Direkte Rede mit Begleitsatz schreiben.",
+    ],
+    order: 10,
+  },
+  {
     subject: "Mathematik",
     title: "Besondere Vierecke",
     link: "subjects/mathematik/besondere-vierecke/mathematik-besondere-vierecke.html",
@@ -300,12 +420,6 @@ const defaultTopics = [
       "Temperaturbegriffe: Winterschlaf, Winterruhe, Waermestarre, Hitzetod, Kaeltestarre, Kaeltetod.",
       "Diagramme beschreiben und erklaeren (Einleitung, Beschreibung, Erklaerung, Fazit).",
     ],
-  },
-  {
-    subject: "Deutsch",
-    title: "Groß- und Kleinschreibung",
-    link: "subjects/deutsch/gross-und-kleinschreibung/deutsch-gross-und-kleinschreibung.html",
-    description: "Dummy-Modul (Platzhalter) - Inhalte folgen.",
   },
   {
     subject: "Geschichte",
@@ -599,8 +713,21 @@ function isMathBlankModule(topic) {
   );
 }
 
+function isDeprecatedDisplayTopic(topic) {
+  const subject = normalizeKeyPart(topic.subject);
+  const title = normalizeKeyPart(topic.title);
+  const description = normalizeKeyPart(topic.description);
+
+  return (
+    subject === "deutsch" &&
+    title.includes("gross") &&
+    title.includes("kleinschreibung") &&
+    (description.includes("dummy modul") || description.includes("platzhalter"))
+  );
+}
+
 function getDisplayTopics(topics) {
-  return topics.filter((topic) => !isMathBlankModule(topic));
+  return topics.filter((topic) => !isMathBlankModule(topic) && !isDeprecatedDisplayTopic(topic));
 }
 
 function createModuleCard(topic) {

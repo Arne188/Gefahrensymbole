@@ -1,0 +1,245 @@
+﻿<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deutsch - Nomen, Artikel und Faelle</title>
+  <link rel="icon" type="image/svg+xml" href="../../../assets/tab-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,650&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../styles.css">
+  <link rel="stylesheet" href="deutsch-nomen-artikel-kasus-numerus-genus.css">
+</head>
+<body>
+  <main class="ng-page">
+    <header class="ng-hero">
+      <a class="back-link" href="../../../subject-dashboard.html?subject=Deutsch">Zurueck zum Fach-Dashboard</a>
+      <p class="ng-tag">Deutsch Klasse 5 - Modul 2</p>
+      <h1>Nomen, Artikel, Genus, Numerus und Kasus</h1>
+      <p class="ng-intro">
+        Dieses Modul macht Nomen sicher: Du erkennst sie im Satz, schreibst sie gross, ordnest Artikel zu,
+        unterscheidest Einzahl und Mehrzahl und bestimmst die vier Faelle mit Fragen.
+      </p>
+      <div class="ng-hero-grid">
+        <figure class="ng-figure">
+          <img src="modul2-uebersicht.png" alt="Uebersichtsgrafik zu Nomen, Artikel, Genus, Numerus und Kasus">
+          <figcaption>Die Gesamtgrafik zeigt den roten Faden. In der Lernreise arbeitest du aktiv mit allen vier Grafiken.</figcaption>
+        </figure>
+        <aside class="ng-quick-card">
+          <h2>Merksatz</h2>
+          <p>Nomen haben oft einen Artikel, stehen in Singular oder Plural und koennen im Satz verschiedene Faelle haben.</p>
+          <div class="ng-mini-table">
+            <span>Genus</span><strong>der, die, das</strong>
+            <span>Numerus</span><strong>Einzahl / Mehrzahl</strong>
+            <span>Kasus</span><strong>Wer? Wessen? Wem? Wen?</strong>
+          </div>
+        </aside>
+      </div>
+    </header>
+
+    <nav class="ng-nav" aria-label="Modulnavigation">
+      <button class="ng-tab-btn is-active" type="button" data-tab="lernen">Lernreise</button>
+      <button class="ng-tab-btn" type="button" data-tab="ueben">Unbegrenzt ueben</button>
+      <button class="ng-tab-btn" type="button" data-tab="check">Diagnose und Check</button>
+    </nav>
+
+    <section id="tab-lernen" class="ng-tab is-active">
+      <article class="ng-card">
+        <p class="ng-kicker">Lernkonzept fuer Klasse 5</p>
+        <h2>Erst verstehen, dann deklinieren</h2>
+        <p>
+          Das Modul bleibt bewusst grundlegend: Du musst nicht jede Sonderform auswendig aufsagen. Wichtig ist,
+          dass du Nomen erkennst, Artikel passend verwendest, Singular/Plural unterscheidest und Faelle ueber Fragen bestimmst.
+        </p>
+        <div class="ng-roadmap">
+          <section><span>1</span><h3>Nomen erkennen</h3><p>Name fuer Mensch, Tier, Ding oder Gefuehl? Artikelprobe hilft.</p></section>
+          <section><span>2</span><h3>Artikel nutzen</h3><p>Bestimmte und unbestimmte Artikel begleiten Nomen.</p></section>
+          <section><span>3</span><h3>Genus & Numerus</h3><p>Grammatisches Geschlecht und Zahlform bestimmen.</p></section>
+          <section><span>4</span><h3>Kasus fragen</h3><p>Mit Wer/Wessen/Wem/Wen den Fall finden.</p></section>
+        </div>
+      </article>
+
+      <article class="ng-card">
+        <p class="ng-kicker">Grafik-Stationen</p>
+        <h2>Waehle deine Lernkarte</h2>
+        <div id="ngGraphicButtons" class="ng-graphic-buttons"></div>
+        <div class="ng-graphic-stage">
+          <figure class="ng-figure">
+            <img id="ngGraphicImage" src="modul2-uebersicht.png" alt="ausgewaehlte Lerngrafik">
+          </figure>
+          <div class="ng-graphic-text">
+            <p class="ng-kicker" id="ngGraphicKicker">Station 0</p>
+            <h3 id="ngGraphicTitle">Nomen verstehen</h3>
+            <p id="ngGraphicText">Starte mit der Gesamtuebersicht und wechsle dann gezielt zu den Teilgrafiken.</p>
+            <p id="ngGraphicPrompt" class="ng-prompt-box">Arbeitsauftrag: Erklaere in einem Satz, woran du ein Nomen erkennen kannst.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="ng-card">
+        <p class="ng-kicker">Aktivstation 1</p>
+        <h2>Nomen-Scanner</h2>
+        <p>Klicke alle Nomen im Satz an. Suche nach Namen fuer Menschen, Tiere, Dinge und Gefuehle.</p>
+        <div class="ng-interactive-grid">
+          <div>
+            <p id="ngScannerInstruction" class="ng-taskline">Finde alle Nomen.</p>
+            <div id="ngScannerSentence" class="ng-token-row"></div>
+          </div>
+          <div class="ng-action-panel">
+            <button id="ngScannerCheck" type="button">Nomen pruefen</button>
+            <button id="ngScannerNext" type="button">Neuer Satz</button>
+            <p id="ngScannerFeedback" class="ng-feedback" aria-live="polite"></p>
+          </div>
+        </div>
+      </article>
+
+      <article class="ng-card">
+        <p class="ng-kicker">Aktivstation 2</p>
+        <h2>Genus- und Numerus-Kartei</h2>
+        <p>Bestimme zum angezeigten Nomen das Genus und ob es im Singular oder Plural steht.</p>
+        <div class="ng-interactive-grid">
+          <div class="ng-noun-card" id="ngNounCard"></div>
+          <div class="ng-action-panel">
+            <label>Genus
+              <select id="ngGenusSelect">
+                <option value="">Bitte waehlen</option>
+                <option value="maskulin">maskulin</option>
+                <option value="feminin">feminin</option>
+                <option value="neutrum">neutrum</option>
+                <option value="plural">Pluralform</option>
+              </select>
+            </label>
+            <label>Numerus
+              <select id="ngNumerusSelect">
+                <option value="">Bitte waehlen</option>
+                <option value="singular">Singular</option>
+                <option value="plural">Plural</option>
+              </select>
+            </label>
+            <button id="ngNounCheck" type="button">Karte pruefen</button>
+            <button id="ngNounNext" type="button">Neue Karte</button>
+            <p id="ngNounFeedback" class="ng-feedback" aria-live="polite"></p>
+          </div>
+        </div>
+      </article>
+
+      <article class="ng-card">
+        <p class="ng-kicker">Aktivstation 3</p>
+        <h2>Kasus-Detektiv</h2>
+        <p>Das markierte Nomen steht in einem Fall. Stelle die passende Frage und waehle den Kasus.</p>
+        <div class="ng-interactive-grid">
+          <div>
+            <p id="ngCasePrompt" class="ng-taskline">Bestimme den Fall.</p>
+            <div id="ngCaseSentence" class="ng-token-row"></div>
+            <div id="ngCaseHint" class="ng-prompt-box"></div>
+          </div>
+          <div class="ng-action-panel">
+            <div id="ngCaseOptions" class="ng-option-grid"></div>
+            <button id="ngCaseNext" type="button">Neue Fallkarte</button>
+            <p id="ngCaseFeedback" class="ng-feedback" aria-live="polite"></p>
+          </div>
+        </div>
+      </article>
+
+      <article class="ng-card">
+        <p class="ng-kicker">Deklinationshilfe</p>
+        <h2>Ein Muster als Startpunkt</h2>
+        <div class="ng-case-table" aria-label="Deklination am Beispiel Hund">
+          <div><strong>Fall</strong><strong>Frage</strong><strong>Beispiel</strong></div>
+          <div><span>Nominativ</span><span>Wer oder was?</span><span>der Hund</span></div>
+          <div><span>Genitiv</span><span>Wessen?</span><span>des Hundes</span></div>
+          <div><span>Dativ</span><span>Wem?</span><span>dem Hund</span></div>
+          <div><span>Akkusativ</span><span>Wen oder was?</span><span>den Hund</span></div>
+        </div>
+        <p>
+          Im Uebungsteil wird dieses Muster auf weitere Nomen uebertragen, zum Beispiel Kind, Ball, Buch,
+          Katze und Maedchen. So bleibt die Tabelle uebersichtlich, aber die Uebung wird abwechslungsreicher.
+        </p>
+        <p class="ng-source-note">
+          Kompetenzabgleich:
+          <a href="https://cuvo.nibis.de/cuvo.php?k0_0=Dokumentenart&k0_1=Schulbereich&k0_2=Schulform&k0_3=Fach&p=search&v0_0=Kerncurriculum&v0_1=Sek+I&v0_2=Gymnasium-Sek.I&v0_3=Deutsch" target="_blank" rel="noopener noreferrer">NIBIS/CuVo - Kerncurriculum Deutsch Gymnasium Sek I</a>.
+        </p>
+      </article>
+    </section>
+
+    <section id="tab-ueben" class="ng-tab">
+      <article class="ng-card">
+        <p class="ng-kicker">Uebungspool</p>
+        <h2>Aufgaben-Generator fuer unbegrenztes Ueben</h2>
+        <p>Jede Runde ist neu. Die Aufgaben ueben Nomen, Grossschreibung, Artikel, Genus, Numerus, Kasus und mehrere einfache Deklinationsformen.</p>
+        <div class="ng-grid">
+          <label>Schwierigkeit
+            <select id="ngDifficulty">
+              <option value="basis">Basis</option>
+              <option value="standard" selected>Standard</option>
+              <option value="profi">Profi</option>
+            </select>
+          </label>
+          <label>Anzahl Aufgaben
+            <select id="ngCount">
+              <option value="8">8</option>
+              <option value="12" selected>12</option>
+              <option value="16">16</option>
+              <option value="20">20</option>
+            </select>
+          </label>
+        </div>
+        <fieldset class="ng-fieldset">
+          <legend>Aufgabentypen</legend>
+          <label><input class="ng-type-check" type="checkbox" value="findNouns" checked> Nomen finden</label>
+          <label><input class="ng-type-check" type="checkbox" value="capital" checked> Grossschreibung</label>
+          <label><input class="ng-type-check" type="checkbox" value="article" checked> Artikel einsetzen</label>
+          <label><input class="ng-type-check" type="checkbox" value="genus" checked> Genus bestimmen</label>
+          <label><input class="ng-type-check" type="checkbox" value="plural" checked> Mehrzahl bilden</label>
+          <label><input class="ng-type-check" type="checkbox" value="caseQuestion" checked> Kasusfrage zuordnen</label>
+          <label><input class="ng-type-check" type="checkbox" value="caseSentence" checked> Fall im Satz bestimmen</label>
+          <label><input class="ng-type-check" type="checkbox" value="decline" checked> Deklinationsuebungen</label>
+        </fieldset>
+        <div class="ng-controls">
+          <button id="ngGenerate" type="button">Neue Runde erstellen</button>
+          <button id="ngCheck" type="button">Runde pruefen</button>
+          <button id="ngReset" type="button">Eingaben leeren</button>
+        </div>
+        <p id="ngTaskFeedback" class="ng-feedback" aria-live="polite"></p>
+        <div id="ngTaskList" class="ng-task-list"></div>
+      </article>
+    </section>
+
+    <section id="tab-check" class="ng-tab">
+      <article class="ng-card ng-check-card">
+        <p class="ng-kicker">Lernkontrolle</p>
+        <h2>Diagnose-Check: Nomen sicher?</h2>
+        <p>Der Check mischt kurze Fragen zu Nomen, Artikel, Genus, Numerus und Kasus.</p>
+        <div class="ng-check-panel">
+          <div>
+            <p id="ngQuizStatus" class="ng-quiz-status">Noch nicht gestartet.</p>
+            <p id="ngQuizScore" class="ng-score">0 / 0 richtig</p>
+          </div>
+          <div class="ng-controls compact">
+            <button id="ngQuizStart" type="button">Check starten</button>
+            <button id="ngQuizNext" type="button" disabled>Naechste Frage</button>
+          </div>
+        </div>
+        <div id="ngQuizPrompt" class="ng-quiz-prompt"></div>
+        <div id="ngQuizVisual" class="ng-quiz-visual"></div>
+        <div id="ngQuizOptions" class="ng-option-grid"></div>
+        <p id="ngQuizFeedback" class="ng-feedback" aria-live="polite"></p>
+      </article>
+
+      <article class="ng-card">
+        <p class="ng-kicker">Kritischer Modulcheck</p>
+        <h2>Warum das Modul nicht ueberladen ist</h2>
+        <div class="ng-quality-grid">
+          <section><h3>Klasse-5-gerecht</h3><p>Erkennen, Fragen stellen und einfache Formen anwenden stehen vor Sonderregeln.</p></section>
+          <section><h3>Curricular passend</h3><p>Nomen, Artikel, Pronomennahe Begleiter, Deklination und Funktion im Satz werden angebahnt.</p></section>
+          <section><h3>Uebungsreich</h3><p>Acht Aufgabenfamilien liefern viele neue Kombinationen fuer Wiederholung und Diagnose.</p></section>
+          <section><h3>Bewusste Grenze</h3><p>Systematische Ausnahmelisten und komplette Paradigmen bleiben ausgeklammert.</p></section>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="deutsch-nomen-artikel-kasus-numerus-genus.js"></script>
+</body>
+</html>

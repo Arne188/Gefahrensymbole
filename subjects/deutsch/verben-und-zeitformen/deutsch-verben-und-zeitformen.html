@@ -1,0 +1,189 @@
+﻿<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deutsch - Verben und Zeitformen</title>
+  <link rel="icon" type="image/svg+xml" href="../../../assets/tab-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,650&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../styles.css">
+  <link rel="stylesheet" href="deutsch-verben-und-zeitformen.css">
+</head>
+<body>
+  <main class="vz-page">
+    <header class="vz-hero">
+      <a class="back-link" href="../../../subject-dashboard.html?subject=Deutsch">Zurueck zum Fach-Dashboard</a>
+      <p class="vz-tag">Deutsch Klasse 5 - Modul 3</p>
+      <h1>Verben und Zeitformen</h1>
+      <p class="vz-intro">
+        Verben sagen, was jemand tut oder was geschieht. In diesem Modul erkennst du Verben,
+        bildest Personalformen und unterscheidest Praesens, Praeteritum, Perfekt und Futur I.
+      </p>
+      <div class="vz-hero-grid">
+        <figure class="vz-figure">
+          <img src="modul3-3-zeitformen.png" alt="Uebersicht zu den wichtigsten Zeitformen">
+          <figcaption>Die Zeitformen-Grafik ist der rote Faden. Die weiteren sieben Grafiken vertiefen einzelne Stationen.</figcaption>
+        </figure>
+        <aside class="vz-quick-card">
+          <h2>Verb-Kompass</h2>
+          <p>Frage zuerst: Was tut jemand? Danach pruefst du Person und Zeit.</p>
+          <div class="vz-mini-table">
+            <span>Praesens</span><strong>ich spiele</strong>
+            <span>Praeteritum</span><strong>ich spielte</strong>
+            <span>Perfekt</span><strong>ich habe gespielt</strong>
+            <span>Futur I</span><strong>ich werde spielen</strong>
+          </div>
+        </aside>
+      </div>
+    </header>
+
+    <nav class="vz-nav" aria-label="Modulnavigation">
+      <button class="vz-tab-btn is-active" type="button" data-tab="lernen">Lernreise</button>
+      <button class="vz-tab-btn" type="button" data-tab="ueben">Unbegrenzt ueben</button>
+      <button class="vz-tab-btn" type="button" data-tab="check">Diagnose und Check</button>
+    </nav>
+
+    <section id="tab-lernen" class="vz-tab is-active">
+      <article class="vz-card">
+        <p class="vz-kicker">Lernkonzept fuer Klasse 5</p>
+        <h2>Vom Tunwort zur Zeitform</h2>
+        <p>
+          Das Modul geht in kleinen Schritten vor: Verben erkennen, Grundform und Personalform unterscheiden,
+          richtig konjugieren und Zeitformen ueber Signalwoerter, Bildung und Bedeutung bestimmen.
+        </p>
+        <div class="vz-roadmap">
+          <section><span>1</span><h3>Erkennen</h3><p>Was tut jemand? Was geschieht?</p></section>
+          <section><span>2</span><h3>Konjugieren</h3><p>Subjekt suchen und Verbform anpassen.</p></section>
+          <section><span>3</span><h3>Zeit bestimmen</h3><p>Jetzt, frueher, gesprochen oder spaeter?</p></section>
+          <section><span>4</span><h3>Umformen</h3><p>Saetze gezielt in andere Zeitformen setzen.</p></section>
+        </div>
+      </article>
+
+      <article class="vz-card">
+        <p class="vz-kicker">Acht Grafikstationen</p>
+        <h2>Waehle deine Lernkarte</h2>
+        <div id="vzGraphicButtons" class="vz-graphic-buttons"></div>
+        <div class="vz-graphic-stage">
+          <figure class="vz-figure"><img id="vzGraphicImage" src="modul3-1-verben-erkennen.png" alt="ausgewaehlte Verb-Lerngrafik"></figure>
+          <div class="vz-graphic-text">
+            <p class="vz-kicker" id="vzGraphicKicker">Station 1</p>
+            <h3 id="vzGraphicTitle">Verben erkennen</h3>
+            <p id="vzGraphicText">Klicke eine Station an und bearbeite den Arbeitsauftrag.</p>
+            <p id="vzGraphicPrompt" class="vz-prompt-box">Arbeitsauftrag: Finde in der Grafik alle Verbformen.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="vz-card">
+        <p class="vz-kicker">Aktivstation 1</p>
+        <h2>Verb-Scanner</h2>
+        <p>Klicke alle Verben im Satz an. Beim Perfekt und Futur I koennen zwei Verbteile zusammengehoeren.</p>
+        <div class="vz-interactive-grid">
+          <div><p class="vz-taskline">Finde alle Verben.</p><div id="vzScannerSentence" class="vz-token-row"></div></div>
+          <div class="vz-action-panel">
+            <button id="vzScannerCheck" type="button">Verben pruefen</button>
+            <button id="vzScannerNext" type="button">Neuer Satz</button>
+            <p id="vzScannerFeedback" class="vz-feedback" aria-live="polite"></p>
+          </div>
+        </div>
+      </article>
+
+      <article class="vz-card">
+        <p class="vz-kicker">Aktivstation 2</p>
+        <h2>Konjugations-Trainer</h2>
+        <p>Waehle die passende Personalform. Subjekt und Verb muessen zusammenpassen.</p>
+        <div class="vz-interactive-grid">
+          <div class="vz-trainer-card" id="vzConjCard"></div>
+          <div class="vz-action-panel">
+            <div id="vzConjOptions" class="vz-option-grid"></div>
+            <button id="vzConjNext" type="button">Neue Karte</button>
+            <p id="vzConjFeedback" class="vz-feedback" aria-live="polite"></p>
+          </div>
+        </div>
+      </article>
+
+      <article class="vz-card">
+        <p class="vz-kicker">Aktivstation 3</p>
+        <h2>Zeitformen-Detektiv</h2>
+        <p>Bestimme die Zeitform des markierten Satzes. Achte auf Signalwoerter und die Verbform.</p>
+        <div class="vz-interactive-grid">
+          <div><p id="vzTensePrompt" class="vz-taskline">Welche Zeitform ist das?</p><div id="vzTenseSentence" class="vz-token-row"></div><div id="vzTenseHint" class="vz-prompt-box"></div></div>
+          <div class="vz-action-panel">
+            <div id="vzTenseOptions" class="vz-option-grid"></div>
+            <button id="vzTenseNext" type="button">Neue Zeitkarte</button>
+            <p id="vzTenseFeedback" class="vz-feedback" aria-live="polite"></p>
+          </div>
+        </div>
+      </article>
+
+      <article class="vz-card">
+        <h2>Lehrplanbezug und bewusste Grenze</h2>
+        <ul class="vz-list">
+          <li>Verben als Wortart fachsprachlich erkennen und beschreiben.</li>
+          <li>Konjugation und Personalformen anwenden.</li>
+          <li>Praesens, Praeteritum, Perfekt und Futur I altersgemaess unterscheiden und bilden.</li>
+          <li>Keine Ueberladung mit Plusquamperfekt, Passiv oder schwierigen Sonderformen.</li>
+        </ul>
+        <p class="vz-source-note">Kompetenzabgleich: <a href="https://cuvo.nibis.de/cuvo.php?k0_0=Dokumentenart&k0_1=Schulbereich&k0_2=Schulform&k0_3=Fach&p=search&v0_0=Kerncurriculum&v0_1=Sek+I&v0_2=Gymnasium-Sek.I&v0_3=Deutsch" target="_blank" rel="noopener noreferrer">NIBIS/CuVo - Kerncurriculum Deutsch Gymnasium Sek I</a>.</p>
+      </article>
+    </section>
+
+    <section id="tab-ueben" class="vz-tab">
+      <article class="vz-card">
+        <p class="vz-kicker">Uebungspool</p>
+        <h2>Aufgaben-Generator fuer unbegrenztes Ueben</h2>
+        <p>Viele Aufgabenfamilien erzeugen immer neue Kombinationen: erkennen, konjugieren, Zeitformen bestimmen, umformen und bilden.</p>
+        <div class="vz-grid">
+          <label>Schwierigkeit<select id="vzDifficulty"><option value="basis">Basis</option><option value="standard" selected>Standard</option><option value="profi">Profi</option></select></label>
+          <label>Anzahl Aufgaben<select id="vzCount"><option value="10">10</option><option value="14" selected>14</option><option value="20">20</option><option value="28">28</option></select></label>
+        </div>
+        <fieldset class="vz-fieldset">
+          <legend>Aufgabentypen</legend>
+          <label><input class="vz-type-check" type="checkbox" value="findVerb" checked> Verben finden</label>
+          <label><input class="vz-type-check" type="checkbox" value="infinitive" checked> Grundform</label>
+          <label><input class="vz-type-check" type="checkbox" value="conjugate" checked> konjugieren</label>
+          <label><input class="vz-type-check" type="checkbox" value="agreement" checked> passende Verbform</label>
+          <label><input class="vz-type-check" type="checkbox" value="tenseName" checked> Zeitform erkennen</label>
+          <label><input class="vz-type-check" type="checkbox" value="signal" checked> Signalwoerter</label>
+          <label><input class="vz-type-check" type="checkbox" value="praeteritum" checked> Praeteritum bilden</label>
+          <label><input class="vz-type-check" type="checkbox" value="perfekt" checked> Perfekt bilden</label>
+          <label><input class="vz-type-check" type="checkbox" value="futur" checked> Futur I bilden</label>
+          <label><input class="vz-type-check" type="checkbox" value="transform" checked> Satz umformen</label>
+        </fieldset>
+        <div class="vz-controls">
+          <button id="vzGenerate" type="button">Neue Runde erstellen</button>
+          <button id="vzCheck" type="button">Runde pruefen</button>
+          <button id="vzReset" type="button">Eingaben leeren</button>
+        </div>
+        <p id="vzTaskFeedback" class="vz-feedback" aria-live="polite"></p>
+        <div id="vzTaskList" class="vz-task-list"></div>
+      </article>
+    </section>
+
+    <section id="tab-check" class="vz-tab">
+      <article class="vz-card vz-check-card">
+        <p class="vz-kicker">Lernkontrolle</p>
+        <h2>Diagnose-Check: Verben und Zeiten</h2>
+        <div class="vz-check-panel"><div><p id="vzQuizStatus" class="vz-quiz-status">Noch nicht gestartet.</p><p id="vzQuizScore" class="vz-score">0 / 0 richtig</p></div><div class="vz-controls compact"><button id="vzQuizStart" type="button">Check starten</button><button id="vzQuizNext" type="button" disabled>Naechste Frage</button></div></div>
+        <div id="vzQuizPrompt" class="vz-quiz-prompt"></div>
+        <div id="vzQuizVisual" class="vz-quiz-visual"></div>
+        <div id="vzQuizOptions" class="vz-option-grid"></div>
+        <p id="vzQuizFeedback" class="vz-feedback" aria-live="polite"></p>
+      </article>
+      <article class="vz-card">
+        <p class="vz-kicker">Kritischer Modulcheck</p>
+        <h2>Warum der Aufbau passt</h2>
+        <div class="vz-quality-grid">
+          <section><h3>Anschaulich</h3><p>Die acht Grafiken strukturieren das Thema in kleine Lernportionen.</p></section>
+          <section><h3>Uebungsstark</h3><p>Der Generator mischt zehn Aufgabenfamilien und viele Verben.</p></section>
+          <section><h3>Klasse 5</h3><p>Der Fokus liegt auf vier zentralen Zeitformen und einfachen Satzmustern.</p></section>
+          <section><h3>Verstaendlich</h3><p>Signalwoerter, Bildung und Bedeutung werden immer zusammen betrachtet.</p></section>
+        </div>
+      </article>
+    </section>
+  </main>
+  <script src="deutsch-verben-und-zeitformen.js"></script>
+</body>
+</html>
