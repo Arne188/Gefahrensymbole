@@ -374,8 +374,11 @@ function initDashboard() {
 
   const topics = hub.loadTopics();
   hub.saveTopics(topics);
+  const displayTopics = typeof hub.getDisplayTopics === "function"
+    ? hub.getDisplayTopics(topics)
+    : topics;
 
-  const subjects = hub.getSubjects(topics);
+  const subjects = hub.getSubjects(displayTopics);
   if (subjects.length === 0) {
     sdTitle.textContent = "Fach-Dashboard";
     sdIntro.textContent = "Es sind aktuell keine Fächer hinterlegt.";
@@ -398,9 +401,9 @@ function initDashboard() {
     sdSubjectSelect.value = currentSubject;
     applySubjectTheme(currentSubject);
     const searchTerm = sdModuleSearch instanceof HTMLInputElement ? sdModuleSearch.value : "";
-    renderModules(topics, currentSubject, searchTerm);
+    renderModules(displayTopics, currentSubject, searchTerm);
     renderDrawerSubjects(subjects, currentSubject);
-    renderDrawerModules(topics, currentSubject);
+    renderDrawerModules(displayTopics, currentSubject);
     updateUrlSubject(currentSubject);
   }
 

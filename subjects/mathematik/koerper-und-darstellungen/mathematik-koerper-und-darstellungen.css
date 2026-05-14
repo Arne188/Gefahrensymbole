@@ -93,6 +93,11 @@
   padding: 16px;
 }
 
+.kd-card,
+.kd-task-row {
+  position: relative;
+}
+
 .kd-card h2 {
   margin: 0 0 8px;
 }
@@ -113,15 +118,35 @@
   gap: 10px;
 }
 
-.kd-roadmap section {
+.kd-roadmap section,
+.kd-compass-grid section {
   border: 1px solid #c6d9ec;
   border-radius: 12px;
   background: #f8fbff;
   padding: 10px;
 }
 
-.kd-roadmap p {
+.kd-roadmap p,
+.kd-compass-grid p {
   margin: 0;
+}
+
+.kd-compass-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.kd-compass-grid section {
+  background:
+    linear-gradient(135deg, rgba(17, 97, 96, 0.08), transparent 58%),
+    #ffffff;
+}
+
+.kd-compass-grid strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #164f62;
 }
 
 .kd-station-buttons {
@@ -245,15 +270,28 @@
 
 .kd-task-row {
   border: 1px solid #ceddeb;
-  border-radius: 10px;
+  border-radius: 14px;
   background: #fff;
-  padding: 10px;
+  padding: 12px;
   display: grid;
+  grid-template-columns: minmax(270px, 0.9fr) minmax(280px, 1.1fr);
   gap: 8px;
+  align-items: start;
 }
 
 .kd-task-row p {
   margin: 0;
+}
+
+.kd-task-row > p,
+.kd-task-row > .kd-answer-line,
+.kd-task-row > .task-feedback {
+  grid-column: 1;
+}
+
+.kd-task-row > .kd-task-visual {
+  grid-column: 2;
+  grid-row: 1 / span 3;
 }
 
 .kd-task-row.is-correct {
@@ -283,10 +321,16 @@
 
 .kd-task-visual {
   border: 1px solid #d0dfee;
-  border-radius: 10px;
-  background: #fafdff;
-  padding: 6px;
-  max-width: 420px;
+  border-radius: 12px;
+  background:
+    linear-gradient(90deg, rgba(36, 88, 132, 0.06) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(36, 88, 132, 0.06) 1px, transparent 1px),
+    #fafdff;
+  background-size: 18px 18px;
+  padding: 8px;
+  min-height: 152px;
+  display: grid;
+  align-items: center;
 }
 
 .kd-task-visual svg {
@@ -316,8 +360,32 @@
   fill: #35506b;
 }
 
+.kd-quiz-visual {
+  margin: 8px 0;
+}
+
+.kd-quiz-visual .kd-task-visual {
+  max-width: 460px;
+}
+
 @media (max-width: 900px) {
-  .kd-explorer {
+  .kd-explorer,
+  .kd-task-row {
     grid-template-columns: 1fr;
+  }
+
+  .kd-task-row > p,
+  .kd-task-row > .kd-answer-line,
+  .kd-task-row > .task-feedback,
+  .kd-task-row > .kd-task-visual {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .kd-controls button,
+  .kd-tab-btn {
+    width: 100%;
   }
 }

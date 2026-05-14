@@ -75,7 +75,7 @@ const defaultTopics = [
   },
   {
     subject: "Mathematik",
-    title: "Modul 1: Koerper, Netze und Schraegbilder",
+    title: "Modul 4: Koerper, Netze und Schraegbilder",
     link: "subjects/mathematik/koerper-und-darstellungen/mathematik-koerper-und-darstellungen.html",
     description: "Grundkoerper erkennen, Kantenmodelle lesen, Netze pruefen und Schraegbilder vervollstaendigen.",
     bulletPoints: [
@@ -84,7 +84,7 @@ const defaultTopics = [
       "Netzpruefung (gueltig/ungueltig), Koerperzuordnung und Schraegbild-Ergaenzung.",
       "Abschluss-Check mit gemischten Fragen und direktem Feedback.",
     ],
-    order: 1,
+    order: 4,
   },
   {
     subject: "Mathematik",
@@ -105,17 +105,16 @@ const defaultTopics = [
     link: "subjects/mathematik/zusammengesetzte-flaechen/mathematik-zusammengesetzte-flaechen.html",
     description: "Zerlegen und Ergaenzen bei zusammengesetzten Figuren mit Zeichnungen und unbegrenztem Uebungsgenerator.",
     bulletPoints: [
-      "Zeitraum: ___",
-      "Lernziele: ___",
-      "Methoden: ___",
-      "Material: ___",
-      "Diagnose/Leistungsnachweis: ___",
+      "Strategiefragen: zerlegen, ergaenzen, fehlende Masse finden.",
+      "Dynamische L-Formen mit klaren Masspfeilen und Loesungswegen.",
+      "Aufgabentypen: Flaeche berechnen, fehlende Seiten, Sachaufgaben.",
+      "Schnell-Check mit gemischten Aufgaben und direktem Feedback.",
     ],
     order: 3,
   },
   {
     subject: "Mathematik",
-    title: "Modul 4: Einheiten und Anwenden",
+    title: "Modul 1: Einheiten und Anwenden",
     link: "subjects/mathematik/einheiten-und-anwenden/mathematik-einheiten-und-anwenden.html",
     description: "Einheiten sicher umrechnen und in Sachaufgaben anwenden (Flaeche, Masse, Zeit).",
     bulletPoints: [
@@ -124,7 +123,7 @@ const defaultTopics = [
       "Mehrere Schwierigkeitsstufen und direkte Auswertung mit Erklaerungen.",
       "Dynamischer Abschluss-Check mit 12 neu generierten Fragen.",
     ],
-    order: 4,
+    order: 1,
   },
   {
     subject: "Englisch",
@@ -555,16 +554,16 @@ function loadTopics() {
   try {
     const raw = localStorage.getItem(storageKey);
     if (!raw) {
-      return dedupeTopics(defaultTopics);
+      return getDisplayTopics(dedupeTopics(defaultTopics));
     }
     const parsed = JSON.parse(raw);
     if (!Array.isArray(parsed)) {
-      return dedupeTopics(defaultTopics);
+      return getDisplayTopics(dedupeTopics(defaultTopics));
     }
 
-    return dedupeTopics([...parsed, ...defaultTopics]);
+    return getDisplayTopics(dedupeTopics([...parsed, ...defaultTopics]));
   } catch {
-    return dedupeTopics(defaultTopics);
+    return getDisplayTopics(dedupeTopics(defaultTopics));
   }
 }
 
@@ -576,6 +575,32 @@ function getSubjects(topics) {
   return [...new Set(topics.map((topic) => topic.subject).filter(Boolean))].sort((a, b) =>
     a.localeCompare(b, "de", { sensitivity: "base" })
   );
+}
+
+function isMathBlankModule(topic) {
+  if (topic.subject !== "Mathematik") {
+    return false;
+  }
+
+  const searchableText = normalizeKeyPart(
+    [
+      topic.title,
+      topic.description,
+      ...(Array.isArray(topic.bulletPoints) ? topic.bulletPoints : []),
+    ].join(" ")
+  );
+
+  return (
+    !topic.link ||
+    searchableText.includes("blanko") ||
+    searchableText.includes("platzhalter") ||
+    searchableText.includes("dummy modul") ||
+    searchableText.includes("in vorbereitung")
+  );
+}
+
+function getDisplayTopics(topics) {
+  return topics.filter((topic) => !isMathBlankModule(topic));
 }
 
 function createModuleCard(topic) {
@@ -708,7 +733,7 @@ function compareTopicsForDisplay(a, b) {
 }
 
 function renderModules(topics, subject) {
-  const filteredTopics = topics
+  const filteredTopics = getDisplayTopics(topics)
     .filter((topic) => topic.subject === subject)
     .sort(compareTopicsForDisplay);
   moduleList.replaceChildren();
@@ -769,6 +794,7 @@ window.LERNHUB = {
   loadTopics,
   saveTopics,
   getSubjects,
+  getDisplayTopics,
 };
 
 if (

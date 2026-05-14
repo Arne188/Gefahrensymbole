@@ -22,6 +22,7 @@ const kdQuizNext = document.getElementById("kdQuizNext");
 const kdQuizScore = document.getElementById("kdQuizScore");
 const kdQuizStatus = document.getElementById("kdQuizStatus");
 const kdQuizPrompt = document.getElementById("kdQuizPrompt");
+const kdQuizVisual = document.getElementById("kdQuizVisual");
 const kdQuizOptions = document.getElementById("kdQuizOptions");
 const kdQuizFeedback = document.getElementById("kdQuizFeedback");
 
@@ -500,133 +501,205 @@ function buildTaskSet() {
 }
 
 function bodySvg(kind, wire = false) {
+  const fillOpacity = wire ? "0.08" : "1";
+  const faceStroke = wire ? "2.6" : "2";
+  const hidden = wire ? "stroke-dasharray=\"6 5\"" : "";
+  const defs = `
+    <defs>
+      <filter id="kdShapeShadow" x="-20%" y="-20%" width="140%" height="140%">
+        <feDropShadow dx="0" dy="6" stdDeviation="4" flood-color="#16324a" flood-opacity="0.16"></feDropShadow>
+      </filter>
+      <linearGradient id="kdGreenFace" x1="0" x2="1" y1="0" y2="1">
+        <stop offset="0%" stop-color="#e8f8db"></stop>
+        <stop offset="100%" stop-color="#94d179"></stop>
+      </linearGradient>
+      <linearGradient id="kdBlueFace" x1="0" x2="1" y1="0" y2="1">
+        <stop offset="0%" stop-color="#e8f3ff"></stop>
+        <stop offset="100%" stop-color="#8fbff2"></stop>
+      </linearGradient>
+      <linearGradient id="kdOrangeFace" x1="0" x2="1" y1="0" y2="1">
+        <stop offset="0%" stop-color="#fff1d6"></stop>
+        <stop offset="100%" stop-color="#f0a24b"></stop>
+      </linearGradient>
+      <radialGradient id="kdSphereFace" cx="32%" cy="28%" r="72%">
+        <stop offset="0%" stop-color="#ffe0e0"></stop>
+        <stop offset="100%" stop-color="#d84646"></stop>
+      </radialGradient>
+    </defs>
+  `;
+
   if (kind === "cube") {
     return `
-      <svg viewBox="0 0 240 130" aria-hidden="true">
-        <polygon points="60,45 130,45 165,25 95,25" fill="${wire ? "#ffffff" : "#d7f4c6"}" stroke="#2f7a44" stroke-width="2"></polygon>
-        <polygon points="60,45 95,25 95,85 60,105" fill="${wire ? "#ffffff" : "#b6e8a0"}" stroke="#2f7a44" stroke-width="2"></polygon>
-        <polygon points="130,45 165,25 165,85 130,105" fill="${wire ? "#ffffff" : "#a1de8a"}" stroke="#2f7a44" stroke-width="2"></polygon>
-        <polygon points="60,45 130,45 130,105 60,105" fill="${wire ? "#ffffff" : "#c6ecb3"}" stroke="#2f7a44" stroke-width="2"></polygon>
+      <svg viewBox="0 0 260 150" aria-hidden="true">
+        ${defs}
+        <g filter="url(#kdShapeShadow)">
+          <polygon points="70,48 146,48 185,26 109,26" fill="url(#kdGreenFace)" fill-opacity="${fillOpacity}" stroke="#2f7a44" stroke-width="${faceStroke}"></polygon>
+          <polygon points="70,48 109,26 109,96 70,118" fill="#bde6a7" fill-opacity="${fillOpacity}" stroke="#2f7a44" stroke-width="${faceStroke}"></polygon>
+          <polygon points="146,48 185,26 185,96 146,118" fill="#98d27f" fill-opacity="${fillOpacity}" stroke="#2f7a44" stroke-width="${faceStroke}"></polygon>
+          <polygon points="70,48 146,48 146,118 70,118" fill="#d8f2c8" fill-opacity="${fillOpacity}" stroke="#2f7a44" stroke-width="${faceStroke}"></polygon>
+          <line x1="109" y1="96" x2="185" y2="96" stroke="#2f7a44" stroke-width="2" ${hidden}></line>
+          <line x1="109" y1="26" x2="109" y2="96" stroke="#2f7a44" stroke-width="2" ${hidden}></line>
+        </g>
+        <text x="128" y="140" text-anchor="middle" class="kd-svg-label">${wire ? "Kantenmodell: Wuerfel" : "Wuerfel"}</text>
       </svg>
     `;
   }
 
   if (kind === "cuboid") {
     return `
-      <svg viewBox="0 0 240 130" aria-hidden="true">
-        <polygon points="40,50 145,50 180,32 75,32" fill="${wire ? "#ffffff" : "#d7e9ff"}" stroke="#2f5d95" stroke-width="2"></polygon>
-        <polygon points="40,50 75,32 75,88 40,106" fill="${wire ? "#ffffff" : "#c2ddff"}" stroke="#2f5d95" stroke-width="2"></polygon>
-        <polygon points="145,50 180,32 180,88 145,106" fill="${wire ? "#ffffff" : "#adcfff"}" stroke="#2f5d95" stroke-width="2"></polygon>
-        <polygon points="40,50 145,50 145,106 40,106" fill="${wire ? "#ffffff" : "#cfe5ff"}" stroke="#2f5d95" stroke-width="2"></polygon>
+      <svg viewBox="0 0 260 150" aria-hidden="true">
+        ${defs}
+        <g filter="url(#kdShapeShadow)">
+          <polygon points="48,56 166,56 208,34 90,34" fill="url(#kdBlueFace)" fill-opacity="${fillOpacity}" stroke="#2f5d95" stroke-width="${faceStroke}"></polygon>
+          <polygon points="48,56 90,34 90,96 48,118" fill="#c8e1ff" fill-opacity="${fillOpacity}" stroke="#2f5d95" stroke-width="${faceStroke}"></polygon>
+          <polygon points="166,56 208,34 208,96 166,118" fill="#9fc6f2" fill-opacity="${fillOpacity}" stroke="#2f5d95" stroke-width="${faceStroke}"></polygon>
+          <polygon points="48,56 166,56 166,118 48,118" fill="#d9ebff" fill-opacity="${fillOpacity}" stroke="#2f5d95" stroke-width="${faceStroke}"></polygon>
+          <line x1="90" y1="96" x2="208" y2="96" stroke="#2f5d95" stroke-width="2" ${hidden}></line>
+          <line x1="90" y1="34" x2="90" y2="96" stroke="#2f5d95" stroke-width="2" ${hidden}></line>
+        </g>
+        <text x="128" y="140" text-anchor="middle" class="kd-svg-label">${wire ? "Kantenmodell: Quader" : "Quader"}</text>
       </svg>
     `;
   }
 
   if (kind === "cylinder") {
     return `
-      <svg viewBox="0 0 240 130" aria-hidden="true">
-        <ellipse cx="110" cy="32" rx="35" ry="12" fill="#ffe8a8" stroke="#b38513" stroke-width="2"></ellipse>
-        <rect x="75" y="32" width="70" height="58" fill="${wire ? "#ffffff" : "#ffe69a"}" stroke="#b38513" stroke-width="2"></rect>
-        <ellipse cx="110" cy="90" rx="35" ry="12" fill="${wire ? "#ffffff" : "#ffd96e"}" stroke="#b38513" stroke-width="2"></ellipse>
+      <svg viewBox="0 0 260 150" aria-hidden="true">
+        ${defs}
+        <g filter="url(#kdShapeShadow)">
+          <path d="M 88 42 C 88 24, 172 24, 172 42 L 172 104 C 172 122, 88 122, 88 104 Z" fill="url(#kdOrangeFace)" fill-opacity="${fillOpacity}" stroke="#b38513" stroke-width="2"></path>
+          <ellipse cx="130" cy="42" rx="42" ry="15" fill="#fff0bc" fill-opacity="${fillOpacity}" stroke="#b38513" stroke-width="2"></ellipse>
+          <path d="M 88 104 C 88 122, 172 122, 172 104" fill="none" stroke="#b38513" stroke-width="2"></path>
+          <path d="M 88 104 C 88 88, 172 88, 172 104" fill="none" stroke="#b38513" stroke-width="2" stroke-dasharray="6 5"></path>
+        </g>
+        <text x="130" y="140" text-anchor="middle" class="kd-svg-label">Zylinder</text>
       </svg>
     `;
   }
 
   if (kind === "sphere") {
     return `
-      <svg viewBox="0 0 240 130" aria-hidden="true">
-        <defs>
-          <radialGradient id="ballGrad" cx="30%" cy="30%" r="70%">
-            <stop offset="0%" stop-color="#ffd9d9"></stop>
-            <stop offset="100%" stop-color="#e14646"></stop>
-          </radialGradient>
-        </defs>
-        <circle cx="110" cy="65" r="38" fill="${wire ? "#ffffff" : "url(#ballGrad)"}" stroke="#a32d2d" stroke-width="2"></circle>
+      <svg viewBox="0 0 260 150" aria-hidden="true">
+        ${defs}
+        <g filter="url(#kdShapeShadow)">
+          <circle cx="130" cy="74" r="48" fill="${wire ? "#ffffff" : "url(#kdSphereFace)"}" stroke="#a32d2d" stroke-width="2"></circle>
+          <ellipse cx="130" cy="74" rx="48" ry="15" fill="none" stroke="#a32d2d" stroke-width="2" stroke-dasharray="6 5"></ellipse>
+          <ellipse cx="130" cy="74" rx="15" ry="48" fill="none" stroke="#a32d2d" stroke-width="1.8" stroke-dasharray="6 5"></ellipse>
+        </g>
+        <text x="130" y="140" text-anchor="middle" class="kd-svg-label">Kugel</text>
       </svg>
     `;
   }
 
   if (kind === "pyramid") {
     return `
-      <svg viewBox="0 0 240 130" aria-hidden="true">
-        <polygon points="60,88 152,88 185,72 93,72" fill="${wire ? "#ffffff" : "#ffe5bf"}" stroke="#b56a14" stroke-width="2"></polygon>
-        <polygon points="105,30 60,88 152,88" fill="${wire ? "#ffffff" : "#ffd49b"}" stroke="#b56a14" stroke-width="2"></polygon>
-        <line x1="105" y1="30" x2="93" y2="72" stroke="#b56a14" stroke-width="2"></line>
-        <line x1="105" y1="30" x2="185" y2="72" stroke="#b56a14" stroke-width="2"></line>
+      <svg viewBox="0 0 260 150" aria-hidden="true">
+        ${defs}
+        <g filter="url(#kdShapeShadow)">
+          <polygon points="64,104 158,104 206,80 112,80" fill="#ffe5bf" fill-opacity="${fillOpacity}" stroke="#b56a14" stroke-width="2"></polygon>
+          <polygon points="132,24 64,104 158,104" fill="#ffd397" fill-opacity="${fillOpacity}" stroke="#b56a14" stroke-width="2"></polygon>
+          <polygon points="132,24 158,104 206,80" fill="#f0b564" fill-opacity="${fillOpacity}" stroke="#b56a14" stroke-width="2"></polygon>
+          <line x1="132" y1="24" x2="112" y2="80" stroke="#b56a14" stroke-width="2" ${hidden}></line>
+          <line x1="132" y1="24" x2="206" y2="80" stroke="#b56a14" stroke-width="2"></line>
+        </g>
+        <text x="130" y="140" text-anchor="middle" class="kd-svg-label">quadratische Pyramide</text>
       </svg>
     `;
   }
 
   return `
-    <svg viewBox="0 0 240 130" aria-hidden="true">
-      <polygon points="60,88 110,88 145,70 95,70" fill="${wire ? "#ffffff" : "#e1d7ff"}" stroke="#5b49a6" stroke-width="2"></polygon>
-      <polygon points="60,88 35,68 85,68 110,88" fill="${wire ? "#ffffff" : "#d1c2ff"}" stroke="#5b49a6" stroke-width="2"></polygon>
-      <polygon points="95,70 145,70 120,50 70,50" fill="${wire ? "#ffffff" : "#c2adff"}" stroke="#5b49a6" stroke-width="2"></polygon>
-      <polygon points="35,68 70,50 120,50 85,68" fill="${wire ? "#ffffff" : "#e8ddff"}" stroke="#5b49a6" stroke-width="2"></polygon>
-      <polygon points="110,88 145,70 120,50 85,68" fill="${wire ? "#ffffff" : "#b89dff"}" stroke="#5b49a6" stroke-width="2"></polygon>
+    <svg viewBox="0 0 260 150" aria-hidden="true">
+      ${defs}
+      <g filter="url(#kdShapeShadow)">
+        <polygon points="58,102 136,102 178,78 100,78" fill="#e4dcff" fill-opacity="${fillOpacity}" stroke="#5b49a6" stroke-width="2"></polygon>
+        <polygon points="58,102 30,68 108,68 136,102" fill="#d1c2ff" fill-opacity="${fillOpacity}" stroke="#5b49a6" stroke-width="2"></polygon>
+        <polygon points="100,78 178,78 150,44 72,44" fill="#c2adff" fill-opacity="${fillOpacity}" stroke="#5b49a6" stroke-width="2"></polygon>
+        <polygon points="30,68 72,44 150,44 108,68" fill="#eee8ff" fill-opacity="${fillOpacity}" stroke="#5b49a6" stroke-width="2"></polygon>
+        <polygon points="136,102 178,78 150,44 108,68" fill="#b89dff" fill-opacity="${fillOpacity}" stroke="#5b49a6" stroke-width="2"></polygon>
+      </g>
+      <text x="130" y="140" text-anchor="middle" class="kd-svg-label">Dreiecksprisma</text>
     </svg>
   `;
 }
 
 function netSvg(cells) {
-  const size = 24;
+  const size = 34;
   const normalized = normalizeCells(cells);
   const maxX = Math.max(...normalized.map(([x]) => x));
   const maxY = Math.max(...normalized.map(([, y]) => y));
-  const width = (maxX + 1) * size + 20;
-  const height = (maxY + 1) * size + 20;
+  const width = (maxX + 1) * size + 34;
+  const height = (maxY + 1) * size + 42;
+  const palette = ["#f7f2ff", "#e9f5ff", "#fef0d6", "#e8f7ee", "#fff0f0", "#eef2ff"];
 
   const rects = normalized
-    .map(([x, y]) => {
-      const rx = 10 + x * size;
-      const ry = 10 + y * size;
-      return `<rect x="${rx}" y="${ry}" width="${size}" height="${size}" fill="#f7f2ff" stroke="#5b49a6" stroke-width="2"></rect>`;
+    .map(([x, y], index) => {
+      const rx = 17 + x * size;
+      const ry = 13 + y * size;
+      return `
+        <rect x="${rx}" y="${ry}" width="${size}" height="${size}" rx="3" fill="${palette[index % palette.length]}" stroke="#5b49a6" stroke-width="2"></rect>
+        <text x="${rx + size / 2}" y="${ry + size / 2 + 5}" text-anchor="middle" class="kd-svg-label">${index + 1}</text>
+      `;
     })
     .join("");
 
   return `
     <svg viewBox="0 0 ${width} ${height}" aria-hidden="true">
+      <rect x="1" y="1" width="${width - 2}" height="${height - 2}" rx="10" fill="#ffffff" stroke="#d7ddea"></rect>
       ${rects}
+      <text x="${width / 2}" y="${height - 9}" text-anchor="middle" class="kd-svg-hint">Netz aus ${normalized.length} Flaechen</text>
     </svg>
   `;
 }
 
 function schraegSvg(variant) {
+  const defs = `
+    <defs>
+      <linearGradient id="kdSketchFace" x1="0" x2="1" y1="0" y2="1">
+        <stop offset="0%" stop-color="#f5fbff"></stop>
+        <stop offset="100%" stop-color="#dceeff"></stop>
+      </linearGradient>
+    </defs>
+  `;
   if (variant === 2) {
     return `
-      <svg viewBox="0 0 240 130" aria-hidden="true">
-        <rect x="50" y="45" width="80" height="55" fill="#ffffff" stroke="#2c4f78" stroke-width="2"></rect>
-        <line x1="130" y1="45" x2="170" y2="25" stroke="#2c4f78" stroke-width="2"></line>
-        <line x1="130" y1="100" x2="170" y2="80" stroke="#2c4f78" stroke-width="2"></line>
-        <line x1="170" y1="25" x2="170" y2="80" stroke="#2c4f78" stroke-width="2"></line>
-        <line x1="50" y1="100" x2="90" y2="80" stroke="#2c4f78" stroke-dasharray="5 4" stroke-width="2"></line>
-        <text x="18" y="118" class="kd-svg-hint">verdeckte Kante</text>
+      <svg viewBox="0 0 260 150" aria-hidden="true">
+        ${defs}
+        <polygon points="60,50 150,50 190,28 100,28" fill="#eef6ff" stroke="#2c4f78" stroke-width="2"></polygon>
+        <polygon points="150,50 190,28 190,92 150,114" fill="#d7eaff" stroke="#2c4f78" stroke-width="2"></polygon>
+        <rect x="60" y="50" width="90" height="64" fill="url(#kdSketchFace)" stroke="#2c4f78" stroke-width="2"></rect>
+        <line x1="60" y1="114" x2="100" y2="92" stroke="#2c4f78" stroke-dasharray="6 5" stroke-width="2.4"></line>
+        <line x1="100" y1="28" x2="100" y2="92" stroke="#2c4f78" stroke-dasharray="6 5" stroke-width="2"></line>
+        <line x1="100" y1="92" x2="190" y2="92" stroke="#2c4f78" stroke-dasharray="6 5" stroke-width="2"></line>
+        <text x="130" y="138" text-anchor="middle" class="kd-svg-hint">verdeckte Kanten werden gestrichelt</text>
       </svg>
     `;
   }
 
   if (variant === 3) {
     return `
-      <svg viewBox="0 0 240 130" aria-hidden="true">
-        <rect x="48" y="44" width="84" height="56" fill="#ffffff" stroke="#2c4f78" stroke-width="2"></rect>
-        <line x1="132" y1="44" x2="170" y2="24" stroke="#2c4f78" stroke-width="2"></line>
-        <line x1="132" y1="100" x2="170" y2="80" stroke="#2c4f78" stroke-width="2"></line>
-        <line x1="170" y1="24" x2="170" y2="80" stroke="#2c4f78" stroke-width="2"></line>
-        <line x1="48" y1="44" x2="86" y2="24" stroke="#2c4f78" stroke-width="2"></line>
-        <text x="16" y="118" class="kd-svg-hint">begonnenes Schraegbild</text>
+      <svg viewBox="0 0 260 150" aria-hidden="true">
+        ${defs}
+        <rect x="58" y="52" width="90" height="62" fill="url(#kdSketchFace)" stroke="#2c4f78" stroke-width="2.4"></rect>
+        <line x1="148" y1="52" x2="190" y2="30" stroke="#2c4f78" stroke-width="2.4"></line>
+        <line x1="148" y1="114" x2="190" y2="92" stroke="#2c4f78" stroke-width="2.4"></line>
+        <line x1="190" y1="30" x2="190" y2="92" stroke="#2c4f78" stroke-width="2.4"></line>
+        <circle cx="100" cy="30" r="5" fill="#d85f16"></circle>
+        <circle cx="58" cy="52" r="5" fill="#d85f16"></circle>
+        <text x="130" y="138" text-anchor="middle" class="kd-svg-hint">Welche Kanten fehlen noch?</text>
       </svg>
     `;
   }
 
   return `
-    <svg viewBox="0 0 240 130" aria-hidden="true">
-      <rect x="50" y="45" width="84" height="56" fill="#ffffff" stroke="#2c4f78" stroke-width="2"></rect>
-      <line x1="134" y1="45" x2="172" y2="25" stroke="#2c4f78" stroke-width="2"></line>
-      <line x1="134" y1="101" x2="172" y2="81" stroke="#2c4f78" stroke-width="2"></line>
-      <line x1="172" y1="25" x2="172" y2="81" stroke="#2c4f78" stroke-width="2"></line>
-      <line x1="50" y1="45" x2="88" y2="25" stroke="#2c4f78" stroke-width="2"></line>
-      <line x1="88" y1="25" x2="172" y2="25" stroke="#2c4f78" stroke-width="2"></line>
-      <text x="18" y="118" class="kd-svg-hint">Tiefe laeuft schraeg nach hinten</text>
+    <svg viewBox="0 0 260 150" aria-hidden="true">
+      ${defs}
+      <polygon points="58,52 148,52 190,30 100,30" fill="#eef6ff" stroke="#2c4f78" stroke-width="2.4"></polygon>
+      <polygon points="148,52 190,30 190,92 148,114" fill="#d7eaff" stroke="#2c4f78" stroke-width="2.4"></polygon>
+      <rect x="58" y="52" width="90" height="62" fill="url(#kdSketchFace)" stroke="#2c4f78" stroke-width="2.4"></rect>
+      <line x1="58" y1="52" x2="100" y2="30" stroke="#d85f16" stroke-width="3"></line>
+      <line x1="148" y1="52" x2="190" y2="30" stroke="#d85f16" stroke-width="3"></line>
+      <line x1="148" y1="114" x2="190" y2="92" stroke="#d85f16" stroke-width="3"></line>
+      <text x="130" y="138" text-anchor="middle" class="kd-svg-hint">Tiefenkanten laufen parallel schraeg nach hinten</text>
     </svg>
   `;
 }
@@ -634,21 +707,21 @@ function schraegSvg(variant) {
 function robotSvg() {
   const circles = robotSteps
     .map((step, index) => {
-      const x = 32 + index * 58;
+      const x = 36 + index * 62;
       return `
-        <circle cx="${x}" cy="32" r="14" fill="#e8f7ee" stroke="#2c7a45" stroke-width="2"></circle>
-        <text x="${x}" y="37" text-anchor="middle" class="kd-svg-label">${index + 1}</text>
-        <text x="${x}" y="62" text-anchor="middle" class="kd-svg-hint">${step.split(" ")[0]}</text>
+        <rect x="${x - 22}" y="13" width="44" height="36" rx="9" fill="#e8f7ee" stroke="#2c7a45" stroke-width="2"></rect>
+        <text x="${x}" y="36" text-anchor="middle" class="kd-svg-label">${index + 1}</text>
+        <text x="${x}" y="68" text-anchor="middle" class="kd-svg-hint">${step.split(" ")[0]}</text>
       `;
     })
     .join("");
 
   return `
-    <svg viewBox="0 0 250 80" aria-hidden="true">
+    <svg viewBox="0 0 280 88" aria-hidden="true">
       ${circles}
-      <line x1="46" y1="32" x2="74" y2="32" stroke="#2c7a45" stroke-width="2"></line>
-      <line x1="104" y1="32" x2="132" y2="32" stroke="#2c7a45" stroke-width="2"></line>
-      <line x1="162" y1="32" x2="190" y2="32" stroke="#2c7a45" stroke-width="2"></line>
+      <line x1="58" y1="31" x2="76" y2="31" stroke="#2c7a45" stroke-width="2"></line>
+      <line x1="120" y1="31" x2="138" y2="31" stroke="#2c7a45" stroke-width="2"></line>
+      <line x1="182" y1="31" x2="200" y2="31" stroke="#2c7a45" stroke-width="2"></line>
     </svg>
   `;
 }
@@ -909,6 +982,7 @@ function toQuizQuestion(task) {
       options: shuffle(labels),
       correctLabel,
       explanation: task.explanation,
+      visual: task.visual,
     };
   }
 
@@ -918,6 +992,7 @@ function toQuizQuestion(task) {
     options: optionData.options,
     correctLabel: optionData.correctLabel,
     explanation: task.explanation,
+    visual: task.visual,
   };
 }
 
@@ -941,6 +1016,14 @@ function renderQuizQuestion() {
   const question = quizState.questions[quizState.index];
   kdQuizStatus.textContent = `Frage ${quizState.index + 1} von ${quizState.questions.length}`;
   kdQuizPrompt.textContent = question.prompt;
+  if (kdQuizVisual instanceof HTMLDivElement) {
+    kdQuizVisual.innerHTML = "";
+    const visualTask = { visual: question.visual };
+    const visual = createTaskVisual(visualTask);
+    if (visual instanceof HTMLDivElement) {
+      kdQuizVisual.append(visual);
+    }
+  }
   kdQuizFeedback.innerHTML = "";
   kdQuizNext.disabled = true;
   kdQuizOptions.innerHTML = question.options
@@ -999,6 +1082,9 @@ function finishQuiz() {
   quizState.running = false;
   kdQuizStatus.textContent = "Abschluss-Check beendet.";
   kdQuizPrompt.textContent = "Du kannst den Check neu starten.";
+  if (kdQuizVisual instanceof HTMLDivElement) {
+    kdQuizVisual.innerHTML = "";
+  }
   kdQuizOptions.innerHTML = "";
   kdQuizFeedback.innerHTML =
     '<p class="feedback info">Starte neu, um mit neuen Koerper-/Netzkonstellationen weiter zu trainieren.</p>';
